@@ -4,16 +4,11 @@ import type { ReactNode } from "react";
 import { brands } from "@/lib/site-data";
 import { buttonVariants } from "@/components/ui/button";
 
-function Logo() {
-  return <img src="/logo.jpg" alt="이음앤빌드" className="h-10 w-auto object-contain sm:h-12" />;
-}
-
 export function SiteShell({ children, overlayHeader = false, hideFooter = false }: { children: ReactNode; overlayHeader?: boolean; hideFooter?: boolean }) {
   return <div className="min-h-screen bg-background text-foreground">
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className={`flex items-center justify-between px-6 py-4 sm:px-10 sm:py-5 md:px-14 ${overlayHeader ? "text-primary-foreground" : "text-foreground"}`}>
-        <Link to="/" aria-label="이음앤빌드 홈"><Logo/></Link>
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="주요 메뉴">
+      <div className={`relative flex items-center justify-end px-6 py-4 sm:px-10 sm:py-5 md:px-14 ${overlayHeader ? "text-primary-foreground" : "text-foreground"}`}>
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex" aria-label="주요 메뉴">
           <Link to="/" activeOptions={{exact:true}} className={overlayHeader ? "text-xs font-semibold text-primary-foreground/80 hover:text-primary-foreground" : "nav-link"}>Home</Link>
           <Link to="/company" className={overlayHeader ? "text-xs font-semibold text-primary-foreground/80 hover:text-primary-foreground" : "nav-link"}>회사소개</Link>
           <div className="group relative py-7">
