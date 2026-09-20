@@ -1,0 +1,5 @@
+- [x] Parse and inventory all PDF content and imagery
+- [x] Build shared premium site shell and navigation
+- [x] Build Home and Company pages
+- [x] Build six complete brand pages
+- [x] Verify all 8 pages on desktop and mobile

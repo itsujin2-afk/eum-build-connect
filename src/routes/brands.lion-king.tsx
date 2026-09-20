@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router"; import { BrandPage } from "@/components/brand-page"; import { brands } from "@/lib/site-data";
+export const Route=createFileRoute("/brands/lion-king")({head:()=>({meta:[{title:"광둥 라이온 킹 세라믹스 — 이음앤빌드"},{name:"description",content:"포산의 대리석 타일 전문 기업과 2025 포틀랜드 시리즈."},{property:"og:title",content:"광둥 라이온 킹 세라믹스"},{property:"og:description",content:"천연석의 표정을 구현하는 하이엔드 타일"},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:()=> <BrandPage brand={brands[1]}/>});

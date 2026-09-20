@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router"; import { BrandPage } from "@/components/brand-page"; import { brands } from "@/lib/site-data";
+export const Route=createFileRoute("/brands/forest-house")({head:()=>({meta:[{title:"이센메이쥐 — 이음앤빌드"},{name:"description",content:"함침지부터 마루까지 원스톱 생산하는 Forest House."},{property:"og:title",content:"이센메이쥐 — Forest House"},{property:"og:description",content:"FZ70 신3중 실목마루와 그래핀 열전도 특허"},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:()=> <BrandPage brand={brands[3]}/>});

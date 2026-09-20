@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router"; import { BrandPage } from "@/components/brand-page"; import { brands } from "@/lib/site-data";
+export const Route=createFileRoute("/brands/jincheng-glass")({head:()=>({meta:[{title:"진청 유리 — 이음앤빌드"},{name:"description",content:"30년 역사의 건축용 안전 유리 고신기술기업 진청 유리."},{property:"og:title",content:"진청 유리 — Jincheng Glass"},{property:"og:description",content:"강화·복층·접합·Low-E 유리 전용 생산라인"},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:()=> <BrandPage brand={brands[2]}/>});
