@@ -30,7 +30,7 @@ export function CinematicHome() {
         {/* pristine logo stage — no imagery behind it */}
         <div className="hero-reveal hero-reveal-logo flex min-w-0 flex-col items-center text-center lg:col-span-5 lg:items-start lg:text-left">
           <div
-            className="logo-stage w-[230px] sm:w-[300px] lg:w-[360px]"
+            className="logo-stage w-[250px] sm:w-[330px] lg:w-[400px]"
             style={{ ["--logo-mask" as string]: `url(${logoAsset.url})` }}
           >
             <span className="logo-glow" aria-hidden />
@@ -44,21 +44,18 @@ export function CinematicHome() {
             </span>
           </div>
 
-          <p className="eyebrow mt-5 text-foreground/55 sm:mt-7">EXCLUSIVE REGIONAL HQ · KOREA</p>
-          <h1 className="mt-3 break-keep text-lg font-bold leading-[1.45] tracking-tight text-foreground sm:text-xl lg:text-[1.6rem]">
-            세계의 건축을 완성한 소재,
-            <br className="hidden lg:block" />{" "}
-            <span className="text-gold">한국의 프로젝트로.</span>
-          </h1>
+          <p className="mt-6 break-keep text-sm font-medium leading-relaxed tracking-tight text-foreground/75 sm:mt-8 sm:text-base">
+            세계의 건축을 완성한 소재, <span className="text-gold">한국의 프로젝트로.</span>
+          </p>
           <Link
             to="/company"
-            className="group mt-7 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-foreground sm:mt-9 sm:text-sm"
+            className="group mt-6 inline-flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-foreground/70 sm:mt-8"
           >
             <span className="relative">
               이음앤빌드 소개
               <span aria-hidden className="absolute inset-x-0 -bottom-1 h-px bg-foreground/30 transition-colors duration-500 group-hover:bg-gold" />
             </span>
-            <ArrowUpRight size={16} className="text-gold transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            <ArrowUpRight size={13} className="text-gold transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </Link>
         </div>
 
@@ -76,8 +73,8 @@ export function CinematicHome() {
           ))}
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(to_top,rgba(25,25,25,0.55),transparent)]" aria-hidden />
           <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-4 sm:p-5">
-            <p key={current.number} className="animate-[fade-in_1s_ease-out] text-[10px] font-semibold uppercase tracking-[0.2em] text-surface sm:text-[11px]">
-              <span className="text-gold">{current.number}</span> {current.english} · {current.category}
+            <p key={current.number} className="animate-[fade-in_1s_ease-out] text-[11px] font-semibold tracking-[0.2em] text-gold">
+              {current.number}
             </p>
             <div className="flex items-center gap-1.5">
               {slides.map((s, i) => (

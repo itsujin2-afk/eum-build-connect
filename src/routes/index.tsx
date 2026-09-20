@@ -7,6 +7,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-function Home(){return <SiteShell fullscreen hideFooterLogo>
+function Home(){return <SiteShell fullscreen hideFooter hideFooterLogo>
   <CinematicHome/>
 </SiteShell>}
