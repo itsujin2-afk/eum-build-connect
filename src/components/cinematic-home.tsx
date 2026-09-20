@@ -30,7 +30,7 @@ export function CinematicHome() {
         {/* pristine logo stage — no imagery behind it */}
         <div className="hero-reveal hero-reveal-logo flex min-w-0 flex-col items-center text-center lg:col-span-5 lg:items-start lg:text-left">
           <div
-            className="logo-stage w-[230px] sm:w-[300px] lg:w-[360px]"
+            className="logo-stage w-[250px] sm:w-[330px] lg:w-[400px]"
             style={{ ["--logo-mask" as string]: `url(${logoAsset.url})` }}
           >
             <span className="logo-glow" aria-hidden />
