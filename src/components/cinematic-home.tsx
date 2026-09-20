@@ -39,27 +39,27 @@ export function CinematicHome() {
           <div className="cinematic-shade" />
         </div>
 
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-1 flex-col justify-end px-5 pb-10 pt-32 lg:px-10 lg:pb-14">
-          <div className="max-w-5xl animate-fade-in">
-            <img src={logoAsset.url} alt="이음앤빌드" className="mb-7 w-32 object-contain drop-shadow-lg sm:w-40" />
-            <p className="eyebrow text-primary-foreground/70">EXCLUSIVE REGIONAL HQ · KOREA</p>
-            <h1 className="mt-5 text-4xl leading-[1.12] sm:text-6xl md:text-8xl lg:text-[6.5rem]">
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-1 flex-col justify-end px-5 pb-8 pt-36 sm:px-8 lg:px-16 lg:pb-12">
+          <div key={active} className="max-w-3xl">
+            <img src={logoAsset.url} alt="이음앤빌드" className="hero-reveal hero-reveal-logo mb-8 w-24 object-contain drop-shadow-lg sm:w-28" />
+            <p className="hero-reveal hero-reveal-eyebrow eyebrow text-primary-foreground/70">EXCLUSIVE REGIONAL HQ · KOREA</p>
+            <h1 className="hero-reveal hero-reveal-title mt-5 text-3xl font-medium leading-[1.25] sm:text-4xl md:text-5xl lg:text-5xl">
               세계의 건축을 완성한 소재,<br />한국의 프로젝트로.
             </h1>
-            <p className="mt-7 max-w-xl text-sm leading-7 text-primary-foreground/80 md:text-base">
+            <p className="hero-reveal hero-reveal-copy mt-6 max-w-lg text-sm leading-7 text-primary-foreground/80">
               중국 최정상 6개 건축자재 브랜드를 하나의 책임 있는 창구로 연결합니다.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <a href="#collection" className={buttonVariants({ size: "lg", className: "h-auto rounded-lg bg-background px-7 py-3 text-foreground shadow-none hover:bg-surface" })}>
+            <div className="hero-reveal hero-reveal-actions mt-7 flex flex-wrap gap-2.5">
+              <a href="#collection" className={buttonVariants({ className: "h-auto rounded-md bg-background px-5 py-2.5 text-xs text-foreground shadow-none hover:bg-surface" })}>
                 포트폴리오 보기 <ArrowDown />
               </a>
-              <Link to="/company" className={buttonVariants({ size: "lg", variant: "outline", className: "h-auto rounded-lg border-primary-foreground/50 bg-transparent px-7 py-3 text-primary-foreground shadow-none hover:bg-primary-foreground/10 hover:text-primary-foreground" })}>
+              <Link to="/company" className={buttonVariants({ variant: "outline", className: "h-auto rounded-md border-primary-foreground/50 bg-transparent px-5 py-2.5 text-xs text-primary-foreground shadow-none hover:bg-primary-foreground/10 hover:text-primary-foreground" })}>
                 이음앤빌드 소개 <ArrowUpRight />
               </Link>
             </div>
           </div>
 
-          <div className="mt-12 flex items-end justify-between border-t border-primary-foreground/30 pt-5">
+          <div className="mt-9 flex items-end justify-between border-t border-primary-foreground/30 pt-4">
             <div><p className="text-[10px] font-semibold text-primary-foreground/60">0{active + 1} / 03</p><p className="mt-2 text-sm font-medium">{heroFrames[active]?.label}</p></div>
             <div className="hidden gap-2 sm:flex" aria-label="대표 이미지 선택">
               {heroFrames.map((frame, index) => <Button key={frame.image} type="button" variant="ghost" size="icon" aria-label={`${index + 1}번 이미지 보기`} onClick={() => setActive(index)} className="h-6 w-12 rounded-none p-0 hover:bg-transparent"><span className={`block h-px w-12 transition-all ${index === active ? "bg-primary-foreground" : "bg-primary-foreground/40"}`} /></Button>)}
@@ -81,7 +81,7 @@ export function CinematicHome() {
             {[...materialFrames, ...materialFrames].map((image, index) => {
               const brand = brands[index % brands.length];
               return <Link key={`${image}-${index}`} to={`/brands/${brand?.slug}` as never} className="group relative block w-[280px] shrink-0 overflow-hidden sm:w-[380px]">
-                <img src={asset(image)} alt={brand?.name ?? "건축 소재"} className="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-105" />
+                <img src={asset(image)} alt={brand?.name ?? "건축 소재"} className="aspect-[4/5] w-full object-cover brightness-90 transition duration-700 ease-out group-hover:scale-105 group-hover:brightness-105" />
                 <div className="absolute inset-x-0 bottom-0 bg-background/90 p-5 backdrop-blur-sm"><p className="text-[10px] font-semibold text-muted-foreground">{brand?.number} · {brand?.english}</p><div className="mt-2 flex items-center justify-between"><b>{brand?.name}</b><ArrowUpRight size={16} /></div></div>
               </Link>;
             })}

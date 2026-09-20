@@ -209,8 +209,13 @@
 }
 
 @keyframes cinematic-in {
-  from { transform: scale(1.02); }
-  to { transform: scale(1.12); }
+  from { transform: scale(1) translate3d(0, 0, 0); }
+  to { transform: scale(1.1) translate3d(-1.2%, -0.8%, 0); }
+}
+
+@keyframes hero-reveal {
+  from { opacity: 0; transform: translate3d(0, 12px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
 @keyframes material-scroll {
@@ -225,14 +230,27 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transform: scale(1.02);
-  transition: opacity 1.4s ease;
+  transform: scale(1);
+  transition: opacity 1.6s cubic-bezier(.4, 0, .2, 1);
+  will-change: opacity, transform;
 }
 
 .cinematic-frame.is-active {
   opacity: 1;
-  animation: cinematic-in 7s ease-out both;
+  animation: cinematic-in 7s cubic-bezier(.2, .7, .3, 1) both;
 }
+
+.hero-reveal {
+  opacity: 0;
+  animation: hero-reveal .8s cubic-bezier(.2, .75, .25, 1) forwards;
+  will-change: opacity, transform;
+}
+
+.hero-reveal-logo { animation-delay: .12s; }
+.hero-reveal-eyebrow { animation-delay: .25s; }
+.hero-reveal-title { animation-delay: .38s; }
+.hero-reveal-copy { animation-delay: .52s; }
+.hero-reveal-actions { animation-delay: .66s; }
 
 .cinematic-shade {
   position: absolute;
