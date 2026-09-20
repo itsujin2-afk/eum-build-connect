@@ -251,6 +251,7 @@
 .hero-reveal-logo { animation-delay: .12s; }
 .hero-reveal-eyebrow { animation-delay: .25s; }
 .hero-reveal-title { animation-delay: .38s; }
+.hero-reveal-media { animation-delay: .3s; }
 .hero-reveal-copy { animation-delay: .52s; }
 .hero-reveal-actions { animation-delay: .66s; }
 

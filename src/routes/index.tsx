@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ContactBand, SiteShell } from "@/components/site-shell";
+import { SiteShell } from "@/components/site-shell";
 import { CinematicHome } from "@/components/cinematic-home";
 
 export const Route = createFileRoute("/")({
@@ -9,5 +9,4 @@ export const Route = createFileRoute("/")({
 
 function Home(){return <SiteShell>
   <CinematicHome/>
-  <ContactBand/>
 </SiteShell>}
