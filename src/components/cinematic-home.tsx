@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { brands } from "@/lib/site-data";
 
 const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
@@ -60,7 +60,7 @@ export function CinematicHome() {
           <div className="mt-12 flex items-end justify-between border-t border-primary-foreground/30 pt-5">
             <div><p className="text-[10px] font-semibold tracking-[.18em] text-primary-foreground/60">0{active + 1} / 03</p><p className="mt-2 text-sm font-medium">{heroFrames[active]?.label}</p></div>
             <div className="hidden gap-2 sm:flex" aria-label="대표 이미지 선택">
-              {heroFrames.map((frame, index) => <button key={frame.image} type="button" aria-label={`${index + 1}번 이미지 보기`} onClick={() => setActive(index)} className={`h-px w-12 transition-all ${index === active ? "bg-primary-foreground" : "bg-primary-foreground/40"}`} />)}
+              {heroFrames.map((frame, index) => <Button key={frame.image} type="button" variant="ghost" size="icon" aria-label={`${index + 1}번 이미지 보기`} onClick={() => setActive(index)} className="h-6 w-12 rounded-none p-0 hover:bg-transparent"><span className={`block h-px w-12 transition-all ${index === active ? "bg-primary-foreground" : "bg-primary-foreground/40"}`} /></Button>)}
             </div>
             <p className="max-w-xs text-right text-xs text-primary-foreground/70">{heroFrames[active]?.caption}</p>
           </div>
