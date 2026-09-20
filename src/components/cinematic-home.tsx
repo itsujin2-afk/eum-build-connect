@@ -28,23 +28,23 @@ export function CinematicHome() {
   return (
     <>
       <section className="relative overflow-hidden bg-background">
-        <div className="mx-auto flex min-h-[92svh] w-full max-w-[1440px] flex-col justify-center px-5 pb-28 pt-28 sm:px-8 lg:px-16 lg:pb-32 lg:pt-32">
-          <div className="hero-reveal hero-reveal-logo flex flex-col items-start gap-4">
-            <img src={logoAsset.url} alt="이음앤빌드" className="w-28 object-contain sm:w-36" />
+        <div className="mx-auto flex min-h-svh w-full max-w-[1440px] flex-col justify-center px-5 pb-14 pt-24 sm:px-8 sm:pb-16 sm:pt-28 lg:px-16 lg:pb-20 lg:pt-32">
+          <div className="hero-reveal hero-reveal-logo flex items-center gap-5 sm:gap-6">
+            <img src={logoAsset.url} alt="이음앤빌드" className="w-[76px] object-contain sm:w-[92px] lg:w-[104px]" />
             <p className="eyebrow text-muted-foreground">EXCLUSIVE REGIONAL HQ · KOREA</p>
           </div>
 
-          <div className="mt-10 grid items-center gap-16 lg:mt-16 lg:grid-cols-12">
-            <div key={active} className="order-2 lg:order-1 lg:col-span-5">
+          <div className="mt-8 grid items-center gap-10 sm:mt-10 lg:mt-14 lg:grid-cols-12 lg:gap-16">
+            <div key={active} className="lg:col-span-5">
               <h1 className="hero-reveal hero-reveal-title break-keep text-3xl font-black leading-[1.16] tracking-tighter sm:text-5xl sm:leading-[1.14] lg:text-[3.4rem]">
                 세계의 건축을<br className="hidden lg:block" />{" "}
                 완성한 소재,<br className="hidden sm:block" />{" "}
                 <span className="text-gold">한국의 프로젝트로.</span>
               </h1>
-              <p className="hero-reveal hero-reveal-copy mt-7 max-w-md text-sm leading-7 text-muted-foreground">
+              <p className="hero-reveal hero-reveal-copy mt-6 max-w-md text-sm leading-7 text-muted-foreground">
                 중국 최정상 6개 건축자재 브랜드를 하나의 책임 있는 창구로 연결합니다.
               </p>
-              <div className="hero-reveal hero-reveal-actions mt-9">
+              <div className="hero-reveal hero-reveal-actions mt-8">
                 <Link to="/company" className="group inline-flex items-center gap-4 pb-1 text-xs font-bold uppercase tracking-[0.18em] text-foreground">
                   <span className="relative">
                     이음앤빌드 소개
@@ -53,7 +53,7 @@ export function CinematicHome() {
                   <ArrowUpRight size={18} className="text-gold transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-1" />
                 </Link>
               </div>
-              <div className="hero-reveal hero-reveal-actions mt-12 flex items-center gap-3">
+              <div className="hero-reveal hero-reveal-actions mt-9 flex items-center gap-3">
                 {heroFrames.map((frame, index) => (
                   <button key={frame.image} type="button" aria-label={`${index + 1}번 이미지 보기`} onClick={() => setActive(index)} className="group py-2">
                     <span className={`block h-px w-10 transition-colors duration-300 ${index === active ? "bg-gold" : "bg-border group-hover:bg-muted-foreground"}`} />
@@ -65,10 +65,10 @@ export function CinematicHome() {
               </div>
             </div>
 
-            <div className="order-1 lg:order-2 lg:col-span-7">
-              <div className="relative p-3 sm:p-5">
-                <div aria-hidden className="absolute inset-0 translate-x-4 translate-y-4 border border-border" />
-                <div className="relative aspect-[4/3] overflow-hidden bg-surface sm:aspect-[16/11]">
+            <div className="lg:col-span-7">
+              <div className="hero-reveal hero-reveal-media relative mx-auto w-full max-w-[560px] p-2.5 sm:p-3 lg:ml-auto lg:mr-0 lg:max-w-[620px]">
+                <div aria-hidden className="absolute inset-0 translate-x-3 translate-y-3 border border-border" />
+                <div className="relative aspect-[16/11] overflow-hidden bg-surface">
                   {heroFrames.map((frame, index) => (
                     <img
                       key={frame.image}
@@ -77,10 +77,10 @@ export function CinematicHome() {
                       className={`cinematic-frame ${index === active ? "is-active" : ""}`}
                     />
                   ))}
-                </div>
-                <div key={active} className="absolute -bottom-8 right-4 max-w-xs border-l-2 border-gold bg-background px-6 py-5 shadow-[0_24px_60px_-24px_rgba(25,25,25,0.25)] sm:-bottom-10 sm:right-8">
-                  <p className="text-[10px] font-bold tracking-[0.3em] text-gold">CURATION 0{active + 1}</p>
-                  <p className="mt-2 text-xs leading-6 text-muted-foreground">{heroFrames[active]?.caption}</p>
+                  <div key={active} className="absolute bottom-4 right-4 max-w-[240px] border-l-2 border-gold bg-background/95 px-4 py-3 backdrop-blur-sm sm:bottom-5 sm:right-5 sm:px-5">
+                    <p className="text-[10px] font-bold tracking-[0.3em] text-gold">CURATION 0{active + 1}</p>
+                    <p className="mt-1.5 text-[11px] leading-5 text-muted-foreground">{heroFrames[active]?.caption}</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ export function CinematicHome() {
           <div className="material-track">
             {[...materialFrames, ...materialFrames].map((image, index) => {
               const brand = brands[index % brands.length];
-              return <Link key={`${image}-${index}`} to={`/brands/${brand?.slug}` as never} className="group relative block w-[280px] shrink-0 overflow-hidden sm:w-[380px]">
+              return <Link key={`${image}-${index}`} to={`/brands/${brand?.slug}`} className="group relative block w-[280px] shrink-0 overflow-hidden sm:w-[380px]">
                 <img src={asset(image)} alt={brand?.name ?? "건축 소재"} className="aspect-[4/5] w-full object-cover brightness-90 transition duration-700 ease-out group-hover:scale-105 group-hover:brightness-105" />
                 <div className="absolute inset-x-0 bottom-0 bg-background/90 p-5 backdrop-blur-sm"><p className="text-[10px] font-semibold text-muted-foreground">{brand?.number} · {brand?.english}</p><div className="mt-2 flex items-center justify-between"><b>{brand?.name}</b><ArrowUpRight size={16} /></div></div>
               </Link>;
