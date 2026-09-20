@@ -6,7 +6,7 @@ export function CinematicHome() {
   return (
     <div className="relative flex h-full min-h-0 flex-col overflow-hidden px-5 pb-3 pt-16 sm:px-8 sm:pt-20 lg:px-14">
       {/* ambient luxury backdrop — surrounds the whole composition */}
-      <div className="lux-stage absolute inset-0" aria-hidden>
+      <div className="lux-stage fixed inset-0" aria-hidden>
         <div className="lux-lines" />
         <div className="lux-orb lux-orb-a" />
         <div className="lux-orb lux-orb-b" />
