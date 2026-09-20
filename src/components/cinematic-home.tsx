@@ -99,7 +99,7 @@ export function CinematicHome() {
           <div className="material-track">
             {[...materialFrames, ...materialFrames].map((image, index) => {
               const brand = brands[index % brands.length];
-              return <Link key={`${image}-${index}`} to={`/brands/${brand?.slug}`} className="group relative block w-[280px] shrink-0 overflow-hidden sm:w-[380px]">
+              return <Link key={`${image}-${index}`} to={`/brands/${brand?.slug}` as never} className="group relative block w-[280px] shrink-0 overflow-hidden sm:w-[380px]">
                 <img src={asset(image)} alt={brand?.name ?? "건축 소재"} className="aspect-[4/5] w-full object-cover brightness-90 transition duration-700 ease-out group-hover:scale-105 group-hover:brightness-105" />
                 <div className="absolute inset-x-0 bottom-0 bg-background/90 p-5 backdrop-blur-sm"><p className="text-[10px] font-semibold text-muted-foreground">{brand?.number} · {brand?.english}</p><div className="mt-2 flex items-center justify-between"><b>{brand?.name}</b><ArrowUpRight size={16} /></div></div>
               </Link>;
