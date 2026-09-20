@@ -1,22 +1,80 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, Check, X } from "lucide-react";
-import { ContactBand, SiteShell } from "@/components/site-shell";
-import { brands, steps } from "@/lib/site-data";
+import { ArrowUpRight } from "lucide-react";
+import { SiteShell } from "@/components/site-shell";
+import { brands } from "@/lib/site-data";
 
-const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string,string>;
-const asset = (id:string) => imageModules[`../assets/eum/${id}.jpg`];
+const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
+const asset = (id: string) => imageModules[`../assets/eum/${id}.jpg`];
 
-export const Route=createFileRoute("/company")({head:()=>({meta:[{title:"회사 소개 — 이음앤빌드"},{name:"description",content:"이음앤빌드 회사 개요, 직통 계약 구조, 공동대표 리더십, 독점 권한과 업무 프로세스를 소개합니다."},{property:"og:title",content:"회사 소개 — 이음앤빌드"},{property:"og:description",content:"중국 본사와 직접 결정하고 한국 법인이 직접 책임지는 구조"},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:Company});
-function Company(){return <SiteShell>
-  <section className="border-b border-border bg-background pt-20"><div className="mx-auto max-w-[1440px] px-5 py-24 lg:px-10 lg:py-36"><p className="eyebrow text-muted-foreground">COMPANY · EXCLUSIVE REGIONAL HQ</p><h1 className="mt-7 max-w-5xl text-5xl leading-tight md:text-7xl">한국 법인이 직접 계약하고<br/>직접 책임집니다.</h1><p className="mt-8 max-w-3xl text-base leading-8 text-muted-foreground">중국 본사와 한국 발주처를 이어주는 창구가 아닙니다. 6개 기업의 상업 권한을 위임받아 직접 집행하며 계약, 세금계산서, 하자 책임이 모두 이 법인에서 나옵니다.</p></div></section>
-  <section className="bg-foreground text-primary-foreground"><div className="mx-auto grid max-w-[1440px] gap-14 px-5 py-24 lg:grid-cols-[1fr_1fr] lg:px-10 lg:py-32"><div><p className="eyebrow text-primary-foreground/60">OUR MISSION</p><h2 className="mt-5 text-4xl leading-tight md:text-6xl">중국 최정상 6개 브랜드<br/>공식 한국 독점 HQ</h2></div><div className="self-end"><p className="text-xl font-semibold leading-8">중간 단계를 없앤 직통 계약 솔루션</p><p className="mt-5 max-w-xl text-sm leading-7 text-primary-foreground/70">본사 직통 단일 마진 구조로 석재, 세라믹 타일, 유리, 마루, 목문, 몰딩을 공급합니다. 중국 본사와 직접 계약하고 한국 법인이 모든 하자와 법적 책임을 집니다.</p></div></div></section>
-  <section className="mx-auto max-w-[1440px] px-5 py-24 lg:px-10"><p className="eyebrow text-muted-foreground">WHAT DO WE DO?</p><div className="mt-6 grid gap-12 lg:grid-cols-[.75fr_1.25fr]"><h2 className="text-4xl leading-tight md:text-6xl">중간 단계를 없앤<br/>직통 계약 솔루션</h2><div className="grid gap-px bg-border sm:grid-cols-3">{[["01","Direct Authority","본사 직통 계약"],["02","Single Margin","단일 마진 구조"],["03","Legal Liability","한국 법인 직접 책임"]].map(([n,en,ko])=><article key={n} className="bg-background p-7"><p className="text-xs text-muted-foreground">{n} / {en}</p><h3 className="mt-10 text-xl font-semibold">{ko}</h3></article>)}</div></div></section>
-  <section className="bg-muted py-24"><div className="mx-auto max-w-[1440px] px-5 lg:px-10"><div className="flex flex-col justify-between gap-6 md:flex-row md:items-end"><div><p className="eyebrow text-muted-foreground">THE CURATED PORTFOLIO</p><h2 className="mt-5 text-4xl md:text-6xl">여섯 개의 독점 브랜드</h2></div><p className="max-w-lg text-sm leading-7 text-muted-foreground">마감재 전 영역을 한 창구에서 조달하며, 각 본사의 생산 역량과 기술을 한국 프로젝트에 직접 연결합니다.</p></div><div className="mt-14 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">{brands.map(brand=><Link key={brand.slug} to={`/brands/${brand.slug}` as never} className="group bg-background"><div className="overflow-hidden"><img src={asset(brand.heroImage)} alt={brand.name} className="aspect-[16/9] w-full object-cover transition duration-700 group-hover:scale-105"/></div><div className="p-6"><p className="text-[10px] font-semibold text-muted-foreground">{brand.number} · {brand.english}</p><h3 className="mt-5 text-xl font-semibold">{brand.name}</h3><div className="mt-8 flex items-center justify-between text-sm text-muted-foreground"><span>{brand.category}</span><ArrowUpRight size={16}/></div></div></Link>)}</div></div></section>
-  <section className="mx-auto max-w-[1440px] px-5 py-24 lg:px-10"><div className="grid gap-14 lg:grid-cols-[.75fr_1.25fr]"><div><p className="eyebrow text-primary">COMPANY FACT SHEET</p><h2 className="mt-5 text-4xl font-semibold">이음앤빌드</h2></div><dl className="fact-list">{[['법인명','주식회사 이음앤빌드'],['영문 상호','EUM&BUILD Co., Ltd.'],['공동대표이사','YIN XIUYING · 조준우'],['법인등록번호','110111-0968258'],['사업자등록번호','810-87-04122'],['본점 소재지','서울특별시 강남구 테헤란로 329, 삼흥빌딩 1612호 (역삼동)']].map(([a,b])=><div key={a}><dt>{a}</dt><dd>{b}</dd></div>)}</dl></div><p className="mt-7 text-xs text-muted-foreground">사업자등록증 및 법인인감증명서 사본은 요청 시 제공합니다.</p></section>
-  <section className="bg-muted"><div className="mx-auto max-w-[1440px] px-5 py-24 lg:px-10"><p className="eyebrow text-primary">BUSINESS AREAS</p><h2 className="mt-5 text-4xl font-semibold md:text-5xl">자재만 넘기고 끝내지 않습니다.</h2><div className="mt-14 grid gap-px bg-border md:grid-cols-3">{[['MATERIAL SOURCING','건축자재 조달 · 유통','6개 본사의 생산 라인에서 직접 물량을 배정받고, 사양 개발과 샘플 대응까지 포함합니다.'],['BUSINESS CONSULTING','한중 사업 컨설팅','양국 시장 진출, 합작 구조와 계약 조건, 현지 파트너 검증을 지원합니다.'],['WORKFORCE OPERATION','프로젝트 인력 운영','석재 시공 전문 인력을 프로젝트 단위로 편성해 자재와 시공을 함께 책임집니다.']].map(([e,t,b])=><article key={e} className="bg-background p-8"><span className="eyebrow text-primary">{e}</span><h3 className="mt-8 text-2xl font-semibold">{t}</h3><p className="mt-5 text-sm leading-7 text-muted-foreground">{b}</p></article>)}</div><div className="mt-12 grid gap-6 md:grid-cols-4">{[['건설사 · 시공사','외장재 물량과 납기'],['설계 · 인테리어','사양·샘플·특수 마감'],['디벨로퍼','원가와 공정 일정 설계'],['자재 유통사','안정적인 지속 공급선']].map(([t,b])=><div key={t}><b>{t}</b><p className="mt-2 text-sm text-muted-foreground">{b}</p></div>)}</div></div></section>
-  <section className="mx-auto max-w-[1440px] px-5 py-24 lg:px-10"><div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]"><div><p className="eyebrow text-primary">WHY EUM&amp;BUILD</p><h2 className="mt-5 text-4xl font-semibold">직통 구조의 차이</h2></div><div className="overflow-x-auto"><table className="comparison"><thead><tr><th>구분</th><th>일반 무역상 · 에이전트</th><th>이음앤빌드</th></tr></thead><tbody>{[['의사결정 속도','본사 회신 소요','협의 자리에서 즉시 확정'],['가격 구조','단계마다 마진 가산','본사 직결 단일 마진'],['책임 소재','본사와 중개상 사이 분산','한국 법인이 직접 부담']].map(r=><tr key={r[0]}>{r.map((c,i)=><td key={c}>{i===1?<><X size={14}/>{c}</>:i===2?<><Check size={14}/><b>{c}</b></>:c}</td>)}</tr>)}</tbody></table></div></div></section>
-  <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 lg:px-10"><p className="eyebrow text-muted-foreground">EXECUTIVE LEADERSHIP</p><h2 className="mt-5 text-4xl md:text-6xl">중국과 한국, 두 대표가 함께 결정합니다.</h2><div className="mt-16 grid gap-2.5 lg:grid-cols-2">{[{role:'CHINA ASSET & PARTNERSHIP',name:'YIN XIUYING',quote:'중국 거대 기업의 자산을 직접 움직이는 현지 파이프라인',items:['6개 핵심 기업 본사 직통 의사결정','자산·브랜드·생산 인프라 한국 직결','물량·생산·사양 변경 본사 협의 전권']},{role:'KOREA BUSINESS & EXECUTION',name:'조준우',quote:'한국 상업 시장을 관통하는 전략과 실행',items:['국내 사업화·유통·현지화 총괄','건설사·시공사·설계사 계약 설계','통관·물류·현장 대응 실행 전반']}].map(p=><article key={p.name} className="rounded-md border border-border bg-background p-8 lg:p-12"><p className="eyebrow text-muted-foreground">{p.role}</p><h3 className="mt-8 font-serif text-4xl">{p.name}</h3><p className="mt-2 text-sm text-muted-foreground">공동대표이사 · Co-CEO</p><blockquote className="my-9 border-l border-foreground pl-5 font-serif text-xl leading-8">“{p.quote}”</blockquote>{p.items.map(i=><p key={i} className="border-t border-border py-4 text-sm text-muted-foreground">{i}</p>)}</article>)}</div></div></section>
-  <section className="mx-auto max-w-[1440px] px-5 py-24 lg:px-10"><p className="eyebrow text-primary">OUR EXCLUSIVE AUTHORITY</p><h2 className="mt-5 max-w-3xl text-4xl font-semibold md:text-5xl">직접 계약하고, 독점 운용하고, 함께 개발합니다.</h2><div className="mt-14 grid gap-px bg-border md:grid-cols-3">{[['01','본사 직통 계약','단가와 사양, 납기가 한 단계에서 확정되며 중간 마진이 존재하지 않습니다.'],['02','한국 내 독점 운용','6개 기업 자산의 국내 사업 운용권을 행사해 국내 경쟁 견적이 발생하지 않습니다.'],['03','공동 개발 · 투자','자재 공급을 넘어 한중 프로젝트의 개발과 투자 의사결정에 참여합니다.']].map(([n,t,b])=><article key={n} className="bg-background p-8"><span className="text-primary">{n}</span><h3 className="mt-10 text-2xl font-semibold">{t}</h3><p className="mt-5 text-sm leading-7 text-muted-foreground">{b}</p></article>)}</div><p className="mt-6 text-xs text-muted-foreground">개별 계약의 범위와 조건은 프로젝트 협의 단계에서 서면으로 확인합니다.</p></section>
-  <section className="bg-muted"><div className="mx-auto max-w-[1440px] px-5 py-24 lg:px-10"><p className="eyebrow text-primary">HOW WE WORK</p><h2 className="mt-5 text-4xl font-semibold md:text-5xl">승인 대기 없는 5단계</h2><div className="mt-14">{steps.map(([n,t,b])=><div key={n} className="grid gap-4 border-t border-border py-6 md:grid-cols-[80px_240px_1fr]"><span className="text-primary">STEP {n}</span><b>{t}</b><p className="text-sm text-muted-foreground">{b}</p></div>)}</div><div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{['무역상 중개 견적','현지 브로커 확인','본사 승인 회신 대기','단계별 마진 가산'].map(x=><p key={x} className="border border-border p-4 text-sm text-muted-foreground"><X className="mr-2 inline text-primary" size={14}/>{x}</p>)}</div></div></section>
-  <ContactBand/>
-</SiteShell>}
+const pillars = [
+  ["01", "Direct Authority", "본사 직통 계약"],
+  ["02", "Single Margin", "단일 마진 구조"],
+  ["03", "Legal Liability", "한국 법인 직접 책임"],
+];
+
+const leaders = [
+  { role: "CHINA ASSET & PARTNERSHIP", name: "YIN XIUYING", line: "6개 본사 직통 의사결정 · 생산 인프라 직결" },
+  { role: "KOREA BUSINESS & EXECUTION", name: "조준우", line: "국내 사업화 · 계약 설계 · 현장 실행 총괄" },
+];
+
+export const Route = createFileRoute("/company")({
+  head: () => ({ meta: [
+    { title: "회사 소개 — 이음앤빌드" },
+    { name: "description", content: "이음앤빌드 회사 개요, 직통 계약 구조, 공동대표 리더십과 6개 독점 브랜드를 한 화면에 소개합니다." },
+    { property: "og:title", content: "회사 소개 — 이음앤빌드" },
+    { property: "og:description", content: "중국 본사와 직접 결정하고 한국 법인이 직접 책임지는 구조" },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
+  component: Company,
+});
+
+function Company() {
+  return <SiteShell fullscreen>
+    <div className="flex h-full min-h-0 flex-col px-5 pb-2 pt-16 sm:px-8 sm:pt-20 lg:px-14">
+      <div className="mx-auto flex min-h-0 w-full max-w-[1280px] flex-1 flex-col">
+        <div className="shrink-0">
+          <p className="eyebrow text-muted-foreground">COMPANY · EXCLUSIVE REGIONAL HQ</p>
+          <h1 className="mt-2 break-keep text-[20px] font-extrabold leading-[1.3] tracking-tight sm:text-[26px] lg:text-[32px]">
+            한국 법인이 직접 계약하고 <span className="text-gold">직접 책임집니다.</span>
+          </h1>
+        </div>
+
+        <div className="mt-4 grid shrink-0 gap-px bg-border sm:grid-cols-3">
+          {pillars.map(([n, en, ko]) => <article key={n} className="bg-background px-4 py-3">
+            <p className="text-[10px] font-semibold tracking-[0.16em] text-muted-foreground">{n} · {en}</p>
+            <h2 className="mt-1.5 text-[13px] font-bold sm:text-sm">{ko}</h2>
+          </article>)}
+        </div>
+
+        <div className="mt-3 grid shrink-0 gap-px bg-border sm:grid-cols-2">
+          {leaders.map((leader) => <article key={leader.name} className="bg-background px-4 py-3">
+            <p className="text-[9px] font-semibold tracking-[0.18em] text-gold">{leader.role}</p>
+            <p className="mt-1.5 text-[13px] font-bold sm:text-sm">{leader.name} <span className="font-normal text-muted-foreground">· 공동대표이사</span></p>
+            <p className="mt-1 text-[11px] leading-5 text-muted-foreground">{leader.line}</p>
+          </article>)}
+        </div>
+
+        <div className="mt-3 flex min-h-0 flex-1 flex-col">
+          <p className="eyebrow shrink-0 text-muted-foreground">THE CURATED PORTFOLIO · SIX BRANDS</p>
+          <div className="mt-2 grid min-h-0 flex-1 grid-cols-3 gap-px bg-border lg:grid-cols-6">
+            {brands.map((brand) => <Link key={brand.slug} to={`/brands/${brand.slug}` as never} className="group relative min-h-0 overflow-hidden bg-background">
+              <img src={asset(brand.heroImage)} alt={brand.name} className="h-full w-full object-cover brightness-95 transition duration-700 group-hover:scale-105 group-hover:brightness-105" />
+              <div className="absolute inset-x-0 bottom-0 bg-background/92 px-2 py-1.5 backdrop-blur-sm">
+                <p className="text-[9px] font-semibold text-gold">{brand.number}</p>
+                <p className="truncate text-[10px] font-bold sm:text-[11px]">{brand.name}</p>
+              </div>
+            </Link>)}
+          </div>
+        </div>
+
+        <div className="mt-2 flex shrink-0 flex-wrap items-center gap-x-4 gap-y-1 text-[10px] leading-5 text-muted-foreground sm:text-[11px]">
+          <span className="font-bold tracking-[0.12em] text-foreground">주식회사 이음앤빌드</span>
+          <span>사업자 810-87-04122</span>
+          <span className="hidden sm:inline">서울 강남구 테헤란로 329 삼흥빌딩 1612호</span>
+          <a href="tel:01031138668" className="inline-flex items-center gap-1 font-semibold text-foreground">견적 상담 010-3113-8668 <ArrowUpRight size={12} className="text-gold" /></a>
+        </div>
+      </div>
+    </div>
+  </SiteShell>;
+}
