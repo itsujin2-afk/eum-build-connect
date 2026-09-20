@@ -37,7 +37,8 @@ export function CinematicHome() {
           <div className="mt-10 grid items-center gap-16 lg:mt-16 lg:grid-cols-12">
             <div key={active} className="order-2 lg:order-1 lg:col-span-5">
               <h1 className="hero-reveal hero-reveal-title break-keep text-3xl font-black leading-[1.16] tracking-tighter sm:text-5xl sm:leading-[1.14] lg:text-[3.4rem]">
-                세계의 건축을 완성한 소재,<br className="hidden sm:block" />{" "}
+                세계의 건축을<br className="hidden lg:block" />{" "}
+                완성한 소재,<br className="hidden sm:block" />{" "}
                 <span className="text-gold">한국의 프로젝트로.</span>
               </h1>
               <p className="hero-reveal hero-reveal-copy mt-7 max-w-md text-sm leading-7 text-muted-foreground">
