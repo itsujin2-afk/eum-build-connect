@@ -20,7 +20,7 @@ export function BrandPage({ brand }: { brand: Brand | undefined }) {
     <div className="flex h-full min-h-0 flex-col px-5 pb-2 pt-16 sm:px-8 sm:pt-20 lg:px-14">
       <div className="mx-auto grid min-h-0 w-full max-w-[1280px] flex-1 gap-4 lg:grid-cols-12 lg:gap-8">
         {/* brand identity */}
-        <div className="flex min-h-0 shrink-0 flex-col lg:col-span-4">
+        <div className="flex min-h-0 w-full min-w-0 shrink-0 flex-col lg:col-span-4">
           <p className="eyebrow text-muted-foreground">{brand.english}{brand.since ? ` · SINCE ${brand.since}` : ""}</p>
           <h1 className="mt-2 break-keep text-[22px] font-extrabold leading-[1.25] tracking-tight sm:text-[28px] lg:text-[34px]">
             <span className="mr-2 text-gold">{brand.number}</span>{brand.name}
@@ -39,7 +39,7 @@ export function BrandPage({ brand }: { brand: Brand | undefined }) {
         </div>
 
         {/* showcase */}
-        <div className="flex min-h-0 flex-1 flex-col lg:col-span-8">
+        <div className="flex min-h-0 w-full min-w-0 flex-1 flex-col lg:col-span-8">
           <div className="relative min-h-[160px] flex-1 overflow-hidden bg-surface">
             <img src={asset(current)} alt={`${brand.name} 대표 이미지`} className="h-full w-full object-cover" />
             <div className="absolute bottom-0 left-0 bg-background/92 px-4 py-2.5 backdrop-blur-sm">
