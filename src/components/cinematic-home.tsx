@@ -14,13 +14,15 @@ export function CinematicHome() {
           className="h-full w-full scale-[1.04] object-cover object-center"
         />
         {/* brand veil: keeps the white editorial tone + guarantees logo contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/55 to-white/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_42%,rgba(255,255,255,0.5),transparent_75%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/35 to-white/60" />
+        <div className="absolute inset-0 bg-[radial-gradient(60%_52%_at_50%_44%,rgba(255,255,255,0.82),transparent_78%)]" />
       </div>
 
       {/* unified centerpiece */}
       <div className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1280px] flex-1 flex-col items-center justify-center px-5 pb-4 pt-16 text-center sm:px-8 sm:pt-20">
-        <div className="hero-reveal hero-reveal-logo flex flex-col items-center">
+        <div className="hero-reveal hero-reveal-logo relative flex flex-col items-center">
+          <div aria-hidden className="absolute -inset-x-16 -inset-y-10 rounded-full bg-white/75 blur-2xl sm:-inset-x-24 sm:-inset-y-12" />
+          <div className="relative flex flex-col items-center">
           <img
             src={logoAsset.url}
             alt="이음앤빌드"
