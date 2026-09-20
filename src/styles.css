@@ -240,6 +240,21 @@
   background: linear-gradient(180deg, color-mix(in oklch, var(--color-foreground) 25%, transparent), color-mix(in oklch, var(--color-foreground) 78%, transparent));
 }
 
+.cinematic-logo-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, color-mix(in oklch, var(--color-foreground) 30%, transparent) 0%, color-mix(in oklch, var(--color-foreground) 62%, transparent) 60%, color-mix(in oklch, var(--color-foreground) 76%, transparent) 100%);
+}
+
+.logo-focus {
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2.25rem) clamp(1.5rem, 5vw, 4rem);
+  background: color-mix(in oklch, var(--color-foreground) 20%, transparent);
+  backdrop-filter: blur(5px);
+}
+
 .material-marquee {
   width: 100%;
 }

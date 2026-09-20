@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ContactBand, SiteShell } from "@/components/site-shell";
+import { SiteShell } from "@/components/site-shell";
 import { CinematicHome } from "@/components/cinematic-home";
 
 export const Route = createFileRoute("/")({
@@ -7,7 +7,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-function Home(){return <SiteShell overlayHeader>
+function Home(){return <SiteShell overlayHeader hideFooter>
   <CinematicHome/>
-  <ContactBand/>
 </SiteShell>}
