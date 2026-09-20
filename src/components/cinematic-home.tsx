@@ -7,12 +7,12 @@ const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, quer
 const asset = (id: string) => imageModules[`../assets/eum/${id}.jpg`] ?? "";
 
 const slides = [
-  { src: asset("023"), number: "01", alt: "환구석재의 절제된 천연석 건축 표면" },
-  { src: asset("034"), number: "02", alt: "라이온 킹의 밝은 웜그레이 세라믹 표면" },
-  { src: asset("048"), number: "03", alt: "진청 유리의 미니멀한 건축 유리 가공" },
-  { src: asset("057"), number: "04", alt: "이센메이쥐의 차분한 원목 마루 텍스처" },
-  { src: asset("069"), number: "05", alt: "슈오펑의 단정한 블랙 아치 목문" },
-  { src: asset("080"), number: "06", alt: "잉코 데코의 모노톤 벽 패널" },
+  { src: asset("030"), number: "01", alt: "미니멀한 조명 아래 전시된 천연 대리석 슬랩" },
+  { src: asset("023"), number: "02", alt: "정제된 기하학이 돋보이는 석회암 건축" },
+  { src: asset("020"), number: "03", alt: "순백의 대리석으로 완성된 그랜드 모스크" },
+  { src: asset("034"), number: "04", alt: "절제된 웜그레이 세라믹 표면" },
+  { src: asset("075"), number: "05", alt: "단정한 아이보리 컬러의 미니멀 도어" },
+  { src: asset("080"), number: "06", alt: "모노톤 리드 벽 패널 인테리어" },
 ];
 
 export function CinematicHome() {
