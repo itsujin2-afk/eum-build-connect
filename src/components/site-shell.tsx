@@ -8,7 +8,7 @@ function Logo() {
   return <img src="/logo.jpg" alt="이음앤빌드" className="h-10 w-auto object-contain sm:h-12" />;
 }
 
-export function SiteShell({ children, overlayHeader = false }: { children: ReactNode; overlayHeader?: boolean }) {
+export function SiteShell({ children, overlayHeader = false, hideFooter = false }: { children: ReactNode; overlayHeader?: boolean; hideFooter?: boolean }) {
   return <div className="min-h-screen bg-background text-foreground">
     <header className="fixed inset-x-0 top-0 z-50">
       <div className={`flex items-center justify-between px-6 py-4 sm:px-10 sm:py-5 md:px-14 ${overlayHeader ? "text-primary-foreground" : "text-foreground"}`}>
@@ -29,13 +29,13 @@ export function SiteShell({ children, overlayHeader = false }: { children: React
       </div>
     </header>
     <main>{children}</main>
-    <footer className="border-t border-border bg-background text-foreground">
+    {!hideFooter && <footer className="border-t border-border bg-background text-foreground">
       <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-16 lg:grid-cols-[1.3fr_1fr_1fr] lg:px-10">
         <div><img src="/logo.jpg" alt="이음앤빌드" className="h-32 w-auto max-w-full object-contain object-left"/><p className="mt-4 max-w-sm text-sm text-muted-foreground">중국 최정상 6개 건축자재 브랜드의 공식 한국 독점 HQ</p></div>
         <div><p className="eyebrow text-muted-foreground">HEAD OFFICE</p><p className="mt-4 text-sm leading-7">서울특별시 강남구 테헤란로 329<br/>삼흥빌딩 1612호 (역삼동)</p></div>
         <div><p className="eyebrow text-muted-foreground">KOREA BUSINESS</p><p className="mt-4 text-sm">조준우 공동대표이사</p><a className="mt-2 inline-flex items-center gap-2 text-xl" href="tel:01031138668">010-3113-8668 <ArrowUpRight size={18}/></a></div>
       </div><div className="border-t border-border px-5 py-5 text-center text-[10px] tracking-[.2em] text-muted-foreground">BRIDGING MARKETS, GOVERNING ASSETS. · EUM&amp;BUILD CO., LTD.</div>
-    </footer>
+    </footer>}
   </div>
 }
 
