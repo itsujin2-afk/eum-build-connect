@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-function Home(){return <SiteShell overlayHeader>
+function Home(){return <SiteShell>
   <CinematicHome/>
   <ContactBand/>
 </SiteShell>}

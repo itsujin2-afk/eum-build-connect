@@ -1,8 +1,9 @@
+// ============= Full file contents =============
+
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import logoAsset from "@/assets/eum-build-logo-transparent.png.asset.json";
-import { Button, buttonVariants } from "@/components/ui/button";
 import { brands } from "@/lib/site-data";
 
 const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
@@ -26,50 +27,68 @@ export function CinematicHome() {
 
   return (
     <>
-      <section className="relative flex min-h-[760px] h-[100svh] flex-col overflow-hidden bg-foreground text-primary-foreground">
-        <div className="absolute inset-0">
-          {heroFrames.map((frame, index) => (
-            <img
-              key={frame.image}
-              src={asset(frame.image)}
-              alt={frame.caption}
-              className={`cinematic-frame ${index === active ? "is-active" : ""}`}
-            />
-          ))}
-          <div className="cinematic-shade" />
-        </div>
-
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-1 flex-col justify-between px-5 pb-8 pt-28 sm:px-8 sm:pt-32 lg:px-16 lg:pb-12">
-          <div className="hero-reveal hero-reveal-logo">
-            <img src={logoAsset.url} alt="이음앤빌드" className="w-[140px] object-contain brightness-110 drop-shadow-[0_10px_24px_rgba(0,0,0,0.45)] sm:w-[210px]" />
+      <section className="relative overflow-hidden bg-background">
+        <div className="mx-auto flex min-h-[92svh] w-full max-w-[1440px] flex-col justify-center px-5 pb-28 pt-28 sm:px-8 lg:px-16 lg:pb-32 lg:pt-32">
+          <div className="hero-reveal hero-reveal-logo flex flex-col items-start gap-4">
+            <img src={logoAsset.url} alt="이음앤빌드" className="w-28 object-contain sm:w-36" />
+            <p className="eyebrow text-muted-foreground">EXCLUSIVE REGIONAL HQ · KOREA</p>
           </div>
 
-          <div key={active} className="max-w-4xl">
-            <p className="hero-reveal hero-reveal-eyebrow eyebrow text-primary-foreground/70">EXCLUSIVE REGIONAL HQ · KOREA</p>
-            <h1 className="hero-reveal hero-reveal-title mt-5 text-3xl font-black leading-[1.16] tracking-tighter sm:text-5xl sm:leading-[1.14] md:text-6xl lg:text-[4rem]">
-              세계의 건축을 완성한 소재,<br className="hidden sm:block" /> 한국의 프로젝트로.
-            </h1>
-            <p className="hero-reveal hero-reveal-copy mt-7 max-w-lg text-sm leading-7 text-primary-foreground/80">
-              중국 최정상 6개 건축자재 브랜드를 하나의 책임 있는 창구로 연결합니다.
-            </p>
-            <div className="hero-reveal hero-reveal-actions mt-8 flex flex-wrap gap-2.5">
-              <Link to="/company" className={buttonVariants({ variant: "outline", className: "h-auto rounded-md border-primary-foreground/50 bg-transparent px-6 py-3 text-xs font-semibold text-primary-foreground shadow-none hover:bg-primary-foreground/10 hover:text-primary-foreground" })}>
-                이음앤빌드 소개 <ArrowUpRight />
-              </Link>
+          <div className="mt-10 grid items-center gap-16 lg:mt-16 lg:grid-cols-12">
+            <div key={active} className="order-2 lg:order-1 lg:col-span-5">
+              <h1 className="hero-reveal hero-reveal-title break-keep text-3xl font-black leading-[1.16] tracking-tighter sm:text-5xl sm:leading-[1.14] lg:text-[3.4rem]">
+                세계의 건축을<br className="hidden lg:block" />{" "}
+                완성한 소재,<br className="hidden sm:block" />{" "}
+                <span className="text-gold">한국의 프로젝트로.</span>
+              </h1>
+              <p className="hero-reveal hero-reveal-copy mt-7 max-w-md text-sm leading-7 text-muted-foreground">
+                중국 최정상 6개 건축자재 브랜드를 하나의 책임 있는 창구로 연결합니다.
+              </p>
+              <div className="hero-reveal hero-reveal-actions mt-9">
+                <Link to="/company" className="group inline-flex items-center gap-4 pb-1 text-xs font-bold uppercase tracking-[0.18em] text-foreground">
+                  <span className="relative">
+                    이음앤빌드 소개
+                    <span aria-hidden className="absolute inset-x-0 -bottom-1 h-px bg-border transition-colors duration-500 group-hover:bg-gold" />
+                  </span>
+                  <ArrowUpRight size={18} className="text-gold transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-1" />
+                </Link>
+              </div>
+              <div className="hero-reveal hero-reveal-actions mt-12 flex items-center gap-3">
+                {heroFrames.map((frame, index) => (
+                  <button key={frame.image} type="button" aria-label={`${index + 1}번 이미지 보기`} onClick={() => setActive(index)} className="group py-2">
+                    <span className={`block h-px w-10 transition-colors duration-300 ${index === active ? "bg-gold" : "bg-border group-hover:bg-muted-foreground"}`} />
+                  </button>
+                ))}
+                <span className="ml-2 text-[10px] font-semibold tracking-[0.2em] text-muted-foreground">
+                  0{active + 1} / 0{heroFrames.length} · {heroFrames[active]?.label}
+                </span>
+              </div>
             </div>
-          </div>
 
-          <div className="mt-9 flex items-end justify-between border-t border-primary-foreground/30 pt-4">
-            <div><p className="text-[10px] font-semibold text-primary-foreground/60">0{active + 1} / 03</p><p className="mt-2 text-sm font-medium">{heroFrames[active]?.label}</p></div>
-            <div className="hidden gap-2 sm:flex" aria-label="대표 이미지 선택">
-              {heroFrames.map((frame, index) => <Button key={frame.image} type="button" variant="ghost" size="icon" aria-label={`${index + 1}번 이미지 보기`} onClick={() => setActive(index)} className="h-6 w-12 rounded-none p-0 hover:bg-transparent"><span className={`block h-px w-12 transition-all ${index === active ? "bg-primary-foreground" : "bg-primary-foreground/40"}`} /></Button>)}
+            <div className="order-1 lg:order-2 lg:col-span-7">
+              <div className="relative p-3 sm:p-5">
+                <div aria-hidden className="absolute inset-0 translate-x-4 translate-y-4 border border-border" />
+                <div className="relative aspect-[4/3] overflow-hidden bg-surface sm:aspect-[16/11]">
+                  {heroFrames.map((frame, index) => (
+                    <img
+                      key={frame.image}
+                      src={asset(frame.image)}
+                      alt={frame.caption}
+                      className={`cinematic-frame ${index === active ? "is-active" : ""}`}
+                    />
+                  ))}
+                </div>
+                <div key={active} className="absolute -bottom-8 right-4 max-w-xs border-l-2 border-gold bg-background px-6 py-5 shadow-[0_24px_60px_-24px_rgba(25,25,25,0.25)] sm:-bottom-10 sm:right-8">
+                  <p className="text-[10px] font-bold tracking-[0.3em] text-gold">CURATION 0{active + 1}</p>
+                  <p className="mt-2 text-xs leading-6 text-muted-foreground">{heroFrames[active]?.caption}</p>
+                </div>
+              </div>
             </div>
-            <p className="max-w-xs text-right text-xs text-primary-foreground/70">{heroFrames[active]?.caption}</p>
           </div>
         </div>
       </section>
 
-      <section id="collection" className="overflow-hidden bg-background py-24 lg:py-32">
+      <section id="collection" className="overflow-hidden border-t border-border bg-background py-24 lg:py-32">
         <div className="mx-auto max-w-[1440px] px-5 lg:px-10">
           <div className="flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div><p className="eyebrow text-muted-foreground">SIX MATERIAL LANGUAGES</p><h2 className="mt-5 text-4xl md:text-6xl">재료에서 공간까지</h2></div>
