@@ -8,3 +8,5 @@
 - [x] Verify redesigned desktop and mobile layouts
 - [x] Replace serif display typography with refined Pretendard Gothic headings
 - [x] Replace navigation, footer, and favicon marks with the official gold logo
+- [x] Separate the flagship home showcase from the detailed company profile
+- [x] Serve the official logo from a reliable local public path
