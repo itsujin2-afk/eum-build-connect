@@ -38,8 +38,23 @@ export function CinematicHome() {
             <p className="eyebrow mt-4 text-muted-foreground sm:mt-5">EXCLUSIVE REGIONAL HQ · KOREA</p>
           </div>
 
-          <div className="mt-8 grid items-center gap-10 sm:mt-12 sm:gap-12 lg:mt-14 lg:grid-cols-12 lg:gap-20">
-            <div key={active} className="lg:col-span-5">
+          <div className="relative mt-7 sm:mt-10 lg:mt-12">
+            {/* rotating frame — woven into the copy composition */}
+            <div className="hero-reveal hero-reveal-media relative ml-auto w-[86%] max-w-[300px] sm:max-w-[360px] lg:absolute lg:bottom-0 lg:right-0 lg:top-0 lg:ml-0 lg:w-[46%] lg:max-w-none">
+              <div aria-hidden className="absolute inset-0 translate-x-2.5 translate-y-2.5 border border-border" />
+              <div className="relative aspect-[16/11] overflow-hidden bg-surface lg:h-full lg:aspect-auto">
+                {heroFrames.map((frame, index) => (
+                  <img
+                    key={frame.image}
+                    src={asset(frame.image)}
+                    alt={frame.caption}
+                    className={`cinematic-frame ${index === active ? "is-active" : ""}`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div key={active} className="relative z-10 -mt-10 max-w-[560px] bg-background pr-4 pt-6 sm:-mt-14 sm:pr-8 sm:pt-8 lg:mt-0 lg:min-h-[260px] lg:max-w-[540px] lg:py-10 lg:pr-14">
               <h1 className="hero-reveal hero-reveal-title break-keep text-[22px] font-extrabold leading-[1.3] tracking-tight sm:text-3xl sm:leading-[1.28] lg:text-[2.4rem] lg:leading-[1.26]">
                 세계의 건축을<br className="hidden lg:block" />{" "}
                 완성한 소재,<br className="hidden sm:block" />{" "}
@@ -48,7 +63,7 @@ export function CinematicHome() {
               <p className="hero-reveal hero-reveal-copy mt-5 max-w-sm text-[13px] leading-7 text-muted-foreground">
                 중국 최정상 6개 건축자재 브랜드를 하나의 책임 있는 창구로 연결합니다.
               </p>
-              <div className="hero-reveal hero-reveal-actions mt-8">
+              <div className="hero-reveal hero-reveal-actions mt-7">
                 <Link to="/company" className="group inline-flex items-center gap-4 pb-1 text-xs font-bold uppercase tracking-[0.18em] text-foreground">
                   <span className="relative">
                     이음앤빌드 소개
@@ -57,35 +72,16 @@ export function CinematicHome() {
                   <ArrowUpRight size={17} className="text-gold transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-1" />
                 </Link>
               </div>
-              <div className="hero-reveal hero-reveal-actions mt-9 flex items-center gap-3">
+              <div className="hero-reveal hero-reveal-actions mt-7 flex flex-wrap items-center gap-3">
                 {heroFrames.map((frame, index) => (
                   <button key={frame.image} type="button" aria-label={`${index + 1}번 이미지 보기`} onClick={() => setActive(index)} className="group py-2">
                     <span className={`block h-px w-10 transition-colors duration-300 ${index === active ? "bg-gold" : "bg-border group-hover:bg-muted-foreground"}`} />
                   </button>
                 ))}
-                <span className="ml-2 text-[10px] font-semibold tracking-[0.2em] text-muted-foreground">
+                <span className="ml-1 text-[10px] font-semibold tracking-[0.2em] text-muted-foreground">
                   0{active + 1} / 0{heroFrames.length} · {heroFrames[active]?.label}
                 </span>
-              </div>
-            </div>
-
-            <div className="lg:col-span-7">
-              <div className="hero-reveal hero-reveal-media relative mx-auto w-full max-w-[340px] p-2 sm:p-2.5 lg:ml-auto lg:mr-0 lg:max-w-[440px]">
-                <div aria-hidden className="absolute inset-0 translate-x-3 translate-y-3 border border-border" />
-                <div className="relative aspect-[4/3] overflow-hidden bg-surface sm:aspect-[16/11]">
-                  {heroFrames.map((frame, index) => (
-                    <img
-                      key={frame.image}
-                      src={asset(frame.image)}
-                      alt={frame.caption}
-                      className={`cinematic-frame ${index === active ? "is-active" : ""}`}
-                    />
-                  ))}
-                  <div key={active} className="absolute bottom-3 right-3 max-w-[200px] border-l-2 border-gold bg-background/95 px-3 py-2 backdrop-blur-sm sm:bottom-4 sm:right-4 sm:px-3.5 sm:py-2.5">
-                    <p className="text-[10px] font-bold tracking-[0.3em] text-gold">CURATION 0{active + 1}</p>
-                    <p className="mt-1 text-[11px] leading-5 text-muted-foreground">{heroFrames[active]?.caption}</p>
-                  </div>
-                </div>
+                <span className="w-full text-[11px] leading-5 text-muted-foreground sm:w-auto sm:border-l sm:border-border sm:pl-3">{heroFrames[active]?.caption}</span>
               </div>
             </div>
           </div>
