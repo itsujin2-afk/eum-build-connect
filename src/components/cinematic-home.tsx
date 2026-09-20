@@ -11,7 +11,7 @@ const slides = [
   { src: asset("023"), number: "02", alt: "정제된 기하학이 돋보이는 석회암 건축" },
   { src: asset("020"), number: "03", alt: "순백의 대리석으로 완성된 그랜드 모스크" },
   { src: asset("034"), number: "04", alt: "절제된 웜그레이 세라믹 표면" },
-  { src: asset("075"), number: "05", alt: "단정한 아이보리 컬러의 미니멀 도어" },
+  { src: asset("010"), number: "05", alt: "정밀한 기하학적 창호 패턴의 대형 건축 입면" },
   { src: asset("080"), number: "06", alt: "모노톤 리드 벽 패널 인테리어" },
 ];
 
