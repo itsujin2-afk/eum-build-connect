@@ -13,3 +13,5 @@
 - [x] Redesign Home with a cinematic architectural image sequence and animated material gallery
 - [x] Consolidate the former Home narrative and six-brand overview into Company
 - [x] Verify the redesigned Home and expanded Company pages on desktop and mobile
+
+- [ ] 히어로 로고 140/210px 확대 + 명확성 향상, 제목 font-black 임팩트 강화, 포트폴리오 보기 제거

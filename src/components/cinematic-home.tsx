@@ -41,12 +41,12 @@ export function CinematicHome() {
 
         <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-1 flex-col justify-between px-5 pb-8 pt-28 sm:px-8 sm:pt-32 lg:px-16 lg:pb-12">
           <div className="hero-reveal hero-reveal-logo">
-            <img src={logoAsset.url} alt="이음앤빌드" className="w-16 object-contain drop-shadow-lg sm:w-20" />
+            <img src={logoAsset.url} alt="이음앤빌드" className="w-[140px] object-contain brightness-110 drop-shadow-[0_10px_24px_rgba(0,0,0,0.45)] sm:w-[210px]" />
           </div>
 
           <div key={active} className="max-w-4xl">
             <p className="hero-reveal hero-reveal-eyebrow eyebrow text-primary-foreground/70">EXCLUSIVE REGIONAL HQ · KOREA</p>
-            <h1 className="hero-reveal hero-reveal-title mt-5 text-3xl font-extrabold leading-[1.18] tracking-[-0.035em] sm:text-5xl sm:leading-[1.14] md:text-6xl lg:text-[4.25rem]">
+            <h1 className="hero-reveal hero-reveal-title mt-5 text-3xl font-black leading-[1.16] tracking-tighter sm:text-5xl sm:leading-[1.14] md:text-6xl lg:text-[4rem]">
               세계의 건축을 완성한 소재,<br className="hidden sm:block" />한국의 프로젝트로.
             </h1>
             <p className="hero-reveal hero-reveal-copy mt-7 max-w-lg text-sm leading-7 text-primary-foreground/80">
