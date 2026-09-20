@@ -47,7 +47,7 @@ export function CinematicHome() {
           <div key={active} className="max-w-4xl">
             <p className="hero-reveal hero-reveal-eyebrow eyebrow text-primary-foreground/70">EXCLUSIVE REGIONAL HQ · KOREA</p>
             <h1 className="hero-reveal hero-reveal-title mt-5 text-3xl font-black leading-[1.16] tracking-tighter sm:text-5xl sm:leading-[1.14] md:text-6xl lg:text-[4rem]">
-              세계의 건축을 완성한 소재,<br className="hidden sm:block" />한국의 프로젝트로.
+              세계의 건축을 완성한 소재,<br className="hidden sm:block" /> 한국의 프로젝트로.
             </h1>
             <p className="hero-reveal hero-reveal-copy mt-7 max-w-lg text-sm leading-7 text-primary-foreground/80">
               중국 최정상 6개 건축자재 브랜드를 하나의 책임 있는 창구로 연결합니다.
