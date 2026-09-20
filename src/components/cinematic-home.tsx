@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import logoAsset from "@/assets/eum-build-logo-transparent.png.asset.json";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -39,21 +39,21 @@ export function CinematicHome() {
           <div className="cinematic-shade" />
         </div>
 
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-1 flex-col justify-end px-5 pb-8 pt-36 sm:px-8 lg:px-16 lg:pb-12">
-          <div key={active} className="max-w-3xl">
-            <img src={logoAsset.url} alt="이음앤빌드" className="hero-reveal hero-reveal-logo mb-8 w-24 object-contain drop-shadow-lg sm:w-28" />
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-1 flex-col justify-between px-5 pb-8 pt-28 sm:px-8 sm:pt-32 lg:px-16 lg:pb-12">
+          <div className="hero-reveal hero-reveal-logo">
+            <img src={logoAsset.url} alt="이음앤빌드" className="w-[140px] object-contain brightness-110 drop-shadow-[0_10px_24px_rgba(0,0,0,0.45)] sm:w-[210px]" />
+          </div>
+
+          <div key={active} className="max-w-4xl">
             <p className="hero-reveal hero-reveal-eyebrow eyebrow text-primary-foreground/70">EXCLUSIVE REGIONAL HQ · KOREA</p>
-            <h1 className="hero-reveal hero-reveal-title mt-5 text-3xl font-medium leading-[1.25] sm:text-4xl md:text-5xl lg:text-5xl">
-              세계의 건축을 완성한 소재,<br />한국의 프로젝트로.
+            <h1 className="hero-reveal hero-reveal-title mt-5 text-3xl font-black leading-[1.16] tracking-tighter sm:text-5xl sm:leading-[1.14] md:text-6xl lg:text-[4rem]">
+              세계의 건축을 완성한 소재,<br className="hidden sm:block" /> 한국의 프로젝트로.
             </h1>
-            <p className="hero-reveal hero-reveal-copy mt-6 max-w-lg text-sm leading-7 text-primary-foreground/80">
+            <p className="hero-reveal hero-reveal-copy mt-7 max-w-lg text-sm leading-7 text-primary-foreground/80">
               중국 최정상 6개 건축자재 브랜드를 하나의 책임 있는 창구로 연결합니다.
             </p>
-            <div className="hero-reveal hero-reveal-actions mt-7 flex flex-wrap gap-2.5">
-              <a href="#collection" className={buttonVariants({ className: "h-auto rounded-md bg-background px-5 py-2.5 text-xs text-foreground shadow-none hover:bg-surface" })}>
-                포트폴리오 보기 <ArrowDown />
-              </a>
-              <Link to="/company" className={buttonVariants({ variant: "outline", className: "h-auto rounded-md border-primary-foreground/50 bg-transparent px-5 py-2.5 text-xs text-primary-foreground shadow-none hover:bg-primary-foreground/10 hover:text-primary-foreground" })}>
+            <div className="hero-reveal hero-reveal-actions mt-8 flex flex-wrap gap-2.5">
+              <Link to="/company" className={buttonVariants({ variant: "outline", className: "h-auto rounded-md border-primary-foreground/50 bg-transparent px-6 py-3 text-xs font-semibold text-primary-foreground shadow-none hover:bg-primary-foreground/10 hover:text-primary-foreground" })}>
                 이음앤빌드 소개 <ArrowUpRight />
               </Link>
             </div>
