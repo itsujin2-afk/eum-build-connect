@@ -5,8 +5,6 @@ import { BoomerangVideoBg } from "@/components/boomerang-video-bg";
 import { steps } from "@/lib/site-data";
 import logoAsset from "@/assets/eum-build-logo-transparent.png.asset.json";
 
-const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
-const asset = (id: string) => imageModules[`../assets/eum/${id}.jpg`];
 
 export const Route = createFileRoute("/company")({
   head: () => ({ meta: [
