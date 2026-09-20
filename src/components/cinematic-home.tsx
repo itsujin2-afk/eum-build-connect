@@ -2,17 +2,18 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import logoAsset from "@/assets/eum-build-logo-transparent.png.asset.json";
-import { brands } from "@/lib/site-data";
 
 const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
 const asset = (id: string) => imageModules[`../assets/eum/${id}.jpg`] ?? "";
 
-const slides = brands.map((b) => ({
-  src: asset(b.heroImage),
-  number: b.number,
-  english: b.english,
-  category: b.category.split(" · ")[0] ?? b.category,
-}));
+const slides = [
+  { src: asset("023"), number: "01", alt: "환구석재의 절제된 천연석 건축 표면" },
+  { src: asset("034"), number: "02", alt: "라이온 킹의 밝은 웜그레이 세라믹 표면" },
+  { src: asset("048"), number: "03", alt: "진청 유리의 미니멀한 건축 유리 가공" },
+  { src: asset("057"), number: "04", alt: "이센메이쥐의 차분한 원목 마루 텍스처" },
+  { src: asset("069"), number: "05", alt: "슈오펑의 단정한 블랙 아치 목문" },
+  { src: asset("080"), number: "06", alt: "잉코 데코의 모노톤 벽 패널" },
+];
 
 export function CinematicHome() {
   const [active, setActive] = useState(0);
@@ -65,8 +66,8 @@ export function CinematicHome() {
             <img
               key={s.number}
               src={s.src}
-              alt={`${s.english} ${s.category}`}
-              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1800ms] ease-in-out ${
+              alt={s.alt}
+              className={`absolute inset-0 h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03] transition-opacity duration-[1800ms] ease-in-out ${
                 i === active ? "opacity-100 animate-[kenburns_9s_ease-out_forwards]" : "opacity-0"
               }`}
             />
@@ -81,7 +82,7 @@ export function CinematicHome() {
                 <button
                   key={s.number}
                   type="button"
-                  aria-label={`${s.english} 보기`}
+                  aria-label={`${s.number}번 이미지 보기`}
                   onClick={() => setActive(i)}
                   className={`h-px transition-all duration-500 ${i === active ? "w-8 bg-gold" : "w-4 bg-surface/50 hover:bg-surface"}`}
                 />
