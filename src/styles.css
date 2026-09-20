@@ -296,7 +296,8 @@
 
 /* ===== Luxury ambient hero animation (no photography) ===== */
 .lux-stage {
-  position: relative;
+  position: fixed;
+  inset: 0;
   overflow: hidden;
   background:
     radial-gradient(60% 55% at 50% 46%, color-mix(in oklch, var(--gold) 16%, transparent), transparent 72%),
