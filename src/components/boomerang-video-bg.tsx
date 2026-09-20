@@ -53,7 +53,8 @@ export function BoomerangVideoBg() {
       let previous = 0;
       const draw = (time: number) => {
         if (time - previous >= 1000 / 30) {
-          output.drawImage(frames[frameIndex], 0, 0);
+          const frame = frames[frameIndex];
+          if (frame) output.drawImage(frame, 0, 0);
           frameIndex += direction;
           if (frameIndex >= frames.length - 1 || frameIndex <= 0) direction *= -1;
           previous = time;
