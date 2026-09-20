@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import { brands } from "@/lib/site-data";
 import { buttonVariants } from "@/components/ui/button";
 
-export function SiteShell({ children, overlayHeader = false, hideFooter = false, hideFooterLogo = false }: { children: ReactNode; overlayHeader?: boolean; hideFooter?: boolean; hideFooterLogo?: boolean }) {
-  return <div className="min-h-screen bg-background text-foreground">
+export function SiteShell({ children, overlayHeader = false, hideFooter = false, hideFooterLogo = false, fullscreen = false }: { children: ReactNode; overlayHeader?: boolean; hideFooter?: boolean; hideFooterLogo?: boolean; fullscreen?: boolean }) {
+  return <div className={fullscreen ? "flex h-svh flex-col overflow-hidden bg-background text-foreground" : "min-h-screen bg-background text-foreground"}>
     <header className="fixed inset-x-0 top-0 z-50">
       <div className={`relative flex items-center justify-end px-6 py-4 sm:px-10 sm:py-5 md:px-14 ${overlayHeader ? "text-primary-foreground" : "text-foreground"}`}>
         <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex" aria-label="주요 메뉴">
@@ -23,9 +23,9 @@ export function SiteShell({ children, overlayHeader = false, hideFooter = false,
         <details className="relative sm:hidden"><summary className="list-none cursor-pointer p-2" aria-label="메뉴 열기"><Menu/></summary><div className="absolute right-0 mt-3 w-72 rounded-md border border-border bg-background p-3 text-foreground shadow-sm"><Link to="/" className="mobile-link">Home</Link><Link to="/company" className="mobile-link">회사소개</Link>{brands.map((brand)=><Link key={brand.slug} to={`/brands/${brand.slug}` as "/brands/huanqiu-stone"} className="mobile-link"><span className="mr-2 text-muted-foreground">{brand.number}</span>{brand.name}</Link>)}</div></details>
       </div>
     </header>
-    <main>{children}</main>
-    {!hideFooter && <footer className="border-t border-border bg-background text-foreground">
-      <div className="mx-auto flex max-w-[1440px] flex-col gap-3 px-5 py-6 text-[11px] leading-6 text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-10">
+    <main className={fullscreen ? "min-h-0 flex-1" : undefined}>{children}</main>
+    {!hideFooter && <footer className="shrink-0 border-t border-border bg-background text-foreground">
+      <div className={`mx-auto flex max-w-[1440px] flex-wrap items-center gap-x-4 gap-y-1 px-5 text-[10px] leading-5 text-muted-foreground sm:justify-between sm:text-[11px] lg:px-10 ${fullscreen ? "py-2.5" : "py-6"}`}>
         <div className="flex items-center gap-3">
           {!hideFooterLogo && <img src="/logo.jpg" alt="이음앤빌드" className="h-6 w-auto object-contain"/>}
           <span className="font-semibold tracking-[.12em] text-foreground">EUM&amp;BUILD CO., LTD.</span>
