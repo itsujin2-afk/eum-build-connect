@@ -94,36 +94,40 @@ function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
 
 function Company() {
   return <SiteShell>
-    {/* Top Visual Hero */}
-    <section className="relative flex min-h-[92svh] items-end overflow-hidden">
-      <img src={asset("010")} alt="정밀한 기하학적 창호 패턴의 대형 건축 입면" className="absolute inset-0 h-full w-full object-cover saturate-[0.8] brightness-[0.98] contrast-[1.03]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/10" />
-      <div className="relative mx-auto w-full max-w-[1440px] px-5 pb-20 pt-44 sm:px-10 lg:px-10">
-        <p className="eyebrow text-foreground/70">EUM&BUILD · EXCLUSIVE REGIONAL HQ</p>
-        <h1 className="mt-6 break-keep text-4xl font-bold leading-[1.15] tracking-tight sm:text-6xl lg:text-[72px]">
+    {/* Boomerang Video Hero + docked glass info panel */}
+    <section className="relative flex min-h-[100svh] flex-col overflow-hidden">
+      <BoomerangVideoBg />
+      <div className="absolute inset-0 z-[1] bg-background/25" />
+      <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-5 pb-10 pt-28 text-center sm:pt-32">
+        <img src={logoAsset.url} alt="이음앤빌드 로고" className="w-[150px] drop-shadow-[0_16px_40px_rgba(60,44,8,0.25)] sm:w-[190px]" />
+        <h1 className="mt-8 break-keep text-4xl font-bold leading-[1.15] tracking-tight sm:text-6xl lg:text-[68px]">
           중국 최정상 6개 브랜드<br />공식 한국 <span className="text-gold">독점 HQ</span>
         </h1>
-        <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-foreground/70 sm:text-base sm:leading-8">
+        <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-foreground/75 sm:text-base sm:leading-8">
           본사 직통 단일 마진 구조로 최고급 건축자재를 공급하는 익스클루시브 리저널 본부
         </p>
       </div>
-    </section>
-
-    {/* WHAT DO WE DO */}
-    <section className="border-t border-border">
-      <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 lg:px-10">
-        <div className="mb-10 max-w-3xl sm:mb-14">
-          <p className="eyebrow text-muted-foreground">WHAT DO WE DO?</p>
-          <h2 className="mt-4 break-keep text-3xl font-bold leading-[1.25] tracking-tight sm:text-4xl lg:text-[42px]">중간 단계를 없앤 직통 계약 솔루션</h2>
-          <p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
-            중국 본사와 직접 계약하고 한국 법인이 모든 하자와 책임을 집니다. 지체 없는 의사결정과 투명한 단일 마진으로 프로젝트를 완성합니다.
-          </p>
-        </div>
-        <div className="grid gap-px border border-border bg-border md:grid-cols-3">
-          {pillars.map(([num, en, ko]) => <article key={num} className="bg-background px-7 py-9">
-            <p className="text-[10px] font-semibold tracking-[0.18em] text-muted-foreground">{num} · <span className="text-gold">{en}</span></p>
-            <h3 className="mt-4 text-lg font-bold tracking-tight sm:text-xl">{ko}</h3>
-          </article>)}
+      <div className="relative z-10 mx-auto w-full max-w-5xl px-4 sm:px-6">
+        <div className="rounded-t-xl border border-b-0 border-border bg-background/90 px-5 pb-6 pt-6 shadow-sm backdrop-blur-md sm:px-8 sm:pb-8 sm:pt-8 md:px-12 md:pt-10">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-10">
+            <div>
+              <p className="eyebrow text-muted-foreground">WHAT DO WE DO?</p>
+              <h2 className="mt-3 break-keep text-xl font-bold leading-[1.3] tracking-tight sm:text-2xl">중간 단계를 없앤 직통 계약 솔루션</h2>
+            </div>
+            <p className="break-keep text-[13px] leading-6 text-muted-foreground sm:text-sm sm:leading-7 md:pt-7">
+              중국 본사와 직접 계약하고 한국 법인이 모든 하자와 책임을 집니다. 지체 없는 의사결정과 투명한 단일 마진으로 프로젝트를 완성합니다.
+            </p>
+          </div>
+          <div className="my-4 h-px w-full bg-border sm:my-6" />
+          <div className="grid gap-5 sm:grid-cols-3 sm:gap-8">
+            {pillars.map(([num, en, ko]) => <div key={num} className="group">
+              <p className="text-[10px] font-semibold tracking-[0.18em] text-muted-foreground">{num} · <span className="text-gold">{en}</span></p>
+              <p className="mt-2 flex items-center gap-2 text-[15px] font-bold tracking-tight">
+                {ko}
+                <ArrowRight size={14} className="text-gold opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </p>
+            </div>)}
+          </div>
         </div>
       </div>
     </section>
