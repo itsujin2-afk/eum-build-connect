@@ -6,3 +6,4 @@
 - [x] Apply white editorial design system across all 8 pages
 - [x] Add full-screen boomerang video homepage and transparent navigation
 - [x] Verify redesigned desktop and mobile layouts
+- [x] Replace serif display typography with refined Pretendard Gothic headings
