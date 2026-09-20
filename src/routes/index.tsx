@@ -1,31 +1,13 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, ArrowUpRight, Check, MoveRight } from "lucide-react";
-import { brands, steps } from "@/lib/site-data";
+import { createFileRoute } from "@tanstack/react-router";
 import { ContactBand, SiteShell } from "@/components/site-shell";
-import { BoomerangVideoBg } from "@/components/boomerang-video-bg";
-import { buttonVariants } from "@/components/ui/button";
-
-const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string,string>;
-const asset = (id:string) => imageModules[`../assets/eum/${id}.jpg`];
+import { CinematicHome } from "@/components/cinematic-home";
 
 export const Route = createFileRoute("/")({
   head:()=>({meta:[{title:"이음앤빌드 — 중국 6개 건축자재 브랜드 공식 한국 HQ"},{name:"description",content:"본사 직통 단일 마진 구조로 석재, 타일, 유리, 마루, 목문, 벽패널을 공급하는 이음앤빌드입니다."},{property:"og:title",content:"이음앤빌드 — Exclusive Regional HQ"},{property:"og:description",content:"중국 최정상 6개 건축자재 브랜드의 공식 한국 독점 HQ"},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),
   component: Home,
 });
 
-function Home(){return <SiteShell>
-  <section className="relative flex h-screen min-h-[760px] flex-col items-center overflow-hidden bg-background">
-    <BoomerangVideoBg/>
-    <div className="pointer-events-none absolute inset-0 z-[1] bg-background/20"/>
-    <div className="relative z-10 px-4 pt-28 text-center sm:px-6 sm:pt-32 md:pt-36">
-      <h1 className="text-4xl leading-[1.1] sm:text-5xl md:text-7xl lg:text-8xl">중국 최정상 6개 브랜드<br/>공식 한국 독점 HQ</h1>
-      <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-foreground/70 sm:mt-6 md:mt-8 md:text-base">본사 직통 단일 마진 구조로 최고급 건축자재를 공급하는 익스클루시브 리저널 본부</p>
-      <a href="#portfolio" className={buttonVariants({size:"lg",className:"mt-6 h-auto rounded-lg px-8 py-3 shadow-none sm:mt-8 md:mt-10"})}>6개 브랜드 보기 <ArrowDown/></a>
-    </div>
-    <div className="relative z-10 mt-auto w-full max-w-5xl px-4 sm:px-6"><div className="rounded-t-xl border border-b-0 border-border bg-background/90 px-5 pt-8 shadow-sm backdrop-blur-sm sm:px-8 sm:pt-10 md:px-12 md:pt-12"><div className="grid gap-5 md:grid-cols-2"><div><p className="eyebrow text-muted-foreground">WHAT DO WE DO?</p><h2 className="mt-2 text-2xl leading-tight sm:text-3xl md:text-4xl">중간 단계를 없앤<br/>직통 계약 솔루션</h2></div><p className="self-end text-sm leading-relaxed text-foreground/70 md:text-[15px]">중국 본사와 직접 계약하고 한국 법인이 모든 하자와 책임을 집니다. 지체 없는 의사결정과 투명한 단일 마진으로 프로젝트를 완성합니다.</p></div><div className="mt-6 h-px w-full bg-border sm:mt-8"/><div className="my-4 grid gap-2.5 sm:grid-cols-3">{[["01","Direct Authority","본사 직통 계약"],["02","Single Margin","단일 마진 구조"],["03","Legal Liability","한국 법인 직접 책임"]].map(([n,en,ko])=><div key={n} className="group flex cursor-pointer items-center justify-between rounded-md bg-surface px-4 py-3.5 transition-all hover:bg-accent sm:px-6 sm:py-4"><div><p className="text-[10px] text-muted-foreground">{n} / {en}</p><p className="mt-1 text-sm font-medium">{ko}</p></div><ArrowRight className="h-4 w-4 text-muted-foreground transition-all group-hover:translate-x-0.5 group-hover:text-foreground"/></div>)}</div></div></div>
-  </section>
-  <section id="portfolio" className="bg-muted py-28"><div className="mx-auto max-w-[1440px] px-5 lg:px-10"><div className="flex flex-col justify-between gap-6 md:flex-row md:items-end"><div><p className="eyebrow text-primary">THE CURATED PORTFOLIO</p><h2 className="mt-5 text-4xl font-semibold md:text-6xl">여섯 개의 브랜드</h2></div><p className="max-w-lg text-sm leading-7 text-muted-foreground">석재, 타일, 유리, 마루, 목문과 정목 가구, 벽패널과 바닥재까지 마감재 전 영역을 한 창구에서 조달합니다.</p></div><div className="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">{brands.map((brand)=><Link key={brand.slug} to={`/brands/${brand.slug}` as never} className="group bg-background"><div className="overflow-hidden"><img src={asset(brand.heroImage)} alt={brand.name} className="aspect-[16/10] w-full object-cover transition duration-700 group-hover:scale-105"/></div><div className="p-6"><div className="flex justify-between text-xs text-muted-foreground"><span>BRAND {brand.number}</span><span>{brand.since&&`SINCE ${brand.since}`}</span></div><h3 className="mt-8 text-2xl font-semibold">{brand.name}</h3><p className="mt-2 text-xs text-muted-foreground">{brand.english}</p><div className="mt-8 flex items-end justify-between"><span className="text-sm">{brand.category}</span><ArrowUpRight className="transition group-hover:translate-x-1 group-hover:-translate-y-1"/></div></div></Link>)}</div></div></section>
-  <section className="mx-auto max-w-[1440px] px-5 py-28 lg:px-10"><div className="grid gap-16 lg:grid-cols-[.9fr_1.1fr]"><div><p className="eyebrow text-primary">WHY EUM&amp;BUILD</p><h2 className="mt-6 text-4xl font-semibold leading-tight md:text-6xl">중간 단계를<br/>아예 없앴습니다.</h2><p className="mt-7 max-w-md text-sm leading-7 text-muted-foreground">본사 회신을 기다리는 대신 협의 자리에서 결정합니다. 가격은 투명해지고, 책임은 선명해집니다.</p><Link to="/company" className={buttonVariants({size:"lg",className:"mt-8 h-auto rounded-lg py-3 shadow-none"})}>회사 소개 자세히 보기 <ArrowUpRight/></Link></div><div><div className="flow-row muted"><span>일반 경로</span><p>중국 본사 → 무역상 → 현지 브로커 → 국내 유통 → 발주처</p></div><div className="flow-row"><span>직통 경로</span><p>중국 본사 <MoveRight/> <b>이음앤빌드 한국 HQ</b> <MoveRight/> 발주처</p></div>{[['의사결정 속도','협의 자리에서 즉시 확정'],['가격 구조','본사 직결 단일 마진'],['책임 소재','한국 법인이 계약 당사자로 직접 부담']].map(([a,b])=><div key={a} className="flex items-center gap-4 border-b border-border py-5 text-sm"><Check size={16} className="text-primary"/><span className="w-28 text-muted-foreground">{a}</span><b>{b}</b></div>)}</div></div></section>
-  <section className="mx-auto max-w-[1440px] px-5 py-28 lg:px-10"><div className="grid gap-16 lg:grid-cols-[.7fr_1.3fr]"><div><p className="eyebrow text-primary">HOW WE WORK</p><h2 className="mt-5 text-4xl font-semibold md:text-6xl">한 번의 미팅으로<br/>견적이 확정됩니다.</h2></div><div>{steps.map(([n,title,body])=><article key={n} className="grid gap-4 border-t border-border py-7 sm:grid-cols-[80px_180px_1fr]"><span className="text-primary">{n}</span><h3 className="font-semibold">{title}</h3><p className="text-sm leading-6 text-muted-foreground">{body}</p></article>)}</div></div></section>
+function Home(){return <SiteShell overlayHeader>
+  <CinematicHome/>
   <ContactBand/>
 </SiteShell>}

@@ -8,24 +8,24 @@ function Logo() {
   return <img src="/logo.jpg" alt="이음앤빌드" className="h-10 w-auto object-contain sm:h-12" />;
 }
 
-export function SiteShell({ children }: { children: ReactNode }) {
+export function SiteShell({ children, overlayHeader = false }: { children: ReactNode; overlayHeader?: boolean }) {
   return <div className="min-h-screen bg-background text-foreground">
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="flex items-center justify-between px-6 py-4 sm:px-10 sm:py-5 md:px-14">
-        <Link to="/" className="text-foreground" aria-label="이음앤빌드 홈"><Logo/></Link>
+      <div className={`flex items-center justify-between px-6 py-4 sm:px-10 sm:py-5 md:px-14 ${overlayHeader ? "text-primary-foreground" : "text-foreground"}`}>
+        <Link to="/" aria-label="이음앤빌드 홈"><Logo/></Link>
         <nav className="hidden items-center gap-8 lg:flex" aria-label="주요 메뉴">
-          <Link to="/" activeOptions={{exact:true}} className="nav-link">Home</Link>
-          <Link to="/company" className="nav-link">회사소개</Link>
+          <Link to="/" activeOptions={{exact:true}} className={overlayHeader ? "text-xs font-semibold text-primary-foreground/80 hover:text-primary-foreground" : "nav-link"}>Home</Link>
+          <Link to="/company" className={overlayHeader ? "text-xs font-semibold text-primary-foreground/80 hover:text-primary-foreground" : "nav-link"}>회사소개</Link>
           <div className="group relative py-7">
-             <span className="nav-link flex cursor-default items-center gap-1">브랜드 <ChevronDown size={13}/></span>
+             <span className={`${overlayHeader ? "text-xs font-semibold text-primary-foreground/80" : "nav-link"} flex cursor-default items-center gap-1`}>브랜드 <ChevronDown size={13}/></span>
              <div className="invisible absolute left-1/2 top-[58px] w-80 -translate-x-1/2 rounded-md border border-border bg-background p-2 opacity-0 shadow-sm transition group-hover:visible group-hover:opacity-100">
                {brands.map((brand)=><Link key={brand.slug} to={`/brands/${brand.slug}` as "/brands/huanqiu-stone"} className="flex items-center justify-between rounded-sm px-4 py-3 text-sm hover:bg-surface"><span><b className="mr-3 font-normal text-muted-foreground">{brand.number}</b>{brand.name}</span><span className="text-[10px] text-muted-foreground">{brand.english}</span></Link>)}
             </div>
           </div>
-           <a href="tel:01031138668" className="nav-link">문의하기</a>
+            <a href="tel:01031138668" className={overlayHeader ? "text-xs font-semibold text-primary-foreground/80 hover:text-primary-foreground" : "nav-link"}>문의하기</a>
         </nav>
-        <a href="tel:01031138668" className={buttonVariants({className:"hidden h-auto rounded-lg px-5 py-2.5 shadow-none sm:inline-flex"})}><Phone size={14}/> 견적 상담</a>
-        <details className="relative sm:hidden"><summary className="list-none cursor-pointer p-2" aria-label="메뉴 열기"><Menu/></summary><div className="absolute right-0 mt-3 w-72 rounded-md border border-border bg-background p-3 shadow-sm"><Link to="/" className="mobile-link">Home</Link><Link to="/company" className="mobile-link">회사소개</Link>{brands.map((brand)=><Link key={brand.slug} to={`/brands/${brand.slug}` as "/brands/huanqiu-stone"} className="mobile-link"><span className="mr-2 text-muted-foreground">{brand.number}</span>{brand.name}</Link>)}</div></details>
+        <a href="tel:01031138668" className={buttonVariants({className:`hidden h-auto rounded-lg px-5 py-2.5 shadow-none sm:inline-flex ${overlayHeader ? "bg-background text-foreground hover:bg-surface" : ""}`})}><Phone size={14}/> 견적 상담</a>
+        <details className="relative sm:hidden"><summary className="list-none cursor-pointer p-2" aria-label="메뉴 열기"><Menu/></summary><div className="absolute right-0 mt-3 w-72 rounded-md border border-border bg-background p-3 text-foreground shadow-sm"><Link to="/" className="mobile-link">Home</Link><Link to="/company" className="mobile-link">회사소개</Link>{brands.map((brand)=><Link key={brand.slug} to={`/brands/${brand.slug}` as "/brands/huanqiu-stone"} className="mobile-link"><span className="mr-2 text-muted-foreground">{brand.number}</span>{brand.name}</Link>)}</div></details>
       </div>
     </header>
     <main>{children}</main>

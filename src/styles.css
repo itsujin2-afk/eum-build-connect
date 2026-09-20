@@ -208,6 +208,51 @@
   & td svg { display:inline; margin-right:.5rem; color:var(--color-primary); }
 }
 
+@keyframes cinematic-in {
+  from { transform: scale(1.02); }
+  to { transform: scale(1.12); }
+}
+
+@keyframes material-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - .375rem)); }
+}
+
+.cinematic-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 1.4s ease;
+}
+
+.cinematic-frame.is-active {
+  opacity: 1;
+  animation: cinematic-in 7s ease-out both;
+}
+
+.cinematic-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, color-mix(in oklch, var(--color-foreground) 25%, transparent), color-mix(in oklch, var(--color-foreground) 78%, transparent));
+}
+
+.material-marquee {
+  width: 100%;
+}
+
+.material-track {
+  display: flex;
+  width: max-content;
+  gap: .75rem;
+  animation: material-scroll 38s linear infinite;
+}
+
+.material-track:hover { animation-play-state: paused; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }

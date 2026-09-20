@@ -10,3 +10,6 @@
 - [x] Replace navigation, footer, and favicon marks with the official gold logo
 - [x] Separate the flagship home showcase from the detailed company profile
 - [x] Serve the official logo from a reliable local public path
+- [x] Redesign Home with a cinematic architectural image sequence and animated material gallery
+- [x] Consolidate the former Home narrative and six-brand overview into Company
+- [x] Verify the redesigned Home and expanded Company pages on desktop and mobile
