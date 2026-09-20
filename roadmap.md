@@ -3,6 +3,6 @@
 - [x] Build Home and Company pages
 - [x] Build six complete brand pages
 - [x] Verify all 8 pages on desktop and mobile
-- [ ] Apply white editorial design system across all 8 pages
-- [ ] Add full-screen boomerang video homepage and transparent navigation
-- [ ] Verify redesigned desktop and mobile layouts
+- [x] Apply white editorial design system across all 8 pages
+- [x] Add full-screen boomerang video homepage and transparent navigation
+- [x] Verify redesigned desktop and mobile layouts
