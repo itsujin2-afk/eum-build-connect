@@ -18,7 +18,7 @@ export function BrandPage({ brand }: { brand: Brand | undefined }) {
 
   return <SiteShell fullscreen>
     <div className="flex h-full min-h-0 flex-col px-5 pb-2 pt-16 sm:px-8 sm:pt-20 lg:px-14">
-      <div className="mx-auto grid min-h-0 w-full max-w-[1280px] flex-1 gap-4 lg:grid-cols-12 lg:gap-8">
+      <div className="mx-auto grid min-h-0 w-full max-w-[1280px] flex-1 grid-rows-[auto_minmax(0,1fr)] gap-4 lg:grid-cols-12 lg:grid-rows-1 lg:gap-8">
         {/* brand identity */}
         <div className="flex min-h-0 w-full min-w-0 shrink-0 flex-col lg:col-span-4">
           <p className="eyebrow text-muted-foreground">{brand.english}{brand.since ? ` · SINCE ${brand.since}` : ""}</p>
