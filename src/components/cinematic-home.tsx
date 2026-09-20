@@ -4,14 +4,28 @@ import logoAsset from "@/assets/eum-build-logo-transparent.png.asset.json";
 
 export function CinematicHome() {
   return (
-    <div className="flex h-full min-h-0 flex-col px-5 pb-3 pt-16 sm:px-8 sm:pt-20 lg:px-14">
-      <div className="mx-auto flex min-h-0 w-full max-w-[1280px] flex-1 flex-col">
-        {/* logo centerpiece */}
-        <div className="hero-reveal hero-reveal-logo flex shrink-0 flex-col items-center text-center">
+    <div className="relative flex h-full min-h-0 flex-col overflow-hidden px-5 pb-3 pt-16 sm:px-8 sm:pt-20 lg:px-14">
+      {/* ambient luxury backdrop — surrounds the whole composition */}
+      <div className="lux-stage absolute inset-0" aria-hidden>
+        <div className="lux-lines" />
+        <div className="lux-orb lux-orb-a" />
+        <div className="lux-orb lux-orb-b" />
+        <div className="lux-orb lux-orb-c" />
+        <svg className="lux-rings" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+          <circle className="lux-arc" cx="50" cy="50" r="34" />
+          <circle className="lux-arc lux-arc-2" cx="50" cy="50" r="25" />
+          <circle className="lux-arc lux-arc-3" cx="50" cy="50" r="43" />
+        </svg>
+        <div className="lux-sweep" />
+      </div>
+
+      {/* unified centerpiece: logo + copy + link floating in the ambience */}
+      <div className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1280px] flex-1 flex-col items-center justify-center text-center">
+        <div className="hero-reveal hero-reveal-logo flex flex-col items-center">
           <img
             src={logoAsset.url}
             alt="이음앤빌드"
-            className="w-[150px] object-contain brightness-110 drop-shadow-[0_10px_28px_rgba(122,92,30,0.3)] sm:w-[210px] lg:w-[260px]"
+            className="w-[170px] object-contain brightness-110 drop-shadow-[0_10px_28px_rgba(122,92,30,0.3)] sm:w-[230px] lg:w-[290px]"
           />
           <p className="eyebrow mt-3 text-muted-foreground sm:mt-4">EXCLUSIVE REGIONAL HQ · KOREA</p>
           <h1 className="hero-reveal hero-reveal-title mt-2.5 break-keep text-[15px] font-semibold leading-[1.5] tracking-tight sm:text-[17px] lg:text-lg">
@@ -19,23 +33,7 @@ export function CinematicHome() {
           </h1>
         </div>
 
-        {/* ambient luxury animation stage */}
-        <div className="hero-reveal hero-reveal-media lux-stage mt-4 min-h-[180px] flex-1 sm:mt-6" aria-hidden>
-          <div className="lux-lines" />
-          <div className="lux-orb lux-orb-a" />
-          <div className="lux-orb lux-orb-b" />
-          <div className="lux-orb lux-orb-c" />
-          <svg className="lux-rings" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-            <circle className="lux-arc" cx="50" cy="50" r="34" />
-            <circle className="lux-arc lux-arc-2" cx="50" cy="50" r="25" />
-            <circle className="lux-arc lux-arc-3" cx="50" cy="50" r="43" />
-          </svg>
-          <div className="lux-sweep" />
-          <div className="absolute inset-0 border border-border" />
-        </div>
-
-        {/* single refined link */}
-        <div className="hero-reveal hero-reveal-actions mt-3 flex shrink-0 justify-center sm:mt-4">
+        <div className="hero-reveal hero-reveal-actions mt-6 sm:mt-8">
           <Link to="/company" className="group inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-foreground sm:text-xs">
             <span className="relative">
               이음앤빌드 소개
