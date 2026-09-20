@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Check, X } from "lucide-react";
+import { ArrowRight, Check, X } from "lucide-react";
 import { SiteShell, ContactBand } from "@/components/site-shell";
 import { steps } from "@/lib/site-data";
+
+const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
+const asset = (id: string) => imageModules[`../assets/eum/${id}.jpg`];
 
 export const Route = createFileRoute("/company")({
   head: () => ({ meta: [
@@ -14,6 +17,18 @@ export const Route = createFileRoute("/company")({
   ] }),
   component: Company,
 });
+
+const pillars: [string, string, string][] = [
+  ["01", "Direct Authority", "본사 직통 계약"],
+  ["02", "Single Margin", "단일 마진 구조"],
+  ["03", "Legal Liability", "한국 법인 직접 책임"],
+];
+
+const highlights: [string, string][] = [
+  ["의사결정 속도", "협의 자리에서 즉시 확정"],
+  ["가격 구조", "본사 직결 단일 마진"],
+  ["책임 소재", "한국 법인이 계약 당사자로 직접 부담"],
+];
 
 const factSheet: [string, string][] = [
   ["법인명", "주식회사 이음앤빌드"],
@@ -77,15 +92,89 @@ function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
 
 function Company() {
   return <SiteShell>
-    {/* Hero */}
-    <section className="mx-auto max-w-[1440px] px-5 pb-24 pt-36 sm:px-10 sm:pt-44 lg:px-10">
-      <p className="eyebrow text-muted-foreground">COMPANY · EXCLUSIVE REGIONAL HQ</p>
-      <h1 className="mt-6 max-w-4xl break-keep text-4xl font-bold leading-[1.2] tracking-tight sm:text-5xl lg:text-[64px]">
-        한국 법인이 직접 계약하고 <span className="text-gold">직접 책임집니다.</span>
-      </h1>
-      <p className="mt-8 max-w-2xl break-keep text-base leading-8 text-muted-foreground sm:text-lg sm:leading-9">
-        중국 본사와 한국 발주처를 이어주는 창구가 아닙니다. 6개 기업의 상업 권한을 위임받아 직접 집행하며 계약, 세금계산서, 하자 책임이 모두 이 법인에서 나옵니다.
-      </p>
+    {/* Top Visual Hero */}
+    <section className="relative flex min-h-[92svh] items-end overflow-hidden">
+      <img src={asset("010")} alt="정밀한 기하학적 창호 패턴의 대형 건축 입면" className="absolute inset-0 h-full w-full object-cover saturate-[0.8] brightness-[0.98] contrast-[1.03]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/10" />
+      <div className="relative mx-auto w-full max-w-[1440px] px-5 pb-20 pt-44 sm:px-10 lg:px-10">
+        <p className="eyebrow text-foreground/70">EUM&BUILD · EXCLUSIVE REGIONAL HQ</p>
+        <h1 className="mt-6 break-keep text-4xl font-bold leading-[1.15] tracking-tight sm:text-6xl lg:text-[72px]">
+          중국 최정상 6개 브랜드<br />공식 한국 <span className="text-gold">독점 HQ</span>
+        </h1>
+        <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-foreground/70 sm:text-base sm:leading-8">
+          본사 직통 단일 마진 구조로 최고급 건축자재를 공급하는 익스클루시브 리저널 본부
+        </p>
+      </div>
+    </section>
+
+    {/* WHAT DO WE DO */}
+    <section className="border-t border-border">
+      <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 lg:px-10">
+        <div className="mb-10 max-w-3xl sm:mb-14">
+          <p className="eyebrow text-muted-foreground">WHAT DO WE DO?</p>
+          <h2 className="mt-4 break-keep text-3xl font-bold leading-[1.25] tracking-tight sm:text-4xl lg:text-[42px]">중간 단계를 없앤 직통 계약 솔루션</h2>
+          <p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
+            중국 본사와 직접 계약하고 한국 법인이 모든 하자와 책임을 집니다. 지체 없는 의사결정과 투명한 단일 마진으로 프로젝트를 완성합니다.
+          </p>
+        </div>
+        <div className="grid gap-px border border-border bg-border md:grid-cols-3">
+          {pillars.map(([num, en, ko]) => <article key={num} className="bg-background px-7 py-9">
+            <p className="text-[10px] font-semibold tracking-[0.18em] text-muted-foreground">{num} · <span className="text-gold">{en}</span></p>
+            <h3 className="mt-4 text-lg font-bold tracking-tight sm:text-xl">{ko}</h3>
+          </article>)}
+        </div>
+      </div>
+    </section>
+
+    {/* WHY — distribution path */}
+    <section className="border-t border-border bg-surface">
+      <div className="mx-auto grid max-w-[1440px] gap-14 px-5 py-24 sm:px-10 lg:grid-cols-2 lg:gap-20 lg:px-10">
+        <div>
+          <p className="eyebrow text-muted-foreground">WHY EUM&BUILD</p>
+          <h2 className="mt-4 break-keep text-3xl font-bold leading-[1.25] tracking-tight sm:text-4xl lg:text-[42px]">중간 단계를 아예 없앴습니다.</h2>
+          <p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
+            본사 회신을 기다리는 대신 협의 자리에서 결정합니다. 가격은 투명해지고, 책임은 선명해집니다.
+          </p>
+        </div>
+        <div className="space-y-8">
+          <div className="space-y-3">
+            <div className="border border-border bg-background px-6 py-5">
+              <p className="text-[11px] font-semibold tracking-[0.14em] text-muted-foreground">일반 경로</p>
+              <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] leading-6 text-muted-foreground">
+                중국 본사 <ArrowRight size={12} className="text-muted-foreground/50" /> 무역상 <ArrowRight size={12} className="text-muted-foreground/50" /> 현지 브로커 <ArrowRight size={12} className="text-muted-foreground/50" /> 국내 유통 <ArrowRight size={12} className="text-muted-foreground/50" /> 발주처
+              </p>
+            </div>
+            <div className="border border-gold/40 bg-background px-6 py-5">
+              <p className="text-[11px] font-semibold tracking-[0.14em] text-gold">직통 경로</p>
+              <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] font-semibold leading-6">
+                중국 본사 <ArrowRight size={12} className="text-gold" /> 이음앤빌드 한국 HQ <ArrowRight size={12} className="text-gold" /> 발주처
+              </p>
+            </div>
+          </div>
+          <ul className="divide-y divide-border border border-border bg-background">
+            {highlights.map(([label, value]) => <li key={label} className="flex items-start gap-4 px-6 py-5">
+              <Check size={16} className="mt-1 shrink-0 text-gold" />
+              <div>
+                <p className="text-[11px] font-semibold tracking-[0.14em] text-muted-foreground">{label}</p>
+                <p className="mt-1.5 break-keep text-sm font-semibold leading-6">{value}</p>
+              </div>
+            </li>)}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* Company Hero */}
+    <section className="border-t border-border">
+      <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32 lg:px-10">
+        <p className="eyebrow text-muted-foreground">COMPANY · EXCLUSIVE REGIONAL HQ</p>
+        <h2 className="mt-6 max-w-4xl break-keep text-4xl font-bold leading-[1.2] tracking-tight sm:text-5xl lg:text-[64px]">
+          한국 법인이 직접 계약하고 <span className="text-gold">직접 책임집니다.</span>
+        </h2>
+        <p className="mt-8 max-w-2xl break-keep text-base leading-8 text-muted-foreground sm:text-lg sm:leading-9">
+          중국 본사와 한국 발주처를 이어주는 창구가 아닙니다. 6개 기업의 상업 권한을 위임받아 직접 집행하며 계약, 세금계산서, 하자 책임이 모두 이 법인에서 나옵니다.
+        </p>
+      </div>
     </section>
 
     {/* Fact Sheet */}
@@ -122,7 +211,7 @@ function Company() {
       </div>
     </section>
 
-    {/* Why */}
+    {/* Comparison Table */}
     <section className="border-t border-border bg-surface">
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 lg:px-10">
         <SectionHead eyebrow="WHY EUM&BUILD" title="직통 구조의 차이" />
