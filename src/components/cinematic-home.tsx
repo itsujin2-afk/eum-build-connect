@@ -41,7 +41,7 @@ export function CinematicHome() {
         <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-1 flex-col justify-end px-5 pb-10 pt-32 lg:px-10 lg:pb-14">
           <div className="max-w-5xl animate-fade-in">
             <p className="eyebrow text-primary-foreground/70">EXCLUSIVE REGIONAL HQ · KOREA</p>
-            <h1 className="mt-5 text-5xl leading-[1.08] sm:text-6xl md:text-8xl lg:text-[6.5rem]">
+            <h1 className="mt-5 text-4xl leading-[1.12] sm:text-6xl md:text-8xl lg:text-[6.5rem]">
               세계의 건축을 완성한 소재,<br />한국의 프로젝트로.
             </h1>
             <p className="mt-7 max-w-xl text-sm leading-7 text-primary-foreground/80 md:text-base">
