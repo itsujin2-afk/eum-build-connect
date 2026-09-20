@@ -7,6 +7,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-function Home(){return <SiteShell>
+function Home(){return <SiteShell hideFooterLogo>
   <CinematicHome/>
 </SiteShell>}

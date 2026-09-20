@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { brands } from "@/lib/site-data";
 import { buttonVariants } from "@/components/ui/button";
 
-export function SiteShell({ children, overlayHeader = false, hideFooter = false }: { children: ReactNode; overlayHeader?: boolean; hideFooter?: boolean }) {
+export function SiteShell({ children, overlayHeader = false, hideFooter = false, hideFooterLogo = false }: { children: ReactNode; overlayHeader?: boolean; hideFooter?: boolean; hideFooterLogo?: boolean }) {
   return <div className="min-h-screen bg-background text-foreground">
     <header className="fixed inset-x-0 top-0 z-50">
       <div className={`relative flex items-center justify-end px-6 py-4 sm:px-10 sm:py-5 md:px-14 ${overlayHeader ? "text-primary-foreground" : "text-foreground"}`}>
@@ -25,11 +25,15 @@ export function SiteShell({ children, overlayHeader = false, hideFooter = false 
     </header>
     <main>{children}</main>
     {!hideFooter && <footer className="border-t border-border bg-background text-foreground">
-      <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-16 lg:grid-cols-[1.3fr_1fr_1fr] lg:px-10">
-        <div><img src="/logo.jpg" alt="이음앤빌드" className="h-32 w-auto max-w-full object-contain object-left"/><p className="mt-4 max-w-sm text-sm text-muted-foreground">중국 최정상 6개 건축자재 브랜드의 공식 한국 독점 HQ</p></div>
-        <div><p className="eyebrow text-muted-foreground">HEAD OFFICE</p><p className="mt-4 text-sm leading-7">서울특별시 강남구 테헤란로 329<br/>삼흥빌딩 1612호 (역삼동)</p></div>
-        <div><p className="eyebrow text-muted-foreground">KOREA BUSINESS</p><p className="mt-4 text-sm">조준우 공동대표이사</p><a className="mt-2 inline-flex items-center gap-2 text-xl" href="tel:01031138668">010-3113-8668 <ArrowUpRight size={18}/></a></div>
-      </div><div className="border-t border-border px-5 py-5 text-center text-[10px] tracking-[.2em] text-muted-foreground">BRIDGING MARKETS, GOVERNING ASSETS. · EUM&amp;BUILD CO., LTD.</div>
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-3 px-5 py-6 text-[11px] leading-6 text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-10">
+        <div className="flex items-center gap-3">
+          {!hideFooterLogo && <img src="/logo.jpg" alt="이음앤빌드" className="h-6 w-auto object-contain"/>}
+          <span className="font-semibold tracking-[.12em] text-foreground">EUM&amp;BUILD CO., LTD.</span>
+        </div>
+        <p>서울 강남구 테헤란로 329 삼흥빌딩 1612호</p>
+        <a className="inline-flex items-center gap-1.5 text-foreground" href="tel:01031138668">010-3113-8668 <ArrowUpRight size={13}/></a>
+        <p>© {new Date().getFullYear()} 주식회사 이음앤빌드</p>
+      </div>
     </footer>}
   </div>
 }
