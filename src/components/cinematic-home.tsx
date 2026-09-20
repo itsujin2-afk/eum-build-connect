@@ -32,6 +32,7 @@ export function CinematicHome() {
           <h1 className="hero-reveal hero-reveal-title mt-3 break-keep text-lg font-bold leading-[1.45] tracking-tight text-foreground sm:text-xl lg:text-2xl">
             세계의 건축을 완성한 소재, <span className="text-gold">한국의 프로젝트로.</span>
           </h1>
+          </div>
         </div>
 
         <div className="hero-reveal hero-reveal-actions mt-7 sm:mt-9">
