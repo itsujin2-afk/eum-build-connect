@@ -307,29 +307,29 @@
 .lux-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(46px);
-  opacity: .62;
+  filter: blur(40px);
+  opacity: .78;
   will-change: transform;
 }
 
 .lux-orb-a {
   width: 46%; aspect-ratio: 1;
   left: 4%; top: -14%;
-  background: radial-gradient(circle, color-mix(in oklch, var(--gold) 46%, transparent), transparent 68%);
+  background: radial-gradient(circle, color-mix(in oklch, var(--gold) 72%, transparent), transparent 66%);
   animation: lux-drift-a 22s cubic-bezier(.45,.05,.55,.95) infinite alternate;
 }
 
 .lux-orb-b {
   width: 52%; aspect-ratio: 1;
   right: -8%; bottom: -22%;
-  background: radial-gradient(circle, color-mix(in oklch, var(--color-foreground) 14%, transparent), transparent 66%);
+  background: radial-gradient(circle, color-mix(in oklch, var(--color-foreground) 22%, transparent), transparent 64%);
   animation: lux-drift-b 28s cubic-bezier(.45,.05,.55,.95) infinite alternate;
 }
 
 .lux-orb-c {
   width: 34%; aspect-ratio: 1;
   left: 38%; bottom: -6%;
-  background: radial-gradient(circle, color-mix(in oklch, var(--gold) 30%, transparent), transparent 70%);
+  background: radial-gradient(circle, color-mix(in oklch, var(--gold) 52%, transparent), transparent 68%);
   animation: lux-drift-c 19s cubic-bezier(.45,.05,.55,.95) infinite alternate;
 }
 
@@ -350,7 +350,7 @@
   position: absolute;
   inset: -12%;
   animation: lux-spin 64s linear infinite;
-  opacity: .5;
+  opacity: .75;
 }
 
 @keyframes lux-spin {
@@ -359,14 +359,14 @@
 
 .lux-arc {
   fill: none;
-  stroke: color-mix(in oklch, var(--gold) 58%, transparent);
-  stroke-width: .35;
+  stroke: color-mix(in oklch, var(--gold) 85%, transparent);
+  stroke-width: .22;
   stroke-dasharray: 220;
   animation: lux-arc-draw 9s ease-in-out infinite alternate;
 }
 
-.lux-arc-2 { stroke: color-mix(in oklch, var(--color-foreground) 24%, transparent); animation-duration: 12s; animation-delay: -3s; }
-.lux-arc-3 { stroke: color-mix(in oklch, var(--gold) 34%, transparent); animation-duration: 15s; animation-delay: -6s; }
+.lux-arc-2 { stroke: color-mix(in oklch, var(--color-foreground) 40%, transparent); animation-duration: 12s; animation-delay: -3s; }
+.lux-arc-3 { stroke: color-mix(in oklch, var(--gold) 55%, transparent); animation-duration: 15s; animation-delay: -6s; }
 
 @keyframes lux-arc-draw {
   from { stroke-dashoffset: 220; opacity: .25; }
@@ -378,7 +378,7 @@
   top: -20%;
   bottom: -20%;
   width: 34%;
-  background: linear-gradient(90deg, transparent, color-mix(in oklch, #fff 78%, transparent), transparent);
+  background: linear-gradient(90deg, transparent, color-mix(in oklch, #fff 52%, transparent), transparent);
   filter: blur(8px);
   transform: skewX(-12deg);
   animation: lux-sweep 11s cubic-bezier(.5,0,.5,1) infinite;
@@ -386,15 +386,15 @@
 
 @keyframes lux-sweep {
   0%   { left: -40%; opacity: 0; }
-  14%  { opacity: .85; }
-  60%  { opacity: .85; }
+  14%  { opacity: .5; }
+  60%  { opacity: .5; }
   100% { left: 108%; opacity: 0; }
 }
 
 .lux-lines {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(90deg, color-mix(in oklch, var(--color-foreground) 7%, transparent) 1px, transparent 1px);
+  background-image: linear-gradient(90deg, color-mix(in oklch, var(--color-foreground) 5%, transparent) 1px, transparent 1px);
   background-size: 11% 100%;
   animation: lux-lines 26s linear infinite;
   opacity: .8;
