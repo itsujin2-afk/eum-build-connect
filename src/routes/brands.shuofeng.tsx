@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router"; import { BrandPage } from "@/components/brand-page"; import { brands } from "@/lib/site-data";
+export const Route=createFileRoute("/brands/shuofeng")({head:()=>({meta:[{title:"슈오펑 목문 — 이음앤빌드"},{name:"description",content:"37년 업력의 5성급 호텔 목공사 전문 제조 기업 슈오펑."},{property:"og:title",content:"슈오펑 목문 — Shuofeng"},{property:"og:description",content:"문·벽·장 일체화 맞춤 제작 솔루션"},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:()=> <BrandPage brand={brands[4]}/>});
