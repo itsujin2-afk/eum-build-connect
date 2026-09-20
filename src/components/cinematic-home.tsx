@@ -66,7 +66,7 @@ export function CinematicHome() {
           ))}
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(to_top,rgba(25,25,25,0.55),transparent)]" aria-hidden />
           <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-4 sm:p-5">
-            <p key={current.number} className="animate-[fade-in_1s_ease-out] text-[10px] font-semibold uppercase tracking-[0.2em] text-white sm:text-[11px]">
+            <p key={current.number} className="animate-[fade-in_1s_ease-out] text-[10px] font-semibold uppercase tracking-[0.2em] text-surface sm:text-[11px]">
               <span className="text-gold">{current.number}</span> {current.english} · {current.category}
             </p>
             <div className="flex items-center gap-1.5">
@@ -76,7 +76,7 @@ export function CinematicHome() {
                   type="button"
                   aria-label={`${s.english} 보기`}
                   onClick={() => setActive(i)}
-                  className={`h-px transition-all duration-500 ${i === active ? "w-8 bg-gold" : "w-4 bg-white/45 hover:bg-white/80"}`}
+                  className={`h-px transition-all duration-500 ${i === active ? "w-8 bg-gold" : "w-4 bg-surface/50 hover:bg-surface"}`}
                 />
               ))}
             </div>
