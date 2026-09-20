@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CompanyRouteImport } from './routes/company'
+import { Route as BrandsForestHouseRouteImport } from './routes/brands.forest-house'
+import { Route as BrandsHuanqiuStoneRouteImport } from './routes/brands.huanqiu-stone'
+import { Route as BrandsIntcoDecorRouteImport } from './routes/brands.intco-decor'
+import { Route as BrandsJinchengGlassRouteImport } from './routes/brands.jincheng-glass'
+import { Route as BrandsLionKingRouteImport } from './routes/brands.lion-king'
+import { Route as BrandsShuofengRouteImport } from './routes/brands.shuofeng'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompanyRoute = CompanyRouteImport.update({
+  id: '/company',
+  path: '/company',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandsForestHouseRoute = BrandsForestHouseRouteImport.update({
+  id: '/brands/forest-house',
+  path: '/brands/forest-house',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandsHuanqiuStoneRoute = BrandsHuanqiuStoneRouteImport.update({
+  id: '/brands/huanqiu-stone',
+  path: '/brands/huanqiu-stone',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandsIntcoDecorRoute = BrandsIntcoDecorRouteImport.update({
+  id: '/brands/intco-decor',
+  path: '/brands/intco-decor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandsJinchengGlassRoute = BrandsJinchengGlassRouteImport.update({
+  id: '/brands/jincheng-glass',
+  path: '/brands/jincheng-glass',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandsLionKingRoute = BrandsLionKingRouteImport.update({
+  id: '/brands/lion-king',
+  path: '/brands/lion-king',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandsShuofengRoute = BrandsShuofengRouteImport.update({
+  id: '/brands/shuofeng',
+  path: '/brands/shuofeng',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/company': typeof CompanyRoute
+  '/brands/forest-house': typeof BrandsForestHouseRoute
+  '/brands/huanqiu-stone': typeof BrandsHuanqiuStoneRoute
+  '/brands/intco-decor': typeof BrandsIntcoDecorRoute
+  '/brands/jincheng-glass': typeof BrandsJinchengGlassRoute
+  '/brands/lion-king': typeof BrandsLionKingRoute
+  '/brands/shuofeng': typeof BrandsShuofengRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/company': typeof CompanyRoute
+  '/brands/forest-house': typeof BrandsForestHouseRoute
+  '/brands/huanqiu-stone': typeof BrandsHuanqiuStoneRoute
+  '/brands/intco-decor': typeof BrandsIntcoDecorRoute
+  '/brands/jincheng-glass': typeof BrandsJinchengGlassRoute
+  '/brands/lion-king': typeof BrandsLionKingRoute
+  '/brands/shuofeng': typeof BrandsShuofengRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/company': typeof CompanyRoute
+  '/brands/forest-house': typeof BrandsForestHouseRoute
+  '/brands/huanqiu-stone': typeof BrandsHuanqiuStoneRoute
+  '/brands/intco-decor': typeof BrandsIntcoDecorRoute
+  '/brands/jincheng-glass': typeof BrandsJinchengGlassRoute
+  '/brands/lion-king': typeof BrandsLionKingRoute
+  '/brands/shuofeng': typeof BrandsShuofengRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/company'
+    | '/brands/forest-house'
+    | '/brands/huanqiu-stone'
+    | '/brands/intco-decor'
+    | '/brands/jincheng-glass'
+    | '/brands/lion-king'
+    | '/brands/shuofeng'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/company'
+    | '/brands/forest-house'
+    | '/brands/huanqiu-stone'
+    | '/brands/intco-decor'
+    | '/brands/jincheng-glass'
+    | '/brands/lion-king'
+    | '/brands/shuofeng'
+  id:
+    | '__root__'
+    | '/'
+    | '/company'
+    | '/brands/forest-house'
+    | '/brands/huanqiu-stone'
+    | '/brands/intco-decor'
+    | '/brands/jincheng-glass'
+    | '/brands/lion-king'
+    | '/brands/shuofeng'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CompanyRoute: typeof CompanyRoute
+  BrandsForestHouseRoute: typeof BrandsForestHouseRoute
+  BrandsHuanqiuStoneRoute: typeof BrandsHuanqiuStoneRoute
+  BrandsIntcoDecorRoute: typeof BrandsIntcoDecorRoute
+  BrandsJinchengGlassRoute: typeof BrandsJinchengGlassRoute
+  BrandsLionKingRoute: typeof BrandsLionKingRoute
+  BrandsShuofengRoute: typeof BrandsShuofengRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/company': {
+      id: '/company'
+      path: '/company'
+      fullPath: '/company'
+      preLoaderRoute: typeof CompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brands/forest-house': {
+      id: '/brands/forest-house'
+      path: '/brands/forest-house'
+      fullPath: '/brands/forest-house'
+      preLoaderRoute: typeof BrandsForestHouseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brands/huanqiu-stone': {
+      id: '/brands/huanqiu-stone'
+      path: '/brands/huanqiu-stone'
+      fullPath: '/brands/huanqiu-stone'
+      preLoaderRoute: typeof BrandsHuanqiuStoneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brands/intco-decor': {
+      id: '/brands/intco-decor'
+      path: '/brands/intco-decor'
+      fullPath: '/brands/intco-decor'
+      preLoaderRoute: typeof BrandsIntcoDecorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brands/jincheng-glass': {
+      id: '/brands/jincheng-glass'
+      path: '/brands/jincheng-glass'
+      fullPath: '/brands/jincheng-glass'
+      preLoaderRoute: typeof BrandsJinchengGlassRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brands/lion-king': {
+      id: '/brands/lion-king'
+      path: '/brands/lion-king'
+      fullPath: '/brands/lion-king'
+      preLoaderRoute: typeof BrandsLionKingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brands/shuofeng': {
+      id: '/brands/shuofeng'
+      path: '/brands/shuofeng'
+      fullPath: '/brands/shuofeng'
+      preLoaderRoute: typeof BrandsShuofengRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CompanyRoute: CompanyRoute,
+  BrandsForestHouseRoute: BrandsForestHouseRoute,
+  BrandsHuanqiuStoneRoute: BrandsHuanqiuStoneRoute,
+  BrandsIntcoDecorRoute: BrandsIntcoDecorRoute,
+  BrandsJinchengGlassRoute: BrandsJinchengGlassRoute,
+  BrandsLionKingRoute: BrandsLionKingRoute,
+  BrandsShuofengRoute: BrandsShuofengRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

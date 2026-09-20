@@ -6,10 +6,11 @@ import { ContactBand, SiteShell } from "@/components/site-shell";
 const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string,string>;
 const asset = (id:string) => imageModules[`../assets/eum/${id}.jpg`];
 
-export function BrandPage({ brand }: { brand: Brand }) {
+export function BrandPage({ brand }: { brand: Brand | undefined }) {
+  if (!brand) return null;
   const index = brands.findIndex((item)=>item.slug===brand.slug);
-  const prev = brands[(index-1+brands.length)%brands.length];
-  const next = brands[(index+1)%brands.length];
+  const prev = brands.at((index-1+brands.length)%brands.length) ?? brand;
+  const next = brands.at((index+1)%brands.length) ?? brand;
   return <SiteShell>
     <section className="relative min-h-[760px] overflow-hidden bg-foreground pt-20 text-background">
       <img src={asset(brand.heroImage)} alt={`${brand.name} 대표 이미지`} className="absolute inset-0 h-full w-full object-cover opacity-50"/>
