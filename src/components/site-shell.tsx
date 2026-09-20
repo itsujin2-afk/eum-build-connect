@@ -3,9 +3,11 @@ import { ArrowUpRight, ChevronDown, Menu, Phone } from "lucide-react";
 import type { ReactNode } from "react";
 import { brands } from "@/lib/site-data";
 import { buttonVariants } from "@/components/ui/button";
+import navLogoAsset from "@/assets/eum-build-logo-nav.jpg.asset.json";
+import fullLogoAsset from "@/assets/eum-build-logo-full.jpg.asset.json";
 
 function Logo() {
-  return <span className="flex items-center gap-3"><svg viewBox="0 0 32 32" className="h-7 w-7" aria-hidden="true"><path d="M4 5h10v10H4V5Zm14 0h10v22H18V5ZM4 19h10v8H4v-8Z" fill="currentColor"/></svg><span className="text-base font-semibold">이음앤빌드</span></span>;
+  return <img src={navLogoAsset.url} alt="이음앤빌드" className="h-10 w-auto object-contain sm:h-12" />;
 }
 
 export function SiteShell({ children }: { children: ReactNode }) {
@@ -31,7 +33,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
     <main>{children}</main>
     <footer className="border-t border-border bg-background text-foreground">
       <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-16 lg:grid-cols-[1.3fr_1fr_1fr] lg:px-10">
-        <div><p className="font-serif text-3xl">이음앤빌드</p><p className="mt-4 max-w-sm text-sm text-muted-foreground">중국 최정상 6개 건축자재 브랜드의 공식 한국 독점 HQ</p></div>
+        <div><img src={fullLogoAsset.url} alt="이음앤빌드 Curated Material Portfolio" className="h-32 w-auto max-w-full object-contain object-left"/><p className="mt-4 max-w-sm text-sm text-muted-foreground">중국 최정상 6개 건축자재 브랜드의 공식 한국 독점 HQ</p></div>
         <div><p className="eyebrow text-muted-foreground">HEAD OFFICE</p><p className="mt-4 text-sm leading-7">서울특별시 강남구 테헤란로 329<br/>삼흥빌딩 1612호 (역삼동)</p></div>
         <div><p className="eyebrow text-muted-foreground">KOREA BUSINESS</p><p className="mt-4 text-sm">조준우 공동대표이사</p><a className="mt-2 inline-flex items-center gap-2 text-xl" href="tel:01031138668">010-3113-8668 <ArrowUpRight size={18}/></a></div>
       </div><div className="border-t border-border px-5 py-5 text-center text-[10px] tracking-[.2em] text-muted-foreground">BRIDGING MARKETS, GOVERNING ASSETS. · EUM&amp;BUILD CO., LTD.</div>
