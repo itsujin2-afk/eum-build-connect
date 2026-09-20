@@ -29,11 +29,21 @@ export function CinematicHome() {
       <div className="mx-auto grid h-full min-h-0 w-full max-w-[1400px] grid-cols-1 grid-rows-[minmax(0,auto)_minmax(0,1fr)] items-center gap-6 px-5 pb-5 pt-14 sm:px-8 lg:grid-cols-12 lg:grid-rows-1 lg:gap-12 lg:pb-8 lg:pt-16">
         {/* pristine logo stage — no imagery behind it */}
         <div className="hero-reveal hero-reveal-logo flex min-w-0 flex-col items-center text-center lg:col-span-5 lg:items-start lg:text-left">
-          <img
-            src={logoAsset.url}
-            alt="이음앤빌드"
-            className="w-[230px] object-contain drop-shadow-[0_18px_44px_rgba(60,44,8,0.22)] sm:w-[300px] lg:w-[360px]"
-          />
+          <div
+            className="logo-stage w-[230px] sm:w-[300px] lg:w-[360px]"
+            style={{ ["--logo-mask" as string]: `url(${logoAsset.url})` }}
+          >
+            <span className="logo-glow" aria-hidden />
+            <span className="logo-stage-inner">
+              <img
+                src={logoAsset.url}
+                alt="이음앤빌드"
+                className="logo-stage-img drop-shadow-[0_18px_44px_rgba(60,44,8,0.22)]"
+              />
+              <span className="logo-sheen" aria-hidden />
+            </span>
+          </div>
+
           <p className="eyebrow mt-5 text-foreground/55 sm:mt-7">EXCLUSIVE REGIONAL HQ · KOREA</p>
           <h1 className="mt-3 break-keep text-lg font-bold leading-[1.45] tracking-tight text-foreground sm:text-xl lg:text-[1.6rem]">
             세계의 건축을 완성한 소재,
