@@ -299,6 +299,7 @@
   position: relative;
   overflow: hidden;
   background:
+    radial-gradient(60% 55% at 50% 46%, color-mix(in oklch, var(--gold) 16%, transparent), transparent 72%),
     radial-gradient(120% 90% at 50% 0%, color-mix(in oklch, var(--gold) 9%, transparent), transparent 70%),
     linear-gradient(180deg, #fff 0%, var(--color-surface, #f4f3f3) 100%);
   isolation: isolate;
@@ -308,28 +309,28 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(34px);
-  opacity: .78;
+  opacity: .9;
   will-change: transform;
 }
 
 .lux-orb-a {
-  width: 46%; aspect-ratio: 1;
-  left: 4%; top: -14%;
-  background: radial-gradient(circle, color-mix(in oklch, var(--gold) 72%, transparent), transparent 66%);
+  width: 52%; aspect-ratio: 1;
+  left: 2%; top: -12%;
+  background: radial-gradient(circle, color-mix(in oklch, var(--gold) 85%, transparent), transparent 66%);
   animation: lux-drift-a 22s cubic-bezier(.45,.05,.55,.95) infinite alternate;
 }
 
 .lux-orb-b {
-  width: 52%; aspect-ratio: 1;
-  right: -8%; bottom: -22%;
-  background: radial-gradient(circle, color-mix(in oklch, var(--color-foreground) 34%, transparent), transparent 62%);
+  width: 58%; aspect-ratio: 1;
+  right: -10%; bottom: -24%;
+  background: radial-gradient(circle, color-mix(in oklch, var(--color-foreground) 42%, transparent), transparent 62%);
   animation: lux-drift-b 28s cubic-bezier(.45,.05,.55,.95) infinite alternate;
 }
 
 .lux-orb-c {
-  width: 34%; aspect-ratio: 1;
-  left: 38%; bottom: -6%;
-  background: radial-gradient(circle, color-mix(in oklch, var(--gold) 52%, transparent), transparent 68%);
+  width: 42%; aspect-ratio: 1;
+  left: 34%; bottom: -4%;
+  background: radial-gradient(circle, color-mix(in oklch, var(--gold) 68%, transparent), transparent 68%);
   animation: lux-drift-c 19s cubic-bezier(.45,.05,.55,.95) infinite alternate;
 }
 
