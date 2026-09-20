@@ -28,23 +28,23 @@ export function CinematicHome() {
   return (
     <>
       <section className="relative overflow-hidden bg-background">
-        <div className="mx-auto flex min-h-svh w-full max-w-[1440px] flex-col justify-center px-5 pb-14 pt-24 sm:px-8 sm:pb-16 sm:pt-28 lg:px-16 lg:pb-20 lg:pt-32">
-          <div className="hero-reveal hero-reveal-logo flex items-center gap-5 sm:gap-6">
-            <img src={logoAsset.url} alt="이음앤빌드" className="w-[76px] object-contain sm:w-[92px] lg:w-[104px]" />
+        <div className="mx-auto flex min-h-svh w-full max-w-[1440px] flex-col justify-center px-5 pb-8 pt-24 sm:px-8 sm:pb-10 sm:pt-28 lg:px-16 lg:pt-28">
+          <div className="hero-reveal hero-reveal-logo flex items-center gap-4 sm:gap-5">
+            <img src={logoAsset.url} alt="이음앤빌드" className="w-[68px] object-contain sm:w-[82px] lg:w-[92px]" />
             <p className="eyebrow text-muted-foreground">EXCLUSIVE REGIONAL HQ · KOREA</p>
           </div>
 
-          <div className="mt-8 grid items-center gap-10 sm:mt-10 lg:mt-14 lg:grid-cols-12 lg:gap-16">
+          <div className="mt-5 grid items-center gap-8 sm:mt-7 sm:gap-10 lg:mt-9 lg:grid-cols-12 lg:gap-16">
             <div key={active} className="lg:col-span-5">
-              <h1 className="hero-reveal hero-reveal-title break-keep text-3xl font-black leading-[1.16] tracking-tighter sm:text-5xl sm:leading-[1.14] lg:text-[3.4rem]">
+              <h1 className="hero-reveal hero-reveal-title break-keep text-[27px] font-black leading-[1.16] tracking-tighter sm:text-4xl sm:leading-[1.14] lg:text-[3.4rem]">
                 세계의 건축을<br className="hidden lg:block" />{" "}
                 완성한 소재,<br className="hidden sm:block" />{" "}
                 <span className="text-gold">한국의 프로젝트로.</span>
               </h1>
-              <p className="hero-reveal hero-reveal-copy mt-6 max-w-md text-sm leading-7 text-muted-foreground">
+              <p className="hero-reveal hero-reveal-copy mt-4 max-w-md text-sm leading-7 text-muted-foreground">
                 중국 최정상 6개 건축자재 브랜드를 하나의 책임 있는 창구로 연결합니다.
               </p>
-              <div className="hero-reveal hero-reveal-actions mt-8">
+              <div className="hero-reveal hero-reveal-actions mt-5">
                 <Link to="/company" className="group inline-flex items-center gap-4 pb-1 text-xs font-bold uppercase tracking-[0.18em] text-foreground">
                   <span className="relative">
                     이음앤빌드 소개
@@ -53,7 +53,7 @@ export function CinematicHome() {
                   <ArrowUpRight size={18} className="text-gold transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-1" />
                 </Link>
               </div>
-              <div className="hero-reveal hero-reveal-actions mt-9 flex items-center gap-3">
+              <div className="hero-reveal hero-reveal-actions mt-7 flex items-center gap-3">
                 {heroFrames.map((frame, index) => (
                   <button key={frame.image} type="button" aria-label={`${index + 1}번 이미지 보기`} onClick={() => setActive(index)} className="group py-2">
                     <span className={`block h-px w-10 transition-colors duration-300 ${index === active ? "bg-gold" : "bg-border group-hover:bg-muted-foreground"}`} />
@@ -66,9 +66,9 @@ export function CinematicHome() {
             </div>
 
             <div className="lg:col-span-7">
-              <div className="hero-reveal hero-reveal-media relative mx-auto w-full max-w-[560px] p-2.5 sm:p-3 lg:ml-auto lg:mr-0 lg:max-w-[620px]">
+              <div className="hero-reveal hero-reveal-media relative mx-auto w-full max-w-[460px] p-2 sm:p-2.5 lg:ml-auto lg:mr-0 lg:max-w-[540px]">
                 <div aria-hidden className="absolute inset-0 translate-x-3 translate-y-3 border border-border" />
-                <div className="relative aspect-[16/11] overflow-hidden bg-surface">
+                <div className="relative aspect-[16/10] overflow-hidden bg-surface sm:aspect-[16/11]">
                   {heroFrames.map((frame, index) => (
                     <img
                       key={frame.image}
@@ -77,9 +77,9 @@ export function CinematicHome() {
                       className={`cinematic-frame ${index === active ? "is-active" : ""}`}
                     />
                   ))}
-                  <div key={active} className="absolute bottom-4 right-4 max-w-[240px] border-l-2 border-gold bg-background/95 px-4 py-3 backdrop-blur-sm sm:bottom-5 sm:right-5 sm:px-5">
+                  <div key={active} className="absolute bottom-3 right-3 max-w-[220px] border-l-2 border-gold bg-background/95 px-3.5 py-2.5 backdrop-blur-sm sm:bottom-4 sm:right-4 sm:px-4 sm:py-3">
                     <p className="text-[10px] font-bold tracking-[0.3em] text-gold">CURATION 0{active + 1}</p>
-                    <p className="mt-1.5 text-[11px] leading-5 text-muted-foreground">{heroFrames[active]?.caption}</p>
+                    <p className="mt-1 text-[11px] leading-5 text-muted-foreground">{heroFrames[active]?.caption}</p>
                   </div>
                 </div>
               </div>
