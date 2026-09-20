@@ -25,7 +25,7 @@ export function CinematicHome() {
           <div className="lux-orb lux-orb-a" />
           <div className="lux-orb lux-orb-b" />
           <div className="lux-orb lux-orb-c" />
-          <svg className="lux-rings" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <svg className="lux-rings" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
             <circle className="lux-arc" cx="50" cy="50" r="34" />
             <circle className="lux-arc lux-arc-2" cx="50" cy="50" r="25" />
             <circle className="lux-arc lux-arc-3" cx="50" cy="50" r="43" />
