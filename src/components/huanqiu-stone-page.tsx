@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { ArrowRight, Award, Factory, Gem, Layers3, Mountain, Ruler, ShieldCheck } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 
