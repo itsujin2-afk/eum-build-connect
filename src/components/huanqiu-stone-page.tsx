@@ -85,7 +85,7 @@ export function HuanqiuStonePage() {
       <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/70 to-foreground/10" />
       <div className="relative mx-auto flex min-h-[92svh] max-w-[1440px] flex-col justify-end px-5 pb-16 pt-32 sm:px-10 sm:pb-24">
         <p className="eyebrow text-primary-foreground/70">01 · UMGG GLOBAL STONE · SINCE 1986</p>
-        <h1 className="mt-6 max-w-4xl break-keep text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl">세상에 불멸의<br />건축을 남기다</h1>
+        <h1 className="mt-6 max-w-4xl break-keep text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl">천연석 광산부터<br />시공까지, 한 번에</h1>
         <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-primary-foreground/75 sm:text-base sm:leading-8">광산 운영과 글로벌 조달부터 설계, 정밀 가공, 커튼월 시공까지 연결하는 장식용 석재 시스템 솔루션 기업입니다.</p>
         <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-primary-foreground/25 pt-6 text-xs text-primary-foreground/70">
           <span>천연석 · 인조석</span><span>정밀 이형 가공</span><span>석재 커튼월</span><span>통합 프로젝트 관리</span>
