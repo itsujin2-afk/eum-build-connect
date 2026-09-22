@@ -46,7 +46,7 @@ export function CinematicHome() {
           </div>
 
           <p className="mt-6 break-keep text-sm font-medium leading-relaxed tracking-tight text-foreground/75 sm:mt-8 sm:text-base">
-            세계 최고급 건축자재를 <span className="text-gold">한국에 직접 공급합니다.</span>
+            중국 6개 건축자재 브랜드를 <span className="text-gold">한국 법인이 직접 공급합니다.</span>
           </p>
           <Link
             to="/company"
