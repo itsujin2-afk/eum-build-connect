@@ -45,7 +45,7 @@ export function HuanqiuProductsPage() {
       <div className="mx-auto max-w-[1440px] px-5 pb-20 pt-32 sm:px-10 sm:pb-28 sm:pt-40">
         <Link to="/brands/huanqiu-stone" className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground"><ArrowLeft size={14}/> 환구석재 소개</Link>
         <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_.7fr] lg:items-end">
-          <div><p className="eyebrow text-gold">UMGG MATERIAL COLLECTION</p><h1 className="mt-5 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">세계의 원석을<br/>프로젝트의 표면으로</h1></div>
+          <div><p className="eyebrow text-gold">UMGG MATERIAL COLLECTION</p><h1 className="mt-5 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">주요 천연석 품종 26종<br/>한곳에서 보고 고릅니다</h1></div>
           <div><p className="break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">화이트 대리석부터 트래버틴, 베이지, 그레이, 골드 계열까지. 글로벌 스톤이 엄선하고 공급하는 주요 천연석 26종을 산지와 물성, 적용 범위에 따라 정리했습니다.</p><div className="mt-7 flex gap-8 text-xs"><span><b className="mr-2 text-xl text-gold">26</b>주요 품종</span><span><b className="mr-2 text-xl text-gold">8</b>산지 국가·지역</span></div></div>
         </div>
       </div>
@@ -72,6 +72,6 @@ export function HuanqiuProductsPage() {
       </section>;
     })}
 
-    <section className="bg-foreground text-primary-foreground"><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-10 sm:py-24 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-primary-foreground/50">MATERIAL SELECTION</p><h2 className="mt-5 max-w-3xl break-keep text-3xl font-bold leading-tight sm:text-5xl">도면과 공간에 맞는 원석부터<br/>가공 방식까지 함께 선정합니다.</h2><div className="mt-8 flex flex-wrap gap-6 text-xs text-primary-foreground/60"><span className="inline-flex items-center gap-2"><Grid2X2 size={14}/> 북매치·연속 무늬</span><span className="inline-flex items-center gap-2"><Layers3 size={14}/> 두께·표면 마감·이형 가공</span></div></div><a href="tel:01031138668" className={buttonVariants({size:"lg",className:"h-auto rounded-lg bg-background px-7 py-4 text-foreground hover:bg-surface"})}>샘플·사양 문의 <ArrowUpRight size={16}/></a></div></section>
+    <section className="bg-foreground text-primary-foreground"><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-10 sm:py-24 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-primary-foreground/50">MATERIAL SELECTION</p><h2 className="mt-5 max-w-3xl break-keep text-3xl font-bold leading-tight sm:text-5xl">도면과 공간에 맞는 천연석 소재부터<br/>가공 방식까지 함께 선정합니다.</h2><div className="mt-8 flex flex-wrap gap-6 text-xs text-primary-foreground/60"><span className="inline-flex items-center gap-2"><Grid2X2 size={14}/> 북매치·연속 무늬</span><span className="inline-flex items-center gap-2"><Layers3 size={14}/> 두께·표면 마감·이형 가공</span></div></div><a href="tel:01031138668" className={buttonVariants({size:"lg",className:"h-auto rounded-lg bg-background px-7 py-4 text-foreground hover:bg-surface"})}>샘플·사양 문의 <ArrowUpRight size={16}/></a></div></section>
   </SiteShell>;
 }
