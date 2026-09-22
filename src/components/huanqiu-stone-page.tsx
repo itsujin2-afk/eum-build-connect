@@ -115,6 +115,30 @@ export function HuanqiuStonePage() {
           <article className="border border-border bg-background p-7 sm:p-9"><Gem className="text-gold" size={24}/><p className="mt-8 text-xs font-bold text-gold">OWN MINE · HEBEI</p><h3 className="mt-3 text-2xl font-bold">한덕석업</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">허베이성 청더 · 블루 레오파드, 엔산 그린<br/>연간 원석 생산량 40만㎥</p><p className="mt-5 border-t border-border pt-5 text-xs leading-6 text-muted-foreground">중국 국가대극원 · 선전공항 · 중국수출입은행 베이징 본점 공급</p></article>
           <article className="border border-border bg-background p-7 sm:p-9"><Layers3 className="text-gold" size={24}/><p className="mt-8 text-xs font-bold text-gold">GLOBAL SOURCING</p><h3 className="mt-3 text-2xl font-bold">200여 종의 품종</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">원석 상시 재고 3만㎥ 이상<br/>판재 상시 재고 60만㎡</p></article>
         </div>
+        <div className="mt-8 grid gap-5 lg:grid-cols-[1.25fr_.75fr]">
+          <figure className="relative overflow-hidden border border-border bg-background">
+            <img src={umgg("mine-sankongsan")} alt="산둥성 라이저우 삼공삼 광업 채석 현장" className="aspect-[16/9] w-full object-cover saturate-[0.82]" />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/85 to-transparent px-6 pb-5 pt-20 text-primary-foreground">
+              <p className="text-[11px] font-bold tracking-[0.18em] text-gold">OWN MINE · 산둥 라이저우</p>
+              <p className="mt-2 text-lg font-bold">삼공삼 광업 · 산동 백화강 채석장</p>
+              <p className="mt-1 text-xs text-primary-foreground/75">연간 원석 37만㎥ 규모의 자체 채광으로 색상과 납기를 직접 통제합니다.</p>
+            </figcaption>
+          </figure>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+            <figure className="relative overflow-hidden border border-border bg-background">
+              <img src={umgg("mine-hande")} alt="허베이성 청더 한덕석업 광산" className="aspect-[16/9] w-full object-cover saturate-[0.82]" />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/85 to-transparent px-5 pb-4 pt-14 text-xs font-bold text-primary-foreground">한덕석업 · 허베이 청더 (블루 레오파드)</figcaption>
+            </figure>
+            <figure className="relative overflow-hidden border border-border bg-background">
+              <img src={umgg("mine-cooperative")} alt="글로벌 협력 광산 원석 블록 야드" className="aspect-[16/9] w-full object-cover saturate-[0.82]" />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/85 to-transparent px-5 pb-4 pt-14 text-xs font-bold text-primary-foreground">글로벌 협력 광산 · 우선 채광권 확보</figcaption>
+            </figure>
+          </div>
+        </div>
+        <figure className="mt-5 relative overflow-hidden border border-border bg-background">
+          <img src={umgg("stone-inventory")} alt="원석 및 판재 상시 재고 야드" className="aspect-[21/7] w-full object-cover saturate-[0.82]" />
+          <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/80 to-transparent px-6 pb-4 pt-14 text-xs font-bold text-primary-foreground">원석 상시 재고 3만㎥ · 판재 60만㎡ · 약 200여 종 품종</figcaption>
+        </figure>
         <p className="mt-8 border-l-2 border-gold pl-5 text-sm leading-7 text-muted-foreground">로마 동석, 설화백, 어두백, 이탈리아 미황, 세잔 그레이, 모네 그레이 등 세계 각지의 협력 광산에서 우선 채광권과 안정적 납기를 확보합니다.</p>
       </div>
     </section>
@@ -133,6 +157,22 @@ export function HuanqiuStonePage() {
               <tbody>{bases.map((base) => <tr key={base.name} className="border-t border-border"><td className="px-5 py-5 font-bold">{base.name}</td><td className="px-5 py-5 text-muted-foreground">{base.area}</td><td className="px-5 py-5">{base.slab}</td><td className="px-5 py-5">{base.panel}</td><td className="px-5 py-5">{base.special}</td></tr>)}</tbody>
             </table>
           </div>
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {[
+            { id: "base-slab", label: "FUJIAN · 300묘", title: "대판 생산 단지", text: "연간 대판 70만㎡ · 규격판 40만㎡" },
+            { id: "base-panel", label: "TIANJIN · 630묘", title: "북방 최대 규격판 기지", text: "연간 대판 60만㎡ · 이형 2,000㎥" },
+            { id: "base-special", label: "SHANDONG · DONGGUAN", title: "이형·화강암 가공 공장", text: "산둥 이형 1만㎥ · 둥관 규격판 15만㎡" },
+          ].map((item) => (
+            <figure key={item.id} className="relative overflow-hidden border border-border bg-surface">
+              <img src={umgg(item.id)} alt={item.title} className="aspect-[4/3] w-full object-cover saturate-[0.82]" />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/85 to-transparent px-5 pb-5 pt-16 text-primary-foreground">
+                <p className="text-[11px] font-bold tracking-[0.18em] text-gold">{item.label}</p>
+                <p className="mt-2 text-base font-bold">{item.title}</p>
+                <p className="mt-1 text-xs text-primary-foreground/75">{item.text}</p>
+              </figcaption>
+            </figure>
+          ))}
         </div>
         <div className="mt-10 grid gap-px border border-border bg-border md:grid-cols-3">
           {[{ icon: Ruler, title: "설계·시공 이중 1급", text: "연구개발, 공사 설계, 설치 시공과 컨설팅을 통합한 커튼월 석재 시스템" }, { icon: ShieldCheck, title: "국가급 하이테크 기업", text: "성급 기술센터, 정부 품질상, 다년 연속 부동산 500대 기업 우선 공급업체" }, { icon: Gem, title: "이형 석재의 대부", text: "국가 표준 제정과 복합 쌍곡면, 워터젯 인레이, 대형 조각 분야를 이끈 기술력" }].map(({icon: Icon, title, text}) => <article key={title} className="bg-background p-7"><Icon size={21} className="text-gold"/><h3 className="mt-6 text-lg font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p></article>)}
