@@ -17,4 +17,4 @@
 - [x] 히어로 로고 확대·명확성 향상, 제목 font-black 강화, 포트폴리오 보기 제거
 - [x] 히어로 풀블리드 제거 → 비대칭 스플릿 에디토리얼 레이아웃, 로고 브랜드 크레스트 재배치, 글로우 골드 액센트 토큰 추가
 - [x] Expand the Huanqiu Stone page with the new UMGG profile content
-- [ ] Expand Huanqiu Stone with complete proposal details, craft imagery, honors, masters, and project categories
+- [x] Expand Huanqiu Stone with complete proposal details, craft imagery, honors, masters, and project categories

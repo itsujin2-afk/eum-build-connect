@@ -55,6 +55,7 @@ const crafts = [
   { image: "craft-spiral", title: "나선계단 공예", text: "곡률과 접합선을 연속적으로 맞춰 하나의 조형물처럼 완성하는 고난도 가공" },
   { image: "craft-double-curve", title: "3D 쌍곡면 아크", text: "항저우 왕차오 센터의 복합 3차원 곡면을 디지털 모델과 정밀 가공으로 구현" },
   { image: "craft-shell-column", title: "조개·자개 인레이", text: "셰이크 자이드 모스크 기둥에 세계 최초로 적용한 석재와 조개의 복합 공법" },
+  { image: "craft-dome", title: "돔 레이저 커팅", text: "알제리 자마 모스크의 거대 돔 부재를 디지털 전개하고 레이저로 정밀 재단" },
   { image: "stone-art", title: "석재 예술 작품", text: "광저우미술학원·칭다오과기대 교수진과 함께 석재의 자연성을 현대 예술로 확장" },
   { image: "027", title: "폐쇄형 타원 쌍곡면", text: "난징 뉴쇼우산 천불전의 연속 타원형 돔을 오차 없이 맞춘 특수 이형 공예" },
 ] as const;
@@ -109,8 +110,8 @@ export function HuanqiuStonePage() {
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
         <SectionHead eyebrow="RESOURCE ADVANTAGE" title="광산에서 현장까지, 자원과 납기를 직접 관리합니다." body="자체 광산과 장기 협력 광산, 200여 종의 석재 품종을 기반으로 프로젝트별 색상과 물성을 안정적으로 맞춥니다." />
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          <article className="border border-border bg-background p-7 sm:p-9"><Mountain className="text-gold" size={24}/><p className="mt-8 text-xs font-bold text-gold">OWN MINE · SHANDONG</p><h3 className="mt-3 text-2xl font-bold">삼공삼 광업</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">산둥성 라이저우 · 산동 백화강<br/>연간 원석 생산량 37만㎥</p></article>
-          <article className="border border-border bg-background p-7 sm:p-9"><Gem className="text-gold" size={24}/><p className="mt-8 text-xs font-bold text-gold">OWN MINE · HEBEI</p><h3 className="mt-3 text-2xl font-bold">한덕석업</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">허베이성 청더 · 블루 레오파드, 엔산 그린<br/>연간 원석 생산량 40만㎥</p></article>
+          <article className="border border-border bg-background p-7 sm:p-9"><Mountain className="text-gold" size={24}/><p className="mt-8 text-xs font-bold text-gold">OWN MINE · SHANDONG</p><h3 className="mt-3 text-2xl font-bold">삼공삼 광업</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">산둥성 라이저우 · 산동 백화강<br/>연간 원석 생산량 37만㎥</p><p className="mt-5 border-t border-border pt-5 text-xs leading-6 text-muted-foreground">타지키스탄 정부·의회청사 · 항저우 G20 · 한국 삼성 본사 · 동계올림픽 경기장 공급</p></article>
+          <article className="border border-border bg-background p-7 sm:p-9"><Gem className="text-gold" size={24}/><p className="mt-8 text-xs font-bold text-gold">OWN MINE · HEBEI</p><h3 className="mt-3 text-2xl font-bold">한덕석업</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">허베이성 청더 · 블루 레오파드, 엔산 그린<br/>연간 원석 생산량 40만㎥</p><p className="mt-5 border-t border-border pt-5 text-xs leading-6 text-muted-foreground">중국 국가대극원 · 선전공항 · 중국수출입은행 베이징 본점 공급</p></article>
           <article className="border border-border bg-background p-7 sm:p-9"><Layers3 className="text-gold" size={24}/><p className="mt-8 text-xs font-bold text-gold">GLOBAL SOURCING</p><h3 className="mt-3 text-2xl font-bold">200여 종의 품종</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">원석 상시 재고 3만㎥ 이상<br/>판재 상시 재고 60만㎡</p></article>
         </div>
         <p className="mt-8 border-l-2 border-gold pl-5 text-sm leading-7 text-muted-foreground">로마 동석, 설화백, 어두백, 이탈리아 미황, 세잔 그레이, 모네 그레이 등 세계 각지의 협력 광산에서 우선 채광권과 안정적 납기를 확보합니다.</p>
@@ -134,6 +135,10 @@ export function HuanqiuStonePage() {
         </div>
         <div className="mt-10 grid gap-px border border-border bg-border md:grid-cols-3">
           {[{ icon: Ruler, title: "설계·시공 이중 1급", text: "연구개발, 공사 설계, 설치 시공과 컨설팅을 통합한 커튼월 석재 시스템" }, { icon: ShieldCheck, title: "국가급 하이테크 기업", text: "성급 기술센터, 정부 품질상, 다년 연속 부동산 500대 기업 우선 공급업체" }, { icon: Gem, title: "이형 석재의 대부", text: "국가 표준 제정과 복합 쌍곡면, 워터젯 인레이, 대형 조각 분야를 이끈 기술력" }].map(({icon: Icon, title, text}) => <article key={title} className="bg-background p-7"><Icon size={21} className="text-gold"/><h3 className="mt-6 text-lg font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p></article>)}
+        </div>
+        <div className="mt-14 grid gap-5 lg:grid-cols-[1.15fr_.85fr]">
+          <figure className="relative overflow-hidden bg-surface"><img src={umgg("breton-line")} alt="이탈리아 Breton 인조석 자동화 생산라인" className="aspect-[16/8] h-full w-full object-cover saturate-[0.82]"/><figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/80 to-transparent px-6 pb-5 pt-16 text-sm font-bold text-primary-foreground">둥관 창핑 · 광시 라이빈 Breton 자동화 생산라인</figcaption></figure>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1"><figure className="relative overflow-hidden bg-surface"><img src={umgg("breton-automation")} alt="친환경 인조석 자동화 설비" className="aspect-[16/7] h-full w-full object-cover saturate-[0.82]"/><figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/80 to-transparent px-5 pb-4 pt-12 text-xs font-bold text-primary-foreground">에너지 절감 · 친환경 · 안전 · 고효율 생산</figcaption></figure><div className="border border-border p-6"><p className="text-xs font-bold text-gold">SHANDONG GLOBAL CURTAIN WALL</p><h3 className="mt-3 text-xl font-bold">설계·시공 이중 1급</h3><p className="mt-4 text-xs leading-6 text-muted-foreground">베이징 인타이센터·광차이센터·자밍센터·안푸빌딩, 상하이 젠단빌딩, 하야오 제6공장, 이연걸 별장, 룽후 이허 원저 등 커튼월 프로젝트 수행</p></div></div>
         </div>
       </div>
     </section>
