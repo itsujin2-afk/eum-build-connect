@@ -1,5 +1,6 @@
+import { Link } from "@tanstack/react-router";
 import { ArrowRight, Award, Factory, Gem, Layers3, Mountain, Ruler, ShieldCheck } from "lucide-react";
-import { ContactBand, SiteShell } from "@/components/site-shell";
+import { SiteShell } from "@/components/site-shell";
 
 const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
 const asset = (id: string) => imageModules[`../assets/eum/${id}.jpg`];
@@ -205,9 +206,8 @@ export function HuanqiuStonePage() {
     <section className="border-b border-border">
       <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-24 sm:px-10 sm:py-32 lg:grid-cols-2 lg:items-center">
         <img src={asset("028")} alt="환구석재가 참여한 현대 건축 프로젝트" className="aspect-[16/10] h-full w-full object-cover saturate-[0.85]" />
-        <div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">글로벌 스톤의 자원과 기술을 한국 프로젝트에 직접 연결합니다.</h2><p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">이음앤빌드가 사양 검토, 샘플, 견적, 생산 일정, 물류와 현장 대응을 하나의 창구에서 관리합니다.</p><a href="tel:01031138668" className="mt-8 inline-flex items-center gap-2 border-b border-foreground pb-2 text-sm font-bold">프로젝트 상담 <ArrowRight size={15}/></a></div>
+        <div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">글로벌 스톤의 자원과 기술을 한국 프로젝트에 직접 연결합니다.</h2><p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">이음앤빌드가 사양 검토, 샘플, 견적, 생산 일정, 물류와 현장 대응을 하나의 창구에서 관리합니다.</p><Link to="/brands/huanqiu-stone-products" className="mt-8 inline-flex items-center gap-2 border-b border-foreground pb-2 text-sm font-bold">주요 제품 보기 <ArrowRight size={15}/></Link></div>
       </div>
     </section>
-    <ContactBand />
   </SiteShell>;
 }

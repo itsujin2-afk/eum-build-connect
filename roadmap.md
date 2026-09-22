@@ -18,3 +18,5 @@
 - [x] 히어로 풀블리드 제거 → 비대칭 스플릿 에디토리얼 레이아웃, 로고 브랜드 크레스트 재배치, 글로우 골드 액센트 토큰 추가
 - [x] Expand the Huanqiu Stone page with the new UMGG profile content
 - [x] Expand Huanqiu Stone with complete proposal details, craft imagery, honors, masters, and project categories
+- [x] Build the Huanqiu Stone product catalogue page from the uploaded 223-page material guide
+- [x] Remove the duplicated quote band from Huanqiu Stone and simplify the Home message
