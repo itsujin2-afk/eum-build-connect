@@ -45,7 +45,7 @@ function SectionHead({ eyebrow, title, body }: { eyebrow: string; title: string;
 export function ForestHousePage() {
   return <SiteShell>
     <section className="border-b border-border bg-background">
-      <div className="mx-auto grid min-h-[88svh] max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-10 lg:grid-cols-[.82fr_1.18fr] lg:gap-16">
+      <div className="mx-auto grid max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-16 lg:pb-24 lg:pt-40">
         <div>
           <p className="eyebrow text-muted-foreground">04 · FOREST HOUSE · SINCE 2016</p>
           <h1 className="mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">함침지부터 마루까지<br/><span className="text-gold">한 공장에서 생산합니다</span></h1>
@@ -53,25 +53,25 @@ export function ForestHousePage() {
           <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>등록자본금 3,000만 위안</span><span>매출의 5% 이상 R&amp;D 투자</span><span>ISO 9001·14001</span></div>
           <Link to="/brands/forest-house-products" className="mt-9 inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">신3중 실목마루 제품 보기 <ArrowRight size={16}/></Link>
         </div>
-        <figure className="relative min-h-[380px] self-stretch overflow-hidden bg-surface lg:min-h-[620px]"><img src={headquarters.url} alt="산동 이센메이쥐 본사와 생산단지" className="absolute inset-0 h-full w-full object-cover"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-4 text-xs font-bold backdrop-blur-sm">SHANDONG · INTEGRATED WOOD MATERIALS CAMPUS</figcaption></figure>
+        <figure className="relative overflow-hidden bg-surface"><img src={headquarters.url} alt="산동 이센메이쥐 본사와 생산단지" className="aspect-[4/3] w-full object-cover saturate-[0.85]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-3 text-[11px] font-bold backdrop-blur-sm">SHANDONG · INTEGRATED WOOD MATERIALS CAMPUS</figcaption></figure>
       </div>
     </section>
 
     <section className="border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-14 lg:grid-cols-[.85fr_1.15fr] lg:gap-24"><SectionHead eyebrow="COMPANY PROFILE" title="원자재부터 완제품까지 이어지는 목재 생산 체계" body="2016년 설립 이후 제품 연구개발, 생산, 가공과 판매를 하나의 조직으로 운영해 왔습니다. 생산시설뿐 아니라 연구실, 신제품 전시장과 직원 지원시설까지 갖춘 장기 운영 기반을 구축했습니다."/><div className="grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3">{metrics.map(([value,label])=><div key={label} className="bg-background p-5 sm:p-7"><strong className="text-2xl font-bold text-gold sm:text-3xl">{value}</strong><p className="mt-3 text-xs leading-5 text-muted-foreground">{label}</p></div>)}</div></div>
-      <div className="mt-16 grid gap-5 lg:grid-cols-[1.2fr_.8fr]"><img src={campusGate.url} alt="이센메이쥐 생산단지 정문" className="aspect-[16/9] h-full w-full object-cover"/><div className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-1"><div className="bg-surface p-7"><b>3,000㎡</b><p className="mt-2 text-sm text-muted-foreground">사무동·제품 연구개발센터</p></div><div className="bg-surface p-7"><b>1,000㎡</b><p className="mt-2 text-sm text-muted-foreground">신제품 전시장</p></div><div className="bg-surface p-7"><b>600㎡+</b><p className="mt-2 text-sm text-muted-foreground">제품 시험·분석 실험실</p></div><div className="bg-surface p-7"><b>7,000㎡</b><p className="mt-2 text-sm text-muted-foreground">생산단지 내 녹지 면적</p></div></div></div>
+      <div className="mt-16 grid gap-5 lg:grid-cols-[.8fr_1.2fr]"><img src={campusGate.url} alt="이센메이쥐 생산단지 정문" className="aspect-[16/10] h-full w-full object-cover saturate-[0.85]"/><div className="grid gap-px bg-border sm:grid-cols-2"><div className="bg-surface p-7"><b>3,000㎡</b><p className="mt-2 text-sm text-muted-foreground">사무동·제품 연구개발센터</p></div><div className="bg-surface p-7"><b>1,000㎡</b><p className="mt-2 text-sm text-muted-foreground">신제품 전시장</p></div><div className="bg-surface p-7"><b>600㎡+</b><p className="mt-2 text-sm text-muted-foreground">제품 시험·분석 실험실</p></div><div className="bg-surface p-7"><b>7,000㎡</b><p className="mt-2 text-sm text-muted-foreground">생산단지 내 녹지 면적</p></div></div></div>
     </div></section>
 
     <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <SectionHead eyebrow="FACTORY CAPABILITY" title="인쇄·함침·압착·마루 가공을 직접 운영합니다" body="7개 4색 고속 인쇄라인과 11개 전자동 함침지 라인, 강화마루·다층마루 생산설비를 연계해 소재의 표면부터 완제품까지 품질과 납기를 관리합니다."/>
-      <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{[
-        [productionHall.url,"자동화 생산라인","대규모 생산동 안에서 마루 가공 공정을 연속 운영합니다."],
-        [flooringLine.url,"마루 성형·이송","자동 이송 설비로 공정 사이의 취급 오차를 줄입니다."],
-        [pressLine.url,"대형 압착 라인","마루와 판재의 접합 품질을 일정하게 관리합니다."],
-        [printingLine.url,"4색 고속 인쇄","7개 라인에서 연간 인쇄지 1.5만 톤을 생산합니다."],
-        [warehouse.url,"원자재·생산 창고","4만㎡ 규모의 생산·창고 공간으로 대량 물량에 대응합니다."],
-        [finishedStorage.url,"완제품 보관","검사를 마친 제품을 출고 전까지 구역별로 관리합니다."],
-      ].map(([image,title,text])=><article key={title} className="bg-background"><img src={image} alt={`이센메이쥐 ${title}`} className="aspect-[4/3] w-full object-cover saturate-[0.88]"/><div className="p-6"><h3 className="text-lg font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p></div></article>)}</div>
+      <div className="mt-14 grid grid-cols-2 gap-px border border-border bg-border md:grid-cols-3">{[
+        [productionHall.url,"자동화 생산라인"],
+        [flooringLine.url,"마루 성형·이송"],
+        [pressLine.url,"대형 압착 라인"],
+        [printingLine.url,"4색 고속 인쇄"],
+        [warehouse.url,"원자재·생산 창고"],
+        [finishedStorage.url,"완제품 보관"],
+      ].map(([image,title])=><figure key={title} className="group relative aspect-[16/10] overflow-hidden bg-background"><img src={image} alt={`이센메이쥐 ${title}`} className="h-full w-full object-cover saturate-[0.8] transition duration-500 group-hover:saturate-100"/><figcaption className="absolute bottom-0 left-0 bg-background/90 px-3 py-1.5 text-[11px] font-semibold backdrop-blur-sm">{title}</figcaption></figure>)}</div>
     </div></section>
 
     <section><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
@@ -84,7 +84,7 @@ export function ForestHousePage() {
     </div></section>
 
     <section><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
-      <div className="grid gap-14 lg:grid-cols-[.85fr_1.15fr] lg:gap-24"><div><SectionHead eyebrow="R&D AND QUALITY" title="매출의 5% 이상을 신제품 연구에 투자합니다" body="기업기술센터와 중점실험실을 기반으로 대학과 산학연 협력을 이어가며 소재 성능과 생산 공정을 개선합니다."/><img src={laboratory.url} alt="이센메이쥐 제품 연구실" className="mt-10 aspect-[16/10] w-full object-cover"/></div><div className="grid gap-px border border-border bg-border sm:grid-cols-2">{[
+      <div className="grid gap-14 lg:grid-cols-[.85fr_1.15fr] lg:gap-24"><div><SectionHead eyebrow="R&D AND QUALITY" title="매출의 5% 이상을 신제품 연구에 투자합니다" body="기업기술센터와 중점실험실을 기반으로 대학과 산학연 협력을 이어가며 소재 성능과 생산 공정을 개선합니다."/><img src={laboratory.url} alt="이센메이쥐 제품 연구실" className="mt-10 aspect-[16/9] w-full max-w-md object-cover saturate-[0.85]"/></div><div className="grid gap-px border border-border bg-border sm:grid-cols-2">{[
         [FlaskConical,"기술혁신 플랫폼","린이시 기업기술센터와 중점실험실 운영"],
         [ThermometerSun,"연구 프로젝트","성급 1건·시급 중점 1건·시구급 3건·자체 17건"],
         [Check,"지식재산","발명특허 2건·실용신안특허 14건"],
