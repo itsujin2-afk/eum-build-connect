@@ -11,7 +11,6 @@ import fz708 from "@/assets/forest-house-products/fz708.jpg.asset.json";
 import fz709 from "@/assets/forest-house-products/fz709.jpg.asset.json";
 import fz710 from "@/assets/forest-house-products/fz710.jpg.asset.json";
 import fz711 from "@/assets/forest-house-products/fz711.jpg.asset.json";
-import pressLine from "@/assets/forest-house/015.jpg.asset.json";
 
 const series = [
   { image: fz701.url, name: "라이트 오크", tone: "밝고 내추럴한 오크 톤" },
@@ -52,7 +51,7 @@ export function ForestHouseProductsPage() {
 
     <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:gap-24">
-        <img src={pressLine.url} alt="이센메이쥐 3중 실목 기재 압착 생산라인" className="aspect-[4/3] w-full bg-background object-cover"/>
+        <img src={fz707.url} alt="신3중 실목마루 내추럴 우드 바닥 질감" className="aspect-[4/3] w-full bg-background object-cover"/>
         <div>
           <p className="eyebrow text-muted-foreground">STRUCTURE</p>
           <h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl">난방열을 고르게 전달하는<br/>3중 실목 구조</h2>

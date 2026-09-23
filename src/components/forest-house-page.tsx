@@ -4,13 +4,7 @@ import { SiteShell } from "@/components/site-shell";
 import campusGate from "@/assets/forest-house/000.jpg.asset.json";
 import headquarters from "@/assets/forest-house/001.jpg.asset.json";
 import laboratory from "@/assets/forest-house/004.jpg.asset.json";
-import warehouse from "@/assets/forest-house/007.jpg.asset.json";
-import productionHall from "@/assets/forest-house/010.jpg.asset.json";
-import flooringLine from "@/assets/forest-house/011.jpg.asset.json";
-import pressLine from "@/assets/forest-house/015.jpg.asset.json";
-import finishedStorage from "@/assets/forest-house/016.jpg.asset.json";
-import printingLine from "@/assets/forest-house/018.jpg.asset.json";
-import heatingFloor from "@/assets/forest-house/025.jpg.asset.json";
+import fz701 from "@/assets/forest-house-products/fz701.jpg.asset.json";
 
 const metrics = [
   ["150무", "기업 총 부지"], ["4만㎡", "생산·창고 면적"], ["12만 장", "함침지 일 생산"],
@@ -62,25 +56,13 @@ export function ForestHousePage() {
       <div className="mt-16 grid gap-5 lg:grid-cols-[.8fr_1.2fr]"><img src={campusGate.url} alt="이센메이쥐 생산단지 정문" className="aspect-[16/10] h-full w-full object-cover saturate-[0.85]"/><div className="grid gap-px bg-border sm:grid-cols-2"><div className="bg-surface p-7"><b>3,000㎡</b><p className="mt-2 text-sm text-muted-foreground">사무동·제품 연구개발센터</p></div><div className="bg-surface p-7"><b>1,000㎡</b><p className="mt-2 text-sm text-muted-foreground">신제품 전시장</p></div><div className="bg-surface p-7"><b>600㎡+</b><p className="mt-2 text-sm text-muted-foreground">제품 시험·분석 실험실</p></div><div className="bg-surface p-7"><b>7,000㎡</b><p className="mt-2 text-sm text-muted-foreground">생산단지 내 녹지 면적</p></div></div></div>
     </div></section>
 
-    <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
-      <SectionHead eyebrow="FACTORY CAPABILITY" title="인쇄·함침·압착·마루 가공을 직접 운영합니다" body="7개 4색 고속 인쇄라인과 11개 전자동 함침지 라인, 강화마루·다층마루 생산설비를 연계해 소재의 표면부터 완제품까지 품질과 납기를 관리합니다."/>
-      <div className="mt-14 grid grid-cols-2 gap-px border border-border bg-border md:grid-cols-3">{[
-        [productionHall.url,"자동화 생산라인"],
-        [flooringLine.url,"마루 성형·이송"],
-        [pressLine.url,"대형 압착 라인"],
-        [printingLine.url,"4색 고속 인쇄"],
-        [warehouse.url,"원자재·생산 창고"],
-        [finishedStorage.url,"완제품 보관"],
-      ].map(([image,title])=><figure key={title} className="group relative aspect-[16/10] overflow-hidden bg-background"><img src={image} alt={`이센메이쥐 ${title}`} className="h-full w-full object-cover saturate-[0.8] transition duration-500 group-hover:saturate-100"/><figcaption className="absolute bottom-0 left-0 bg-background/90 px-3 py-1.5 text-[11px] font-semibold backdrop-blur-sm">{title}</figcaption></figure>)}</div>
-    </div></section>
-
     <section><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <SectionHead eyebrow="PRODUCT SYSTEM" title="바닥재와 표면 소재를 함께 공급합니다" body="마루 한 품목만 만드는 회사가 아니라 표면 인쇄와 함침, 기재, 완제품을 함께 생산해 프로젝트별 색상과 구조, 물량을 통합 검토합니다."/>
       <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">{products.map(([title,text])=><article key={title} className="bg-background p-7"><Layers3 size={20} className="text-gold"/><h3 className="mt-8 text-xl font-bold">{title}</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div>
     </div></section>
 
     <section className="border-y border-border bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
-      <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:gap-24"><img src={heatingFloor.url} alt="이센메이쥐 탄소섬유 지열마루 소개" className="mx-auto max-h-[680px] w-full max-w-xl object-contain bg-background"/><div><SectionHead eyebrow="HEATING FLOOR TECHNOLOGY" title="지열 난방을 고려한 신3중 실목마루" body="3중 실목 기재와 탄소섬유 패널을 결합해 열 전달, 변형 안정성, 방습과 표면 내구성을 함께 높인 기능형 바닥재입니다."/><div className="mt-9 divide-y divide-border border-y border-border">{floorBenefits.map(([title,text],index)=><article key={title} className="grid gap-3 py-5 sm:grid-cols-[42px_150px_1fr]"><span className="text-xs font-bold text-gold">0{index+1}</span><h3 className="font-bold">{title}</h3><p className="text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div></div></div>
+      <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:gap-24"><img src={fz701.url} alt="이센메이쥐 신3중 실목마루 라이트 오크 바닥 질감" className="aspect-[4/3] w-full object-cover saturate-[0.85]"/><div><SectionHead eyebrow="HEATING FLOOR TECHNOLOGY" title="지열 난방을 고려한 신3중 실목마루" body="3중 실목 기재와 탄소섬유 패널을 결합해 열 전달, 변형 안정성, 방습과 표면 내구성을 함께 높인 기능형 바닥재입니다."/><div className="mt-9 divide-y divide-border border-y border-border">{floorBenefits.map(([title,text],index)=><article key={title} className="grid gap-3 py-5 sm:grid-cols-[42px_150px_1fr]"><span className="text-xs font-bold text-gold">0{index+1}</span><h3 className="font-bold">{title}</h3><p className="text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div></div></div>
     </div></section>
 
     <section><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
