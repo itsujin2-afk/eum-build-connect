@@ -12,8 +12,6 @@ import glassFireproof from "@/assets/jincheng/glass-fireproof.jpg.asset.json";
 import glassLowe from "@/assets/jincheng/glass-lowe.jpg.asset.json";
 import curtainwall from "@/assets/jincheng/curtainwall.jpg";
 
-const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
-const asset = (id: string) => imageModules[`../assets/eum/${id}.jpg`] ?? "";
 
 const metrics = [
   ["1996", "연태 진청 유리 설립"], ["33,000m²", "생산 부지 약 50여 무"], ["2023", "고신기술기업 인정"],
