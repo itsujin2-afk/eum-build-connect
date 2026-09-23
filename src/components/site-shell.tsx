@@ -4,6 +4,14 @@ import type { ReactNode } from "react";
 import { brands } from "@/lib/site-data";
 import { buttonVariants } from "@/components/ui/button";
 
+const productLinks = {
+  "huanqiu-stone": "/brands/huanqiu-stone-products",
+  "intco-decor": "/brands/intco-decor-products",
+  "forest-house": "/brands/forest-house-products",
+  "lion-king": "/brands/lion-king-products",
+  "shuofeng": "/brands/shuofeng-products",
+} as const;
+
 export function SiteShell({ children, overlayHeader = false, hideFooter = false, hideFooterLogo = false, fullscreen = false }: { children: ReactNode; overlayHeader?: boolean; hideFooter?: boolean; hideFooterLogo?: boolean; fullscreen?: boolean }) {
   return <div className={fullscreen ? "flex h-svh flex-col overflow-hidden bg-background text-foreground" : "min-h-screen bg-background text-foreground"}>
     <header className="fixed inset-x-0 top-0 z-50">
