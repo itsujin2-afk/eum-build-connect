@@ -36,7 +36,9 @@ const features = [
 export function ForestHouseProductsPage() {
   return <SiteShell>
     <section className="border-b border-border bg-background">
-      <div className="mx-auto grid max-w-[1440px] gap-10 px-5 pb-20 pt-28 sm:px-10 lg:grid-cols-[1.05fr_.95fr] lg:items-end lg:gap-16 lg:pt-36">
+      <div className="mx-auto max-w-[1440px] px-5 pb-20 pt-28 sm:px-10 lg:pb-24 lg:pt-36">
+        <Link to="/brands/forest-house" className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground"><ArrowLeft size={14}/> 이센메이쥐 소개</Link>
+        <div className="mt-12 grid gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-end lg:gap-16">
         <div>
           <p className="eyebrow text-muted-foreground">04 · FOREST HOUSE · PRODUCTS</p>
           <h1 className="mt-5 break-keep text-4xl font-bold leading-[1.12] sm:text-5xl lg:text-6xl">신3중 실목마루<br/>FZ70 시리즈</h1>
