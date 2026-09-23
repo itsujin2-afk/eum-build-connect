@@ -2,18 +2,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import spaceAesthetics from "@/assets/lion/space-aesthetics.jpg.asset.json";
-import portlandInterior from "@/assets/lion/portland-interior.jpg.asset.json";
-import y1 from "@/assets/lion/portland-y1.jpg.asset.json";
-import y2 from "@/assets/lion/portland-y2.jpg.asset.json";
-import y3 from "@/assets/lion/portland-y3.jpg.asset.json";
-import y4 from "@/assets/lion/portland-y4.jpg.asset.json";
-import y5 from "@/assets/lion/portland-y5.jpg.asset.json";
-import y6 from "@/assets/lion/portland-y6.jpg.asset.json";
-import m20 from "@/assets/lion/portland-m20.jpg.asset.json";
-import m24 from "@/assets/lion/portland-m24.jpg.asset.json";
-import m25 from "@/assets/lion/portland-m25.jpg.asset.json";
-import m26 from "@/assets/lion/portland-m26.jpg.asset.json";
-import m27 from "@/assets/lion/portland-m27.jpg.asset.json";
 
 const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
 const eumAsset = (id: string) => imageModules[`../assets/eum/${id}.jpg`];
@@ -29,16 +17,6 @@ const productLines = [
   ["MARBLE", "대리석 타일", "천연 대리석의 깊이 있는 결을 공간에 편안하게 적용합니다."],
   ["DIAMOND GLAZE", "다이아몬드 글레이즈", "단단하고 매끄러운 표면으로 선명한 질감과 관리 편의성을 갖췄습니다."],
   ["INTERIOR WALL", "내벽 타일", "주거와 상업 공간의 벽면을 정돈된 한 가지 톤으로 연결합니다."],
-];
-
-const plainSurfaces = [
-  ["Y1", y1.url], ["Y2", y2.url], ["Y3", y3.url],
-  ["Y4", y4.url], ["Y5", y5.url], ["Y6", y6.url],
-];
-
-const moldedSurfaces = [
-  ["M20", m20.url], ["M24", m24.url], ["M25", m25.url],
-  ["M26", m26.url], ["M27", m27.url],
 ];
 
 export function LionKingPage() {
