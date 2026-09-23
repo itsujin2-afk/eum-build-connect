@@ -36,7 +36,19 @@ export const brands: Brand[] = [
     ]
   },
   {
-    slug:"lion-king", number:"02", name:"광둥 라이온 킹 세라믹스", english:"GUANGDONG LION KING CERAMICS", category:"대리석 타일 · 내벽 타일",
+    slug:"intco-decor", number:"02", name:"잉코 데코", english:"INTCO DECOR", since:"2002", category:"벽패널 · 몰딩 · 바닥재 · 아웃도어",
+    headline:"장식 몰딩을 연간 1억 3천만 m 만듭니다", intro:"상장기업 잉코(종목코드 688087)의 건축장식자재 브랜드입니다. 2002년 상하이에서 시작해 현재 실내외 마감재 전 품목을 직접 제조합니다.",
+    heroImage:"079", gallery:["080","081","082","083","084","085","086","087","088","089"],
+    highlights:[{title:"4개 지역 생산기지",body:"산동 410무 · 상하이 56무 · 안후이 100무 · 베트남 150무, 총 716무입니다."},{title:"자사 브랜드",body:"이바이션·이시무 등 자체 브랜드로 5개 카테고리를 통합 공급합니다."},{title:"그룹 내 원료 조달",body:"회수 EPS를 r-PS 펠릿으로 재생해 신재 대비 탄소 배출을 84% 낮춥니다."}],
+    metrics:[{value:"1.3억m",label:"장식 몰딩 연 생산"},{value:"4,500만 개",label:"완제품 연 생산"},{value:"130+",label:"수출 대상국"},{value:"400+",label:"글로벌 유통·소매 체인"}],
+    sections:[
+      {eyebrow:"PRODUCT CATEGORIES",title:"벽에서 바닥, 실외까지",items:[{title:"벽패널",text:"흡음·3D · MDF · PS · SPC · WPC"},{title:"몰딩",text:"걸레받이 · 벽면 · 천장 · PS · MDF · PVC"},{title:"바닥 부속",text:"PVC 계단 디딤판 · 단차 · 마감 · T몰딩"},{title:"아웃도어",text:"WPC 외벽 · 데크 · 펜스 · DIY 데크 타일 · 인조 잔디"},{title:"바닥재",text:"SPC 플로어링 4mm · 5mm / 6종 규격"}]},
+      {eyebrow:"SIGNATURE SERIES",title:"대표 벽패널 시리즈",items:[{title:"MDF 흡음 패널",text:"600×2400 · 600×3000mm · 중이톤 · 무니톤 · 천연 무니목"},{title:"MDF 3D 패널",text:"도장형 · 랩핑형 · 폭 122mm · 두께 12mm"},{title:"이바이션 3D 패널",text:"고급 · 기본 · 디자이너 3계열 · 폭 250 · 304 · 315mm"},{title:"SPC 석재 패널",text:"대리석무늬 · 암암판 · 고전암운 · 최대 1200×2400mm"},{title:"럭셔리 스톤",text:"연속 부합 마본 · UV 코팅 · 상업 공간 전용"}]},
+      {eyebrow:"CERTIFIED PERFORMANCE",title:"재생 소재와 국제 인증",items:[{title:"소재",text:"PS · MDF · PVC · PET · WPC"},{title:"인증",text:"ISO 9001 · ISO 14001 · CE · VOC A+"},{title:"성능",text:"포름알데히드 무첨가 · 중금속 무첨가 · 방수"},{title:"벽패널",text:"최대 1200×2400mm"}]}
+    ]
+  },
+  {
+    slug:"lion-king", number:"03", name:"광둥 라이온 킹 세라믹스", english:"GUANGDONG LION KING CERAMICS", category:"대리석 타일 · 내벽 타일",
     headline:"천연석의 표정을 타일로 구현합니다", intro:"중국 도자기 산업의 중심지 포산 화샤 세라믹 엑스포 시티에 위치한 대리석 타일 전문 기업으로, 생산·연구개발·판매를 일체화했습니다.",
     heroImage:"030", gallery:["031","032","033","034","035","036","037","038","039","040","041"],
     highlights:[{title:"해외 최첨단 설비",body:"세계적인 첨단 기술과 장비를 지속 도입해 업계 최전선 수준을 유지합니다."},{title:"국제 품질 관리",body:"생산 전 과정에서 국제 기준에 따라 검사하고 다수의 인증을 확보했습니다."},{title:"하이엔드 콘셉트",body:"실속 있는 고품질 타일이라는 철학으로 시장의 신뢰를 확보했습니다."}],
@@ -47,7 +59,7 @@ export const brands: Brand[] = [
     ]
   },
   {
-    slug:"jincheng-glass", number:"03", name:"진청 유리", english:"JINCHENG GLASS", since:"1996", category:"강화 · 복층 · 접합 · Low-E · 커튼월",
+    slug:"jincheng-glass", number:"04", name:"진청 유리", english:"JINCHENG GLASS", since:"1996", category:"강화 · 복층 · 접합 · Low-E · 커튼월",
     headline:"건축용 안전 유리를 30년간 만들어 왔습니다", intro:"1996년 설립된 고신기술기업으로 2023년 7월 11일 치루 지분거래센터에 상장했습니다. 생산 부지 50여 무, 약 33,000㎡를 보유합니다.",
     heroImage:"042", gallery:["043","044","045","046","047","048","049"],
     highlights:[{title:"3개 전용 생산라인",body:"템퍼링, 전자동 IGU, 접합 유리 라인을 보유하고 10여 개 성·시에 공급합니다."},{title:"성급 R&D 센터",body:"수십 건의 국가 특허와 스마트 조광·초박형 플렉시블 유리 연구 역량을 갖췄습니다."},{title:"청정 에너지",body:"지붕 태양광의 90%를 생산에 사용하고 10%는 국가 전력망에 병입합니다."}],
@@ -59,7 +71,7 @@ export const brands: Brand[] = [
     ]
   },
   {
-    slug:"forest-house", number:"04", name:"이센메이쥐", english:"FOREST HOUSE", since:"2016", category:"마루 · 판재 · 함침지",
+    slug:"forest-house", number:"05", name:"이센메이쥐", english:"FOREST HOUSE", since:"2016", category:"마루 · 판재 · 함침지",
     headline:"원자재부터 완제품까지 한 공장에서 만듭니다", intro:"제이슨그룹 산하 산동 이센메이쥐는 마루와 판재의 연구개발·생산·가공·판매를 일체화한 과학기술형 기업입니다. 등록자본금 3,000만 위안입니다.",
     heroImage:"051", gallery:["052","053","054","055","056","057","058","059","060"],
     highlights:[{title:"함침지부터 마루까지",body:"함침지 라인 11기, 4색 인쇄라인 7기와 대규모 마루 생산 인프라를 운영합니다."},{title:"R&D 매출 5% 이상",body:"발명특허 2건, 실용신안 14건과 기업기술센터·중점실험실을 운영합니다."},{title:"검증된 인증 체계",body:"ISO 9001·14001 인증과 산동성 우수혁신성과상 2등상을 보유합니다."}],
@@ -71,7 +83,7 @@ export const brands: Brand[] = [
     ]
   },
   {
-    slug:"shuofeng", number:"05", name:"슈오펑 목문", english:"SHUOFENG", since:"1988", category:"목문 · 목마감재 · 정목 가구",
+    slug:"shuofeng", number:"06", name:"슈오펑 목문", english:"SHUOFENG", since:"1988", category:"목문 · 목마감재 · 정목 가구",
     headline:"5성급 호텔 목공사를 37년간 해왔습니다", intro:"1988년 린이에서 시작한 인더스트리 4.0 제조 기업입니다. 디자인·연구개발·생산·판매·서비스를 일체화하고 문·벽·장을 같은 톤으로 맞춤 제작합니다.",
     heroImage:"062", gallery:["063","064","065","066","067","069","071","073","075","077"],
     highlights:[{title:"문·벽·장 일체화",body:"방문, 벽면 목시멘, 드레스룸과 수납장을 공간 단위로 맞춥니다."},{title:"린이 생산 거점",body:"장식자재 시장·물류원 3km 거리에서 원자재 원가와 리스크를 낮춥니다."},{title:"유럽 정밀 설비",body:"독일·이탈리아 설비로 프렌치, 미드센추리, 현대식, 신중식 등 맞춤 목공예를 구현합니다."}],
@@ -82,18 +94,6 @@ export const brands: Brand[] = [
       {eyebrow:"REFERENCES & SERVICE",title:"호텔·주택·오피스·병원 레퍼런스",items:[{title:"5성급 호텔",text:"하이난 항수만 · 알카디아 · 산야 산해천대 · 하이커우 힐튼 · 곡부 메리어트 · 쓰촨 구채구 인디고"},{title:"주요 그룹",text:"영성개발 · 롱능그룹 · 노상그룹 · 쌍대그룹 · 태성항그룹"},{title:"품질보증",text:"2년 보증 · 종신 A/S · 보증 내 수리·교환·환불 · 이후 소모품 원가만 과금"}]}
     ]
   },
-  {
-    slug:"intco-decor", number:"06", name:"잉코 데코", english:"INTCO DECOR", since:"2002", category:"벽패널 · 몰딩 · 바닥재 · 아웃도어",
-    headline:"장식 몰딩을 연간 1억 3천만 m 만듭니다", intro:"상장기업 잉코(종목코드 688087)의 건축장식자재 브랜드입니다. 2002년 상하이에서 시작해 현재 실내외 마감재 전 품목을 직접 제조합니다.",
-    heroImage:"079", gallery:["080","081","082","083","084","085","086","087","088","089"],
-    highlights:[{title:"4개 지역 생산기지",body:"산동 410무 · 상하이 56무 · 안후이 100무 · 베트남 150무, 총 716무입니다."},{title:"자사 브랜드",body:"이바이션·이시무 등 자체 브랜드로 5개 카테고리를 통합 공급합니다."},{title:"그룹 내 원료 조달",body:"회수 EPS를 r-PS 펠릿으로 재생해 신재 대비 탄소 배출을 84% 낮춥니다."}],
-    metrics:[{value:"1.3억m",label:"장식 몰딩 연 생산"},{value:"4,500만 개",label:"완제품 연 생산"},{value:"130+",label:"수출 대상국"},{value:"400+",label:"글로벌 유통·소매 체인"}],
-    sections:[
-      {eyebrow:"PRODUCT CATEGORIES",title:"벽에서 바닥, 실외까지",items:[{title:"벽패널",text:"흡음·3D · MDF · PS · SPC · WPC"},{title:"몰딩",text:"걸레받이 · 벽면 · 천장 · PS · MDF · PVC"},{title:"바닥 부속",text:"PVC 계단 디딤판 · 단차 · 마감 · T몰딩"},{title:"아웃도어",text:"WPC 외벽 · 데크 · 펜스 · DIY 데크 타일 · 인조 잔디"},{title:"바닥재",text:"SPC 플로어링 4mm · 5mm / 6종 규격"}]},
-      {eyebrow:"SIGNATURE SERIES",title:"대표 벽패널 시리즈",items:[{title:"MDF 흡음 패널",text:"600×2400 · 600×3000mm · 중이톤 · 무니톤 · 천연 무니목"},{title:"MDF 3D 패널",text:"도장형 · 랩핑형 · 폭 122mm · 두께 12mm"},{title:"이바이션 3D 패널",text:"고급 · 기본 · 디자이너 3계열 · 폭 250 · 304 · 315mm"},{title:"SPC 석재 패널",text:"대리석무늬 · 암암판 · 고전암운 · 최대 1200×2400mm"},{title:"럭셔리 스톤",text:"연속 부합 마본 · UV 코팅 · 상업 공간 전용"}]},
-      {eyebrow:"CERTIFIED PERFORMANCE",title:"재생 소재와 국제 인증",items:[{title:"소재",text:"PS · MDF · PVC · PET · WPC"},{title:"인증",text:"ISO 9001 · ISO 14001 · CE · VOC A+"},{title:"성능",text:"포름알데히드 무첨가 · 중금속 무첨가 · 방수"},{title:"벽패널",text:"최대 1200×2400mm"}]}
-    ]
-  }
 ];
 
 export const steps = [
