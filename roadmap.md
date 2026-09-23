@@ -24,4 +24,4 @@
 - [x] Expand the Intco Decor page from the uploaded company profile and product notes
 - [x] Build the Intco Decor product catalogue page from the two uploaded product guides
 - [x] Add prominent Intco Decor product buttons and navigation links
-- [ ] Verify the new catalogue on desktop and mobile
+- [x] Verify the new catalogue on desktop and mobile
