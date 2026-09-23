@@ -24,6 +24,14 @@ import mouldings from "@/assets/intco-products/mouldings.jpg.asset.json";
 import floorAccessories from "@/assets/intco-products/floor-accessories.jpg.asset.json";
 import wpcWall from "@/assets/intco-products/wpc-wall.jpg.asset.json";
 import wpcDeck from "@/assets/intco-products/wpc-deck.jpg.asset.json";
+import floorOakInstall from "@/assets/intco-products/floor-oak-install.jpg.asset.json";
+import floorOakSwatches from "@/assets/intco-products/floor-oak-swatches.jpg.asset.json";
+import floorPineInstall from "@/assets/intco-products/floor-pine-install.jpg.asset.json";
+import floorPineSwatches from "@/assets/intco-products/floor-pine-swatches.jpg.asset.json";
+import floorMapleInstall from "@/assets/intco-products/floor-maple-install.jpg.asset.json";
+import floorMapleSwatches from "@/assets/intco-products/floor-maple-swatches.jpg.asset.json";
+import floorElmInstall from "@/assets/intco-products/floor-elm-install.jpg.asset.json";
+import floorElmSwatches from "@/assets/intco-products/floor-elm-swatches.jpg.asset.json";
 
 const categories = [
   { id: "wall", number: "01", title: "실내 벽패널", subtitle: "흡음·3D·MDF·SPC 패널", description: "흡음판부터 입체 벽패널까지 공간의 용도와 디자인에 맞춰 고릅니다. 우드·패브릭·석재 느낌을 다양한 규격과 색상으로 제공합니다.", image: wallApplication.url },
@@ -71,7 +79,12 @@ const outdoorLines = [
   ["높임 화단", "조경 공간을 빠르게 구성하는 모듈형 제품"],
 ] as const;
 
-const flooringPatterns = ["오크", "파인", "메이플", "화이트 엘름"] as const;
+const flooringPatterns = [
+  { name: "오크", tone: "밝고 따뜻한 내추럴 우드", install: floorOakInstall, swatches: floorOakSwatches },
+  { name: "파인", tone: "맑고 가벼운 밝은 우드", install: floorPineInstall, swatches: floorPineSwatches },
+  { name: "메이플", tone: "부드러운 크림 베이지 우드", install: floorMapleInstall, swatches: floorMapleSwatches },
+  { name: "화이트 엘름", tone: "차분한 그레이·브라운 우드", install: floorElmInstall, swatches: floorElmSwatches },
+] as const;
 
 function SectionHeading({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) {
   return <div className="max-w-3xl"><p className="eyebrow text-muted-foreground">{eyebrow}</p><h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl lg:text-5xl">{title}</h2>{description && <p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">{description}</p>}</div>;
