@@ -48,8 +48,8 @@ function SectionHead({ eyebrow, title, body }: { eyebrow: string; title: string;
 
 export function JinchengGlassPage() {
   return <SiteShell>
-    <section className="relative min-h-[88svh] overflow-hidden border-b border-border bg-background">
-      <div className="mx-auto grid min-h-[88svh] max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-10 lg:grid-cols-[.86fr_1.14fr] lg:gap-16">
+    <section className="relative overflow-hidden border-b border-border bg-background">
+      <div className="mx-auto grid max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-16">
         <div className="relative z-10">
           <p className="eyebrow text-muted-foreground">03 · JINCHENG GLASS · SINCE 1996</p>
           <h1 className="mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">30년의<br/><span className="text-gold">건축용 안전 유리</span></h1>
@@ -57,7 +57,7 @@ export function JinchengGlassPage() {
           <div className="mt-9 flex flex-wrap items-center gap-4"><a href="tel:01031138668" className="inline-flex items-center gap-2.5 bg-foreground px-7 py-3.5 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">사양·견적 문의 <ArrowRight size={16}/></a><span className="text-xs text-muted-foreground">강화 · 복층 · 접합 · 방화 · Low-E</span></div>
           <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>2023 고신기술기업</span><span>치루 지분거래센터 상장 (307208)</span><span>CCC · ISO · CE</span></div>
         </div>
-        <figure className="relative min-h-[360px] self-stretch overflow-hidden bg-surface lg:min-h-[620px]"><img src={hqAerial.url} alt="산동 진청 특종 유리 생산기지 전경" className="absolute inset-0 h-full w-full object-cover saturate-[0.86]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-4 text-xs font-bold backdrop-blur-sm">SHANDONG JINCHENG · ZHAOYUAN PLANT</figcaption></figure>
+        <figure className="relative aspect-[4/3] self-center overflow-hidden bg-surface"><img src={hqAerial.url} alt="산동 진청 특종 유리 생산기지 전경" className="absolute inset-0 h-full w-full object-cover saturate-[0.86]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-4 py-3 text-[11px] font-bold backdrop-blur-sm">SHANDONG JINCHENG · ZHAOYUAN PLANT</figcaption></figure>
       </div>
     </section>
 
