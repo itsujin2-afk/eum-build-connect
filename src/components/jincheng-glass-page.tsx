@@ -10,9 +10,8 @@ import glassHollow from "@/assets/jincheng/glass-hollow.jpg.asset.json";
 import glassLaminated from "@/assets/jincheng/glass-laminated.jpg.asset.json";
 import glassFireproof from "@/assets/jincheng/glass-fireproof.jpg.asset.json";
 import glassLowe from "@/assets/jincheng/glass-lowe.jpg.asset.json";
+import curtainwall from "@/assets/jincheng/curtainwall.jpg";
 
-const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
-const asset = (id: string) => imageModules[`../assets/eum/${id}.jpg`] ?? "";
 
 const metrics = [
   ["1996", "연태 진청 유리 설립"], ["33,000m²", "생산 부지 약 50여 무"], ["2023", "고신기술기업 인정"],
@@ -52,7 +51,7 @@ export function JinchengGlassPage() {
       <div className="mx-auto grid max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-16">
         <div className="relative z-10">
           <p className="eyebrow text-muted-foreground">03 · JINCHENG GLASS · SINCE 1996</p>
-          <h1 className="mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">30년의<br/><span className="text-gold">건축용 안전 유리</span></h1>
+          <h1 className="mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">1996년부터 이어온<br/><span className="text-gold">건축용 안전 유리</span></h1>
           <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">산동 진청 특종 유리는 1996년 설립 이후 강화·복층·접합·Low-E 유리를 자체 라인에서 생산하는 고신기술기업입니다. 커튼월과 창호 프로젝트에 필요한 안전성과 단열 성능을 규격에 맞춰 공급합니다.</p>
           <div className="mt-9 flex flex-wrap items-center gap-4"><a href="tel:01031138668" className="inline-flex items-center gap-2.5 bg-foreground px-7 py-3.5 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">사양·견적 문의 <ArrowRight size={16}/></a><span className="text-xs text-muted-foreground">강화 · 복층 · 접합 · 방화 · Low-E</span></div>
           <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>2023 고신기술기업</span><span>치루 지분거래센터 상장 (307208)</span><span>CCC · ISO · CE</span></div>
@@ -88,7 +87,7 @@ export function JinchengGlassPage() {
       <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:gap-24"><SectionHead eyebrow="CURTAIN WALL" title="유리 커튼월이 선택되는 이유" body="외장 계획 단계에서 미관과 하중, 내풍·내진, 열 성능과 유지관리를 함께 검토합니다."/>
         <div className="divide-y divide-border border-y border-border">{[["아름다움","보는 각도와 빛의 변화에 따라 다른 색조를 보여주는 현대 건축의 외장 언어입니다."],["경량성","같은 면적 벽체의 1/5~1/10 무게로 건물 하중과 공사 비용을 줄입니다."],["내풍 · 내진","유연한 설계 방식으로 바람과 지진에 강해 해안 고층 건물에 적합합니다."],["열안정성","강화 유리는 약 300°C까지 견디고, 복층 커튼월은 실내 온도를 안정적으로 유지합니다."],["에너지 절약","Low-E 유리와 결합해 단열·차열 성능을 확보합니다."],["유지관리","외부에서 접근하는 설계로 세척과 교체가 편리합니다."]].map(([title,text],index)=><article key={title} className="grid gap-4 py-6 sm:grid-cols-[48px_150px_1fr]"><span className="text-xs font-bold text-gold">0{index+1}</span><h3 className="font-bold">{title}</h3><p className="break-keep text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div>
       </div>
-      <figure className="mt-16 overflow-hidden"><img src={asset("020")} alt="진청 유리가 적용된 커튼월 외장" className="aspect-[21/9] w-full object-cover saturate-[0.84]"/></figure>
+      <figure className="mt-16 overflow-hidden"><img src={curtainwall} alt="유리 커튼월 파사드 확대 컷" loading="lazy" width={1600} height={912} className="aspect-[21/9] w-full object-cover saturate-[0.84]"/></figure>
     </div></section>
 
     <section><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
