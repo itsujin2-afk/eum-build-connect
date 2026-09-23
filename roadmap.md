@@ -36,3 +36,4 @@
 - [x] Add substantially more clean product and installation imagery across the INTCO catalogue page
 - [x] Simplify INTCO catalogue codes and specifications in favor of image-led presentation
 - [x] Add real catalogue installation photos and pattern swatches to the four SPC flooring wood series
+- [x] Build the Forest House products page from the 10 FZ70 flooring photos
