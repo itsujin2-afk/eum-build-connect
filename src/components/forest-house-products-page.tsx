@@ -45,13 +45,14 @@ export function ForestHouseProductsPage() {
           <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">이센메이쥐가 직접 인쇄·함침·기재 가공부터 완제품까지 생산하는 지열 대응 실목마루입니다. 10가지 색상을 한 페이지에서 비교해 보세요.</p>
           <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold text-muted-foreground"><span>색상 10종</span><span>지열 난방 대응</span><span>자체 공장 직생산</span></div>
         </div>
-        <figure className="overflow-hidden bg-surface"><img src={fz703.url} alt="신3중 실목마루 FZ70 시리즈 골든 오크 시공 공간" className="aspect-[4/3] w-full object-cover"/><figcaption className="flex items-center justify-between px-5 py-3 text-[11px] text-muted-foreground"><span className="font-bold text-gold">FZ70 SERIES</span><span>신3중 실목마루 · 10 COLORS</span></figcaption></figure>
+        <figure className="overflow-hidden bg-surface"><img src={fz703.url} alt="신3중 실목마루 FZ70 시리즈 골든 오크 시공 공간" className="aspect-[4/3] w-full object-cover object-top"/><figcaption className="flex items-center justify-between px-5 py-3 text-[11px] text-muted-foreground"><span className="font-bold text-gold">FZ70 SERIES</span><span>신3중 실목마루 · 10 COLORS</span></figcaption></figure>
+        </div>
       </div>
     </section>
 
     <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:gap-24">
-        <img src={heatingFloor.url} alt="신3중 실목마루 구조와 지열 기술" className="mx-auto max-h-[640px] w-full max-w-xl bg-background object-contain"/>
+        <img src={pressLine.url} alt="이센메이쥐 3중 실목 기재 압착 생산라인" className="aspect-[4/3] w-full bg-background object-cover"/>
         <div>
           <p className="eyebrow text-muted-foreground">STRUCTURE</p>
           <h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl">난방열을 고르게 전달하는<br/>3중 실목 구조</h2>
