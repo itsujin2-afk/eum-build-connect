@@ -1,0 +1,193 @@
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { SiteShell } from "@/components/site-shell";
+import spaceAesthetics from "@/assets/lion/space-aesthetics.jpg.asset.json";
+import portlandInterior from "@/assets/lion/portland-interior.jpg.asset.json";
+import y1 from "@/assets/lion/portland-y1.jpg.asset.json";
+import y2 from "@/assets/lion/portland-y2.jpg.asset.json";
+import y3 from "@/assets/lion/portland-y3.jpg.asset.json";
+import y4 from "@/assets/lion/portland-y4.jpg.asset.json";
+import y5 from "@/assets/lion/portland-y5.jpg.asset.json";
+import y6 from "@/assets/lion/portland-y6.jpg.asset.json";
+import m20 from "@/assets/lion/portland-m20.jpg.asset.json";
+import m24 from "@/assets/lion/portland-m24.jpg.asset.json";
+import m25 from "@/assets/lion/portland-m25.jpg.asset.json";
+import m26 from "@/assets/lion/portland-m26.jpg.asset.json";
+import m27 from "@/assets/lion/portland-m27.jpg.asset.json";
+
+const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
+const eumAsset = (id: string) => imageModules[`../assets/eum/${id}.jpg`];
+
+const strengths = [
+  { number: "01", title: "연구개발", text: "국내외 기술과 디자인 흐름을 제품 개발에 빠르게 반영합니다." },
+  { number: "02", title: "생산 설비", text: "해외 첨단 장비를 도입해 섬세한 문양과 안정적인 표면을 구현합니다." },
+  { number: "03", title: "품질 관리", text: "생산 전 과정을 국제 품질관리 기준에 따라 엄격하게 검사합니다." },
+];
+
+const productLines = [
+  ["FULL-BODY", "풀바디 대리석 타일", "몸체 전체에 자연스러운 석재 질감을 담아 절단면까지 완성도가 이어집니다."],
+  ["MARBLE", "대리석 타일", "천연 대리석의 깊이 있는 결을 공간에 편안하게 적용합니다."],
+  ["DIAMOND GLAZE", "다이아몬드 글레이즈", "단단하고 매끄러운 표면으로 선명한 질감과 관리 편의성을 갖췄습니다."],
+  ["INTERIOR WALL", "내벽 타일", "주거와 상업 공간의 벽면을 정돈된 한 가지 톤으로 연결합니다."],
+];
+
+const plainSurfaces = [
+  ["Y1", y1.url], ["Y2", y2.url], ["Y3", y3.url],
+  ["Y4", y4.url], ["Y5", y5.url], ["Y6", y6.url],
+];
+
+const moldedSurfaces = [
+  ["M20", m20.url], ["M24", m24.url], ["M25", m25.url],
+  ["M26", m26.url], ["M27", m27.url],
+];
+
+export function LionKingPage() {
+  return (
+    <SiteShell>
+      <main className="overflow-hidden bg-background text-foreground">
+        <section className="mx-auto grid min-h-[82svh] max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-8 lg:grid-cols-12 lg:px-14 lg:pb-20 lg:pt-32">
+          <div className="lg:col-span-5">
+            <p className="eyebrow text-gold">02 · LIONKING CERAMICS</p>
+            <h1 className="mt-5 break-keep text-[42px] font-semibold leading-[1.12] tracking-normal sm:text-[58px] lg:text-[72px]">
+              공간에 남는 것은<br />타일이 아니라<br /><span className="text-gold">표정입니다</span>
+            </h1>
+            <p className="mt-7 max-w-md break-keep text-sm leading-7 text-muted-foreground sm:text-base">
+              광둥성 포산에서 타일의 생산과 연구개발, 판매를 함께 운영하는 라이온킹. 천연석의 결을 현대적인 표면 기술로 다시 만듭니다.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-x-8 gap-y-3 border-t border-border pt-5 text-[11px] font-semibold tracking-normal text-muted-foreground">
+              <span>대리석 타일</span><span>다이아몬드 글레이즈</span><span>내벽 타일</span>
+            </div>
+          </div>
+          <figure className="relative lg:col-span-7">
+            <div className="aspect-[4/3] overflow-hidden bg-surface">
+              <img src={eumAsset("030")} alt="라이온킹 세라믹 타일이 적용된 공간" className="h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]" />
+            </div>
+            <figcaption className="mt-3 flex justify-between text-[10px] font-semibold text-muted-foreground">
+              <span>GUANGDONG · FOSHAN</span><span>VISION LIFE</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section className="border-y border-border bg-surface">
+          <div className="mx-auto grid max-w-[1280px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:px-14 lg:py-28">
+            <div className="lg:col-span-5">
+              <p className="eyebrow text-gold">VISION LIFE</p>
+              <h2 className="mt-4 break-keep text-3xl font-semibold leading-tight tracking-normal sm:text-5xl">시각에서 생활로,<br />표면에서 공간으로</h2>
+            </div>
+            <div className="lg:col-span-7 lg:pt-8">
+              <p className="max-w-2xl break-keep text-lg font-medium leading-9">라이온킹은 타일을 단순한 마감재가 아닌, 공간의 분위기와 사용하는 사람의 취향을 담는 재료로 바라봅니다.</p>
+              <p className="mt-6 max-w-2xl break-keep text-sm leading-7 text-muted-foreground">세계의 디자인 흐름을 살피고 자연석의 질감과 색을 새롭게 해석합니다. 자연스럽고 예술적이며 개성 있는 석재 효과로 주거와 상업 공간에 오래 남는 인상을 만듭니다.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto grid max-w-[1280px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:px-14 lg:py-28">
+          <figure className="lg:col-span-5">
+            <div className="aspect-[3/4] overflow-hidden bg-surface">
+              <img src={spaceAesthetics.url} alt="라이온킹이 제안하는 석재 질감과 공간 미학" className="h-full w-full object-cover" />
+            </div>
+          </figure>
+          <div className="lg:col-span-7 lg:pl-10">
+            <p className="eyebrow text-gold">SPACE AESTHETICS</p>
+            <h2 className="mt-4 break-keep text-3xl font-semibold leading-tight tracking-normal sm:text-5xl">포산에서 완성하는<br />현대적인 석재의 감각</h2>
+            <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-muted-foreground">중국 도자기 산업의 중심지인 포산에 기반을 두고 풀바디 대리석 타일, 대리석 타일, 다이아몬드 글레이즈 타일, 내벽 타일을 직접 개발하고 생산합니다.</p>
+            <div className="mt-12 divide-y divide-border border-y border-border">
+              {strengths.map((item) => (
+                <div key={item.number} className="grid grid-cols-[44px_110px_1fr] gap-3 py-5 sm:grid-cols-[56px_150px_1fr]">
+                  <span className="text-xs font-semibold text-gold">{item.number}</span>
+                  <h3 className="text-sm font-semibold">{item.title}</h3>
+                  <p className="break-keep text-xs leading-6 text-muted-foreground sm:text-sm">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-border bg-surface">
+          <div className="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
+            <div className="grid gap-8 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <p className="eyebrow text-gold">PRODUCT SYSTEM</p>
+                <h2 className="mt-4 break-keep text-3xl font-semibold tracking-normal sm:text-5xl">네 가지 타일,<br />하나의 기준</h2>
+              </div>
+              <div className="grid gap-px bg-border sm:grid-cols-2 lg:col-span-8">
+                {productLines.map(([label, title, text]) => (
+                  <article key={label} className="bg-background p-6 sm:p-8">
+                    <p className="text-[10px] font-semibold text-gold">{label}</p>
+                    <h3 className="mt-4 text-lg font-semibold">{title}</h3>
+                    <p className="mt-3 break-keep text-sm leading-7 text-muted-foreground">{text}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
+          <div className="flex flex-col justify-between gap-6 border-b border-border pb-8 sm:flex-row sm:items-end">
+            <div>
+              <p className="eyebrow text-gold">PORTLAND · 2025</p>
+              <h2 className="mt-4 break-keep text-3xl font-semibold tracking-normal sm:text-5xl">한 가지 돌, 여러 가지 표면</h2>
+            </div>
+            <p className="max-w-md break-keep text-sm leading-7 text-muted-foreground">같은 색의 평면과 입체 표면을 조합해 바닥과 벽을 자연스럽게 연결합니다.</p>
+          </div>
+
+          <div className="mt-12">
+            <div className="mb-5 flex items-baseline justify-between">
+              <h3 className="text-lg font-semibold">평면 6종</h3><span className="text-[10px] font-semibold text-muted-foreground">PLAIN SURFACE</span>
+            </div>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+              {plainSurfaces.map(([name, src]) => (
+                <figure key={name}>
+                  <div className="aspect-[1/2] overflow-hidden bg-surface"><img src={src} alt={`포틀랜드 ${name} 평면 타일`} className="h-full w-full object-cover" /></div>
+                  <figcaption className="mt-2 text-xs font-semibold">{name}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-16">
+            <div className="mb-5 flex items-baseline justify-between">
+              <h3 className="text-lg font-semibold">몰드면 5종</h3><span className="text-[10px] font-semibold text-muted-foreground">MOLDED SURFACE</span>
+            </div>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+              {moldedSurfaces.map(([name, src]) => (
+                <figure key={name}>
+                  <div className="aspect-[1/2] overflow-hidden bg-surface"><img src={src} alt={`포틀랜드 ${name} 입체 타일`} className="h-full w-full object-cover" /></div>
+                  <figcaption className="mt-2 text-xs font-semibold">{name}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-border bg-surface">
+          <div className="mx-auto grid max-w-[1280px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:px-14 lg:py-28">
+            <figure className="lg:col-span-7">
+              <div className="aspect-[4/3] overflow-hidden bg-background"><img src={portlandInterior.url} alt="포틀랜드 Y4 타일이 적용된 거실" className="h-full w-full object-cover" /></div>
+            </figure>
+            <div className="flex flex-col justify-center lg:col-span-5 lg:pl-8">
+              <p className="eyebrow text-gold">PROJECT FORMAT</p>
+              <h2 className="mt-4 break-keep text-3xl font-semibold leading-tight tracking-normal sm:text-5xl">공간 규모에 맞춘<br />다섯 가지 규격</h2>
+              <div className="mt-8 grid grid-cols-2 gap-px bg-border text-sm font-semibold">
+                {["900 × 1800", "750 × 1500", "600 × 1200", "800 × 1350", "600 × 600"].map((size) => <div key={size} className="bg-background px-4 py-4">{size}<span className="ml-1 text-[10px] text-muted-foreground">mm</span></div>)}
+              </div>
+              <p className="mt-5 break-keep text-xs leading-6 text-muted-foreground">프로젝트의 면적과 시공 조건에 따라 규격을 주문 제작할 수 있습니다.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
+          <div className="flex flex-col justify-between gap-8 border-t border-foreground pt-8 sm:flex-row sm:items-end">
+            <div>
+              <p className="eyebrow text-gold">KOREA PROJECT DESK</p>
+              <h2 className="mt-4 break-keep text-2xl font-semibold tracking-normal sm:text-4xl">라이온킹의 한국 프로젝트는<br />이음앤빌드가 연결합니다.</h2>
+            </div>
+            <Link to="/company" className="inline-flex items-center gap-3 text-xs font-semibold hover:text-gold">이음앤빌드 소개 <ArrowRight size={15} /></Link>
+          </div>
+          <Link to="/brands/huanqiu-stone" className="mt-16 inline-flex items-center gap-2 text-[10px] font-semibold text-muted-foreground hover:text-foreground"><ArrowLeft size={13} /> 환구석재</Link>
+        </section>
+      </main>
+    </SiteShell>
+  );
+}
