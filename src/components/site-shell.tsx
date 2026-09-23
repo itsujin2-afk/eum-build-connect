@@ -39,7 +39,7 @@ export function SiteShell({ children, overlayHeader = false, hideFooter = false,
       <div className={`mx-auto flex max-w-[1440px] flex-wrap items-center gap-x-4 gap-y-1 px-5 text-[10px] leading-5 text-muted-foreground sm:justify-between sm:text-[11px] lg:px-10 ${fullscreen ? "py-2.5" : "py-6"}`}>
         <div className="flex items-center gap-3">
           {!hideFooterLogo && <img src="/logo.jpg" alt="이음앤빌드" className="h-6 w-auto object-contain"/>}
-          <span className="font-semibold tracking-[.12em] text-foreground">EUM&amp;BUILD CO., LTD.</span>
+          <span className="font-semibold text-foreground">주식회사 이음앤빌드</span>
         </div>
         <p>서울 강남구 테헤란로 329 삼흥빌딩 1612호</p>
         <a className="inline-flex items-center gap-1.5 text-foreground" href="tel:01031138668">010-3113-8668 <ArrowUpRight size={13}/></a>

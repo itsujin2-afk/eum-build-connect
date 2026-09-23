@@ -39,7 +39,7 @@ export function ForestHouseProductsPage() {
         <Link to="/brands/forest-house" className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground"><ArrowLeft size={14}/> 이센메이쥐 소개</Link>
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-end lg:gap-16">
         <div>
-          <p className="eyebrow text-muted-foreground">04 · FOREST HOUSE · PRODUCTS</p>
+          <p className="eyebrow text-muted-foreground">05 · 이센메이쥐 · 제품소개</p>
           <h1 className="mt-5 break-keep text-4xl font-bold leading-[1.12] sm:text-5xl lg:text-6xl">신3중 실목마루<br/>FZ70 시리즈</h1>
           <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">이센메이쥐가 직접 인쇄·함침·기재 가공부터 완제품까지 생산하는 지열 대응 실목마루입니다. 10가지 색상을 한 페이지에서 비교해 보세요.</p>
           <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold text-muted-foreground"><span>색상 10종</span><span>지열 난방 대응</span><span>자체 공장 직생산</span></div>

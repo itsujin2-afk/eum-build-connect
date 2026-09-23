@@ -50,13 +50,13 @@ export function JinchengGlassPage() {
     <section className="relative overflow-hidden border-b border-border bg-background">
       <div className="mx-auto grid max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-16">
         <div className="relative z-10">
-          <p className="eyebrow text-muted-foreground">03 · JINCHENG GLASS · SINCE 1996</p>
+          <p className="eyebrow text-muted-foreground">04 · 진청 유리 · 1996년 설립</p>
           <h1 className="mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">30년을 이어온<br/><span className="text-gold">건축용 안전 유리</span></h1>
           <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">산동 진청 특종 유리는 1996년 설립 이후 강화·복층·접합·Low-E 유리를 자체 라인에서 생산하는 고신기술기업입니다. 커튼월과 창호 프로젝트에 필요한 안전성과 단열 성능을 규격에 맞춰 공급합니다.</p>
           <div className="mt-9 flex flex-wrap items-center gap-4"><a href="tel:01031138668" className="inline-flex items-center gap-2.5 bg-foreground px-7 py-3.5 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">사양·견적 문의 <ArrowRight size={16}/></a><span className="text-xs text-muted-foreground">강화 · 복층 · 접합 · 방화 · Low-E</span></div>
           <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>2023 고신기술기업</span><span>치루 지분거래센터 상장 (307208)</span><span>CCC · ISO · CE</span></div>
         </div>
-        <figure className="relative aspect-[4/3] self-center overflow-hidden bg-surface"><img src={hqAerial.url} alt="산동 진청 특종 유리 생산기지 전경" className="absolute inset-0 h-full w-full object-cover saturate-[0.86]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-4 py-3 text-[11px] font-bold backdrop-blur-sm">SHANDONG JINCHENG · ZHAOYUAN PLANT</figcaption></figure>
+        <figure className="relative aspect-[4/3] self-center overflow-hidden bg-surface"><img src={hqAerial.url} alt="산동 진청 특종 유리 생산기지 전경" className="absolute inset-0 h-full w-full object-cover saturate-[0.86]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-4 py-3 text-[11px] font-bold backdrop-blur-sm">산동 진청 유리 · 자오위안 생산기지</figcaption></figure>
       </div>
     </section>
 
