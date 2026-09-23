@@ -22,3 +22,6 @@
 - [x] Remove the duplicated quote band from Huanqiu Stone and simplify the Home message
 
 - [x] Expand the Intco Decor page from the uploaded company profile and product notes
+- [ ] Build the Intco Decor product catalogue page from the two uploaded product guides
+- [ ] Add prominent Intco Decor product buttons and navigation links
+- [ ] Verify the new catalogue on desktop and mobile
