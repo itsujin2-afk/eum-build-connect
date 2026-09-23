@@ -22,11 +22,11 @@ const categories = [
 ] as const;
 
 const spcSeries = [
-  { name: "모닝 스톤", size: "1220 × 2440 × 3mm", text: "맑은 흰색 바탕과 회색·금색 결의 밝은 석재 패턴", image: spcMorningApplication.url },
-  { name: "그레이 스톤", size: "1220 × 2440 × 3mm", text: "차분한 회색 톤으로 구성한 현대적인 석재 패턴", image: spcGreyApplication.url },
-  { name: "나이트 록", size: "1220 × 2440 × 3mm", text: "검정과 짙은 회색을 중심으로 한 깊이 있는 패턴", image: spcNightApplication.url },
-  { name: "컬러 스톤", size: "1220 × 2440 × 3mm", text: "베이지부터 슬레이트 그레이까지 폭넓은 색상 선택", image: spcColorApplication.url },
-  { name: "클래식 스톤", size: "1200 × 2440 × 3mm", text: "자연석의 결을 차분하게 재현한 스톤 프레스 제품", image: spcClassicApplication.url },
+  { name: "모닝 라이트 스톤", size: "1220 × 2440 × 3mm", text: "맑은 흰색 바탕과 회색·금색 결의 밝은 석재 패턴", codes: "8859 · 8869 · 8870 · 8871 · 88672 · 88263 · 1561 · 8066", image: spcMorningApplication.url },
+  { name: "그레이 스톤 아웃라인", size: "1220 × 2440 × 3mm", text: "차분한 회색 톤으로 구성한 현대적인 석재 패턴", codes: "88494 · 88652 · 8252 · 8248 · 88226 · 8040", image: spcGreyApplication.url },
+  { name: "나이트 록", size: "1220 × 2440 × 3mm", text: "검정과 짙은 회색을 중심으로 한 깊이 있는 패턴", codes: "82312 · 88491 · 88651 · 88671 · 80052 · 8231 · 1164 · 06W1 · 8803", image: spcNightApplication.url },
+  { name: "컬러 스톤 컬렉션", size: "1220 × 2440 × 3mm", text: "베이지부터 슬레이트 그레이까지 폭넓은 색상 선택", codes: "80871 · 80042 · 8176 · 88653 · 8088 · 8259", image: spcColorApplication.url },
+  { name: "클래식 스톤 무드", size: "1200 × 2440 × 3mm", text: "자연석의 결을 차분하게 재현한 스톤 프레스 제품", codes: "88531 · 88512 · 88521 · 88532 · 9951 · 88539 · 88511", image: spcClassicApplication.url },
 ] as const;
 
 const benefits = [
@@ -34,6 +34,8 @@ const benefits = [
   [Flame, "B1 방화 등급", "제품 시험 기준 B1 등급의 방화 성능을 갖췄습니다."],
   [Leaf, "포름알데히드 불검출", "실내 마감재로 사용할 수 있도록 유해 물질 기준을 관리합니다."],
   [Hammer, "빠른 설치", "접착제와 금속 부속으로 시공해 공사 과정과 시간을 줄입니다."],
+  [Check, "청소가 쉬운 표면", "매끄러운 표면이 오염물질이 쌓이는 것을 줄여 일상 관리가 간편합니다."],
+  [Ruler, "다양한 디자인", "석재 질감과 색상 선택지가 다양해 여러 공간 분위기에 맞출 수 있습니다."],
 ] as const;
 
 const acousticLines = [
@@ -41,6 +43,17 @@ const acousticLines = [
   ["PET 흡음 패널", "내추럴 · 라미네이팅 · 인쇄", "300 × 300mm부터 600 × 2400 × 9mm"],
   ["MDF 3D 월패널", "현장 도장 가능 · 래핑 마감", "폭 56–189mm · 두께 9/12mm"],
 ] as const;
+
+const wallPanelLines = [
+  ["이보센 3D · 베이직", "JC1337 · JC1552 · JC1314 · JC1362", "폭 304–315mm · 두께 6–7mm"],
+  ["이보센 3D · 프리미엄", "JC695 · JC2064 · JC693 · JC2065 · JC694 · JC696", "폭 250mm · 두께 13–20mm"],
+  ["이보센 3D · 디자이너", "JC1215 · JC1216 · JC1154 · JC1232 · JC1235 · JC1217", "폭 200mm · 두께 12–20mm"],
+  ["이보센 월패널", "JC971 · JC1047 · JC1077 · JC1051 · JC1213 · JC963 외", "우드 · 스톤 · 가죽 · 단색 마감"],
+  ["이스무 3D·월패널", "JF188 · JF178 외", "3D · 중공 · 솔리드 시리즈"],
+  ["MDF 3D 월패널", "JM1319 · JM1320 · JM1321 · JM1322 · JM1324 외", "현장 도장 또는 래핑 마감"],
+] as const;
+
+const acousticFinishes = ["H361", "H199", "H364", "H363", "B193", "H57", "H362", "H188", "H31", "B191", "30WV", "26WV", "10WV", "B111", "B194", "23WV", "22WV", "20WV", "08WV"] as const;
 
 const outdoorLines = [
   ["외벽 패널", "건물 외벽과 담장에 사용하는 세로형 WPC 패널"],
@@ -54,6 +67,20 @@ const flooringPatterns = [
   ["파인", "WY137 · WY138 · WY140 · WY141"],
   ["메이플", "WY132 · WY133 · WY134 · WY135 · WY136"],
   ["화이트 엘름", "WY142 · WY143 · WY144 · WY145 · WY146"],
+] as const;
+
+const fullProductRange = [
+  ["월패널", "흡음판 · 이보센 3D 월패널 · 이보센 월패널 · 이스무 3D 월패널 · 이스무 월패널 · MDF 3D 월패널 · SPC 월패널"],
+  ["걸레받이", "PS 걸레받이 · MDF 걸레받이 · PVC 걸레받이"],
+  ["장식 몰딩", "PS 벽면 장식 몰딩 · PS 크라운 몰딩 · MDF 크라운 몰딩 · PVC 크라운 몰딩"],
+  ["바닥·계단 부속", "PVC 계단 디딤판 · PVC 레벨링 스트립 · PVC 엣지 트림"],
+  ["아웃도어", "WPC 월패널 · WPC 데킹 · DIY WPC 데크 타일 · WPC 기둥 · WPC 펜스 · WPC 높임 화단"],
+  ["바닥재", "SPC 클릭 바닥재 · 계단 및 가장자리 마감 부속"],
+] as const;
+
+const spcAccessories = [
+  ["JA521", "5 × 17mm"], ["JA522", "7mm"], ["JA523", "9 × 10mm"],
+  ["JA524", "5 × 14mm"], ["JA525", "10 × 14mm"], ["JA526", "14 × 14mm"],
 ] as const;
 
 function SectionHeading({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) {
@@ -77,15 +104,19 @@ export function IntcoProductsPage() {
     <section className="border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <SectionHeading eyebrow="PRODUCT RANGE" title="실내외 마감에 필요한 4개 제품군" description="재생 소재를 활용한 패널과 몰딩부터 외부용 WPC까지, 공간별로 필요한 제품을 함께 구성할 수 있습니다."/>
       <div className="mt-14 grid gap-x-8 gap-y-16 sm:grid-cols-2">{categories.map((item)=><article key={item.id} id={item.id} className="scroll-mt-20"><div className="overflow-hidden border border-border bg-surface"><img src={item.image} alt={`${item.title} 제품과 시공 예시`} className="aspect-[16/10] w-full object-cover transition duration-700 hover:scale-[1.02]"/></div><div className="mt-6 grid grid-cols-[auto_1fr] gap-5"><span className="text-xs font-bold text-gold">{item.number}</span><div><p className="text-xs font-semibold text-muted-foreground">{item.subtitle}</p><h3 className="mt-2 text-2xl font-bold">{item.title}</h3><p className="mt-4 break-keep text-sm leading-7 text-muted-foreground">{item.description}</p></div></div></article>)}</div>
+      <div className="mt-20 border-t border-border pt-12"><p className="eyebrow text-muted-foreground">COMPLETE PRODUCT INDEX</p><h3 className="mt-4 text-3xl font-bold">카탈로그 전체 제품 구성</h3><div className="mt-8 border-t border-border">{fullProductRange.map(([group,items])=><div key={group} className="grid gap-3 border-b border-border py-5 sm:grid-cols-[180px_1fr]"><b className="text-sm">{group}</b><p className="break-keep text-sm leading-7 text-muted-foreground">{items}</p></div>)}</div></div>
       <div className="mt-16 grid gap-6 lg:grid-cols-[1fr_1.25fr]"><figure className="overflow-hidden border border-border bg-surface"><img src={wallApplication.url} alt="우드 루버 흡음 패널을 적용한 거실" className="aspect-[16/10] h-full w-full object-cover"/></figure><div className="bg-surface p-7 sm:p-10"><p className="eyebrow text-gold">ACOUSTIC PANEL</p><h3 className="mt-4 text-3xl font-bold">소음을 줄이는 흡음 패널</h3><p className="mt-5 break-keep text-sm leading-7 text-muted-foreground">MDF 스틱과 PET 화이버를 결합한 구조로, 회의실·사무실·호텔·식음 공간의 울림을 줄이는 데 사용합니다. 종이 무늬목과 천연 무늬목 중 선택할 수 있습니다.</p><ul className="mt-7 grid gap-3 text-sm sm:grid-cols-2">{["JM1114 · JM1372 · JM1216 등 규격","우드 패턴과 다양한 간격 선택","벽·천장 포인트 마감","빠르고 간단한 설치"].map(item=><li key={item} className="flex gap-2 border-t border-border pt-3"><Check size={15} className="mt-0.5 shrink-0 text-gold"/>{item}</li>)}</ul></div></div>
       <div className="mt-16 grid gap-8 border-t border-border pt-16 lg:grid-cols-[.9fr_1.1fr] lg:items-start"><div><p className="eyebrow text-muted-foreground">2026 SS ACOUSTIC RANGE</p><h3 className="mt-4 text-3xl font-bold">형태와 시공 방식까지 넓어진 흡음 패널</h3><p className="mt-5 text-sm leading-7 text-muted-foreground">한 가지 세로 루버형뿐 아니라 폭이 다른 패턴, 직접 조립하는 소형 패널, 접이식·곡면용 제품과 PET 패널까지 선택할 수 있습니다.</p></div><div className="border-t border-border">{acousticLines.map(([name,series,size])=><div key={name} className="grid gap-2 border-b border-border py-5 sm:grid-cols-[130px_1fr]"><b className="text-sm">{name}</b><div><p className="text-sm text-muted-foreground">{series}</p><p className="mt-2 text-xs font-semibold">대표 규격 · {size}</p></div></div>)}</div></div>
+      <div className="mt-10 grid gap-6 lg:grid-cols-[.7fr_1.3fr]"><div className="bg-surface p-7"><p className="eyebrow text-gold">SURFACE FINISHES</p><h3 className="mt-4 text-2xl font-bold">흡음 패널 마감 19종</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">종이 무늬목 또는 천연 무늬목을 선택할 수 있습니다.</p><p className="mt-6 text-xs font-semibold leading-7 text-foreground">{acousticFinishes.join(" · ")}</p></div><div className="border-t border-border"><p className="eyebrow py-5 text-muted-foreground">3D &amp; DECORATIVE WALL PANEL</p>{wallPanelLines.map(([name,models,size])=><div key={name} className="grid gap-2 border-b border-border py-5 sm:grid-cols-[190px_1fr]"><b className="text-sm">{name}</b><div><p className="text-sm leading-6 text-muted-foreground">{models}</p><p className="mt-1 text-xs font-semibold">{size}</p></div></div>)}</div></div>
     </div></section>
 
     <section id="spc" className="scroll-mt-20 bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
-      <div className="grid gap-10 lg:grid-cols-[1fr_.7fr] lg:items-end"><SectionHeading eyebrow="SPC WALL PANEL" title="물과 오염에 강한 대형 SPC 월패널" description="천연석 느낌의 대형 패널을 접착 방식으로 빠르게 시공합니다. 주거, 호텔, 매장, 오피스의 벽면을 위한 제품입니다."/><dl className="grid grid-cols-2 gap-px border border-border bg-border text-sm">{[["표준 규격","1220 × 2440 × 3mm"],["무게","약 6.2kg/㎡"],["구성","PVC + 탄산칼슘 + 첨가제"],["방화","B1 등급"],["표면","UV 코팅 또는 스톤 프레스"],["맞춤 길이","2800·2900mm 가능"]].map(([term,value])=><div key={term} className="bg-background p-5"><dt className="text-xs text-muted-foreground">{term}</dt><dd className="mt-2 font-bold">{value}</dd></div>)}</dl></div>
-      <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">{benefits.map(([Icon,title,text])=><article key={title} className="bg-background p-7"><Icon size={22} className="text-gold"/><h3 className="mt-7 text-lg font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div>
-      <div className="mt-20 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">{spcSeries.map((series)=><article key={series.name}><div className="overflow-hidden border border-border bg-background"><img src={series.image} alt={`SPC 월패널 ${series.name} 패턴 모음`} className="aspect-[16/10] w-full object-cover transition duration-700 hover:scale-[1.02]"/></div><p className="mt-5 text-[10px] font-bold text-gold">SPC WALL PANEL</p><h3 className="mt-2 text-2xl font-bold">{series.name}</h3><p className="mt-2 flex items-center gap-2 text-xs text-muted-foreground"><Ruler size={13}/>{series.size}</p><p className="mt-4 text-sm leading-7 text-muted-foreground">{series.text}</p></article>)}</div>
+      <div className="grid gap-10 lg:grid-cols-[1fr_.7fr] lg:items-end"><SectionHeading eyebrow="SPC WALL PANEL" title="물과 오염에 강한 대형 SPC 월패널" description="천연석 느낌의 대형 패널을 접착 방식으로 빠르게 시공합니다. 주거, 호텔, 매장, 오피스의 벽면을 위한 제품입니다."/><dl className="grid grid-cols-2 gap-px border border-border bg-border text-sm">{[["표준 규격","1220 × 2440 × 3mm"],["무게","약 6.2kg/㎡"],["밀도","2,000kg/㎥"],["구성","PVC + 탄산칼슘 + 첨가제"],["방화","B1 등급"],["맞춤 길이","2800·2900mm 가능"]].map(([term,value])=><div key={term} className="bg-background p-5"><dt className="text-xs text-muted-foreground">{term}</dt><dd className="mt-2 font-bold">{value}</dd></div>)}</dl></div>
+      <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">{benefits.map(([Icon,title,text])=><article key={title} className="bg-background p-7"><Icon size={22} className="text-gold"/><h3 className="mt-7 text-lg font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div>
+      <div className="mt-14 grid gap-px border border-border bg-border lg:grid-cols-2"><article className="bg-background p-7 sm:p-9"><p className="eyebrow text-gold">M · UV HIGH-GLOSS</p><h3 className="mt-4 text-2xl font-bold">UV 하이글로시 공정</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">SPC 기재 위에 열전사 필름, UV 코팅과 PE 보호필름을 차례로 적용합니다. 고해상도 석재 무늬와 표면 보호 성능을 함께 갖춥니다.</p></article><article className="bg-background p-7 sm:p-9"><p className="eyebrow text-gold">R · STONE PRESS</p><h3 className="mt-4 text-2xl font-bold">석압 공정</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">SPC 기재 위에 PVC 래핑 필름과 PE 보호필름을 적용해 자연석의 깊은 질감과 차분한 표면을 표현합니다.</p></article></div>
+      <div className="mt-20 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">{spcSeries.map((series)=><article key={series.name}><div className="overflow-hidden border border-border bg-background"><img src={series.image} alt={`SPC 월패널 ${series.name} 시공 예시`} className="aspect-[16/10] w-full object-cover transition duration-700 hover:scale-[1.02]"/></div><p className="mt-5 text-[10px] font-bold text-gold">SPC WALL PANEL</p><h3 className="mt-2 text-2xl font-bold">{series.name}</h3><p className="mt-2 flex items-center gap-2 text-xs text-muted-foreground"><Ruler size={13}/>{series.size}</p><p className="mt-4 text-sm leading-7 text-muted-foreground">{series.text}</p><p className="mt-4 border-t border-border pt-4 text-xs leading-6 text-muted-foreground"><b className="text-foreground">패턴 코드</b><br/>JF{series.size.startsWith("1200") ? "12003-YY" : "12203-UV"}-{series.codes}</p></article>)}</div>
       <div className="mt-16 grid gap-6 border-t border-border pt-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center"><img src={spcInstall.url} alt="SPC 월패널 금속 부속과 설치 방법" className="aspect-[16/10] w-full border border-border object-cover"/><div><p className="eyebrow text-muted-foreground">INSTALLATION</p><h3 className="mt-4 text-3xl font-bold">접착제와 금속 부속으로 간단하게</h3><ol className="mt-7 grid gap-3 text-sm text-muted-foreground">{["벽면을 평평하고 깨끗하게 정리합니다.","패널과 금속 부속을 현장 치수에 맞게 자릅니다.","패널 뒷면에 접착제를 바르고 벽면에 고정합니다.","연결부를 마감한 뒤 표면 보호필름을 제거합니다."].map((step,index)=><li key={step} className="grid grid-cols-[28px_1fr] border-t border-border pt-3"><b className="text-gold">0{index+1}</b><span>{step}</span></li>)}</ol></div></div>
+      <div className="mt-14 grid gap-8 border-t border-border pt-12 lg:grid-cols-2"><div><p className="eyebrow text-muted-foreground">METAL ACCESSORIES</p><h3 className="mt-4 text-2xl font-bold">전용 금속 부속 6종</h3><div className="mt-7 grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3">{spcAccessories.map(([model,size])=><div key={model} className="bg-background p-4"><b className="text-sm">{model}</b><p className="mt-1 text-xs text-muted-foreground">{size}</p></div>)}</div><p className="mt-5 text-sm leading-7 text-muted-foreground">전용 중성 실리콘 실란트는 금속, 석재, 유리, 세라믹, 콘크리트와 일반 건축자재 접착에 사용하며 300ml 규격입니다.</p></div><div><p className="eyebrow text-muted-foreground">PACKING &amp; ORDER</p><h3 className="mt-4 text-2xl font-bold">현장 물량에 맞춘 포장·운송 기준</h3><dl className="mt-7 border-t border-border text-sm">{[["최소 주문","패턴별 100장"],["팔레트 포장","100장 · 약 1.9톤"],["2440mm 제품","20피트 컨테이너 14팔레트 · 1,400장"],["2800·2900mm 제품","20피트 컨테이너 12팔레트 · 1,200장"]].map(([term,value])=><div key={term} className="grid grid-cols-[120px_1fr] border-b border-border py-4"><dt className="text-muted-foreground">{term}</dt><dd className="font-bold">{value}</dd></div>)}</dl></div></div>
     </div></section>
 
     <section id="outdoor-range" className="scroll-mt-20 border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
