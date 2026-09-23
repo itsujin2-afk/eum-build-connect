@@ -123,57 +123,13 @@ export function LionKingPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
-          <div className="flex flex-col justify-between gap-6 border-b border-border pb-8 sm:flex-row sm:items-end">
+        <section className="border-y border-border bg-surface">
+          <div className="mx-auto flex max-w-[1280px] flex-col justify-between gap-8 px-5 py-16 sm:flex-row sm:items-end sm:px-8 lg:px-14 lg:py-20">
             <div>
               <p className="eyebrow text-gold">PORTLAND · 2025</p>
-              <h2 className="mt-4 break-keep text-3xl font-semibold tracking-normal sm:text-5xl">한 가지 돌, 여러 가지 표면</h2>
+              <h2 className="mt-4 break-keep text-2xl font-semibold tracking-normal sm:text-4xl">포틀랜드 시리즈의 표면과 규격은<br />제품 소개에서 확인하세요.</h2>
             </div>
-            <p className="max-w-md break-keep text-sm leading-7 text-muted-foreground">같은 색의 평면과 입체 표면을 조합해 바닥과 벽을 자연스럽게 연결합니다.</p>
-          </div>
-
-          <div className="mt-12">
-            <div className="mb-5 flex items-baseline justify-between">
-              <h3 className="text-lg font-semibold">평면 6종</h3><span className="text-[10px] font-semibold text-muted-foreground">PLAIN SURFACE</span>
-            </div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-              {plainSurfaces.map(([name, src]) => (
-                <figure key={name}>
-                  <div className="aspect-[1/2] overflow-hidden bg-surface"><img src={src} alt={`포틀랜드 ${name} 평면 타일`} className="h-full w-full object-cover" /></div>
-                  <figcaption className="mt-2 text-xs font-semibold">{name}</figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-16">
-            <div className="mb-5 flex items-baseline justify-between">
-              <h3 className="text-lg font-semibold">몰드면 5종</h3><span className="text-[10px] font-semibold text-muted-foreground">MOLDED SURFACE</span>
-            </div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-              {moldedSurfaces.map(([name, src]) => (
-                <figure key={name}>
-                  <div className="aspect-[1/2] overflow-hidden bg-surface"><img src={src} alt={`포틀랜드 ${name} 입체 타일`} className="h-full w-full object-cover" /></div>
-                  <figcaption className="mt-2 text-xs font-semibold">{name}</figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="border-y border-border bg-surface">
-          <div className="mx-auto grid max-w-[1280px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:px-14 lg:py-28">
-            <figure className="lg:col-span-7">
-              <div className="aspect-[4/3] overflow-hidden bg-background"><img src={portlandInterior.url} alt="포틀랜드 Y4 타일이 적용된 거실" className="h-full w-full object-cover" /></div>
-            </figure>
-            <div className="flex flex-col justify-center lg:col-span-5 lg:pl-8">
-              <p className="eyebrow text-gold">PROJECT FORMAT</p>
-              <h2 className="mt-4 break-keep text-3xl font-semibold leading-tight tracking-normal sm:text-5xl">공간 규모에 맞춘<br />다섯 가지 규격</h2>
-              <div className="mt-8 grid grid-cols-2 gap-px bg-border text-sm font-semibold">
-                {["900 × 1800", "750 × 1500", "600 × 1200", "800 × 1350", "600 × 600"].map((size) => <div key={size} className="bg-background px-4 py-4">{size}<span className="ml-1 text-[10px] text-muted-foreground">mm</span></div>)}
-              </div>
-              <p className="mt-5 break-keep text-xs leading-6 text-muted-foreground">프로젝트의 면적과 시공 조건에 따라 규격을 주문 제작할 수 있습니다.</p>
-            </div>
+            <Link to="/brands/lion-king-products" className="inline-flex items-center gap-3 text-xs font-semibold hover:text-gold">제품 소개 보기 <ArrowRight size={15} /></Link>
           </div>
         </section>
 
