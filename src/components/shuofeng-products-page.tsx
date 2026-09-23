@@ -19,6 +19,12 @@ import modernRoom from "@/assets/shuofeng-products/modern-room.jpg.asset.json";
 import designerWalnut from "@/assets/shuofeng-products/designer-walnut.jpg.asset.json";
 import italianDoor from "@/assets/shuofeng-products/italian-door.jpg.asset.json";
 import chineseWalnut from "@/assets/shuofeng-products/chinese-walnut.jpg.asset.json";
+import simpleEuropean from "@/assets/shuofeng-products/simple-european.jpg.asset.json";
+import newChinese from "@/assets/shuofeng-products/new-chinese.jpg.asset.json";
+import sunshineGlass from "@/assets/shuofeng-products/sunshine-glass.jpg.asset.json";
+import specialDoors from "@/assets/shuofeng-products/special-doors.jpg.asset.json";
+import frenchCabinet from "@/assets/shuofeng-products/french-cabinet.jpg.asset.json";
+import modernCabinet from "@/assets/shuofeng-products/modern-cabinet.jpg.asset.json";
 
 const scenes = [
   { image: classicWall.url, title: "문·벽·수납장 일체형", detail: "5001 · 침실 수납 벽면" },
@@ -53,6 +59,18 @@ const extendedCollections = [
   { range: "5124—5145", label: "WOOD GRAIN", title: "현대 중식 우드", copy: "다양한 우드 톤과 사각 패널을 중심으로 문, 벽면, 수납장을 하나의 흐름으로 맞춥니다.", image: chineseWalnut.url },
 ] as const;
 
+const finalCollections = [
+  { range: "5146—5165", label: "SIMPLE EUROPEAN", title: "심플 유러피안", copy: "베이지·아이보리·그레이 등 차분한 색과 절제된 몰딩을 조합해 거실, 침실, 서재에 편안한 클래식 분위기를 만듭니다.", image: simpleEuropean.url },
+  { range: "5166—5184", label: "NEW CHINESE", title: "뉴 차이니즈", copy: "월넛과 마호가니 계열의 깊은 나뭇결에 간결한 선을 더해 동양적인 공간을 현대적으로 정돈합니다.", image: newChinese.url },
+  { range: "S185—SF7009", label: "LOG & SUNSHINE GLASS", title: "원목·선샤인 글라스", copy: "원목 도어와 빛을 통과시키는 유리 도어를 함께 구성해 다이닝룸, 서재, 주방의 개방감과 채광을 조절합니다.", image: sunshineGlass.url },
+  { range: "5201—5216", label: "SPECIAL DOOR SYSTEM", title: "특수 도어 시스템", copy: "바깥면을 평평하게 맞춘 도어부터 슬라이딩, 히든, 폴딩 도어까지 공간 조건과 동선에 맞춰 선택합니다.", image: specialDoors.url },
+] as const;
+
+const coordinatedOptions = [
+  { label: "FRENCH CABINET", title: "프렌치 수납장", copy: "아치 비례와 장식 몰딩을 문·벽면과 맞춘 수납장 도어", image: frenchCabinet.url },
+  { label: "MODERN · MID-CENTURY", title: "모던·미드센추리 수납장", copy: "플랫 패널과 우드 톤을 조합한 수납장 도어", image: modernCabinet.url },
+] as const;
+
 export function ShuofengProductsPage() {
   return <SiteShell>
     <section className="border-b border-border bg-background">
@@ -62,8 +80,8 @@ export function ShuofengProductsPage() {
           <div>
             <p className="eyebrow text-muted-foreground">05 · SHUOFENG · DOOR COLLECTION</p>
             <h1 className="mt-5 break-keep text-4xl font-bold leading-[1.12] sm:text-5xl lg:text-6xl">슈오펑 목문<br/>제품 컬렉션</h1>
-            <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">프렌치 몰딩부터 미드센추리 우드, 모던 심플, 현대 중식과 이탈리안 스타일까지 5001부터 5145까지 공간에 맞는 문을 한곳에서 비교해 보세요.</p>
-            <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold text-muted-foreground"><span>모델 145종</span><span>도장 · 우드 베니어</span><span>거실 · 침실 · 서재</span></div>
+            <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">프렌치 몰딩부터 원목, 유리, 히든·폴딩 도어와 수납장까지 5001부터 5216까지 공간에 맞는 제품을 한곳에서 비교해 보세요.</p>
+            <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold text-muted-foreground"><span>모델 216종</span><span>도장 · 우드 베니어 · 유리</span><span>도어 · 벽면 · 수납장</span></div>
           </div>
           <figure className="overflow-hidden bg-surface"><img src={classicWall.url} alt="슈오펑 프렌치 스타일 문과 수납장 일체형 공간" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><figcaption className="flex items-center justify-between px-5 py-3 text-[11px] text-muted-foreground"><span className="font-bold text-gold">LIGHT LUXURY FRENCH</span><span>DOOR · WALL · CABINET</span></figcaption></figure>
         </div>
@@ -83,6 +101,15 @@ export function ShuofengProductsPage() {
     <section className="border-y border-border bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="max-w-3xl"><p className="eyebrow text-muted-foreground">EXTENDED COLLECTION</p><h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl lg:text-5xl">5029부터 5145까지,<br/>일곱 가지 스타일로 확장합니다</h2><p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">추가 카탈로그 28개 자료에서 모델과 제품군을 이어 정리하고, 카탈로그 화면과 글자는 제외한 실제 제품·공간 사진만 사용했습니다.</p></div>
       <div className="mt-14 grid gap-x-5 gap-y-12 md:grid-cols-2 lg:grid-cols-3">{extendedCollections.map((item)=><article key={item.range}><div className="overflow-hidden bg-background"><img src={item.image} alt={`슈오펑 ${item.title} ${item.range}`} className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03] transition duration-500 hover:scale-[1.03]"/></div><div className="border-t border-border pt-5"><div className="flex items-center justify-between gap-4 text-[11px] font-bold"><span className="text-gold">{item.label}</span><span className="text-muted-foreground">{item.range}</span></div><h3 className="mt-3 text-xl font-bold">{item.title}</h3><p className="mt-3 break-keep text-sm leading-7 text-muted-foreground">{item.copy}</p></div></article>)}</div>
+    </div></section>
+
+    <section><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
+      <div className="max-w-3xl"><p className="eyebrow text-muted-foreground">COMPLETE DOOR SYSTEM</p><h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl lg:text-5xl">5146부터 5216까지,<br/>도어 선택을 더 넓힙니다</h2><p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">심플 유러피안과 뉴 차이니즈, 원목·유리 도어에 슬라이딩·히든·폴딩 방식까지 후속 카탈로그의 제품군을 이어 정리했습니다.</p></div>
+      <div className="mt-14 grid gap-x-5 gap-y-12 md:grid-cols-2">{finalCollections.map((item)=><article key={item.range}><div className="overflow-hidden bg-surface"><img src={item.image} alt={`슈오펑 ${item.title} ${item.range}`} className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03] transition duration-500 hover:scale-[1.03]"/></div><div className="border-t border-border pt-5"><div className="flex items-center justify-between gap-4 text-[11px] font-bold"><span className="text-gold">{item.label}</span><span className="text-muted-foreground">{item.range}</span></div><h3 className="mt-3 text-xl font-bold">{item.title}</h3><p className="mt-3 break-keep text-sm leading-7 text-muted-foreground">{item.copy}</p></div></article>)}</div>
+    </div></section>
+
+    <section className="border-y border-border bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
+      <div className="grid gap-12 lg:grid-cols-[.75fr_1.25fr] lg:gap-20"><div><p className="eyebrow text-muted-foreground">COORDINATED OPTIONS</p><h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl">문틀부터 수납장까지<br/>같은 흐름으로 맞춥니다</h2><p className="mt-6 break-keep text-sm leading-7 text-muted-foreground">아치형·직선형 문틀, 벽 패널과 창틀, 프렌치·모던·미드센추리·중식 수납장 도어를 공간에 맞춰 함께 선택할 수 있습니다.</p></div><div className="grid gap-5 sm:grid-cols-2">{coordinatedOptions.map((item)=><article key={item.label} className="bg-background"><img src={item.image} alt={`슈오펑 ${item.title} 적용 공간`} className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><div className="p-5"><p className="text-[11px] font-bold text-gold">{item.label}</p><h3 className="mt-2 text-lg font-bold">{item.title}</h3><p className="mt-3 break-keep text-sm leading-7 text-muted-foreground">{item.copy}</p></div></article>)}</div></div>
     </div></section>
 
     <section className="border-y border-border bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
