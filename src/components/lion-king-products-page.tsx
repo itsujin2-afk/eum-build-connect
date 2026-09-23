@@ -113,8 +113,8 @@ export function LionKingProductsPage() {
                 라이온킹의 한국 프로젝트는<br />이음앤빌드가 연결합니다.
               </h2>
             </div>
-            <Link to="/company" className="inline-flex items-center gap-3 text-xs font-semibold hover:text-gold">
-              이음앤빌드 소개 <ArrowRight size={15} />
+            <Link to="/company" className="inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors duration-300 hover:bg-gold hover:text-foreground">
+              이음앤빌드 소개 <ArrowRight size={16} />
             </Link>
           </div>
         </section>
