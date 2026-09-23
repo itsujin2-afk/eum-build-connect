@@ -31,4 +31,4 @@
 - [x] Verify the expanded Forest House page on desktop and mobile
 
 - [x] Expand the Intco Decor product page with the 2026 SS catalogue
-- [ ] Rework all INTCO product imagery into clean product and installation crops
+- [x] Rework all INTCO product imagery into clean product and installation crops
