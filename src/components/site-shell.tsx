@@ -14,12 +14,10 @@ export function SiteShell({ children, overlayHeader = false, hideFooter = false,
           <div className="group relative py-7">
              <span className={`${overlayHeader ? "text-xs font-semibold text-primary-foreground/80" : "nav-link"} flex cursor-default items-center gap-1`}>브랜드 <ChevronDown size={13}/></span>
              <div className="invisible absolute left-1/2 top-[58px] w-80 -translate-x-1/2 rounded-md border border-border bg-background p-2 opacity-0 shadow-sm transition group-hover:visible group-hover:opacity-100">
-               {brands.map((brand)=><Link key={brand.slug} to={`/brands/${brand.slug}` as "/brands/huanqiu-stone"} className="flex items-center justify-between rounded-sm px-4 py-3 text-sm hover:bg-surface"><span><b className="mr-3 font-normal text-muted-foreground">{brand.number}</b>{brand.name}</span><span className="text-[10px] text-muted-foreground">{brand.english}</span></Link>)}
-               <Link to="/brands/huanqiu-stone-products" className="flex items-center justify-between border-t border-border px-4 py-3 text-sm font-semibold hover:bg-surface"><span>환구석재 제품소개</span><ArrowUpRight size={13} className="text-gold"/></Link>
-                  <Link to="/brands/intco-decor-products" className="flex items-center justify-between border-t border-border px-4 py-3 text-sm font-semibold hover:bg-surface"><span>잉코 데코 제품소개</span><ArrowUpRight size={13} className="text-gold"/></Link>
-                   <Link to="/brands/forest-house-products" className="flex items-center justify-between border-t border-border px-4 py-3 text-sm font-semibold hover:bg-surface"><span>이센메이쥐 제품소개</span><ArrowUpRight size={13} className="text-gold"/></Link>
-                   <Link to="/brands/lion-king-products" className="flex items-center justify-between border-t border-border px-4 py-3 text-sm font-semibold hover:bg-surface"><span>라이온킹 제품소개</span><ArrowUpRight size={13} className="text-gold"/></Link>
-                   <Link to="/brands/shuofeng-products" className="flex items-center justify-between border-t border-border px-4 py-3 text-sm font-semibold hover:bg-surface"><span>슈오펑 제품소개</span><ArrowUpRight size={13} className="text-gold"/></Link>
+               {brands.map((brand)=><div key={brand.slug}>
+                 <Link to={`/brands/${brand.slug}` as "/brands/huanqiu-stone"} className="flex items-center justify-between rounded-sm px-4 py-3 text-sm hover:bg-surface"><span><b className="mr-3 font-normal text-muted-foreground">{brand.number}</b>{brand.name}</span><span className="text-[10px] text-muted-foreground">{brand.english}</span></Link>
+                 {brand.slug in productLinks && <Link to={productLinks[brand.slug as keyof typeof productLinks]} className="mb-1 ml-9 flex items-center justify-between rounded-sm px-4 py-1.5 text-xs text-muted-foreground hover:bg-surface hover:text-foreground"><span>제품소개</span><ArrowUpRight size={11} className="text-gold"/></Link>}
+               </div>)}
             </div>
           </div>
             <a href="tel:01031138668" className={overlayHeader ? "text-xs font-semibold text-primary-foreground/80 hover:text-primary-foreground" : "nav-link"}>문의하기</a>
