@@ -30,4 +30,4 @@
 - [x] Add factory, production, R&D, and graphene floor sections with source imagery
 - [x] Verify the expanded Forest House page on desktop and mobile
 
-- [ ] Expand the Intco Decor product page with the 2026 SS catalogue
+- [x] Expand the Intco Decor product page with the 2026 SS catalogue

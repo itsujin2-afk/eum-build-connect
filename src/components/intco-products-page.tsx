@@ -76,7 +76,7 @@ export function IntcoProductsPage() {
       </div>
     </section>
 
-    <nav className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur" aria-label="제품 카테고리"><div className="mx-auto flex max-w-[1440px] gap-7 overflow-x-auto px-5 py-4 sm:px-10">{[["wall","벽패널"],["moulding","몰딩"],["accessory","부속"],["outdoor","아웃도어"],["spc","SPC 월패널"],["flooring","SPC 바닥재"]].map(([id,label])=><a key={id} href={`#${id}`} className="shrink-0 text-xs font-bold text-muted-foreground hover:text-gold">{label}</a>)}</div></nav>
+    <nav className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur" aria-label="제품 카테고리"><div className="mx-auto flex max-w-[1440px] gap-7 overflow-x-auto px-5 py-4 sm:px-10">{[["wall","벽패널"],["moulding","몰딩"],["accessory","부속"],["outdoor-range","아웃도어"],["spc","SPC 월패널"],["flooring","SPC 바닥재"]].map(([id,label])=><a key={id} href={`#${id}`} className="shrink-0 text-xs font-bold text-muted-foreground hover:text-gold">{label}</a>)}</div></nav>
 
     <section className="border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <SectionHeading eyebrow="PRODUCT RANGE" title="실내외 마감에 필요한 4개 제품군" description="재생 소재를 활용한 패널과 몰딩부터 외부용 WPC까지, 공간별로 필요한 제품을 함께 구성할 수 있습니다."/>
@@ -92,7 +92,7 @@ export function IntcoProductsPage() {
       <div className="mt-16 grid gap-6 border-t border-border pt-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center"><img src={spcInstall.url} alt="SPC 월패널 금속 부속과 설치 방법" className="aspect-[16/10] w-full border border-border object-cover"/><div><p className="eyebrow text-muted-foreground">INSTALLATION</p><h3 className="mt-4 text-3xl font-bold">접착제와 금속 부속으로 간단하게</h3><ol className="mt-7 grid gap-3 text-sm text-muted-foreground">{["벽면을 평평하고 깨끗하게 정리합니다.","패널과 금속 부속을 현장 치수에 맞게 자릅니다.","패널 뒷면에 접착제를 바르고 벽면에 고정합니다.","연결부를 마감한 뒤 표면 보호필름을 제거합니다."].map((step,index)=><li key={step} className="grid grid-cols-[28px_1fr] border-t border-border pt-3"><b className="text-gold">0{index+1}</b><span>{step}</span></li>)}</ol></div></div>
     </div></section>
 
-    <section id="outdoor" className="scroll-mt-20 border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
+    <section id="outdoor-range" className="scroll-mt-20 border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-10 lg:grid-cols-[.78fr_1.22fr] lg:items-end"><SectionHeading eyebrow="OUTDOOR COLLECTION" title="외벽부터 데크·펜스까지 맞춰 공급합니다" description="2026 SS 카탈로그에는 외벽 패널, 데크재, 데크 타일, 기둥, 펜스와 높임 화단이 포함됩니다. 공압출 표면 제품은 비와 햇빛에 노출되는 외부 공간을 고려해 구성했습니다."/><figure className="overflow-hidden border border-border bg-surface"><img src={catalogueOutdoor.url} alt="잉코 데코 WPC 외벽 패널, 데크, 펜스와 높임 화단 제품" className="aspect-[16/10] w-full object-cover"/></figure></div>
       <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">{outdoorLines.map(([title,text],index)=><article key={title} className="bg-background p-7"><span className="text-xs font-bold text-gold">0{index+1}</span><h3 className="mt-6 text-lg font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div>
       <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-t border-border pt-6 text-xs font-semibold text-muted-foreground"><span>내후성</span><span>내부식성</span><span>방수</span><span>미끄럼 방지</span><span>다양한 우드·그레이 색상</span></div>
