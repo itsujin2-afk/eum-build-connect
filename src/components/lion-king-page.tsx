@@ -2,18 +2,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import spaceAesthetics from "@/assets/lion/space-aesthetics.jpg.asset.json";
-import portlandInterior from "@/assets/lion/portland-interior.jpg.asset.json";
-import y1 from "@/assets/lion/portland-y1.jpg.asset.json";
-import y2 from "@/assets/lion/portland-y2.jpg.asset.json";
-import y3 from "@/assets/lion/portland-y3.jpg.asset.json";
-import y4 from "@/assets/lion/portland-y4.jpg.asset.json";
-import y5 from "@/assets/lion/portland-y5.jpg.asset.json";
-import y6 from "@/assets/lion/portland-y6.jpg.asset.json";
-import m20 from "@/assets/lion/portland-m20.jpg.asset.json";
-import m24 from "@/assets/lion/portland-m24.jpg.asset.json";
-import m25 from "@/assets/lion/portland-m25.jpg.asset.json";
-import m26 from "@/assets/lion/portland-m26.jpg.asset.json";
-import m27 from "@/assets/lion/portland-m27.jpg.asset.json";
 
 const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
 const eumAsset = (id: string) => imageModules[`../assets/eum/${id}.jpg`];
@@ -29,16 +17,6 @@ const productLines = [
   ["MARBLE", "대리석 타일", "천연 대리석의 깊이 있는 결을 공간에 편안하게 적용합니다."],
   ["DIAMOND GLAZE", "다이아몬드 글레이즈", "단단하고 매끄러운 표면으로 선명한 질감과 관리 편의성을 갖췄습니다."],
   ["INTERIOR WALL", "내벽 타일", "주거와 상업 공간의 벽면을 정돈된 한 가지 톤으로 연결합니다."],
-];
-
-const plainSurfaces = [
-  ["Y1", y1.url], ["Y2", y2.url], ["Y3", y3.url],
-  ["Y4", y4.url], ["Y5", y5.url], ["Y6", y6.url],
-];
-
-const moldedSurfaces = [
-  ["M20", m20.url], ["M24", m24.url], ["M25", m25.url],
-  ["M26", m26.url], ["M27", m27.url],
 ];
 
 export function LionKingPage() {
@@ -57,6 +35,7 @@ export function LionKingPage() {
             <div className="mt-9 flex flex-wrap gap-x-8 gap-y-3 border-t border-border pt-5 text-[11px] font-semibold tracking-normal text-muted-foreground">
               <span>대리석 타일</span><span>다이아몬드 글레이즈</span><span>내벽 타일</span>
             </div>
+            <Link to="/brands/lion-king-products" className="mt-8 inline-flex items-center gap-3 text-xs font-semibold hover:text-gold">포틀랜드 시리즈 제품 보기 <ArrowRight size={15} /></Link>
           </div>
           <figure className="relative lg:col-span-7">
             <div className="aspect-[4/3] overflow-hidden bg-surface">
@@ -123,57 +102,13 @@ export function LionKingPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
-          <div className="flex flex-col justify-between gap-6 border-b border-border pb-8 sm:flex-row sm:items-end">
+        <section className="border-y border-border bg-surface">
+          <div className="mx-auto flex max-w-[1280px] flex-col justify-between gap-8 px-5 py-16 sm:flex-row sm:items-end sm:px-8 lg:px-14 lg:py-20">
             <div>
               <p className="eyebrow text-gold">PORTLAND · 2025</p>
-              <h2 className="mt-4 break-keep text-3xl font-semibold tracking-normal sm:text-5xl">한 가지 돌, 여러 가지 표면</h2>
+              <h2 className="mt-4 break-keep text-2xl font-semibold tracking-normal sm:text-4xl">포틀랜드 시리즈의 표면과 규격은<br />제품 소개에서 확인하세요.</h2>
             </div>
-            <p className="max-w-md break-keep text-sm leading-7 text-muted-foreground">같은 색의 평면과 입체 표면을 조합해 바닥과 벽을 자연스럽게 연결합니다.</p>
-          </div>
-
-          <div className="mt-12">
-            <div className="mb-5 flex items-baseline justify-between">
-              <h3 className="text-lg font-semibold">평면 6종</h3><span className="text-[10px] font-semibold text-muted-foreground">PLAIN SURFACE</span>
-            </div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-              {plainSurfaces.map(([name, src]) => (
-                <figure key={name}>
-                  <div className="aspect-[1/2] overflow-hidden bg-surface"><img src={src} alt={`포틀랜드 ${name} 평면 타일`} className="h-full w-full object-cover" /></div>
-                  <figcaption className="mt-2 text-xs font-semibold">{name}</figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-16">
-            <div className="mb-5 flex items-baseline justify-between">
-              <h3 className="text-lg font-semibold">몰드면 5종</h3><span className="text-[10px] font-semibold text-muted-foreground">MOLDED SURFACE</span>
-            </div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-              {moldedSurfaces.map(([name, src]) => (
-                <figure key={name}>
-                  <div className="aspect-[1/2] overflow-hidden bg-surface"><img src={src} alt={`포틀랜드 ${name} 입체 타일`} className="h-full w-full object-cover" /></div>
-                  <figcaption className="mt-2 text-xs font-semibold">{name}</figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="border-y border-border bg-surface">
-          <div className="mx-auto grid max-w-[1280px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:px-14 lg:py-28">
-            <figure className="lg:col-span-7">
-              <div className="aspect-[4/3] overflow-hidden bg-background"><img src={portlandInterior.url} alt="포틀랜드 Y4 타일이 적용된 거실" className="h-full w-full object-cover" /></div>
-            </figure>
-            <div className="flex flex-col justify-center lg:col-span-5 lg:pl-8">
-              <p className="eyebrow text-gold">PROJECT FORMAT</p>
-              <h2 className="mt-4 break-keep text-3xl font-semibold leading-tight tracking-normal sm:text-5xl">공간 규모에 맞춘<br />다섯 가지 규격</h2>
-              <div className="mt-8 grid grid-cols-2 gap-px bg-border text-sm font-semibold">
-                {["900 × 1800", "750 × 1500", "600 × 1200", "800 × 1350", "600 × 600"].map((size) => <div key={size} className="bg-background px-4 py-4">{size}<span className="ml-1 text-[10px] text-muted-foreground">mm</span></div>)}
-              </div>
-              <p className="mt-5 break-keep text-xs leading-6 text-muted-foreground">프로젝트의 면적과 시공 조건에 따라 규격을 주문 제작할 수 있습니다.</p>
-            </div>
+            <Link to="/brands/lion-king-products" className="inline-flex items-center gap-3 text-xs font-semibold hover:text-gold">제품 소개 보기 <ArrowRight size={15} /></Link>
           </div>
         </section>
 
