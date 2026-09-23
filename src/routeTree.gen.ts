@@ -21,6 +21,7 @@ import { Route as BrandsJinchengGlassRouteImport } from './routes/brands.jinchen
 import { Route as BrandsLionKingRouteImport } from './routes/brands.lion-king'
 import { Route as BrandsLionKingProductsRouteImport } from './routes/brands.lion-king-products'
 import { Route as BrandsShuofengRouteImport } from './routes/brands.shuofeng'
+import { Route as BrandsShuofengProductsRouteImport } from './routes/brands.shuofeng-products'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -85,6 +86,11 @@ const BrandsShuofengRoute = BrandsShuofengRouteImport.update({
   path: '/brands/shuofeng',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BrandsShuofengProductsRoute = BrandsShuofengProductsRouteImport.update({
+  id: '/brands/shuofeng-products',
+  path: '/brands/shuofeng-products',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -99,6 +105,7 @@ export interface FileRoutesByFullPath {
   '/brands/lion-king': typeof BrandsLionKingRoute
   '/brands/lion-king-products': typeof BrandsLionKingProductsRoute
   '/brands/shuofeng': typeof BrandsShuofengRoute
+  '/brands/shuofeng-products': typeof BrandsShuofengProductsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -113,6 +120,7 @@ export interface FileRoutesByTo {
   '/brands/lion-king': typeof BrandsLionKingRoute
   '/brands/lion-king-products': typeof BrandsLionKingProductsRoute
   '/brands/shuofeng': typeof BrandsShuofengRoute
+  '/brands/shuofeng-products': typeof BrandsShuofengProductsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -128,6 +136,7 @@ export interface FileRoutesById {
   '/brands/lion-king': typeof BrandsLionKingRoute
   '/brands/lion-king-products': typeof BrandsLionKingProductsRoute
   '/brands/shuofeng': typeof BrandsShuofengRoute
+  '/brands/shuofeng-products': typeof BrandsShuofengProductsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -144,6 +153,7 @@ export interface FileRouteTypes {
     | '/brands/lion-king'
     | '/brands/lion-king-products'
     | '/brands/shuofeng'
+    | '/brands/shuofeng-products'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -158,6 +168,7 @@ export interface FileRouteTypes {
     | '/brands/lion-king'
     | '/brands/lion-king-products'
     | '/brands/shuofeng'
+    | '/brands/shuofeng-products'
   id:
     | '__root__'
     | '/'
@@ -172,6 +183,7 @@ export interface FileRouteTypes {
     | '/brands/lion-king'
     | '/brands/lion-king-products'
     | '/brands/shuofeng'
+    | '/brands/shuofeng-products'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -187,6 +199,7 @@ export interface RootRouteChildren {
   BrandsLionKingRoute: typeof BrandsLionKingRoute
   BrandsLionKingProductsRoute: typeof BrandsLionKingProductsRoute
   BrandsShuofengRoute: typeof BrandsShuofengRoute
+  BrandsShuofengProductsRoute: typeof BrandsShuofengProductsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -275,6 +288,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrandsShuofengRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/brands/shuofeng-products': {
+      id: '/brands/shuofeng-products'
+      path: '/brands/shuofeng-products'
+      fullPath: '/brands/shuofeng-products'
+      preLoaderRoute: typeof BrandsShuofengProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -291,6 +311,7 @@ const rootRouteChildren: RootRouteChildren = {
   BrandsLionKingRoute: BrandsLionKingRoute,
   BrandsLionKingProductsRoute: BrandsLionKingProductsRoute,
   BrandsShuofengRoute: BrandsShuofengRoute,
+  BrandsShuofengProductsRoute: BrandsShuofengProductsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
