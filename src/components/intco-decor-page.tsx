@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Factory, Layers3, Leaf } from "lucide-react";
-import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import factoryShandong from "@/assets/intco/factory-shandong.jpg.asset.json";
 import factoryMalaysia from "@/assets/intco/factory-malaysia.jpg.asset.json";
