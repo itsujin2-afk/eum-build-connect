@@ -11,7 +11,6 @@ import fz708 from "@/assets/forest-house-products/fz708.jpg.asset.json";
 import fz709 from "@/assets/forest-house-products/fz709.jpg.asset.json";
 import fz710 from "@/assets/forest-house-products/fz710.jpg.asset.json";
 import fz711 from "@/assets/forest-house-products/fz711.jpg.asset.json";
-import pressLine from "@/assets/forest-house/015.jpg.asset.json";
 
 const series = [
   { image: fz701.url, name: "라이트 오크", tone: "밝고 내추럴한 오크 톤" },
