@@ -2,35 +2,31 @@ import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, Check, Droplets, Flame, Hammer, Leaf, Ruler } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { buttonVariants } from "@/components/ui/button";
-import acoustic from "@/assets/intco-products/acoustic.jpg.asset.json";
-import wallPanels from "@/assets/intco-products/wall-panels.jpg.asset.json";
-import mouldings from "@/assets/intco-products/mouldings.jpg.asset.json";
-import floorAccessories from "@/assets/intco-products/floor-accessories.jpg.asset.json";
-import wpcWall from "@/assets/intco-products/wpc-wall.jpg.asset.json";
-import wpcDeck from "@/assets/intco-products/wpc-deck.jpg.asset.json";
-import spcMorning from "@/assets/intco-products/spc-morning.jpg.asset.json";
-import spcGrey from "@/assets/intco-products/spc-grey.jpg.asset.json";
-import spcNight from "@/assets/intco-products/spc-night.jpg.asset.json";
-import spcColor from "@/assets/intco-products/spc-color.jpg.asset.json";
-import spcClassic from "@/assets/intco-products/spc-classic.jpg.asset.json";
 import spcInstall from "@/assets/intco-products/spc-install.jpg.asset.json";
-import catalogueAcoustic from "@/assets/intco-products/intco-2026-acoustic.jpg.asset.json";
-import catalogueOutdoor from "@/assets/intco-products/intco-2026-outdoor.jpg.asset.json";
-import catalogueFlooring from "@/assets/intco-products/intco-2026-flooring.jpg.asset.json";
+import wallApplication from "@/assets/intco-products/wall-application.jpg.asset.json";
+import mouldingApplication from "@/assets/intco-products/moulding-application.jpg.asset.json";
+import accessoriesApplication from "@/assets/intco-products/accessories-application.jpg.asset.json";
+import outdoorApplication from "@/assets/intco-products/outdoor-application.jpg.asset.json";
+import flooringApplication from "@/assets/intco-products/flooring-application.jpg.asset.json";
+import spcMorningApplication from "@/assets/intco-products/spc-morning-application.jpg.asset.json";
+import spcGreyApplication from "@/assets/intco-products/spc-grey-application.jpg.asset.json";
+import spcNightApplication from "@/assets/intco-products/spc-night-application.jpg.asset.json";
+import spcColorApplication from "@/assets/intco-products/spc-color-application.jpg.asset.json";
+import spcClassicApplication from "@/assets/intco-products/spc-classic-application.jpg.asset.json";
 
 const categories = [
-  { id: "wall", number: "01", title: "실내 벽패널", subtitle: "흡음·3D·MDF·SPC 패널", description: "흡음판부터 입체 벽패널까지 공간의 용도와 디자인에 맞춰 고릅니다. 우드·패브릭·석재 느낌을 다양한 규격과 색상으로 제공합니다.", image: wallPanels.url },
-  { id: "moulding", number: "02", title: "몰딩과 걸레받이", subtitle: "PS·MDF·PVC 마감재", description: "걸레받이, 벽면 장식 몰딩, 천장 몰딩을 한 제조사에서 구성합니다. 벽과 바닥의 연결부까지 같은 디자인 방향으로 맞출 수 있습니다.", image: mouldings.url },
-  { id: "accessory", number: "03", title: "바닥·계단 부속", subtitle: "디딤판·마감·단차 몰딩", description: "계단 디딤판과 T형 몰딩, 레벨링 스트립, 엣지 트림으로 모서리와 단차를 깔끔하게 마감합니다.", image: floorAccessories.url },
-  { id: "outdoor", number: "04", title: "WPC 실외 마감재", subtitle: "외벽·데크·데크 타일·펜스", description: "비와 햇빛에 노출되는 외부 공간을 위한 벽패널과 데킹 제품입니다. 방수와 미끄럼 방지, 손쉬운 설치를 고려했습니다.", image: wpcDeck.url },
+  { id: "wall", number: "01", title: "실내 벽패널", subtitle: "흡음·3D·MDF·SPC 패널", description: "흡음판부터 입체 벽패널까지 공간의 용도와 디자인에 맞춰 고릅니다. 우드·패브릭·석재 느낌을 다양한 규격과 색상으로 제공합니다.", image: wallApplication.url },
+  { id: "moulding", number: "02", title: "몰딩과 걸레받이", subtitle: "PS·MDF·PVC 마감재", description: "걸레받이, 벽면 장식 몰딩, 천장 몰딩을 한 제조사에서 구성합니다. 벽과 바닥의 연결부까지 같은 디자인 방향으로 맞출 수 있습니다.", image: mouldingApplication.url },
+  { id: "accessory", number: "03", title: "바닥·계단 부속", subtitle: "디딤판·마감·단차 몰딩", description: "계단 디딤판과 T형 몰딩, 레벨링 스트립, 엣지 트림으로 모서리와 단차를 깔끔하게 마감합니다.", image: accessoriesApplication.url },
+  { id: "outdoor", number: "04", title: "WPC 실외 마감재", subtitle: "외벽·데크·데크 타일·펜스", description: "비와 햇빛에 노출되는 외부 공간을 위한 벽패널과 데킹 제품입니다. 방수와 미끄럼 방지, 손쉬운 설치를 고려했습니다.", image: outdoorApplication.url },
 ] as const;
 
 const spcSeries = [
-  { name: "모닝 스톤", size: "1220 × 2440 × 3mm", text: "맑은 흰색 바탕과 회색·금색 결의 밝은 석재 패턴", image: spcMorning.url },
-  { name: "그레이 스톤", size: "1220 × 2440 × 3mm", text: "차분한 회색 톤으로 구성한 현대적인 석재 패턴", image: spcGrey.url },
-  { name: "나이트 록", size: "1220 × 2440 × 3mm", text: "검정과 짙은 회색을 중심으로 한 깊이 있는 패턴", image: spcNight.url },
-  { name: "컬러 스톤", size: "1220 × 2440 × 3mm", text: "베이지부터 슬레이트 그레이까지 폭넓은 색상 선택", image: spcColor.url },
-  { name: "클래식 스톤", size: "1200 × 2440 × 3mm", text: "자연석의 결을 차분하게 재현한 스톤 프레스 제품", image: spcClassic.url },
+  { name: "모닝 스톤", size: "1220 × 2440 × 3mm", text: "맑은 흰색 바탕과 회색·금색 결의 밝은 석재 패턴", image: spcMorningApplication.url },
+  { name: "그레이 스톤", size: "1220 × 2440 × 3mm", text: "차분한 회색 톤으로 구성한 현대적인 석재 패턴", image: spcGreyApplication.url },
+  { name: "나이트 록", size: "1220 × 2440 × 3mm", text: "검정과 짙은 회색을 중심으로 한 깊이 있는 패턴", image: spcNightApplication.url },
+  { name: "컬러 스톤", size: "1220 × 2440 × 3mm", text: "베이지부터 슬레이트 그레이까지 폭넓은 색상 선택", image: spcColorApplication.url },
+  { name: "클래식 스톤", size: "1200 × 2440 × 3mm", text: "자연석의 결을 차분하게 재현한 스톤 프레스 제품", image: spcClassicApplication.url },
 ] as const;
 
 const benefits = [
@@ -71,7 +67,7 @@ export function IntcoProductsPage() {
         <Link to="/brands/intco-decor" className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground"><ArrowLeft size={14}/> 잉코 데코 소개</Link>
         <div className="mt-14 grid gap-10 lg:grid-cols-[.95fr_1.05fr] lg:items-end">
           <div><p className="eyebrow text-gold">INTCO DECOR PRODUCT COLLECTION</p><h1 className="mt-5 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">벽부터 바닥·외부 공간까지<br/>한곳에서 고릅니다</h1><p className="mt-7 max-w-2xl break-keep text-sm leading-7 text-muted-foreground sm:text-base">벽패널, 몰딩과 부속, WPC 외장재, SPC 월패널을 실제 패턴과 규격 중심으로 정리했습니다.</p></div>
-          <figure className="overflow-hidden border border-border bg-background"><img src={spcMorning.url} alt="잉코 데코 SPC 월패널 모닝 스톤 제품군" className="aspect-[16/10] w-full object-cover"/></figure>
+          <figure className="overflow-hidden border border-border bg-background"><img src={spcMorningApplication.url} alt="모닝 스톤 SPC 월패널이 시공된 실내" className="aspect-[16/10] w-full object-cover"/></figure>
         </div>
       </div>
     </section>
@@ -81,8 +77,8 @@ export function IntcoProductsPage() {
     <section className="border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <SectionHeading eyebrow="PRODUCT RANGE" title="실내외 마감에 필요한 4개 제품군" description="재생 소재를 활용한 패널과 몰딩부터 외부용 WPC까지, 공간별로 필요한 제품을 함께 구성할 수 있습니다."/>
       <div className="mt-14 grid gap-x-8 gap-y-16 sm:grid-cols-2">{categories.map((item)=><article key={item.id} id={item.id} className="scroll-mt-20"><div className="overflow-hidden border border-border bg-surface"><img src={item.image} alt={`${item.title} 제품과 시공 예시`} className="aspect-[16/10] w-full object-cover transition duration-700 hover:scale-[1.02]"/></div><div className="mt-6 grid grid-cols-[auto_1fr] gap-5"><span className="text-xs font-bold text-gold">{item.number}</span><div><p className="text-xs font-semibold text-muted-foreground">{item.subtitle}</p><h3 className="mt-2 text-2xl font-bold">{item.title}</h3><p className="mt-4 break-keep text-sm leading-7 text-muted-foreground">{item.description}</p></div></div></article>)}</div>
-      <div className="mt-16 grid gap-6 lg:grid-cols-[1fr_1.25fr]"><figure className="overflow-hidden border border-border bg-surface"><img src={acoustic.url} alt="잉코 데코 흡음 패널 구조와 규격" className="aspect-[16/10] h-full w-full object-cover"/></figure><div className="bg-surface p-7 sm:p-10"><p className="eyebrow text-gold">ACOUSTIC PANEL</p><h3 className="mt-4 text-3xl font-bold">소음을 줄이는 흡음 패널</h3><p className="mt-5 break-keep text-sm leading-7 text-muted-foreground">MDF 스틱과 PET 화이버를 결합한 구조로, 회의실·사무실·호텔·식음 공간의 울림을 줄이는 데 사용합니다. 종이 무늬목과 천연 무늬목 중 선택할 수 있습니다.</p><ul className="mt-7 grid gap-3 text-sm sm:grid-cols-2">{["JM1114 · JM1372 · JM1216 등 규격","우드 패턴과 다양한 간격 선택","벽·천장 포인트 마감","빠르고 간단한 설치"].map(item=><li key={item} className="flex gap-2 border-t border-border pt-3"><Check size={15} className="mt-0.5 shrink-0 text-gold"/>{item}</li>)}</ul></div></div>
-      <div className="mt-16 grid gap-8 border-t border-border pt-16 lg:grid-cols-[1.05fr_.95fr] lg:items-start"><figure className="overflow-hidden border border-border bg-surface"><img src={catalogueAcoustic.url} alt="2026 잉코 데코 MDF 흡음 패널 색상과 규격" className="aspect-[16/10] w-full object-cover"/><figcaption className="border-t border-border px-5 py-4 text-xs text-muted-foreground">2026 SS · MDF 흡음 패널 클래식 시리즈</figcaption></figure><div><p className="eyebrow text-muted-foreground">2026 SS ACOUSTIC RANGE</p><h3 className="mt-4 text-3xl font-bold">형태와 시공 방식까지 넓어진 흡음 패널</h3><p className="mt-5 text-sm leading-7 text-muted-foreground">한 가지 세로 루버형뿐 아니라 폭이 다른 패턴, 직접 조립하는 소형 패널, 접이식·곡면용 제품과 PET 패널까지 선택할 수 있습니다.</p><div className="mt-8 border-t border-border">{acousticLines.map(([name,series,size])=><div key={name} className="grid gap-2 border-b border-border py-5 sm:grid-cols-[130px_1fr]"><b className="text-sm">{name}</b><div><p className="text-sm text-muted-foreground">{series}</p><p className="mt-2 text-xs font-semibold">대표 규격 · {size}</p></div></div>)}</div></div></div>
+      <div className="mt-16 grid gap-6 lg:grid-cols-[1fr_1.25fr]"><figure className="overflow-hidden border border-border bg-surface"><img src={wallApplication.url} alt="우드 루버 흡음 패널을 적용한 거실" className="aspect-[16/10] h-full w-full object-cover"/></figure><div className="bg-surface p-7 sm:p-10"><p className="eyebrow text-gold">ACOUSTIC PANEL</p><h3 className="mt-4 text-3xl font-bold">소음을 줄이는 흡음 패널</h3><p className="mt-5 break-keep text-sm leading-7 text-muted-foreground">MDF 스틱과 PET 화이버를 결합한 구조로, 회의실·사무실·호텔·식음 공간의 울림을 줄이는 데 사용합니다. 종이 무늬목과 천연 무늬목 중 선택할 수 있습니다.</p><ul className="mt-7 grid gap-3 text-sm sm:grid-cols-2">{["JM1114 · JM1372 · JM1216 등 규격","우드 패턴과 다양한 간격 선택","벽·천장 포인트 마감","빠르고 간단한 설치"].map(item=><li key={item} className="flex gap-2 border-t border-border pt-3"><Check size={15} className="mt-0.5 shrink-0 text-gold"/>{item}</li>)}</ul></div></div>
+      <div className="mt-16 grid gap-8 border-t border-border pt-16 lg:grid-cols-[.9fr_1.1fr] lg:items-start"><div><p className="eyebrow text-muted-foreground">2026 SS ACOUSTIC RANGE</p><h3 className="mt-4 text-3xl font-bold">형태와 시공 방식까지 넓어진 흡음 패널</h3><p className="mt-5 text-sm leading-7 text-muted-foreground">한 가지 세로 루버형뿐 아니라 폭이 다른 패턴, 직접 조립하는 소형 패널, 접이식·곡면용 제품과 PET 패널까지 선택할 수 있습니다.</p></div><div className="border-t border-border">{acousticLines.map(([name,series,size])=><div key={name} className="grid gap-2 border-b border-border py-5 sm:grid-cols-[130px_1fr]"><b className="text-sm">{name}</b><div><p className="text-sm text-muted-foreground">{series}</p><p className="mt-2 text-xs font-semibold">대표 규격 · {size}</p></div></div>)}</div></div>
     </div></section>
 
     <section id="spc" className="scroll-mt-20 bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
@@ -93,14 +89,14 @@ export function IntcoProductsPage() {
     </div></section>
 
     <section id="outdoor-range" className="scroll-mt-20 border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
-      <div className="grid gap-10 lg:grid-cols-[.78fr_1.22fr] lg:items-end"><SectionHeading eyebrow="OUTDOOR COLLECTION" title="외벽부터 데크·펜스까지 맞춰 공급합니다" description="2026 SS 카탈로그에는 외벽 패널, 데크재, 데크 타일, 기둥, 펜스와 높임 화단이 포함됩니다. 공압출 표면 제품은 비와 햇빛에 노출되는 외부 공간을 고려해 구성했습니다."/><figure className="overflow-hidden border border-border bg-surface"><img src={catalogueOutdoor.url} alt="잉코 데코 WPC 외벽 패널, 데크, 펜스와 높임 화단 제품" className="aspect-[16/10] w-full object-cover"/></figure></div>
+      <div className="grid gap-10 lg:grid-cols-[.78fr_1.22fr] lg:items-end"><SectionHeading eyebrow="OUTDOOR COLLECTION" title="외벽부터 데크·펜스까지 맞춰 공급합니다" description="2026 SS 제품군에는 외벽 패널, 데크재, 데크 타일, 기둥, 펜스와 높임 화단이 포함됩니다. 공압출 표면 제품은 비와 햇빛에 노출되는 외부 공간을 고려해 구성했습니다."/><figure className="overflow-hidden border border-border bg-surface"><img src={outdoorApplication.url} alt="WPC 데크와 외벽재를 적용한 야외 테라스" className="aspect-[16/10] w-full object-cover"/></figure></div>
       <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">{outdoorLines.map(([title,text],index)=><article key={title} className="bg-background p-7"><span className="text-xs font-bold text-gold">0{index+1}</span><h3 className="mt-6 text-lg font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div>
       <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-t border-border pt-6 text-xs font-semibold text-muted-foreground"><span>내후성</span><span>내부식성</span><span>방수</span><span>미끄럼 방지</span><span>다양한 우드·그레이 색상</span></div>
     </div></section>
 
     <section id="flooring" className="scroll-mt-20 bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-10 lg:grid-cols-[1fr_.9fr] lg:items-end"><SectionHeading eyebrow="SPC FLOORING" title="물에 강하고 관리가 쉬운 SPC 바닥재" description="벽패널과 함께 바닥까지 한 제조사에서 검토할 수 있습니다. 고밀도 스톤 복합 코어와 클릭 결합 구조로 주거·상업 공간에 적용합니다."/><dl className="grid grid-cols-2 gap-px border border-border bg-border text-sm">{[["유해물질","0 VOC · 포름알데히드 무방출"],["방수","100% 방수 코어"],["내마모층","최대 0.55mm"],["두께","4mm · 5mm"],["폭","128–450mm"],["길이","450–1200mm"]].map(([term,value])=><div key={term} className="bg-background p-5"><dt className="text-xs text-muted-foreground">{term}</dt><dd className="mt-2 font-bold">{value}</dd></div>)}</dl></div>
-      <div className="mt-14 grid gap-8 lg:grid-cols-[1.15fr_.85fr]"><figure className="overflow-hidden border border-border bg-background"><img src={catalogueFlooring.url} alt="잉코 데코 SPC 바닥재 구조와 성능 설명" className="aspect-[16/10] w-full object-cover"/><figcaption className="border-t border-border px-5 py-4 text-xs text-muted-foreground">UV 코팅 · 내마모층 · 고해상도 무늬층 · SPC 코어 · 선택형 바닥재</figcaption></figure><div className="border-t border-border">{flooringPatterns.map(([name,codes])=><div key={name} className="border-b border-border py-5"><h3 className="text-lg font-bold">{name}</h3><p className="mt-2 text-xs leading-6 text-muted-foreground">대표 패턴 {codes}</p></div>)}</div></div>
+      <div className="mt-14 grid gap-8 lg:grid-cols-[1.15fr_.85fr]"><figure className="overflow-hidden border border-border bg-background"><img src={flooringApplication.url} alt="우드 패턴 SPC 바닥재를 시공한 거실" className="aspect-[16/10] w-full object-cover"/><figcaption className="border-t border-border px-5 py-4 text-xs text-muted-foreground">UV 코팅 · 내마모층 · 고해상도 무늬층 · SPC 코어 · 선택형 바닥재</figcaption></figure><div className="border-t border-border">{flooringPatterns.map(([name,codes])=><div key={name} className="border-b border-border py-5"><h3 className="text-lg font-bold">{name}</h3><p className="mt-2 text-xs leading-6 text-muted-foreground">대표 패턴 {codes}</p></div>)}</div></div>
     </div></section>
 
     <section className="border-b border-border"><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-10 sm:py-24 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 max-w-4xl break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">공간과 물량을 알려주시면 알맞은 제품과 규격을 확인해 드립니다.</h2><p className="mt-5 text-sm leading-7 text-muted-foreground">샘플, 색상, 최소 주문 수량, 납기와 시공 방법을 이음앤빌드에서 안내합니다.</p></div><a href="tel:01031138668" className={buttonVariants({ size: "lg", className: "h-auto rounded-lg px-7 py-4" })}>제품·샘플 문의 <ArrowUpRight size={16}/></a></div></section>
