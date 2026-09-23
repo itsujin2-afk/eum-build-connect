@@ -45,7 +45,7 @@ function SectionHead({ eyebrow, title, body }: { eyebrow: string; title: string;
 export function ForestHousePage() {
   return <SiteShell>
     <section className="border-b border-border bg-background">
-      <div className="mx-auto grid min-h-[88svh] max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-10 lg:grid-cols-[.82fr_1.18fr] lg:gap-16">
+      <div className="mx-auto grid max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-16 lg:pb-24 lg:pt-40">
         <div>
           <p className="eyebrow text-muted-foreground">04 · FOREST HOUSE · SINCE 2016</p>
           <h1 className="mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">함침지부터 마루까지<br/><span className="text-gold">한 공장에서 생산합니다</span></h1>
@@ -53,7 +53,7 @@ export function ForestHousePage() {
           <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>등록자본금 3,000만 위안</span><span>매출의 5% 이상 R&amp;D 투자</span><span>ISO 9001·14001</span></div>
           <Link to="/brands/forest-house-products" className="mt-9 inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">신3중 실목마루 제품 보기 <ArrowRight size={16}/></Link>
         </div>
-        <figure className="relative min-h-[260px] self-stretch overflow-hidden bg-surface lg:min-h-[420px]"><img src={headquarters.url} alt="산동 이센메이쥐 본사와 생산단지" className="absolute inset-0 h-full w-full object-cover"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-4 text-xs font-bold backdrop-blur-sm">SHANDONG · INTEGRATED WOOD MATERIALS CAMPUS</figcaption></figure>
+        <figure className="relative overflow-hidden bg-surface"><img src={headquarters.url} alt="산동 이센메이쥐 본사와 생산단지" className="aspect-[4/3] w-full object-cover saturate-[0.85]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-3 text-[11px] font-bold backdrop-blur-sm">SHANDONG · INTEGRATED WOOD MATERIALS CAMPUS</figcaption></figure>
       </div>
     </section>
 
