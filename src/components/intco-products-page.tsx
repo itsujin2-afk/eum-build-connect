@@ -24,6 +24,14 @@ import mouldings from "@/assets/intco-products/mouldings.jpg.asset.json";
 import floorAccessories from "@/assets/intco-products/floor-accessories.jpg.asset.json";
 import wpcWall from "@/assets/intco-products/wpc-wall.jpg.asset.json";
 import wpcDeck from "@/assets/intco-products/wpc-deck.jpg.asset.json";
+import floorOakInstall from "@/assets/intco-products/floor-oak-install.jpg.asset.json";
+import floorOakSwatches from "@/assets/intco-products/floor-oak-swatches.jpg.asset.json";
+import floorPineInstall from "@/assets/intco-products/floor-pine-install.jpg.asset.json";
+import floorPineSwatches from "@/assets/intco-products/floor-pine-swatches.jpg.asset.json";
+import floorMapleInstall from "@/assets/intco-products/floor-maple-install.jpg.asset.json";
+import floorMapleSwatches from "@/assets/intco-products/floor-maple-swatches.jpg.asset.json";
+import floorElmInstall from "@/assets/intco-products/floor-elm-install.jpg.asset.json";
+import floorElmSwatches from "@/assets/intco-products/floor-elm-swatches.jpg.asset.json";
 
 const categories = [
   { id: "wall", number: "01", title: "실내 벽패널", subtitle: "흡음·3D·MDF·SPC 패널", description: "흡음판부터 입체 벽패널까지 공간의 용도와 디자인에 맞춰 고릅니다. 우드·패브릭·석재 느낌을 다양한 규격과 색상으로 제공합니다.", image: wallApplication.url },
@@ -71,7 +79,12 @@ const outdoorLines = [
   ["높임 화단", "조경 공간을 빠르게 구성하는 모듈형 제품"],
 ] as const;
 
-const flooringPatterns = ["오크", "파인", "메이플", "화이트 엘름"] as const;
+const flooringPatterns = [
+  { name: "오크", tone: "밝고 따뜻한 내추럴 우드", install: floorOakInstall, swatches: floorOakSwatches },
+  { name: "파인", tone: "맑고 가벼운 밝은 우드", install: floorPineInstall, swatches: floorPineSwatches },
+  { name: "메이플", tone: "부드러운 크림 베이지 우드", install: floorMapleInstall, swatches: floorMapleSwatches },
+  { name: "화이트 엘름", tone: "차분한 그레이·브라운 우드", install: floorElmInstall, swatches: floorElmSwatches },
+] as const;
 
 function SectionHeading({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) {
   return <div className="max-w-3xl"><p className="eyebrow text-muted-foreground">{eyebrow}</p><h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl lg:text-5xl">{title}</h2>{description && <p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">{description}</p>}</div>;
@@ -118,7 +131,8 @@ export function IntcoProductsPage() {
 
     <section id="flooring" className="scroll-mt-20 bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-10 lg:grid-cols-[1fr_.9fr] lg:items-end"><SectionHeading eyebrow="SPC FLOORING" title="물에 강하고 관리가 쉬운 SPC 바닥재" description="벽패널과 함께 바닥까지 한 제조사에서 검토할 수 있습니다. 고밀도 스톤 복합 코어와 클릭 결합 구조로 주거·상업 공간에 적용합니다."/><dl className="grid grid-cols-2 gap-px border border-border bg-border text-sm">{[["유해물질","0 VOC · 포름알데히드 무방출"],["방수","100% 방수 코어"],["내마모층","최대 0.55mm"],["두께","4mm · 5mm"],["폭","128–450mm"],["길이","450–1200mm"]].map(([term,value])=><div key={term} className="bg-background p-5"><dt className="text-xs text-muted-foreground">{term}</dt><dd className="mt-2 font-bold">{value}</dd></div>)}</dl></div>
-      <div className="mt-14 grid gap-8 lg:grid-cols-[1.15fr_.85fr]"><figure className="overflow-hidden border border-border bg-background"><img src={flooringApplication.url} alt="우드 패턴 SPC 바닥재를 시공한 거실" className="aspect-[16/10] w-full object-cover"/><figcaption className="border-t border-border px-5 py-4 text-xs text-muted-foreground">UV 코팅 · 내마모층 · 고해상도 무늬층 · SPC 코어 · 선택형 바닥재</figcaption></figure><div className="grid grid-cols-2 gap-px bg-border">{flooringPatterns.map((name)=><div key={name} className="flex min-h-28 items-end bg-background p-5"><h3 className="text-lg font-bold">{name}</h3></div>)}</div></div>
+      <figure className="mt-14 overflow-hidden border border-border bg-background"><img src={flooringApplication.url} alt="우드 패턴 SPC 바닥재를 시공한 거실" className="aspect-[16/9] w-full object-cover"/><figcaption className="border-t border-border px-5 py-4 text-xs text-muted-foreground">UV 코팅 · 내마모층 · 고해상도 무늬층 · SPC 코어 · 선택형 바닥재</figcaption></figure>
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{flooringPatterns.map((p)=>(<article key={p.name} className="overflow-hidden border border-border bg-background"><img src={p.install.url} alt={`${p.name} 패턴 SPC 바닥재 시공 공간`} className="aspect-[4/5] w-full object-cover"/><img src={p.swatches.url} alt={`${p.name} 패턴 색상 샘플`} className="aspect-[4/3] w-full border-t border-border object-cover"/><div className="border-t border-border p-5"><h3 className="text-lg font-bold">{p.name}</h3><p className="mt-1 text-xs text-muted-foreground">{p.tone}</p></div></article>))}</div>
     </div></section>
 
     <section className="border-b border-border"><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-10 sm:py-24 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 max-w-4xl break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">공간과 물량을 알려주시면 알맞은 제품과 규격을 확인해 드립니다.</h2><p className="mt-5 text-sm leading-7 text-muted-foreground">샘플, 색상, 최소 주문 수량, 납기와 시공 방법을 이음앤빌드에서 안내합니다.</p></div><a href="tel:01031138668" className={buttonVariants({ size: "lg", className: "h-auto rounded-lg px-7 py-4" })}>제품·샘플 문의 <ArrowUpRight size={16}/></a></div></section>
