@@ -15,6 +15,7 @@ import { Route as BrandsForestHouseRouteImport } from './routes/brands.forest-ho
 import { Route as BrandsHuanqiuStoneRouteImport } from './routes/brands.huanqiu-stone'
 import { Route as BrandsHuanqiuStoneProductsRouteImport } from './routes/brands.huanqiu-stone-products'
 import { Route as BrandsIntcoDecorRouteImport } from './routes/brands.intco-decor'
+import { Route as BrandsIntcoDecorProductsRouteImport } from './routes/brands.intco-decor-products'
 import { Route as BrandsJinchengGlassRouteImport } from './routes/brands.jincheng-glass'
 import { Route as BrandsLionKingRouteImport } from './routes/brands.lion-king'
 import { Route as BrandsShuofengRouteImport } from './routes/brands.shuofeng'
@@ -50,6 +51,12 @@ const BrandsIntcoDecorRoute = BrandsIntcoDecorRouteImport.update({
   path: '/brands/intco-decor',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BrandsIntcoDecorProductsRoute =
+  BrandsIntcoDecorProductsRouteImport.update({
+    id: '/brands/intco-decor-products',
+    path: '/brands/intco-decor-products',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BrandsJinchengGlassRoute = BrandsJinchengGlassRouteImport.update({
   id: '/brands/jincheng-glass',
   path: '/brands/jincheng-glass',
@@ -73,6 +80,7 @@ export interface FileRoutesByFullPath {
   '/brands/huanqiu-stone': typeof BrandsHuanqiuStoneRoute
   '/brands/huanqiu-stone-products': typeof BrandsHuanqiuStoneProductsRoute
   '/brands/intco-decor': typeof BrandsIntcoDecorRoute
+  '/brands/intco-decor-products': typeof BrandsIntcoDecorProductsRoute
   '/brands/jincheng-glass': typeof BrandsJinchengGlassRoute
   '/brands/lion-king': typeof BrandsLionKingRoute
   '/brands/shuofeng': typeof BrandsShuofengRoute
@@ -84,6 +92,7 @@ export interface FileRoutesByTo {
   '/brands/huanqiu-stone': typeof BrandsHuanqiuStoneRoute
   '/brands/huanqiu-stone-products': typeof BrandsHuanqiuStoneProductsRoute
   '/brands/intco-decor': typeof BrandsIntcoDecorRoute
+  '/brands/intco-decor-products': typeof BrandsIntcoDecorProductsRoute
   '/brands/jincheng-glass': typeof BrandsJinchengGlassRoute
   '/brands/lion-king': typeof BrandsLionKingRoute
   '/brands/shuofeng': typeof BrandsShuofengRoute
@@ -96,6 +105,7 @@ export interface FileRoutesById {
   '/brands/huanqiu-stone': typeof BrandsHuanqiuStoneRoute
   '/brands/huanqiu-stone-products': typeof BrandsHuanqiuStoneProductsRoute
   '/brands/intco-decor': typeof BrandsIntcoDecorRoute
+  '/brands/intco-decor-products': typeof BrandsIntcoDecorProductsRoute
   '/brands/jincheng-glass': typeof BrandsJinchengGlassRoute
   '/brands/lion-king': typeof BrandsLionKingRoute
   '/brands/shuofeng': typeof BrandsShuofengRoute
@@ -109,6 +119,7 @@ export interface FileRouteTypes {
     | '/brands/huanqiu-stone'
     | '/brands/huanqiu-stone-products'
     | '/brands/intco-decor'
+    | '/brands/intco-decor-products'
     | '/brands/jincheng-glass'
     | '/brands/lion-king'
     | '/brands/shuofeng'
@@ -120,6 +131,7 @@ export interface FileRouteTypes {
     | '/brands/huanqiu-stone'
     | '/brands/huanqiu-stone-products'
     | '/brands/intco-decor'
+    | '/brands/intco-decor-products'
     | '/brands/jincheng-glass'
     | '/brands/lion-king'
     | '/brands/shuofeng'
@@ -131,6 +143,7 @@ export interface FileRouteTypes {
     | '/brands/huanqiu-stone'
     | '/brands/huanqiu-stone-products'
     | '/brands/intco-decor'
+    | '/brands/intco-decor-products'
     | '/brands/jincheng-glass'
     | '/brands/lion-king'
     | '/brands/shuofeng'
@@ -143,6 +156,7 @@ export interface RootRouteChildren {
   BrandsHuanqiuStoneRoute: typeof BrandsHuanqiuStoneRoute
   BrandsHuanqiuStoneProductsRoute: typeof BrandsHuanqiuStoneProductsRoute
   BrandsIntcoDecorRoute: typeof BrandsIntcoDecorRoute
+  BrandsIntcoDecorProductsRoute: typeof BrandsIntcoDecorProductsRoute
   BrandsJinchengGlassRoute: typeof BrandsJinchengGlassRoute
   BrandsLionKingRoute: typeof BrandsLionKingRoute
   BrandsShuofengRoute: typeof BrandsShuofengRoute
@@ -192,6 +206,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrandsIntcoDecorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/brands/intco-decor-products': {
+      id: '/brands/intco-decor-products'
+      path: '/brands/intco-decor-products'
+      fullPath: '/brands/intco-decor-products'
+      preLoaderRoute: typeof BrandsIntcoDecorProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/brands/jincheng-glass': {
       id: '/brands/jincheng-glass'
       path: '/brands/jincheng-glass'
@@ -223,6 +244,7 @@ const rootRouteChildren: RootRouteChildren = {
   BrandsHuanqiuStoneRoute: BrandsHuanqiuStoneRoute,
   BrandsHuanqiuStoneProductsRoute: BrandsHuanqiuStoneProductsRoute,
   BrandsIntcoDecorRoute: BrandsIntcoDecorRoute,
+  BrandsIntcoDecorProductsRoute: BrandsIntcoDecorProductsRoute,
   BrandsJinchengGlassRoute: BrandsJinchengGlassRoute,
   BrandsLionKingRoute: BrandsLionKingRoute,
   BrandsShuofengRoute: BrandsShuofengRoute,
