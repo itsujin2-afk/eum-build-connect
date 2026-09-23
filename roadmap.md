@@ -25,3 +25,7 @@
 - [x] Build the Intco Decor product catalogue page from the two uploaded product guides
 - [x] Add prominent Intco Decor product buttons and navigation links
 - [x] Verify the new catalogue on desktop and mobile
+
+- [ ] Expand the Forest House page from the uploaded company profile
+- [ ] Add factory, production, R&D, and graphene floor sections with source imagery
+- [ ] Verify the expanded Forest House page on desktop and mobile
