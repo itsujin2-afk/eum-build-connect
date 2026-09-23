@@ -35,7 +35,7 @@ export function LionKingPage() {
             <div className="mt-9 flex flex-wrap gap-x-8 gap-y-3 border-t border-border pt-5 text-[11px] font-semibold tracking-normal text-muted-foreground">
               <span>대리석 타일</span><span>다이아몬드 글레이즈</span><span>내벽 타일</span>
             </div>
-            <Link to="/brands/lion-king-products" className="mt-8 inline-flex items-center gap-3 text-xs font-semibold hover:text-gold">포틀랜드 시리즈 제품 보기 <ArrowRight size={15} /></Link>
+            <Link to="/brands/lion-king-products" className="mt-9 inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors duration-300 hover:bg-gold hover:text-foreground">포틀랜드 시리즈 제품 보기 <ArrowRight size={16} /></Link>
           </div>
           <figure className="relative lg:col-span-7">
             <div className="aspect-[4/3] overflow-hidden bg-surface">
@@ -108,7 +108,7 @@ export function LionKingPage() {
               <p className="eyebrow text-gold">PORTLAND · 2025</p>
               <h2 className="mt-4 break-keep text-2xl font-semibold tracking-normal sm:text-4xl">포틀랜드 시리즈의 표면과 규격은<br />제품 소개에서 확인하세요.</h2>
             </div>
-            <Link to="/brands/lion-king-products" className="inline-flex items-center gap-3 text-xs font-semibold hover:text-gold">제품 소개 보기 <ArrowRight size={15} /></Link>
+            <Link to="/brands/lion-king-products" className="inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors duration-300 hover:bg-gold hover:text-foreground">제품 소개 보기 <ArrowRight size={16} /></Link>
           </div>
         </section>
 
@@ -118,7 +118,7 @@ export function LionKingPage() {
               <p className="eyebrow text-gold">KOREA PROJECT DESK</p>
               <h2 className="mt-4 break-keep text-2xl font-semibold tracking-normal sm:text-4xl">라이온킹의 한국 프로젝트는<br />이음앤빌드가 연결합니다.</h2>
             </div>
-            <Link to="/company" className="inline-flex items-center gap-3 text-xs font-semibold hover:text-gold">이음앤빌드 소개 <ArrowRight size={15} /></Link>
+            <Link to="/company" className="inline-flex items-center gap-2 border border-foreground px-8 py-4 text-sm font-bold transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground">이음앤빌드 소개 <ArrowRight size={16} /></Link>
           </div>
           <Link to="/brands/huanqiu-stone" className="mt-16 inline-flex items-center gap-2 text-[10px] font-semibold text-muted-foreground hover:text-foreground"><ArrowLeft size={13} /> 환구석재</Link>
         </section>
