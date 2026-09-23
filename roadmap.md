@@ -34,3 +34,4 @@
 - [x] Rework all INTCO product imagery into clean product and installation crops
 - [x] Restore all detailed INTCO catalogue information while keeping images clean
 - [ ] Add substantially more clean product and installation imagery across the INTCO catalogue page
+- [ ] Simplify INTCO catalogue codes and specifications in favor of image-led presentation
