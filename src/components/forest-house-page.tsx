@@ -1,4 +1,5 @@
 import { ArrowRight, Check, FlaskConical, Layers3, ThermometerSun } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import campusGate from "@/assets/forest-house/000.jpg.asset.json";
 import headquarters from "@/assets/forest-house/001.jpg.asset.json";
@@ -50,6 +51,7 @@ export function ForestHousePage() {
           <h1 className="mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">함침지부터 마루까지<br/><span className="text-gold">한 공장에서 생산합니다</span></h1>
           <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">산동 이센메이쥐는 인쇄지와 함침지, 마루 기재, 강화마루, 다층·3중 실목마루를 연구개발하고 생산하는 제이슨그룹의 목재 전문기업입니다.</p>
           <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>등록자본금 3,000만 위안</span><span>매출의 5% 이상 R&amp;D 투자</span><span>ISO 9001·14001</span></div>
+          <Link to="/brands/forest-house-products" className="mt-9 inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">신3중 실목마루 제품 보기 <ArrowRight size={16}/></Link>
         </div>
         <figure className="relative min-h-[380px] self-stretch overflow-hidden bg-surface lg:min-h-[620px]"><img src={headquarters.url} alt="산동 이센메이쥐 본사와 생산단지" className="absolute inset-0 h-full w-full object-cover"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-4 text-xs font-bold backdrop-blur-sm">SHANDONG · INTEGRATED WOOD MATERIALS CAMPUS</figcaption></figure>
       </div>
@@ -91,6 +93,6 @@ export function ForestHousePage() {
       <div className="mt-8 grid gap-px border border-border bg-border md:grid-cols-3">{[["2020","산동성 우수혁신성과상 2등"],["3년 연속","지역 경제발전 공헌상"],["80+명","마케팅·고급 기술 인력"]].map(([value,label])=><div key={label} className="bg-background p-7"><strong className="text-3xl text-gold">{value}</strong><p className="mt-3 text-sm text-muted-foreground">{label}</p></div>)}</div>
     </div></section>
 
-    <section className="border-b border-border bg-surface"><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-24 sm:px-10 sm:py-32 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 max-w-4xl break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">마루 구조와 색상, 난방 조건, 물량을 한국에서 함께 검토합니다.</h2><p className="mt-6 max-w-2xl text-sm leading-7 text-muted-foreground">이음앤빌드가 프로젝트 조건을 확인하고 이센메이쥐 생산라인과 직접 사양·납기·공급 조건을 조율합니다.</p></div><a href="tel:01031138668" className="inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">제품·사양 문의 <ArrowRight size={16}/></a></div></section>
+    <section className="border-b border-border bg-surface"><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-24 sm:px-10 sm:py-32 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 max-w-4xl break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">마루 구조와 색상, 난방 조건, 물량을 한국에서 함께 검토합니다.</h2><p className="mt-6 max-w-2xl text-sm leading-7 text-muted-foreground">이음앤빌드가 프로젝트 조건을 확인하고 이센메이쥐 생산라인과 직접 사양·납기·공급 조건을 조율합니다.</p></div><div className="flex flex-wrap gap-3"><Link to="/brands/forest-house-products" className="inline-flex items-center gap-2 border border-foreground px-8 py-4 text-sm font-bold transition-colors hover:bg-foreground hover:text-primary-foreground">신3중 실목마루 제품 보기</Link><a href="tel:01031138668" className="inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">제품·사양 문의 <ArrowRight size={16}/></a></div></div></section>
   </SiteShell>;
 }
