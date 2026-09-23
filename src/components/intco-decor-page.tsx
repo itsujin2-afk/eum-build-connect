@@ -50,7 +50,7 @@ export function IntcoDecorPage() {
         <div className="relative z-10">
           <p className="eyebrow text-muted-foreground">06 · INTCO DECOR · SINCE 2002</p>
           <h1 className="mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">재생 소재로 만드는<br/><span className="text-gold">실내외 마감재</span></h1>
-          <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">플라스틱 회수와 재생 펠릿 생산부터 벽패널·몰딩·SPC 바닥재·아웃도어 제품 제조까지 그룹 안에서 연결합니다.</p>
+          <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">버려진 플라스틱을 회수해 재생 원료로 만들고, 벽패널·몰딩·SPC 바닥재·아웃도어 제품까지 친환경 순환 구조 안에서 직접 생산합니다.</p>
           <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>연 1억 3천만m 몰딩</span><span>연 4,500만 개 완제품</span><span>130개국 이상 공급</span></div>
         </div>
         <figure className="relative min-h-[360px] self-stretch overflow-hidden bg-surface lg:min-h-[620px]"><img src={asset("079")} alt="잉코 데코 건축 장식 패널이 적용된 실내 공간" className="absolute inset-0 h-full w-full object-cover saturate-[0.88]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-4 text-xs font-bold backdrop-blur-sm">INTCO DECOR · ARCHITECTURAL MATERIALS</figcaption></figure>
@@ -58,7 +58,7 @@ export function IntcoDecorPage() {
     </section>
 
     <section className="border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
-      <div className="grid gap-14 lg:grid-cols-[.85fr_1.15fr] lg:gap-24"><SectionHead eyebrow="COMPANY PROFILE" title="회수·재생·제품화를 연결한 제조기업" body="잉코는 3개 사업부와 6개 연구개발·생산기지를 운영하는 자원재생 하이테크 제조기업입니다. 건축 장식 자재 사업은 재생 PS·PET·PE·PP 원료를 벽·바닥·실외 마감 제품으로 전환합니다."/><div className="grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3">{metrics.map(([value,label])=><div key={label} className="bg-background p-5 sm:p-7"><strong className="text-2xl font-bold text-gold sm:text-3xl">{value}</strong><p className="mt-3 text-xs leading-5 text-muted-foreground">{label}</p></div>)}</div></div>
+      <div className="grid gap-14 lg:grid-cols-[.85fr_1.15fr] lg:gap-24"><SectionHead eyebrow="ECO COMPANY PROFILE" title="폐플라스틱을 자원으로 되돌리는 친환경 제조기업" body="잉코는 버려진 발포 PS와 PET 음료병을 회수·선별해 재생 펠릿으로 만들고, 다시 벽·바닥·실외 마감 제품으로 생산하는 자원재생 하이테크 기업입니다. 연간 재생 플라스틱 생산능력 15만 톤 이상, 누적 탄소배출 340만 톤 절감의 실적으로 순환경제를 실천합니다."/><div className="grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3">{metrics.map(([value,label])=><div key={label} className="bg-background p-5 sm:p-7"><strong className="text-2xl font-bold text-gold sm:text-3xl">{value}</strong><p className="mt-3 text-xs leading-5 text-muted-foreground">{label}</p></div>)}</div></div>
       <div className="mt-16 grid gap-5 lg:grid-cols-[1.2fr_.8fr]"><figure className="overflow-hidden bg-surface"><img src={factoryShandong.url} alt="잉코 산둥 생산기지 전경" className="aspect-[16/9] h-full w-full object-cover"/><figcaption className="p-5"><b>산둥 생산기지 · 410무</b><p className="mt-2 text-xs text-muted-foreground">PS·MDF·PET 건축 장식 몰딩과 완제품 연구개발·생산</p></figcaption></figure><figure className="overflow-hidden bg-surface"><img src={factoryMalaysia.url} alt="잉코 말레이시아 생산기지" className="aspect-[16/9] h-full w-full object-cover"/><figcaption className="p-5"><b>말레이시아 생산기지 · 62무</b><p className="mt-2 text-xs text-muted-foreground">r-PS·r-PET 펠릿, 시트와 식품용 포장 생산</p></figcaption></figure></div>
     </div></section>
 
