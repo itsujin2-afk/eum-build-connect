@@ -22,11 +22,11 @@ const categories = [
 ] as const;
 
 const spcSeries = [
-  { name: "모닝 스톤", size: "1220 × 2440 × 3mm", text: "맑은 흰색 바탕과 회색·금색 결의 밝은 석재 패턴", image: spcMorningApplication.url },
-  { name: "그레이 스톤", size: "1220 × 2440 × 3mm", text: "차분한 회색 톤으로 구성한 현대적인 석재 패턴", image: spcGreyApplication.url },
-  { name: "나이트 록", size: "1220 × 2440 × 3mm", text: "검정과 짙은 회색을 중심으로 한 깊이 있는 패턴", image: spcNightApplication.url },
-  { name: "컬러 스톤", size: "1220 × 2440 × 3mm", text: "베이지부터 슬레이트 그레이까지 폭넓은 색상 선택", image: spcColorApplication.url },
-  { name: "클래식 스톤", size: "1200 × 2440 × 3mm", text: "자연석의 결을 차분하게 재현한 스톤 프레스 제품", image: spcClassicApplication.url },
+  { name: "모닝 라이트 스톤", size: "1220 × 2440 × 3mm", text: "맑은 흰색 바탕과 회색·금색 결의 밝은 석재 패턴", codes: "8859 · 8869 · 8870 · 8871 · 88672 · 88263 · 1561 · 8066", image: spcMorningApplication.url },
+  { name: "그레이 스톤 아웃라인", size: "1220 × 2440 × 3mm", text: "차분한 회색 톤으로 구성한 현대적인 석재 패턴", codes: "88494 · 88652 · 8252 · 8248 · 88226 · 8040", image: spcGreyApplication.url },
+  { name: "나이트 록", size: "1220 × 2440 × 3mm", text: "검정과 짙은 회색을 중심으로 한 깊이 있는 패턴", codes: "82312 · 88491 · 88651 · 88671 · 80052 · 8231 · 1164 · 06W1 · 8803", image: spcNightApplication.url },
+  { name: "컬러 스톤 컬렉션", size: "1220 × 2440 × 3mm", text: "베이지부터 슬레이트 그레이까지 폭넓은 색상 선택", codes: "80871 · 80042 · 8176 · 88653 · 8088 · 8259", image: spcColorApplication.url },
+  { name: "클래식 스톤 무드", size: "1200 × 2440 × 3mm", text: "자연석의 결을 차분하게 재현한 스톤 프레스 제품", codes: "88531 · 88512 · 88521 · 88532 · 9951 · 88539 · 88511", image: spcClassicApplication.url },
 ] as const;
 
 const benefits = [
@@ -54,6 +54,20 @@ const flooringPatterns = [
   ["파인", "WY137 · WY138 · WY140 · WY141"],
   ["메이플", "WY132 · WY133 · WY134 · WY135 · WY136"],
   ["화이트 엘름", "WY142 · WY143 · WY144 · WY145 · WY146"],
+] as const;
+
+const fullProductRange = [
+  ["월패널", "흡음판 · 이보센 3D 월패널 · 이보센 월패널 · 이스무 3D 월패널 · 이스무 월패널 · MDF 3D 월패널 · SPC 월패널"],
+  ["걸레받이", "PS 걸레받이 · MDF 걸레받이 · PVC 걸레받이"],
+  ["장식 몰딩", "PS 벽면 장식 몰딩 · PS 크라운 몰딩 · MDF 크라운 몰딩 · PVC 크라운 몰딩"],
+  ["바닥·계단 부속", "PVC 계단 디딤판 · PVC 레벨링 스트립 · PVC 엣지 트림"],
+  ["아웃도어", "WPC 월패널 · WPC 데킹 · DIY WPC 데크 타일 · WPC 기둥 · WPC 펜스 · WPC 높임 화단"],
+  ["바닥재", "SPC 클릭 바닥재 · 계단 및 가장자리 마감 부속"],
+] as const;
+
+const spcAccessories = [
+  ["JA521", "5 × 17mm"], ["JA522", "7mm"], ["JA523", "9 × 10mm"],
+  ["JA524", "5 × 14mm"], ["JA525", "10 × 14mm"], ["JA526", "14 × 14mm"],
 ] as const;
 
 function SectionHeading({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) {
