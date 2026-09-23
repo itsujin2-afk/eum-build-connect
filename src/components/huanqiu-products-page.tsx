@@ -45,8 +45,8 @@ export function HuanqiuProductsPage() {
       <div className="mx-auto max-w-[1440px] px-5 pb-20 pt-32 sm:px-10 sm:pb-28 sm:pt-40">
         <Link to="/brands/huanqiu-stone" className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground"><ArrowLeft size={14}/> 환구석재 소개</Link>
         <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_.7fr] lg:items-end">
-          <div><p className="eyebrow text-gold">UMGG MATERIAL COLLECTION</p><h1 className="mt-5 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">주요 천연석 품종 26종<br/>한곳에서 보고 고릅니다</h1></div>
-          <div><p className="break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">화이트 대리석부터 트래버틴, 베이지, 그레이, 골드 계열까지. 글로벌 스톤이 엄선하고 공급하는 주요 천연석 26종을 산지와 물성, 적용 범위에 따라 정리했습니다.</p><div className="mt-7 flex gap-8 text-xs"><span><b className="mr-2 text-xl text-gold">26</b>주요 품종</span><span><b className="mr-2 text-xl text-gold">8</b>산지 국가·지역</span></div></div>
+          <div><p className="eyebrow text-gold">환구석재 제품 컬렉션</p><h1 className="mt-5 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">주요 천연석 품종 26종<br/>한곳에서 보고 고릅니다</h1></div>
+          <div><p className="break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">화이트 대리석부터 트래버틴, 베이지, 그레이, 골드 계열까지. 환구석재가 엄선하고 공급하는 주요 천연석 26종을 산지와 물성, 적용 범위에 따라 정리했습니다.</p><div className="mt-7 flex gap-8 text-xs"><span><b className="mr-2 text-xl text-gold">26</b>주요 품종</span><span><b className="mr-2 text-xl text-gold">8</b>산지 국가·지역</span></div></div>
         </div>
       </div>
     </section>

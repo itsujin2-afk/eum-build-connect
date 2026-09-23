@@ -84,7 +84,7 @@ export function HuanqiuStonePage() {
       <img src={asset("010")} alt="환구석재가 참여한 정밀한 석재 건축 입면" className="absolute inset-0 h-full w-full object-cover opacity-70" />
       <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/70 to-foreground/10" />
       <div className="relative mx-auto flex min-h-[92svh] max-w-[1440px] flex-col justify-end px-5 pb-16 pt-32 sm:px-10 sm:pb-24">
-        <p className="eyebrow text-primary-foreground/70">01 · UMGG GLOBAL STONE · SINCE 1986</p>
+        <p className="eyebrow text-primary-foreground/70">01 · 환구석재 · 1986년 설립</p>
         <h1 className="mt-6 max-w-4xl break-keep text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl">천연석 광산부터<br />시공까지, 한 번에</h1>
         <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-primary-foreground/75 sm:text-base sm:leading-8">광산 운영과 글로벌 조달부터 설계, 정밀 가공, 커튼월 시공까지 연결하는 장식용 석재 시스템 솔루션 기업입니다.</p>
         <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -102,7 +102,7 @@ export function HuanqiuStonePage() {
     <section className="border-b border-border">
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
         <div className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-24">
-          <SectionHead eyebrow="ABOUT UMGG" title="1986년부터 이어온 글로벌 석재 시스템" body="글로벌 스톤은 홍콩에서 설립된 석재 업계 선도 기업입니다. 중앙기업 화련 건자재 기술(1313.HK)이 지분을 보유하고 있으며, 광산·무역·연구개발·가공·인테리어·커튼월까지 폭넓은 사업 역량을 갖추고 있습니다." />
+          <SectionHead eyebrow="환구석재 소개" title="1986년부터 이어온 글로벌 석재 시스템" body="환구석재는 홍콩에서 설립된 석재 업계 선도 기업입니다. 중앙기업 화련 건자재 기술(1313.HK)이 지분을 보유하고 있으며, 광산·무역·연구개발·가공·인테리어·커튼월까지 폭넓은 사업 역량을 갖추고 있습니다." />
           <div className="grid grid-cols-2 gap-px border border-border bg-border">
             {overviewMetrics.map(([value, label]) => <div key={label} className="bg-background p-6 sm:p-8"><strong className="text-3xl font-bold text-gold sm:text-4xl">{value}</strong><p className="mt-3 text-xs leading-6 text-muted-foreground sm:text-sm">{label}</p></div>)}
           </div>

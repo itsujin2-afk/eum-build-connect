@@ -34,7 +34,7 @@ export function LionKingProductsPage() {
           </Link>
           <div className="mt-6 flex flex-col justify-between gap-6 border-b border-border pb-10 sm:flex-row sm:items-end">
             <div>
-              <p className="eyebrow text-gold">LIONKING CERAMICS · PORTLAND 2025</p>
+              <p className="eyebrow text-gold">광둥 라이온 킹 세라믹스 · 포틀랜드 2025</p>
               <h1 className="mt-4 break-keep text-3xl font-semibold leading-tight tracking-normal sm:text-5xl">
                 포틀랜드 시리즈,<br />한 가지 돌의 여러 가지 표면
               </h1>
