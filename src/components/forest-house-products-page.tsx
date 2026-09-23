@@ -45,7 +45,7 @@ export function ForestHouseProductsPage() {
           <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">이센메이쥐가 직접 인쇄·함침·기재 가공부터 완제품까지 생산하는 지열 대응 실목마루입니다. 10가지 색상을 한 페이지에서 비교해 보세요.</p>
           <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold text-muted-foreground"><span>색상 10종</span><span>지열 난방 대응</span><span>자체 공장 직생산</span></div>
         </div>
-        <figure className="overflow-hidden bg-surface"><img src={fz703.url} alt="신3중 실목마루 FZ70 시리즈 골든 오크 시공 공간" className="aspect-[4/3] w-full object-cover object-top"/><figcaption className="flex items-center justify-between px-5 py-3 text-[11px] text-muted-foreground"><span className="font-bold text-gold">FZ70 SERIES</span><span>신3중 실목마루 · 10 COLORS</span></figcaption></figure>
+        <figure className="overflow-hidden bg-surface"><img src={fz703.url} alt="신3중 실목마루 FZ70 시리즈 골든 오크 바닥 질감" className="aspect-[4/3] w-full object-cover"/><figcaption className="flex items-center justify-between px-5 py-3 text-[11px] text-muted-foreground"><span className="font-bold text-gold">FZ70 SERIES</span><span>신3중 실목마루 · 10 COLORS</span></figcaption></figure>
         </div>
       </div>
     </section>
@@ -65,12 +65,12 @@ export function ForestHouseProductsPage() {
     <section><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="max-w-3xl">
         <p className="eyebrow text-muted-foreground">COLOR COLLECTION</p>
-        <h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl lg:text-5xl">10가지 색상, 실제 시공 공간으로 확인하세요</h2>
-        <p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">모든 사진은 실제 시공 공간을 촬영한 이미지입니다. 마음에 드는 색상을 정해 주시면 샘플과 사양을 한국에서 바로 검토해 드립니다.</p>
+        <h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl lg:text-5xl">10가지 색상, 마루의 결만 비교하세요</h2>
+        <p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">가구와 장식을 제외하고 마룻바닥의 색상과 나뭇결만 담았습니다. 마음에 드는 색상을 정해 주시면 샘플과 사양을 한국에서 바로 검토해 드립니다.</p>
       </div>
       <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {series.map((item,i)=><article key={item.name} className="group bg-surface">
-          <div className="overflow-hidden"><img src={item.image} alt={`신3중 실목마루 ${item.name} 시공 공간`} className="aspect-[3/4] w-full object-cover transition duration-500 group-hover:scale-[1.03] sm:aspect-[4/5]"/></div>
+          <div className="overflow-hidden"><img src={item.image} alt={`신3중 실목마루 ${item.name} 바닥 질감`} className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]"/></div>
           <div className="flex items-baseline justify-between px-5 py-4">
             <div><p className="text-[10px] font-bold tracking-[0.22em] text-gold">FZ70 · {String(i+1).padStart(2,"0")}</p><h3 className="mt-1.5 text-lg font-bold">{item.name}</h3></div>
             <p className="max-w-[45%] text-right text-[11px] leading-5 text-muted-foreground">{item.tone}</p>
