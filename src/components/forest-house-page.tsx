@@ -1,4 +1,5 @@
 import { ArrowRight, Check, FlaskConical, Layers3, ThermometerSun } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import campusGate from "@/assets/forest-house/000.jpg.asset.json";
 import headquarters from "@/assets/forest-house/001.jpg.asset.json";
