@@ -120,7 +120,6 @@ export function LionKingPage() {
             </div>
             <Link to="/company" className="inline-flex items-center gap-2 border border-foreground px-8 py-4 text-sm font-bold transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground">이음앤빌드 소개 <ArrowRight size={16} /></Link>
           </div>
-          <Link to="/brands/huanqiu-stone" className="mt-16 inline-flex items-center gap-2 text-[10px] font-semibold text-muted-foreground hover:text-foreground"><ArrowLeft size={13} /> 환구석재</Link>
         </section>
       </main>
     </SiteShell>
