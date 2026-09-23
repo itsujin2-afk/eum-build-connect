@@ -48,8 +48,8 @@ function SectionHead({ eyebrow, title, body }: { eyebrow: string; title: string;
 
 export function JinchengGlassPage() {
   return <SiteShell>
-    <section className="relative min-h-[88svh] overflow-hidden border-b border-border bg-background">
-      <div className="mx-auto grid min-h-[88svh] max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-10 lg:grid-cols-[.86fr_1.14fr] lg:gap-16">
+    <section className="relative overflow-hidden border-b border-border bg-background">
+      <div className="mx-auto grid max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-16">
         <div className="relative z-10">
           <p className="eyebrow text-muted-foreground">03 · JINCHENG GLASS · SINCE 1996</p>
           <h1 className="mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">30년의<br/><span className="text-gold">건축용 안전 유리</span></h1>
@@ -57,16 +57,16 @@ export function JinchengGlassPage() {
           <div className="mt-9 flex flex-wrap items-center gap-4"><a href="tel:01031138668" className="inline-flex items-center gap-2.5 bg-foreground px-7 py-3.5 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">사양·견적 문의 <ArrowRight size={16}/></a><span className="text-xs text-muted-foreground">강화 · 복층 · 접합 · 방화 · Low-E</span></div>
           <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>2023 고신기술기업</span><span>치루 지분거래센터 상장 (307208)</span><span>CCC · ISO · CE</span></div>
         </div>
-        <figure className="relative min-h-[360px] self-stretch overflow-hidden bg-surface lg:min-h-[620px]"><img src={hqAerial.url} alt="산동 진청 특종 유리 생산기지 전경" className="absolute inset-0 h-full w-full object-cover saturate-[0.86]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-4 text-xs font-bold backdrop-blur-sm">SHANDONG JINCHENG · ZHAOYUAN PLANT</figcaption></figure>
+        <figure className="relative aspect-[4/3] self-center overflow-hidden bg-surface"><img src={hqAerial.url} alt="산동 진청 특종 유리 생산기지 전경" className="absolute inset-0 h-full w-full object-cover saturate-[0.86]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-4 py-3 text-[11px] font-bold backdrop-blur-sm">SHANDONG JINCHENG · ZHAOYUAN PLANT</figcaption></figure>
       </div>
     </section>
 
     <section className="border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-14 lg:grid-cols-[.85fr_1.15fr] lg:gap-24"><SectionHead eyebrow="COMPANY PROFILE" title="유리 한 장을 처음부터 끝까지 직접 만드는 회사" body="산동성 초원시 개발구에 약 33,000m² 규모의 생산 부지를 두고, 강화 생산라인과 전자동 복층(IGU) 생산라인, 접합 유리 생산라인을 함께 운영합니다. 2023년 7월 치루 지분거래센터에 상장했고 같은 해 고신기술기업으로 인정받았습니다." /><div className="grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3">{metrics.map(([value,label])=><div key={label} className="bg-background p-5 sm:p-7"><strong className="text-2xl font-bold text-gold sm:text-3xl">{value}</strong><p className="mt-3 text-xs leading-5 text-muted-foreground">{label}</p></div>)}</div></div>
-      <div className="mt-16 grid gap-5 lg:grid-cols-3">
-        <figure className="overflow-hidden bg-surface"><img src={lineCutting.url} alt="진청 유리 자동 절단 라인" className="aspect-[4/3] w-full object-cover saturate-[0.86]"/><figcaption className="p-5"><b>원판 · 자동 절단</b><p className="mt-2 text-xs text-muted-foreground">XYG, 金晶(GGG), 玉晶, 南玻 등 중국 일류 원판만 사용합니다.</p></figcaption></figure>
-        <figure className="overflow-hidden bg-surface"><img src={lineEdging.url} alt="진청 유리 직선 연삭 라인" className="aspect-[4/3] w-full object-cover saturate-[0.86]"/><figcaption className="p-5"><b>연삭 · 가공</b><p className="mt-2 text-xs text-muted-foreground">직선 연삭기로 절단면을 다듬어 강화 공정의 안정성을 확보합니다.</p></figcaption></figure>
-        <figure className="overflow-hidden bg-surface"><img src={lineAutoclave.url} alt="진청 유리 강화로 및 접합 설비" className="aspect-[4/3] w-full object-cover saturate-[0.86]"/><figcaption className="p-5"><b>강화 · 접합</b><p className="mt-2 text-xs text-muted-foreground">강화로와 PVB 오토클레이브로 안전 유리를 완성합니다.</p></figcaption></figure>
+      <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-3">
+        <figure className="overflow-hidden bg-surface"><img src={lineCutting.url} alt="진청 유리 자동 절단 라인" className="aspect-[16/10] w-full object-cover saturate-[0.86]"/><figcaption className="p-4"><b className="text-xs">원판 · 자동 절단</b><p className="mt-1.5 text-[11px] leading-5 text-muted-foreground">XYG, 金晶(GGG), 玉晶, 南玻 등 중국 일류 원판만 사용합니다.</p></figcaption></figure>
+        <figure className="overflow-hidden bg-surface"><img src={lineEdging.url} alt="진청 유리 직선 연삭 라인" className="aspect-[16/10] w-full object-cover saturate-[0.86]"/><figcaption className="p-4"><b className="text-xs">연삭 · 가공</b><p className="mt-1.5 text-[11px] leading-5 text-muted-foreground">직선 연삭기로 절단면을 다듬어 강화 공정의 안정성을 확보합니다.</p></figcaption></figure>
+        <figure className="overflow-hidden bg-surface"><img src={lineAutoclave.url} alt="진청 유리 강화로 및 접합 설비" className="aspect-[16/10] w-full object-cover saturate-[0.86]"/><figcaption className="p-4"><b className="text-xs">강화 · 접합</b><p className="mt-1.5 text-[11px] leading-5 text-muted-foreground">강화로와 PVB 오토클레이브로 안전 유리를 완성합니다.</p></figcaption></figure>
       </div>
     </div></section>
 
