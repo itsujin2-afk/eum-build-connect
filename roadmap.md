@@ -32,4 +32,4 @@
 
 - [x] Expand the Intco Decor product page with the 2026 SS catalogue
 - [x] Rework all INTCO product imagery into clean product and installation crops
-- [ ] Restore all detailed INTCO catalogue information while keeping images clean
+- [x] Restore all detailed INTCO catalogue information while keeping images clean
