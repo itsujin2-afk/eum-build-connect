@@ -46,7 +46,8 @@ export const brands: Brand[] = [
       {eyebrow:"SIGNATURE SERIES",title:"대표 벽패널 시리즈",items:[{title:"MDF 흡음 패널",text:"600×2400 · 600×3000mm · 중이톤 · 무니톤 · 천연 무니목"},{title:"MDF 3D 패널",text:"도장형 · 랩핑형 · 폭 122mm · 두께 12mm"},{title:"이바이션 3D 패널",text:"고급 · 기본 · 디자이너 3계열 · 폭 250 · 304 · 315mm"},{title:"SPC 석재 패널",text:"대리석무늬 · 암암판 · 고전암운 · 최대 1200×2400mm"},{title:"럭셔리 스톤",text:"연속 부합 마본 · UV 코팅 · 상업 공간 전용"}]},
       {eyebrow:"CERTIFIED PERFORMANCE",title:"재생 소재와 국제 인증",items:[{title:"소재",text:"PS · MDF · PVC · PET · WPC"},{title:"인증",text:"ISO 9001 · ISO 14001 · CE · VOC A+"},{title:"성능",text:"포름알데히드 무첨가 · 중금속 무첨가 · 방수"},{title:"벽패널",text:"최대 1200×2400mm"}]}
     ]
-  }  {
+  },
+  {
     slug:"lion-king", number:"03", name:"광둥 라이온 킹 세라믹스", english:"GUANGDONG LION KING CERAMICS", category:"대리석 타일 · 내벽 타일",
     headline:"천연석의 표정을 타일로 구현합니다", intro:"중국 도자기 산업의 중심지 포산 화샤 세라믹 엑스포 시티에 위치한 대리석 타일 전문 기업으로, 생산·연구개발·판매를 일체화했습니다.",
     heroImage:"030", gallery:["031","032","033","034","035","036","037","038","039","040","041"],
