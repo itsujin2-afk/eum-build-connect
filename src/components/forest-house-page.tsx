@@ -4,13 +4,7 @@ import { SiteShell } from "@/components/site-shell";
 import campusGate from "@/assets/forest-house/000.jpg.asset.json";
 import headquarters from "@/assets/forest-house/001.jpg.asset.json";
 import laboratory from "@/assets/forest-house/004.jpg.asset.json";
-import warehouse from "@/assets/forest-house/007.jpg.asset.json";
-import productionHall from "@/assets/forest-house/010.jpg.asset.json";
-import flooringLine from "@/assets/forest-house/011.jpg.asset.json";
-import pressLine from "@/assets/forest-house/015.jpg.asset.json";
-import finishedStorage from "@/assets/forest-house/016.jpg.asset.json";
-import printingLine from "@/assets/forest-house/018.jpg.asset.json";
-import heatingFloor from "@/assets/forest-house/025.jpg.asset.json";
+import fz701 from "@/assets/forest-house-products/fz701.jpg.asset.json";
 
 const metrics = [
   ["150무", "기업 총 부지"], ["4만㎡", "생산·창고 면적"], ["12만 장", "함침지 일 생산"],
@@ -60,18 +54,6 @@ export function ForestHousePage() {
     <section className="border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-14 lg:grid-cols-[.85fr_1.15fr] lg:gap-24"><SectionHead eyebrow="COMPANY PROFILE" title="원자재부터 완제품까지 이어지는 목재 생산 체계" body="2016년 설립 이후 제품 연구개발, 생산, 가공과 판매를 하나의 조직으로 운영해 왔습니다. 생산시설뿐 아니라 연구실, 신제품 전시장과 직원 지원시설까지 갖춘 장기 운영 기반을 구축했습니다."/><div className="grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3">{metrics.map(([value,label])=><div key={label} className="bg-background p-5 sm:p-7"><strong className="text-2xl font-bold text-gold sm:text-3xl">{value}</strong><p className="mt-3 text-xs leading-5 text-muted-foreground">{label}</p></div>)}</div></div>
       <div className="mt-16 grid gap-5 lg:grid-cols-[.8fr_1.2fr]"><img src={campusGate.url} alt="이센메이쥐 생산단지 정문" className="aspect-[16/10] h-full w-full object-cover saturate-[0.85]"/><div className="grid gap-px bg-border sm:grid-cols-2"><div className="bg-surface p-7"><b>3,000㎡</b><p className="mt-2 text-sm text-muted-foreground">사무동·제품 연구개발센터</p></div><div className="bg-surface p-7"><b>1,000㎡</b><p className="mt-2 text-sm text-muted-foreground">신제품 전시장</p></div><div className="bg-surface p-7"><b>600㎡+</b><p className="mt-2 text-sm text-muted-foreground">제품 시험·분석 실험실</p></div><div className="bg-surface p-7"><b>7,000㎡</b><p className="mt-2 text-sm text-muted-foreground">생산단지 내 녹지 면적</p></div></div></div>
-    </div></section>
-
-    <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
-      <SectionHead eyebrow="FACTORY CAPABILITY" title="인쇄·함침·압착·마루 가공을 직접 운영합니다" body="7개 4색 고속 인쇄라인과 11개 전자동 함침지 라인, 강화마루·다층마루 생산설비를 연계해 소재의 표면부터 완제품까지 품질과 납기를 관리합니다."/>
-      <div className="mt-14 grid grid-cols-2 gap-px border border-border bg-border md:grid-cols-3">{[
-        [productionHall.url,"자동화 생산라인"],
-        [flooringLine.url,"마루 성형·이송"],
-        [pressLine.url,"대형 압착 라인"],
-        [printingLine.url,"4색 고속 인쇄"],
-        [warehouse.url,"원자재·생산 창고"],
-        [finishedStorage.url,"완제품 보관"],
-      ].map(([image,title])=><figure key={title} className="group relative aspect-[16/10] overflow-hidden bg-background"><img src={image} alt={`이센메이쥐 ${title}`} className="h-full w-full object-cover saturate-[0.8] transition duration-500 group-hover:saturate-100"/><figcaption className="absolute bottom-0 left-0 bg-background/90 px-3 py-1.5 text-[11px] font-semibold backdrop-blur-sm">{title}</figcaption></figure>)}</div>
     </div></section>
 
     <section><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
