@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Factory, Layers3, Leaf } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import factoryShandong from "@/assets/intco/factory-shandong.jpg.asset.json";
 import factoryMalaysia from "@/assets/intco/factory-malaysia.jpg.asset.json";
@@ -52,7 +53,8 @@ export function IntcoDecorPage() {
           <p className="eyebrow text-muted-foreground">06 · INTCO DECOR · SINCE 2002</p>
           <h1 className="mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">재생 소재로 만드는<br/><span className="text-gold">실내외 마감재</span></h1>
           <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">버려진 플라스틱을 회수해 재생 원료로 만들고, 벽패널·몰딩·SPC 바닥재·아웃도어 제품까지 친환경 순환 구조 안에서 직접 생산합니다.</p>
-          <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>연 1억 3천만m 몰딩</span><span>연 4,500만 개 완제품</span><span>130개국 이상 공급</span></div>
+          <div className="mt-9 flex flex-wrap items-center gap-4"><Link to="/brands/intco-decor-products" className="inline-flex items-center gap-2.5 bg-foreground px-7 py-3.5 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">제품 소개 보기 <ArrowRight size={16}/></Link><span className="text-xs text-muted-foreground">벽패널 · 몰딩 · WPC · SPC 월패널</span></div>
+          <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>연 1억 3천만m 몰딩</span><span>연 4,500만 개 완제품</span><span>130개국 이상 공급</span></div>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Link to="/brands/intco-decor-products" className="inline-flex items-center gap-2.5 bg-foreground px-7 py-3.5 text-sm font-bold text-primary-foreground transition-colors duration-300 hover:bg-gold hover:text-foreground">
               제품 소개 보기 <ArrowRight size={16} />
@@ -95,6 +97,6 @@ export function IntcoDecorPage() {
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center"><img src={circularMaterials.url} alt="재생 소재를 활용한 잉코의 실내외 장식 자재" className="aspect-[16/10] w-full object-cover"/><div><SectionHead eyebrow="CERTIFICATION & ESG" title="검증된 재생 소재와 국제 인증" body="ISO 9001·14001, GRS, CE, FSC, SGS, VOC A+ 등 제품과 생산 체계의 기준을 관리합니다."/><ul className="mt-8 grid gap-4 text-sm sm:grid-cols-2">{["S&P Global ESG 69점·글로벌 상위 5%","CDP 기후변화 B등급","113개 특허·38개 소프트웨어 저작권","국가·산업·단체 표준 제정 참여","연간 재생 플라스틱 생산능력 15만 톤 이상","누적 탄소배출 340만 톤 절감"].map(item=><li key={item} className="flex gap-3 border-t border-border pt-4"><Check size={17} className="mt-0.5 shrink-0 text-gold"/><span>{item}</span></li>)}</ul></div></div>
     </div></section>
 
-    <section className="border-b border-border"><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-24 sm:px-10 sm:py-32 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 max-w-4xl break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">패널과 SPC 바닥재를 함께 검토하고, 프로젝트 사양에 맞춰 공급합니다.</h2><p className="mt-6 max-w-2xl text-sm leading-7 text-muted-foreground">이음앤빌드가 디자인, 샘플, 물량, 시공 방식과 납기 조건을 한국에서 확인합니다.</p></div><a href="tel:01031138668" className="inline-flex items-center gap-2 bg-foreground px-7 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">제품·사양 문의 <ArrowRight size={16}/></a></div></section>
+    <section className="border-b border-border"><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-24 sm:px-10 sm:py-32 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 max-w-4xl break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">패널과 SPC 바닥재를 함께 검토하고, 프로젝트 사양에 맞춰 공급합니다.</h2><p className="mt-6 max-w-2xl text-sm leading-7 text-muted-foreground">이음앤빌드가 디자인, 샘플, 물량, 시공 방식과 납기 조건을 한국에서 확인합니다.</p><div className="mt-8 flex flex-wrap items-center gap-4"><Link to="/brands/intco-decor-products" className="inline-flex items-center gap-2.5 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">제품 소개 보기 <ArrowRight size={16}/></Link><span className="text-xs text-muted-foreground">두 제품 카탈로그의 주요 품목·규격·패턴</span></div></div><a href="tel:01031138668" className="inline-flex items-center gap-2 border border-border px-7 py-4 text-sm font-bold transition-colors hover:border-gold hover:text-gold">제품·사양 문의 <ArrowRight size={16}/></a></div></section>
   </SiteShell>;
 }
