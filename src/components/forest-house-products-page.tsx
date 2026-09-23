@@ -51,7 +51,7 @@ export function ForestHouseProductsPage() {
 
     <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:gap-24">
-        <img src={pressLine.url} alt="이센메이쥐 3중 실목 기재 압착 생산라인" className="aspect-[4/3] w-full bg-background object-cover"/>
+        <img src={fz707.url} alt="신3중 실목마루 내추럴 우드 바닥 질감" className="aspect-[4/3] w-full bg-background object-cover"/>
         <div>
           <p className="eyebrow text-muted-foreground">STRUCTURE</p>
           <h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl">난방열을 고르게 전달하는<br/>3중 실목 구조</h2>
