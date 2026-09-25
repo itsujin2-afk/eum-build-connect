@@ -19,7 +19,7 @@ export const Route = createFileRoute("/company")({
 });
 
 const pillars: [string, string, string][] = [
-  ["01", "Direct Authority", "본사 직통 계약"],
+  ["01", "Direct Authority", "본사 직접 계약"],
   ["02", "Single Margin", "단일 마진 구조"],
   ["03", "Legal Liability", "한국 법인 직접 책임"],
 ];
@@ -64,7 +64,7 @@ const leaders = [
     name: "YIN XIUYING",
     subtitle: "공동대표이사 · Co-CEO",
     quote: "“중국 거대 기업의 자산을 직접 움직이는 현지 파이프라인”",
-    bullets: ["6개 핵심 기업 본사 직통 의사결정", "자산·브랜드·생산 인프라 한국 직결", "물량·생산·사양 변경 본사 협의 전권"],
+    bullets: ["6개 핵심 기업 본사 직접 의사결정", "자산·브랜드·생산 인프라 한국 직결", "물량·생산·사양 변경 본사 협의 전권"],
   },
   {
     role: "KOREA BUSINESS & EXECUTION",
@@ -76,7 +76,7 @@ const leaders = [
 ];
 
 const authority: [string, string, string][] = [
-  ["01", "본사 직통 계약", "단가와 사양, 납기가 한 단계에서 확정되며 중간 마진이 존재하지 않습니다."],
+  ["01", "본사 직접 계약", "단가와 사양, 납기가 한 단계에서 확정되며 중간 마진이 존재하지 않습니다."],
   ["02", "한국 내 독점 운용", "6개 기업 자산의 국내 사업 운용권을 행사해 국내 경쟁 견적이 발생하지 않습니다."],
   ["03", "공동 개발 · 투자", "자재 공급을 넘어 한중 프로젝트의 개발과 투자 의사결정에 참여합니다."],
 ];
@@ -102,7 +102,7 @@ function Company() {
           중국 최정상 6개 브랜드<br />공식 한국 <span className="text-gold">독점 HQ</span>
         </h1>
         <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-foreground/75 sm:text-base sm:leading-8">
-          본사 직통 단일 마진 구조로 최고급 건축자재를 공급하는 익스클루시브 리저널 본부
+          본사와 직접 계약하는 단일 마진 구조로 최고급 건축자재를 공급하는 익스클루시브 리저널 본부
         </p>
       </div>
       <div className="relative z-10 mx-auto w-full max-w-5xl px-4 sm:px-6">
@@ -110,7 +110,7 @@ function Company() {
           <div className="grid gap-6 md:grid-cols-2 md:gap-10">
             <div>
               <p className="eyebrow text-muted-foreground">WHAT DO WE DO?</p>
-              <h2 className="mt-3 break-keep text-xl font-bold leading-[1.3] tracking-tight sm:text-2xl">중간 단계를 없앤 직통 계약 솔루션</h2>
+              <h2 className="mt-3 break-keep text-xl font-bold leading-[1.3] tracking-tight sm:text-2xl">중간 단계를 없앤 직접 계약 솔루션</h2>
             </div>
             <p className="break-keep text-[13px] leading-6 text-muted-foreground sm:text-sm sm:leading-7 md:pt-7">
               중국 본사와 직접 계약하고 한국 법인이 모든 하자와 책임을 집니다. 지체 없는 의사결정과 투명한 단일 마진으로 프로젝트를 완성합니다.
@@ -149,7 +149,7 @@ function Company() {
               </p>
             </div>
             <div className="border border-gold/40 bg-background px-6 py-5">
-              <p className="text-[11px] font-semibold tracking-[0.14em] text-gold">직통 경로</p>
+              <p className="text-[11px] font-semibold tracking-[0.14em] text-gold">직접 경로</p>
               <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] font-semibold leading-6">
                 중국 본사 <ArrowRight size={12} className="text-gold" /> 이음앤빌드 한국 HQ <ArrowRight size={12} className="text-gold" /> 발주처
               </p>
@@ -218,7 +218,7 @@ function Company() {
     {/* Comparison Table */}
     <section className="border-t border-border bg-surface">
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 lg:px-10">
-        <SectionHead eyebrow="WHY EUM&BUILD" title="직통 구조의 차이" />
+        <SectionHead eyebrow="WHY EUM&BUILD" title="직접 계약 구조의 차이" />
         <div className="overflow-x-auto border border-border bg-background">
           <table className="w-full min-w-[640px] text-left">
             <thead>
