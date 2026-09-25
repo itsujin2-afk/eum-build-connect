@@ -4,9 +4,9 @@ import { SiteShell } from "@/components/site-shell";
 import doorHero from "@/assets/eum/075.jpg";
 import doorClassic from "@/assets/eum/071.jpg";
 import doorModern from "@/assets/eum/069.jpg";
-import interiorLiving from "@/assets/eum/086.jpg";
-import interiorBedroom from "@/assets/eum/087.jpg";
-import interiorFeature from "@/assets/eum/089.jpg";
+import interiorLiving from "@/assets/shuofeng-products/panel-living.jpg.asset.json";
+import interiorBedroom from "@/assets/shuofeng-products/wardrobe.jpg.asset.json";
+import interiorFeature from "@/assets/shuofeng-products/media-wall.jpg.asset.json";
 
 const metrics = [
   ["1988", "목공 사업 시작"], ["45,000㎡", "공장 건축 면적"], ["3,400㎡", "제품 전시장"],
@@ -69,17 +69,17 @@ export function ShuofengPage() {
     <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <SectionHead eyebrow="INTEGRATED WOODWORK" title="문 하나가 아니라, 공간 전체를 맞춥니다" body="방문과 벽면, 수납장, 계단과 몰딩을 각각 주문하는 대신 디자인과 재료를 한 체계에서 조율합니다."/>
       <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">{productSystems.map(([title,text],index)=><article key={title} className="bg-background p-7"><span className="text-xs font-bold text-gold">0{index+1}</span><h3 className="mt-8 text-xl font-bold">{title}</h3><p className="mt-4 break-keep text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div>
-      <div className="mt-10 grid gap-5 lg:grid-cols-[1.2fr_.8fr]"><img src={interiorLiving} alt="슈오펑 목재 벽면과 수납장 일체화 거실" className="aspect-[16/10] h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={interiorBedroom} alt="슈오펑 목재 벽면을 적용한 침실" className="aspect-[16/10] h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
+      <div className="mt-10 grid gap-5 lg:grid-cols-[1.2fr_.8fr]"><img src={interiorLiving.url} alt="슈오펑 목재 벽면과 수납장 일체화 거실" className="aspect-[16/10] h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={interiorBedroom.url} alt="슈오펑 목재 벽면을 적용한 침실" className="aspect-[16/10] h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
     </div></section>
 
     <section className="border-y border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
-      <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:gap-24"><SectionHead eyebrow="SMART PRODUCTION" title="대형 프로젝트의 물량과 납기를 함께 관리합니다" body="자동 문짝·문틀 생산, UV 롤코팅과 도장, 수납장과 목재 마감판 생산라인을 갖추고 품목별 공정을 연결합니다. 공장 사진을 크게 보여주기보다 실제 공급 능력과 관리 체계를 중심으로 정리했습니다."/><div className="grid grid-cols-2 gap-px border border-border bg-border">{capacities.map(([value,label])=><div key={label} className="bg-background p-6 sm:p-8"><Factory size={19} className="text-gold"/><strong className="mt-6 block text-2xl font-bold sm:text-3xl">{value}</strong><p className="mt-2 text-xs text-muted-foreground">{label}</p></div>)}</div></div>
-      <div className="mt-16 grid gap-px border border-border bg-border md:grid-cols-3">{[[DraftingCompass,"정밀 설계","현장 실측과 상세 도면을 생산 오더로 연결합니다."],[ShieldCheck,"공정별 검사","자재 입고부터 제작, 완제품과 설치까지 단계별로 확인합니다."],[Clock3,"현장 대응","서비스 요청은 4시간 이내 응답하고 24시간 이내 대응 방안을 제시합니다."]].map(([Icon,title,text])=>{const ItemIcon=Icon as typeof Factory; return <article key={String(title)} className="bg-background p-7"><ItemIcon size={21} className="text-gold"/><h3 className="mt-7 text-lg font-bold">{String(title)}</h3><p className="mt-3 break-keep text-sm leading-7 text-muted-foreground">{String(text)}</p></article>})}</div>
+      <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:gap-24"><SectionHead eyebrow="SMART PRODUCTION" title="대형 프로젝트의 물량과 납기를 함께 관리합니다" body="자동 문짝·문틀 생산, UV 롤코팅과 도장, 수납장과 목재 마감판 생산라인을 갖추고 품목별 공정을 연결합니다."/><div className="grid grid-cols-2 gap-px border border-border bg-border">{capacities.map(([value,label])=><div key={label} className="bg-background p-6 sm:p-8"><Factory size={19} className="text-gold"/><strong className="mt-6 block text-2xl font-bold sm:text-3xl">{value}</strong><p className="mt-2 text-xs text-muted-foreground">{label}</p></div>)}</div></div>
+      <div className="mt-16 grid gap-px border border-border bg-border md:grid-cols-3">{[[DraftingCompass,"정밀 설계","현장 실측과 상세 도면을 생산 오더로 연결합니다."],[ShieldCheck,"공정별 검사","자재 입고부터 제작, 완제품과 설치까지 단계별로 확인합니다."],[Clock3,"현장 대응","서비스 요청 접수 후 4시간 이내에 응답하고, 24시간 이내에 전문 기술 인력을 현장에 파견합니다."]].map(([Icon,title,text])=>{const ItemIcon=Icon as typeof Factory; return <article key={String(title)} className="bg-background p-7"><ItemIcon size={21} className="text-gold"/><h3 className="mt-7 text-lg font-bold">{String(title)}</h3><p className="mt-3 break-keep text-sm leading-7 text-muted-foreground">{String(text)}</p></article>})}</div>
     </div></section>
 
     <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <SectionHead eyebrow="PROJECT EXPERIENCE" title="호텔·고급 주거·업무 공간에서 쌓은 경험" body="객실 한 곳부터 수백 세대의 목문과 고정 가구까지, 설계와 생산·설치 조직을 프로젝트 규모에 맞춰 편성합니다."/>
-      <div className="mt-14 grid gap-8 lg:grid-cols-[.9fr_1.1fr]"><div className="divide-y divide-border border-y border-border">{projectFields.map(([title,text],index)=><article key={title} className="grid gap-4 py-6 sm:grid-cols-[44px_130px_1fr]"><span className="text-xs font-bold text-gold">0{index+1}</span><h3 className="font-bold">{title}</h3><p className="break-keep text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div><img src={interiorFeature} alt="슈오펑 고급 주거 목공 프로젝트" className="aspect-[16/10] h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
+      <div className="mt-14 grid gap-8 lg:grid-cols-[.9fr_1.1fr]"><div className="divide-y divide-border border-y border-border">{projectFields.map(([title,text],index)=><article key={title} className="grid gap-4 py-6 sm:grid-cols-[44px_130px_1fr]"><span className="text-xs font-bold text-gold">0{index+1}</span><h3 className="font-bold">{title}</h3><p className="break-keep text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div><img src={interiorFeature.url} alt="슈오펑 고급 주거 목공 프로젝트" className="aspect-[16/10] h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
       <p className="mt-10 text-xs leading-6 text-muted-foreground">주요 수행 분야: 하이난·칭다오·쉬저우·타이안·린이 지역의 호텔 객실, 고급 아파트, 별장과 오피스 프로젝트</p>
     </div></section>
 
