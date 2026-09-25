@@ -4,9 +4,9 @@ import { SiteShell } from "@/components/site-shell";
 import doorHero from "@/assets/eum/075.jpg";
 import doorClassic from "@/assets/eum/071.jpg";
 import doorModern from "@/assets/eum/069.jpg";
-import interiorLiving from "@/assets/eum/086.jpg";
-import interiorBedroom from "@/assets/eum/087.jpg";
-import interiorFeature from "@/assets/eum/089.jpg";
+import interiorLiving from "@/assets/shuofeng-products/panel-living.jpg.asset.json";
+import interiorBedroom from "@/assets/shuofeng-products/wardrobe.jpg.asset.json";
+import interiorFeature from "@/assets/shuofeng-products/media-wall.jpg.asset.json";
 
 const metrics = [
   ["1988", "목공 사업 시작"], ["45,000㎡", "공장 건축 면적"], ["3,400㎡", "제품 전시장"],
