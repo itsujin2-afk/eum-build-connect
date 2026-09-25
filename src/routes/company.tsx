@@ -222,8 +222,9 @@ function Company() {
     <section className="border-t border-border bg-surface">
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 lg:px-10">
         <SectionHead eyebrow="WHY EUM&BUILD" title="직접 계약 구조의 차이" />
-        <div className="overflow-x-auto border border-border bg-background">
-          <table className="w-full min-w-[640px] text-left">
+        {/* Desktop table */}
+        <div className="hidden overflow-hidden border border-border bg-background sm:block">
+          <table className="w-full text-left">
             <thead>
               <tr className="border-b border-border">
                 <th className="px-6 py-5 text-[11px] font-semibold tracking-[0.14em] text-muted-foreground">구분</th>
@@ -239,6 +240,16 @@ function Company() {
               </tr>)}
             </tbody>
           </table>
+        </div>
+        {/* Mobile stacked cards */}
+        <div className="border border-border bg-background sm:hidden">
+          {compareRows.map(([label, general, ours], i) => <div key={label} className={i > 0 ? "border-t border-border" : undefined}>
+            <p className="border-b border-border bg-surface px-5 py-3 text-sm font-bold">{label}</p>
+            <div className="px-5 py-3">
+              <p className="flex items-start gap-2 text-sm text-muted-foreground"><X size={14} className="mt-1 shrink-0 text-muted-foreground/60" /><span className="break-keep">{general}<span className="sr-only"> (일반 무역상 · 에이전트)</span></span></p>
+              <p className="mt-2 flex items-start gap-2 text-sm font-semibold"><Check size={14} className="mt-1 shrink-0 text-gold" /><span className="break-keep">{ours}<span className="sr-only"> (이음앤빌드)</span></span></p>
+            </div>
+          </div>)}
         </div>
       </div>
     </section>
