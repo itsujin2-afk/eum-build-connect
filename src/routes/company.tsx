@@ -173,10 +173,10 @@ function Company() {
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32 lg:px-10">
         <p className="eyebrow text-muted-foreground">COMPANY · EXCLUSIVE REGIONAL HQ</p>
         <h2 className="mt-6 max-w-4xl break-keep text-4xl font-bold leading-[1.2] tracking-tight sm:text-5xl lg:text-[64px]">
-          한국 법인이 직접 계약하고 <span className="text-gold">직접 담당합니다.</span>
+          한국에서 계약하고, <span className="text-gold">한국에서 책임집니다.</span>
         </h2>
         <p className="mt-8 max-w-2xl break-keep text-base leading-8 text-muted-foreground sm:text-lg sm:leading-9">
-          중국 본사와 한국 발주처를 이어주는 창구가 아닙니다. 6개 기업의 상업 권한을 위임받아 직접 집행하며 계약, 세금계산서, 하자 사후관리가 모두 이 법인에서 이루어집니다.
+          중국 본사와 한국 발주처를 단순히 연결하는 중개 창구가 아닙니다. 당사는 중국 본사의 공식 권한을 위임받아 한국 시장에서 직접 사업을 수행하는 법인으로, 계약 체결부터 세금계산서 발행, 제품 공급, 품질·하자보수까지 한국 내 거래 전반을 직접 관리하고 책임집니다.
         </p>
       </div>
     </section>
@@ -185,6 +185,9 @@ function Company() {
     <section className="border-t border-border bg-surface">
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 lg:px-10">
         <SectionHead eyebrow="COMPANY FACT SHEET" title="이음앤빌드" />
+        <p className="mt-6 max-w-2xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
+          아래 정보는 이음앤빌드가 중개상이 아닌, 중국 본사의 한국 공식 법인(RHQ)임을 확인하는 자료입니다.
+        </p>
         <dl className="grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {factSheet.map(([term, value]) => <div key={term} className="bg-background px-6 py-6">
             <dt className="text-[11px] font-semibold tracking-[0.14em] text-muted-foreground">{term}</dt>
