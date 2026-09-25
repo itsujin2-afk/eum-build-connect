@@ -25,7 +25,7 @@ const pillars: [string, string, string][] = [
 ];
 
 const highlights: [string, string][] = [
-  ["의사결정 속도", "협의 자리에서 즉시 확정"],
+  ["의사결정 속도", "미팅 자리에서 바로 결정"],
   ["가격 구조", "본사 직결 단일 마진"],
   ["책임 소재", "한국 법인이 계약 당사자로 직접 부담"],
 ];
@@ -53,7 +53,7 @@ const targets: [string, string][] = [
 ];
 
 const compareRows: [string, string, string][] = [
-  ["의사결정 속도", "본사 회신 소요", "협의 자리에서 즉시 확정"],
+  ["의사결정 속도", "본사 회신 소요", "미팅 자리에서 바로 결정"],
   ["가격 구조", "단계마다 마진 가산", "본사 직결 단일 마진"],
   ["책임 소재", "본사와 중개상 사이 분산", "한국 법인이 직접 부담"],
 ];
@@ -137,7 +137,7 @@ function Company() {
           <p className="eyebrow text-muted-foreground">WHY EUM&BUILD</p>
           <h2 className="mt-4 break-keep text-3xl font-bold leading-[1.25] tracking-tight sm:text-4xl lg:text-[42px]">중간 단계를 아예 없앴습니다.</h2>
           <p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
-            본사 회신을 기다리는 대신 협의 자리에서 결정합니다. 가격은 투명해지고, 책임은 선명해집니다.
+            본사 회신을 기다리지 않고, 자리에서 바로 답을 얻습니다. 가격은 투명해지고, 책임은 선명해집니다.
           </p>
         </div>
         <div className="space-y-8">
