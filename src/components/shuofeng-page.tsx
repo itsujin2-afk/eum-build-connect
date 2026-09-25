@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Clock3, DraftingCompass, Factory, ShieldCheck } from "lucide-react";
+import { ArrowRight, Check, DraftingCompass, Factory, ShieldCheck } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import doorHero from "@/assets/eum/075.jpg";
@@ -74,7 +74,7 @@ export function ShuofengPage() {
 
     <section className="border-y border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:gap-24"><SectionHead eyebrow="SMART PRODUCTION" title="대형 프로젝트의 물량과 납기를 함께 관리합니다" body="자동 문짝·문틀 생산, UV 롤코팅과 도장, 수납장과 목재 마감판 생산라인을 갖추고 품목별 공정을 연결합니다."/><div className="grid grid-cols-2 gap-px border border-border bg-border">{capacities.map(([value,label])=><div key={label} className="bg-background p-6 sm:p-8"><Factory size={19} className="text-gold"/><strong className="mt-6 block text-2xl font-bold sm:text-3xl">{value}</strong><p className="mt-2 text-xs text-muted-foreground">{label}</p></div>)}</div></div>
-      <div className="mt-16 grid gap-px border border-border bg-border md:grid-cols-3">{[[DraftingCompass,"정밀 설계","현장 실측과 상세 도면을 생산 오더로 연결합니다."],[ShieldCheck,"공정별 검사","자재 입고부터 제작, 완제품과 설치까지 단계별로 확인합니다."],[Clock3,"현장 대응","서비스 요청 접수 후 4시간 이내에 응답하고, 24시간 이내에 전문 기술 인력을 현장에 파견합니다."]].map(([Icon,title,text])=>{const ItemIcon=Icon as typeof Factory; return <article key={String(title)} className="bg-background p-7"><ItemIcon size={21} className="text-gold"/><h3 className="mt-7 text-lg font-bold">{String(title)}</h3><p className="mt-3 break-keep text-sm leading-7 text-muted-foreground">{String(text)}</p></article>})}</div>
+      <div className="mt-16 grid gap-px border border-border bg-border md:grid-cols-2">{[[DraftingCompass,"정밀 설계","현장 실측과 상세 도면을 생산 오더로 연결합니다."],[ShieldCheck,"공정별 검사","자재 입고부터 제작, 완제품과 설치까지 단계별로 확인합니다."]].map(([Icon,title,text])=>{const ItemIcon=Icon as typeof Factory; return <article key={String(title)} className="bg-background p-7"><ItemIcon size={21} className="text-gold"/><h3 className="mt-7 text-lg font-bold">{String(title)}</h3><p className="mt-3 break-keep text-sm leading-7 text-muted-foreground">{String(text)}</p></article>})}</div>
     </div></section>
 
     <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
