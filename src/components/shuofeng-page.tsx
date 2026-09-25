@@ -6,7 +6,7 @@ import doorClassic from "@/assets/eum/071.jpg";
 import doorModern from "@/assets/eum/069.jpg";
 import interiorLiving from "@/assets/shuofeng-products/panel-living.jpg.asset.json";
 import interiorBedroom from "@/assets/shuofeng-products/wardrobe.jpg.asset.json";
-import interiorFeature from "@/assets/shuofeng-products/media-wall.jpg.asset.json";
+import interiorFeature from "@/assets/shuofeng-products/french-cabinet.jpg.asset.json";
 
 const metrics = [
   ["1988", "목공 사업 시작"], ["45,000㎡", "공장 건축 면적"], ["3,400㎡", "제품 전시장"],
@@ -79,7 +79,7 @@ export function ShuofengPage() {
 
     <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <SectionHead eyebrow="PROJECT EXPERIENCE" title="호텔·고급 주거·업무 공간에서 쌓은 경험" body="객실 한 곳부터 수백 세대의 목문과 고정 가구까지, 설계와 생산·설치 조직을 프로젝트 규모에 맞춰 편성합니다."/>
-      <div className="mt-14 grid gap-8 lg:grid-cols-[.9fr_1.1fr]"><div className="divide-y divide-border border-y border-border">{projectFields.map(([title,text],index)=><article key={title} className="grid gap-4 py-6 sm:grid-cols-[44px_130px_1fr]"><span className="text-xs font-bold text-gold">0{index+1}</span><h3 className="font-bold">{title}</h3><p className="break-keep text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div><img src={interiorFeature.url} alt="슈오펑 고급 주거 목공 프로젝트" className="aspect-[16/10] h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
+      <div className="mt-14 grid gap-8 lg:grid-cols-[.9fr_1.1fr]"><div className="divide-y divide-border border-y border-border">{projectFields.map(([title,text],index)=><article key={title} className="grid gap-4 py-6 sm:grid-cols-[44px_130px_1fr]"><span className="text-xs font-bold text-gold">0{index+1}</span><h3 className="font-bold">{title}</h3><p className="break-keep text-sm leading-7 text-muted-foreground">{text}</p></article>)}</div><img src={interiorFeature.url} alt="슈오펑 베이지 톤 수납장과 미디어월을 적용한 고급 거실" className="aspect-[16/10] h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
       <p className="mt-10 text-xs leading-6 text-muted-foreground">주요 수행 분야: 하이난·칭다오·쉬저우·타이안·린이 지역의 호텔 객실, 고급 아파트, 별장과 오피스 프로젝트</p>
     </div></section>
 
