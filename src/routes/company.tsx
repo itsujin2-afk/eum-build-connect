@@ -9,9 +9,9 @@ import logoAsset from "@/assets/eum-build-logo-transparent.png.asset.json";
 export const Route = createFileRoute("/company")({
   head: () => ({ meta: [
     { title: "회사 소개 — 이음앤빌드" },
-    { name: "description", content: "중국 본사와 직접 결정하고 한국 법인이 직접 책임지는 이음앤빌드의 구조, 리더십, 사업 영역을 소개합니다." },
+    { name: "description", content: "중국 본사와 직접 결정하고 한국 법인이 직접 담당하는 이음앤빌드의 구조, 리더십, 사업 영역을 소개합니다." },
     { property: "og:title", content: "회사 소개 — 이음앤빌드" },
-    { property: "og:description", content: "중국 본사와 직접 결정하고 한국 법인이 직접 책임지는 구조" },
+    { property: "og:description", content: "중국 본사와 직접 결정하고 한국 법인이 직접 담당하는 구조" },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
   ] }),
@@ -21,13 +21,13 @@ export const Route = createFileRoute("/company")({
 const pillars: [string, string, string][] = [
   ["01", "Direct Authority", "본사 직접 계약"],
   ["02", "Single Margin", "단일 마진 구조"],
-  ["03", "Legal Liability", "한국 법인 직접 책임"],
+  ["03", "Legal Liability", "한국 법인 직접 관리"],
 ];
 
 const highlights: [string, string][] = [
   ["의사결정 속도", "미팅 자리에서 바로 결정"],
   ["가격 구조", "본사 직결 단일 마진"],
-  ["책임 소재", "하자와 사후관리까지 한국 법인이 책임"],
+  ["담당", "하자와 사후관리까지 한국 법인이 담당"],
 ];
 
 const factSheet: [string, string][] = [
@@ -42,7 +42,7 @@ const factSheet: [string, string][] = [
 const areas = [
   { en: "MATERIAL SOURCING", title: "건축자재 조달 · 유통", desc: "6개 본사의 생산 라인에서 직접 물량을 배정받고, 사양 개발과 샘플 대응까지 포함합니다." },
   { en: "BUSINESS CONSULTING", title: "한중 사업 컨설팅", desc: "양국 시장 진출, 합작 구조와 계약 조건, 현지 파트너 검증을 지원합니다." },
-  { en: "WORKFORCE OPERATION", title: "프로젝트 인력 운영", desc: "석재 시공 전문 인력을 프로젝트 단위로 편성해 자재와 시공을 함께 책임집니다." },
+  { en: "WORKFORCE OPERATION", title: "프로젝트 인력 운영", desc: "석재 시공 전문 인력을 프로젝트 단위로 편성해 자재와 시공을 함께 담당합니다." },
 ];
 
 const targets: [string, string][] = [
@@ -55,7 +55,7 @@ const targets: [string, string][] = [
 const compareRows: [string, string, string][] = [
   ["의사결정 속도", "본사 회신 소요", "미팅 자리에서 바로 결정"],
   ["가격 구조", "단계마다 마진 가산", "본사 직결 단일 마진"],
-  ["책임 소재", "본사와 중개상 사이 분산", "한국 법인이 한곳에서 책임"],
+  ["담당", "본사와 중개상 사이 분산", "한국 법인이 한곳에서 담당"],
 ];
 
 const leaders = [
@@ -113,7 +113,7 @@ function Company() {
               <h2 className="mt-3 break-keep text-xl font-bold leading-[1.3] tracking-tight sm:text-2xl">중간 단계를 없앤 직접 계약 솔루션</h2>
             </div>
             <p className="break-keep text-[13px] leading-6 text-muted-foreground sm:text-sm sm:leading-7 md:pt-7">
-              중국 본사와 직접 계약하고 한국 법인이 모든 하자와 책임을 집니다. 결정은 빠르게, 가격은 처음부터 끝까지 같은 구조로 프로젝트를 완성합니다.
+              중국 본사와 직접 계약하고 한국 법인이 모든 하자와 사후관리를 맡습니다. 결정은 빠르게, 가격은 처음부터 끝까지 같은 구조로 프로젝트를 완성합니다.
             </p>
           </div>
           <div className="my-4 h-px w-full bg-border sm:my-6" />
@@ -137,7 +137,7 @@ function Company() {
           <p className="eyebrow text-muted-foreground">WHY EUM&BUILD</p>
           <h2 className="mt-4 break-keep text-3xl font-bold leading-[1.25] tracking-tight sm:text-4xl lg:text-[42px]">중간 단계를 아예 없앴습니다.</h2>
           <p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
-            본사 회신을 기다리지 않고, 자리에서 바로 답을 얻습니다. 가격은 투명해지고, 책임은 선명해집니다.
+            본사 회신을 기다리지 않고, 자리에서 바로 답을 얻습니다. 가격은 투명해지고, 관리 주체도 분명해집니다.
           </p>
         </div>
         <div className="space-y-8">
@@ -173,10 +173,10 @@ function Company() {
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32 lg:px-10">
         <p className="eyebrow text-muted-foreground">COMPANY · EXCLUSIVE REGIONAL HQ</p>
         <h2 className="mt-6 max-w-4xl break-keep text-4xl font-bold leading-[1.2] tracking-tight sm:text-5xl lg:text-[64px]">
-          한국 법인이 직접 계약하고 <span className="text-gold">직접 책임집니다.</span>
+          한국 법인이 직접 계약하고 <span className="text-gold">직접 담당합니다.</span>
         </h2>
         <p className="mt-8 max-w-2xl break-keep text-base leading-8 text-muted-foreground sm:text-lg sm:leading-9">
-          중국 본사와 한국 발주처를 이어주는 창구가 아닙니다. 6개 기업의 상업 권한을 위임받아 직접 집행하며 계약, 세금계산서, 하자 책임이 모두 이 법인에서 나옵니다.
+          중국 본사와 한국 발주처를 이어주는 창구가 아닙니다. 6개 기업의 상업 권한을 위임받아 직접 집행하며 계약, 세금계산서, 하자 사후관리가 모두 이 법인에서 이루어집니다.
         </p>
       </div>
     </section>
