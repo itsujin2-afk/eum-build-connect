@@ -24,17 +24,17 @@ import frenchCabinet from "@/assets/shuofeng-products/french-cabinet.jpg.asset.j
 import modernCabinet from "@/assets/shuofeng-products/modern-cabinet.jpg.asset.json";
 
 const scenes = [
-  { image: classicWall.url, title: "문·벽·수납장 일체형", detail: "5001 · 침실 수납 벽면" },
-  { image: wardrobe.url, title: "프렌치 수납 시스템", detail: "5002 · 붙박이장과 오픈 선반" },
-  { image: whiteDoor.url, title: "클래식 싱글 도어", detail: "5003 · 침실 적용" },
+  { image: classicWall.url, title: "클래식 도어·수납장 일체형", detail: "5001 · 아이보리 패널 월" },
+  { image: wardrobe.url, title: "프렌치 붙박이 수납장", detail: "아치 오픈장 · 유리 선반 · 서랍장" },
+  { image: whiteDoor.url, title: "화이트 클래식 싱글 도어", detail: "5003 · 투 패널 몰딩" },
 ] as const;
 
 const collections = [
-  { range: "5004—5006", title: "절제된 라운드 몰딩", copy: "얇은 선과 부드러운 모서리로 거실·침실·서재에 차분한 프렌치 인상을 더합니다.", image: roundedDoor.url },
-  { range: "5007—5009", title: "양개문과 글라스 도어", copy: "넓은 출입구를 위한 양개문, 빛을 나누는 유리문, 올리브 톤 포인트 도어로 구성됩니다.", image: oliveDoor.url },
-  { range: "5010—5014", title: "아치 패널 컬렉션", copy: "긴 아치와 타원형 패널을 중심으로 화이트·크림·월넛 색상을 선택할 수 있습니다.", image: archedDoor.url },
-  { range: "5015—5020", title: "세이지와 뉴트럴 톤", copy: "세이지 그린, 아이보리, 그레이 브라운을 벽 패널과 연결해 한 공간처럼 맞춥니다.", image: greenDoor.url },
-  { range: "5021—5028", title: "8가지 도어 베리에이션", copy: "플랫 패널부터 아치, 유리, 세로 루버 형태까지 공간의 개방감과 프라이버시에 맞춰 고릅니다.", image: minimalDoor.url },
+  { range: "5004—5006", title: "라운드 프레임 싱글 도어", copy: "대표 모델 5006의 길게 이어진 라운드 프레임과 아이보리 톤이 클래식한 벽 몰딩과 자연스럽게 연결됩니다.", image: roundedDoor.url },
+  { range: "5007—5009", title: "올리브 아치 패널 도어", copy: "대표 모델 5009의 올리브 컬러와 부드러운 아치형 패널이 공간에 차분한 포인트를 더합니다.", image: oliveDoor.url },
+  { range: "5010—5012", title: "화이트 도어·우드 슬랫 월", copy: "대표 모델 5012의 슬림한 화이트 싱글 도어를 월넛 슬랫 벽면과 조합한 모던 프렌치 구성입니다.", image: archedDoor.url },
+  { range: "5013—5017", title: "딥 그린 아치 패널", copy: "대표 모델 5015의 딥 그린 싱글 도어와 아이보리 벽 패널, 같은 색상의 수납장을 함께 맞춘 구성입니다.", image: greenDoor.url },
+  { range: "5018—5028", title: "뉴트럴 플랫 패널", copy: "대표 모델 5018의 그레이지 싱글 도어와 플랫 수납 패널처럼 장식을 줄인 디자인을 중심으로 구성됩니다.", image: minimalDoor.url },
 ] as const;
 
 const modelGroups = [
@@ -47,25 +47,25 @@ const modelGroups = [
 ] as const;
 
 const extendedCollections = [
-  { range: "5029—5048", label: "RETRO FRENCH", title: "레트로 프렌치", copy: "깊은 아치와 세로 몰딩, 블랙·올리브·월넛 색상을 중심으로 공간에 클래식한 무게감을 더합니다.", image: retroBlack.url },
-  { range: "5049—5060", label: "MEDIEVAL WOOD", title: "미드센추리 우드", copy: "나뭇결과 따뜻한 브라운 톤을 살린 문으로, 복고적인 분위기를 현대적인 공간에 자연스럽게 연결합니다.", image: retroWood.url },
-  { range: "5061—5087", label: "MODERN SIMPLE", title: "모던 심플", copy: "장식을 줄인 플랫 도어와 얇은 선형 디테일로 거실·침실·서재를 깔끔하게 정돈합니다.", image: modernWhite.url },
-  { range: "5089—5104", label: "MODERN CHINESE", title: "현대 중식", copy: "동양적인 비례를 간결한 면과 중성적인 색으로 풀어 전통과 현대 공간을 차분하게 잇습니다.", image: modernRoom.url },
-  { range: "5105—5117", label: "DESIGNER SERIES", title: "디자이너 시리즈", copy: "천연 나뭇결과 절제된 패널 구성을 강조한 디자인 도어로, 거실과 서재의 중심 면을 만듭니다.", image: designerWalnut.url },
-  { range: "5118—5123", label: "ITALIAN STYLE", title: "이탈리안 스타일", copy: "짙은 우드 베니어와 슬림한 프레임을 조합해 단정하고 깊이 있는 공간을 연출합니다.", image: italianDoor.url },
-  { range: "5124—5145", label: "WOOD GRAIN", title: "현대 중식 우드", copy: "다양한 우드 톤과 사각 패널을 중심으로 문, 벽면, 수납장을 하나의 흐름으로 맞춥니다.", image: chineseWalnut.url },
+  { range: "5029—5048", label: "RETRO FRENCH", title: "블랙 클래식 패널", copy: "대표 이미지의 블랙 싱글 도어처럼 깊은 색과 세로 몰딩을 사용해 레트로 프렌치 특유의 무게감을 더합니다.", image: retroBlack.url },
+  { range: "5049—5060", label: "MEDIEVAL WOOD", title: "아치형 우드 도어", copy: "세로 홈을 낸 브라운 원목 도어와 둥근 아치 프레임을 조합해 따뜻하고 고전적인 공간을 만듭니다.", image: retroWood.url },
+  { range: "5061—5087", label: "MODERN SIMPLE", title: "화이트 슬림 프레임", copy: "화이트 싱글 도어에 가는 세로 홈과 슬림한 프레임을 적용해 벽면과 자연스럽게 이어지도록 정돈합니다.", image: modernWhite.url },
+  { range: "5089—5104", label: "MODERN CHINESE", title: "화이트 도어·월넛 월", copy: "장식을 줄인 화이트 도어와 짙은 월넛 벽면·수납장을 대비시켜 차분하고 단정하게 구성합니다.", image: modernRoom.url },
+  { range: "5105—5117", label: "DESIGNER SERIES", title: "다크 우드 디자이너 도어", copy: "짙은 우드 톤의 플랫 도어와 떠 있는 수납장을 헤링본 바닥과 조합해 간결한 중심 면을 만듭니다.", image: designerWalnut.url },
+  { range: "5118—5123", label: "ITALIAN STYLE", title: "월넛 슬림 패널 도어", copy: "짙은 월넛 톤과 가는 세로 프레임, 브라스 손잡이를 조합해 절제되고 깊이 있는 인상을 냅니다.", image: italianDoor.url },
+  { range: "5124—5145", label: "WOOD GRAIN", title: "월넛 투 패널 도어", copy: "중간 톤 월넛의 사각 투 패널 도어를 같은 나뭇결의 수납장과 연결해 공간 전체를 통일합니다.", image: chineseWalnut.url },
 ] as const;
 
 const finalCollections = [
-  { range: "5146—5165", label: "SIMPLE EUROPEAN", title: "심플 유러피안", copy: "베이지·아이보리·그레이 등 차분한 색과 절제된 몰딩을 조합해 거실, 침실, 서재에 편안한 클래식 분위기를 만듭니다.", image: simpleEuropean.url },
-  { range: "5166—5184", label: "NEW CHINESE", title: "뉴 차이니즈", copy: "월넛과 마호가니 계열의 깊은 나뭇결에 간결한 선을 더해 동양적인 공간을 현대적으로 정돈합니다.", image: newChinese.url },
-  { range: "S185—SF7009", label: "LOG & SUNSHINE GLASS", title: "원목·선샤인 글라스", copy: "원목 도어와 빛을 통과시키는 유리 도어를 함께 구성해 다이닝룸, 서재, 주방의 개방감과 채광을 조절합니다.", image: sunshineGlass.url },
-  { range: "5201—5216", label: "SPECIAL DOOR SYSTEM", title: "특수 도어 시스템", copy: "바깥면을 평평하게 맞춘 도어부터 슬라이딩, 히든, 폴딩 도어까지 공간 조건과 동선에 맞춰 선택합니다.", image: specialDoors.url },
+  { range: "5146—5165", label: "SIMPLE EUROPEAN", title: "마호가니 인레이 도어", copy: "깊은 적갈색 우드 톤과 가는 세로 인레이 라인을 조합해 장식을 절제한 유러피안 분위기를 만듭니다.", image: simpleEuropean.url },
+  { range: "5166—5184", label: "NEW CHINESE", title: "산수화 파티션 월", copy: "동양화 모티프의 대형 패널과 짙은 우드 수납장을 조합해 전통적인 이미지를 현대적인 다이닝 공간에 담았습니다.", image: newChinese.url },
+  { range: "S185—SF7009", label: "LOG & SUNSHINE GLASS", title: "아치 글라스 원목 양개문", copy: "마호가니 톤 원목 프레임과 아치형 유리창을 결합한 양개문으로 채광과 공간의 개방감을 함께 조절합니다.", image: sunshineGlass.url },
+  { range: "5201—5216", label: "SPECIAL DOOR SYSTEM", title: "루버형 폴딩 도어", copy: "대표 모델 5216의 화이트 루버 폴딩 도어처럼 문짝을 접어 열 수 있어 좁은 동선을 효율적으로 활용합니다.", image: specialDoors.url },
 ] as const;
 
 const coordinatedOptions = [
-  { label: "FRENCH CABINET", title: "프렌치 수납장", copy: "아치 비례와 장식 몰딩을 문·벽면과 맞춘 수납장 도어", image: frenchCabinet.url },
-  { label: "MODERN · MID-CENTURY", title: "모던·미드센추리 수납장", copy: "플랫 패널과 우드 톤을 조합한 수납장 도어", image: modernCabinet.url },
+  { label: "FRENCH CABINET", title: "아치형 프렌치 미디어월", copy: "머스터드 톤 아치 수납장과 오픈 선반을 벽면 중앙의 미디어월과 맞춘 구성", image: frenchCabinet.url },
+  { label: "MODERN · MID-CENTURY", title: "월넛·라탄 다이닝 수납장", copy: "월넛 프레임과 라탄 패널 도어, 오픈 선반을 조합한 다이닝 수납 시스템", image: modernCabinet.url },
 ] as const;
 
 export function ShuofengProductsPage() {
@@ -111,7 +111,7 @@ export function ShuofengProductsPage() {
 
     <section className="border-y border-border bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-20"><div><p className="eyebrow text-muted-foreground">MODEL INDEX</p><h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl">프로젝트에 맞는<br/>도어 형태를 고릅니다</h2><p className="mt-6 break-keep text-sm leading-7 text-muted-foreground">모델을 선택한 뒤 현장 도면에 맞춰 크기, 열림 방향, 컬러와 벽·수납장 연결 범위를 확정합니다.</p></div><div className="grid gap-px border border-border bg-border sm:grid-cols-2">{modelGroups.map(([range,title,copy])=><article key={range} className="bg-background p-6"><p className="text-xs font-bold text-gold">{range}</p><h3 className="mt-5 text-lg font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{copy}</p></article>)}</div></div>
-      <div className="mt-14 grid gap-5 md:grid-cols-3"><img src={frenchCabinet.url} alt="슈오펑 베이지 톤 수납장과 미디어월을 적용한 거실" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={modernCabinet.url} alt="슈오펑 월넛 수납장과 다이닝 테이블을 적용한 실내" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={modernRoom.url} alt="슈오펑 웜그레이 벽면과 화이트 도어를 적용한 침실" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
+      <div className="mt-14 grid gap-5 md:grid-cols-3"><img src={frenchCabinet.url} alt="슈오펑 머스터드 톤 아치 수납장과 미디어월을 적용한 거실" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={modernCabinet.url} alt="슈오펑 월넛과 라탄 수납장, 다이닝 테이블을 적용한 실내" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={modernRoom.url} alt="슈오펑 다크 월넛 벽면과 화이트 도어를 적용한 복도" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
     </div></section>
 
     <section><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-24 sm:px-10 sm:py-32 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 max-w-4xl break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">마음에 드는 모델과 현장 도면을 보내주시면 제작 조건을 확인합니다.</h2><p className="mt-6 max-w-2xl break-keep text-sm leading-7 text-muted-foreground">이음앤빌드가 슈오펑 생산팀과 크기·마감·수량·납기를 직접 조율합니다.</p></div><div className="flex flex-wrap gap-3"><a href="tel:01031138668" className="inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">제품·사양 문의 <ArrowRight size={16}/></a><Link to="/brands/shuofeng" className="inline-flex items-center gap-2 border border-foreground px-8 py-4 text-sm font-bold transition-colors hover:bg-foreground hover:text-primary-foreground">슈오펑 소개로</Link></div></div></section>
