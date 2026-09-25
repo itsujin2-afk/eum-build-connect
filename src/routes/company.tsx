@@ -9,9 +9,9 @@ import logoAsset from "@/assets/eum-build-logo-transparent.png.asset.json";
 export const Route = createFileRoute("/company")({
   head: () => ({ meta: [
     { title: "회사 소개 — 이음앤빌드" },
-    { name: "description", content: "중국 본사와 직접 결정하고 한국 법인이 직접 담당하는 이음앤빌드의 구조, 리더십, 사업 영역을 소개합니다." },
+    { name: "description", content: "한국에서 계약하고 한국에서 책임지는 이음앤빌드 — 중국 본사의 한국 공식 법인으로서의 구조, 리더십, 사업 영역을 소개합니다." },
     { property: "og:title", content: "회사 소개 — 이음앤빌드" },
-    { property: "og:description", content: "중국 본사와 직접 결정하고 한국 법인이 직접 담당하는 구조" },
+    { property: "og:description", content: "한국에서 계약하고 한국에서 책임지는 이음앤빌드 — 중국 본사의 한국 공식 법인 구조" },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
   ] }),
