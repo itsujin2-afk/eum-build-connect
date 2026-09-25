@@ -1,9 +1,9 @@
 import { ArrowRight, Check, DraftingCompass, Factory, ShieldCheck } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
-import doorHero from "@/assets/eum/075.jpg";
 import doorClassic from "@/assets/eum/071.jpg";
 import doorModern from "@/assets/eum/069.jpg";
+import heroInterior from "@/assets/shuofeng-products/modern-room.jpg.asset.json";
 import interiorLiving from "@/assets/shuofeng-products/panel-living.jpg.asset.json";
 import interiorBedroom from "@/assets/shuofeng-products/wardrobe.jpg.asset.json";
 import interiorFeature from "@/assets/shuofeng-products/french-cabinet.jpg.asset.json";
@@ -57,7 +57,7 @@ export function ShuofengPage() {
           <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>실목 전 공간 맞춤 제작</span><span>고급 주택 · 호텔 프로젝트</span><span>설계 · 생산 · 설치 일체화</span></div>
           <Link to="/brands/shuofeng-products" className="mt-8 inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">제품 보기 <ArrowRight size={16}/></Link>
         </div>
-        <figure className="relative overflow-hidden bg-surface"><img src={doorHero} alt="슈오펑 화이트 클래식 목문" className="aspect-[4/5] w-full object-contain saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-3 text-[11px] font-bold backdrop-blur-sm">슈오펑 · 전 공간 원목 맞춤 제작</figcaption></figure>
+        <figure className="relative self-center overflow-hidden bg-surface lg:justify-self-end lg:max-w-[520px]"><img src={heroInterior.url} alt="슈오펑 목문과 우드 벽면, 수납장을 한 공간에 적용한 거실" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-3 text-[11px] font-bold backdrop-blur-sm">슈오펑 · 문·벽·수납장을 하나의 디자인으로</figcaption></figure>
       </div>
     </section>
 
