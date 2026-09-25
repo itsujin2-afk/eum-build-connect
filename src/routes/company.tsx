@@ -27,7 +27,7 @@ const pillars: [string, string, string][] = [
 const highlights: [string, string][] = [
   ["의사결정 속도", "미팅 자리에서 바로 결정"],
   ["가격 구조", "본사 직결 단일 마진"],
-  ["책임 소재", "한국 법인이 계약 당사자로 직접 부담"],
+  ["책임 소재", "하자와 사후관리까지 한국 법인이 책임"],
 ];
 
 const factSheet: [string, string][] = [
@@ -55,7 +55,7 @@ const targets: [string, string][] = [
 const compareRows: [string, string, string][] = [
   ["의사결정 속도", "본사 회신 소요", "미팅 자리에서 바로 결정"],
   ["가격 구조", "단계마다 마진 가산", "본사 직결 단일 마진"],
-  ["책임 소재", "본사와 중개상 사이 분산", "한국 법인이 직접 부담"],
+  ["책임 소재", "본사와 중개상 사이 분산", "한국 법인이 한곳에서 책임"],
 ];
 
 const leaders = [
@@ -102,7 +102,7 @@ function Company() {
           중국 최정상 6개 브랜드<br />공식 한국 <span className="text-gold">독점 HQ</span>
         </h1>
         <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-foreground/75 sm:text-base sm:leading-8">
-          본사와 직접 계약하는 단일 마진 구조로 최고급 건축자재를 공급하는 익스클루시브 리저널 본부
+          본사와 직접 계약해 중간 마진 없이 최고급 건축자재를 공급하는 익스클루시브 리저널 본부
         </p>
       </div>
       <div className="relative z-10 mx-auto w-full max-w-5xl px-4 sm:px-6">
@@ -113,7 +113,7 @@ function Company() {
               <h2 className="mt-3 break-keep text-xl font-bold leading-[1.3] tracking-tight sm:text-2xl">중간 단계를 없앤 직접 계약 솔루션</h2>
             </div>
             <p className="break-keep text-[13px] leading-6 text-muted-foreground sm:text-sm sm:leading-7 md:pt-7">
-              중국 본사와 직접 계약하고 한국 법인이 모든 하자와 책임을 집니다. 지체 없는 의사결정과 투명한 단일 마진으로 프로젝트를 완성합니다.
+              중국 본사와 직접 계약하고 한국 법인이 모든 하자와 책임을 집니다. 결정은 빠르게, 가격은 처음부터 끝까지 같은 구조로 프로젝트를 완성합니다.
             </p>
           </div>
           <div className="my-4 h-px w-full bg-border sm:my-6" />
