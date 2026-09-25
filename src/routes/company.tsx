@@ -137,7 +137,7 @@ function Company() {
           <p className="eyebrow text-muted-foreground">WHY EUM&BUILD</p>
           <h2 className="mt-4 break-keep text-3xl font-bold leading-[1.25] tracking-tight sm:text-4xl lg:text-[42px]">중간 단계를 아예 없앴습니다.</h2>
           <p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
-            본사 회신을 기다리지 않고, 자리에서 바로 답을 얻습니다. 가격은 투명해지고, 관리 주체도 분명해집니다.
+            중간 단계가 없어 답변이 빠릅니다. 가격은 처음부터 끝까지 동일하고, 진행 상황도 한곳에서 확인할 수 있습니다.
           </p>
         </div>
         <div className="space-y-8">
