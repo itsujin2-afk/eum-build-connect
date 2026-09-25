@@ -27,7 +27,7 @@ const pillars: [string, string, string][] = [
 const highlights: [string, string][] = [
   ["의사결정 속도", "미팅 자리에서 바로 결정"],
   ["가격 구조", "본사 직결 단일 마진"],
-  ["책임 소재", "한국 법인이 계약 당사자로 직접 부담"],
+  ["책임 소재", "하자와 사후관리까지 한국 법인이 책임"],
 ];
 
 const factSheet: [string, string][] = [
@@ -55,7 +55,7 @@ const targets: [string, string][] = [
 const compareRows: [string, string, string][] = [
   ["의사결정 속도", "본사 회신 소요", "미팅 자리에서 바로 결정"],
   ["가격 구조", "단계마다 마진 가산", "본사 직결 단일 마진"],
-  ["책임 소재", "본사와 중개상 사이 분산", "한국 법인이 직접 부담"],
+  ["책임 소재", "본사와 중개상 사이 분산", "한국 법인이 한곳에서 책임"],
 ];
 
 const leaders = [
