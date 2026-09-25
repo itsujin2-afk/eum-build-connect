@@ -3,12 +3,9 @@ import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import archedDoor from "@/assets/shuofeng-products/arched-door.jpg.asset.json";
 import classicWall from "@/assets/shuofeng-products/classic-wall.jpg.asset.json";
-import doubleDoor from "@/assets/shuofeng-products/double-door.jpg.asset.json";
 import greenDoor from "@/assets/shuofeng-products/green-door.jpg.asset.json";
-import mediaWall from "@/assets/shuofeng-products/media-wall.jpg.asset.json";
 import minimalDoor from "@/assets/shuofeng-products/minimal-door.jpg.asset.json";
 import oliveDoor from "@/assets/shuofeng-products/olive-door.jpg.asset.json";
-import panelLiving from "@/assets/shuofeng-products/panel-living.jpg.asset.json";
 import roundedDoor from "@/assets/shuofeng-products/rounded-door.jpg.asset.json";
 import wardrobe from "@/assets/shuofeng-products/wardrobe.jpg.asset.json";
 import whiteDoor from "@/assets/shuofeng-products/white-door.jpg.asset.json";
@@ -114,7 +111,7 @@ export function ShuofengProductsPage() {
 
     <section className="border-y border-border bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-20"><div><p className="eyebrow text-muted-foreground">MODEL INDEX</p><h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl">프로젝트에 맞는<br/>도어 형태를 고릅니다</h2><p className="mt-6 break-keep text-sm leading-7 text-muted-foreground">모델을 선택한 뒤 현장 도면에 맞춰 크기, 열림 방향, 컬러와 벽·수납장 연결 범위를 확정합니다.</p></div><div className="grid gap-px border border-border bg-border sm:grid-cols-2">{modelGroups.map(([range,title,copy])=><article key={range} className="bg-background p-6"><p className="text-xs font-bold text-gold">{range}</p><h3 className="mt-5 text-lg font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{copy}</p></article>)}</div></div>
-      <div className="mt-14 grid gap-5 md:grid-cols-3"><img src={doubleDoor.url} alt="슈오펑 양개 도어 적용 거실" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={panelLiving.url} alt="슈오펑 벽 패널 적용 거실" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={mediaWall.url} alt="슈오펑 수납장과 미디어 벽면" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
+      <div className="mt-14 grid gap-5 md:grid-cols-3"><img src={frenchCabinet.url} alt="슈오펑 베이지 톤 수납장과 미디어월을 적용한 거실" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={modernCabinet.url} alt="슈오펑 월넛 수납장과 다이닝 테이블을 적용한 실내" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={modernRoom.url} alt="슈오펑 웜그레이 벽면과 화이트 도어를 적용한 침실" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
     </div></section>
 
     <section><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-24 sm:px-10 sm:py-32 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 max-w-4xl break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">마음에 드는 모델과 현장 도면을 보내주시면 제작 조건을 확인합니다.</h2><p className="mt-6 max-w-2xl break-keep text-sm leading-7 text-muted-foreground">이음앤빌드가 슈오펑 생산팀과 크기·마감·수량·납기를 직접 조율합니다.</p></div><div className="flex flex-wrap gap-3"><a href="tel:01031138668" className="inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">제품·사양 문의 <ArrowRight size={16}/></a><Link to="/brands/shuofeng" className="inline-flex items-center gap-2 border border-foreground px-8 py-4 text-sm font-bold transition-colors hover:bg-foreground hover:text-primary-foreground">슈오펑 소개로</Link></div></div></section>
