@@ -1,8 +1,8 @@
 import { ArrowRight, Check, DraftingCompass, Factory, ShieldCheck } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
-import doorClassic from "@/assets/eum/071.jpg";
-import doorModern from "@/assets/eum/069.jpg";
+import interiorClassic from "@/assets/shuofeng-products/classic-wall.jpg.asset.json";
+import interiorModern from "@/assets/shuofeng-products/designer-walnut.jpg.asset.json";
 import heroInterior from "@/assets/shuofeng-products/modern-room.jpg.asset.json";
 import interiorLiving from "@/assets/shuofeng-products/panel-living.jpg.asset.json";
 import interiorBedroom from "@/assets/shuofeng-products/wardrobe.jpg.asset.json";
