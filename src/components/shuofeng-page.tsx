@@ -57,13 +57,13 @@ export function ShuofengPage() {
           <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>실목 전 공간 맞춤 제작</span><span>고급 주택 · 호텔 프로젝트</span><span>설계 · 생산 · 설치 일체화</span></div>
           <Link to="/brands/shuofeng-products" className="mt-8 inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">제품 보기 <ArrowRight size={16}/></Link>
         </div>
-        <figure className="relative overflow-hidden bg-surface"><img src={doorHero} alt="슈오펑 화이트 클래식 목문" className="aspect-[4/3] w-full object-cover object-center saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-3 text-[11px] font-bold backdrop-blur-sm">슈오펑 · 전 공간 원목 맞춤 제작</figcaption></figure>
+        <figure className="relative overflow-hidden bg-surface"><img src={doorHero} alt="슈오펑 화이트 클래식 목문" className="aspect-[4/5] w-full object-contain saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><figcaption className="absolute bottom-0 left-0 bg-background/95 px-5 py-3 text-[11px] font-bold backdrop-blur-sm">슈오펑 · 전 공간 원목 맞춤 제작</figcaption></figure>
       </div>
     </section>
 
     <section className="border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-14 lg:grid-cols-[.85fr_1.15fr] lg:gap-24"><SectionHead eyebrow="COMPANY PROFILE" title="목공소에서 시작해 전 공간 맞춤 제작 기업으로" body="1988년 창업 이후 목문을 중심으로 기술을 쌓고, 현재는 디자인·연구개발·생산·판매·설치를 연결하는 전문 제조 체계를 운영합니다. 중국 판재와 물류의 중심지인 산동성 린이에 자리해 원자재 조달과 대형 프로젝트 공급에 유리합니다."/><div className="grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3">{metrics.map(([value,label])=><div key={label} className="bg-background p-5 sm:p-7"><strong className="text-2xl font-bold text-gold sm:text-3xl">{value}</strong><p className="mt-3 text-xs leading-5 text-muted-foreground">{label}</p></div>)}</div></div>
-      <div className="mt-16 grid gap-5 sm:grid-cols-2"><img src={doorClassic} alt="슈오펑 클래식 원목문" className="aspect-[16/10] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={doorModern} alt="슈오펑 현대식 블랙 목문" className="aspect-[16/10] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
+      <div className="mt-16 grid gap-5 sm:grid-cols-2"><div className="bg-surface"><img src={doorClassic} alt="슈오펑 클래식 원목문" className="aspect-[4/5] w-full object-contain saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div><div className="bg-surface"><img src={doorModern} alt="슈오펑 현대식 블랙 목문" className="aspect-[4/5] w-full object-contain saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div></div>
     </div></section>
 
     <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
