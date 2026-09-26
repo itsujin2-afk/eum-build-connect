@@ -4,8 +4,6 @@ import { SiteShell } from "@/components/site-shell";
 import spaceAesthetics from "@/assets/lion/space-aesthetics.jpg.asset.json";
 import portlandHero from "@/assets/lion/portland-hero.jpg";
 
-const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
-const eumAsset = (id: string) => imageModules[`../assets/eum/${id}.jpg`];
 
 const strengths = [
   { number: "01", title: "연구개발", text: "국내외 기술과 디자인 흐름을 제품 개발에 빠르게 반영합니다." },
