@@ -85,8 +85,8 @@ export function ForestHouseProductsPage() {
         <p className="mt-6 max-w-2xl text-sm leading-7 text-muted-foreground">이음앤빌드가 이센메이쥐 생산라인과 직접 사양·납기·물량을 조율합니다.</p>
       </div>
       <div className="flex flex-wrap gap-3">
-        <a href="tel:01031138668" className="inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">제품·사양 문의 <ArrowRight size={16}/></a>
-        <Link to="/brands/forest-house" className="inline-flex items-center gap-2 border border-foreground px-8 py-4 text-sm font-bold transition-colors hover:bg-foreground hover:text-primary-foreground">이센메이쥐 소개로</Link>
+        <Link to="/brands/forest-house" className="inline-flex items-center gap-2.5 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">이센메이쥐 소개 보기 <ArrowRight size={16}/></Link>
+        <Link to="/company" className="inline-flex items-center gap-2.5 border border-foreground px-8 py-4 text-sm font-bold transition-colors hover:bg-foreground hover:text-primary-foreground">이음앤빌드 소개</Link>
       </div>
     </div></section>
   </SiteShell>;
