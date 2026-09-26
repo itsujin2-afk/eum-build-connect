@@ -18,9 +18,9 @@ import spcGrey from "@/assets/intco-products/spc-grey.jpg.asset.json";
 import spcNight from "@/assets/intco-products/spc-night.jpg.asset.json";
 import spcColor from "@/assets/intco-products/spc-color.jpg.asset.json";
 import spcClassic from "@/assets/intco-products/spc-classic.jpg.asset.json";
-import acoustic from "@/assets/intco-products/acoustic.jpg.asset.json";
-import wallPanels from "@/assets/intco-products/wall-panels.jpg.asset.json";
-import mouldings from "@/assets/intco-products/mouldings.jpg.asset.json";
+import acoustic from "@/assets/intco-products/acoustic-clean.jpg";
+import wallPanels from "@/assets/intco-products/wall-panels-clean.jpg";
+import mouldings from "@/assets/intco-products/mouldings-clean.jpg";
 import floorAccessories from "@/assets/intco-products/floor-accessories.jpg.asset.json";
 import wpcWall from "@/assets/intco-products/wpc-wall.jpg.asset.json";
 import wpcDeck from "@/assets/intco-products/wpc-deck.jpg.asset.json";
@@ -65,10 +65,10 @@ const acousticLines = [
 
 const materialGallery = [
   [wallApplication.url, "우드 루버 흡음 패널 시공"],
-  [acoustic.url, "흡음 패널 재질과 마감"],
-  [wallPanels.url, "입체 벽패널 제품"],
+  [acoustic, "흡음 패널 재질과 마감"],
+  [wallPanels, "입체 벽패널 제품"],
   [mouldingApplication.url, "몰딩을 적용한 실내"],
-  [mouldings.url, "벽과 천장 몰딩 제품"],
+  [mouldings, "벽과 천장 몰딩 제품"],
   [accessoriesApplication.url, "바닥과 계단 마감 부속"],
 ] as const;
 
@@ -110,7 +110,7 @@ export function IntcoProductsPage() {
       <div className="mt-20 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">{materialGallery.map(([image,alt],index)=><figure key={alt} className={index === 0 || index === 4 ? "col-span-2" : ""}><div className="overflow-hidden bg-surface"><img src={image} alt={alt} className="aspect-[4/5] h-full w-full object-cover transition duration-700 hover:scale-[1.03]"/></div><figcaption className="mt-3 text-xs font-semibold text-muted-foreground">{alt}</figcaption></figure>)}</div>
       <div className="mt-16 grid gap-6 lg:grid-cols-[1fr_1.25fr]"><figure className="overflow-hidden border border-border bg-surface"><img src={wallApplication.url} alt="우드 루버 흡음 패널을 적용한 거실" className="aspect-[16/10] h-full w-full object-cover"/></figure><div className="bg-surface p-7 sm:p-10"><p className="eyebrow text-gold">ACOUSTIC PANEL</p><h3 className="mt-4 text-3xl font-bold">소음을 줄이는 흡음 패널</h3><p className="mt-5 break-keep text-sm leading-7 text-muted-foreground">MDF 스틱과 PET 화이버를 결합한 구조로, 회의실·사무실·호텔·식음 공간의 울림을 줄이는 데 사용합니다. 종이 무늬목과 천연 무늬목 중 선택할 수 있습니다.</p><ul className="mt-7 grid gap-3 text-sm sm:grid-cols-2">{["우드 패턴과 다양한 간격 선택","종이·천연 무늬목 선택","벽·천장 포인트 마감","빠르고 간단한 설치"].map(item=><li key={item} className="flex gap-2 border-t border-border pt-3"><Check size={15} className="mt-0.5 shrink-0 text-gold"/>{item}</li>)}</ul></div></div>
       <div className="mt-16 grid gap-8 border-t border-border pt-16 lg:grid-cols-[.9fr_1.1fr] lg:items-start"><div><p className="eyebrow text-muted-foreground">2026 SS ACOUSTIC RANGE</p><h3 className="mt-4 text-3xl font-bold">형태와 시공 방식까지 넓어진 흡음 패널</h3><p className="mt-5 text-sm leading-7 text-muted-foreground">한 가지 세로 루버형뿐 아니라 폭이 다른 패턴, 직접 조립하는 소형 패널, 접이식·곡면용 제품과 PET 패널까지 선택할 수 있습니다.</p></div><div className="border-t border-border">{acousticLines.map(([name,series,size])=><div key={name} className="grid gap-2 border-b border-border py-5 sm:grid-cols-[130px_1fr]"><b className="text-sm">{name}</b><div><p className="text-sm text-muted-foreground">{series}</p><p className="mt-2 text-xs font-semibold">대표 규격 · {size}</p></div></div>)}</div></div>
-      <div className="mt-10 grid gap-6 sm:grid-cols-2"><figure className="overflow-hidden bg-surface"><img src={acoustic.url} alt="다양한 우드 톤 흡음 패널" className="aspect-[16/10] w-full object-cover"/><figcaption className="p-5 text-sm font-semibold">우드·패브릭 느낌의 다양한 흡음 패널 마감</figcaption></figure><figure className="overflow-hidden bg-surface"><img src={wallPanels.url} alt="다양한 형태의 3D 벽패널" className="aspect-[16/10] w-full object-cover"/><figcaption className="p-5 text-sm font-semibold">평면·입체·곡면에 맞춘 벽패널 선택</figcaption></figure></div>
+      <div className="mt-10 grid gap-6 sm:grid-cols-2"><figure className="overflow-hidden bg-surface"><img src={acoustic} alt="다양한 우드 톤 흡음 패널" className="aspect-[16/10] w-full object-cover"/><figcaption className="p-5 text-sm font-semibold">우드·패브릭 느낌의 다양한 흡음 패널 마감</figcaption></figure><figure className="overflow-hidden bg-surface"><img src={wallPanels} alt="다양한 형태의 3D 벽패널" className="aspect-[16/10] w-full object-cover"/><figcaption className="p-5 text-sm font-semibold">평면·입체·곡면에 맞춘 벽패널 선택</figcaption></figure></div>
     </div></section>
 
     <section id="spc" className="scroll-mt-20 bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
