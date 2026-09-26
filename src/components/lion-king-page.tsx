@@ -118,7 +118,7 @@ export function LionKingPage() {
               <p className="eyebrow text-gold">KOREA PROJECT DESK</p>
               <h2 className="mt-4 break-keep text-2xl font-semibold tracking-normal sm:text-4xl">라이온킹의 한국 프로젝트는<br />이음앤빌드가 연결합니다.</h2>
             </div>
-            <Link to="/company" className="inline-flex items-center gap-2 border border-foreground px-8 py-4 text-sm font-bold transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground">이음앤빌드 소개 <ArrowRight size={16} /></Link>
+            <Link to="/company" className="inline-flex items-center gap-2 border border-foreground px-8 py-4 text-sm font-bold transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground">이음앤빌드 소개</Link>
           </div>
         </section>
       </main>
