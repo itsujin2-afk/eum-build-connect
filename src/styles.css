@@ -167,8 +167,9 @@
   }
 
   html[lang="ja"] .ja-wrap {
-    white-space: normal;
+    white-space: normal !important;
     overflow-wrap: anywhere;
+    word-break: normal;
   }
 }
 
