@@ -151,7 +151,7 @@ export function HuanqiuStonePage() {
 
     <section>
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
-        <SectionHead eyebrow="SYSTEM SOLUTION" title="요구 사항을 읽고, 석재 시스템 전체를 설계합니다." />
+        <SectionHead eyebrow="SYSTEM SOLUTION" title="고객의 요구에 맞춰 석재 시스템 전체를 설계합니다." />
         <ol className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
           {solutions.map((item, index) => <li key={item} className="bg-background p-6 sm:p-7"><span className="text-xs font-bold text-gold">{String(index + 1).padStart(2, "0")}</span><p className="mt-5 text-base font-bold">{item}</p></li>)}
         </ol>
