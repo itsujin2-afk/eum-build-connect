@@ -40,7 +40,7 @@ export function LionKingPage() {
           </div>
           <figure className="relative lg:col-span-7">
             <div className="aspect-[4/3] overflow-hidden bg-surface">
-              <img src={eumAsset("030")} alt="라이온킹 세라믹 타일이 적용된 공간" className="h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]" />
+              <img src={portlandHero} alt="라이온킹 세라믹 타일이 적용된 공간" className="h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]" />
             </div>
             <figcaption className="mt-3 flex justify-between text-[10px] font-semibold text-muted-foreground">
               <span>GUANGDONG · FOSHAN</span><span>VISION LIFE</span>
