@@ -58,7 +58,7 @@ export function HuanqiuProductsPage() {
       const items = products.filter((product) => product.family === group);
       return <section key={group} id={group} className={groupIndex % 2 ? "bg-surface" : "bg-background"}>
         <div className="mx-auto max-w-[1440px] px-5 py-20 sm:px-10 sm:py-28">
-          <div className="flex items-end justify-between gap-6 border-b border-border pb-7"><div><p className="eyebrow text-muted-foreground">COLLECTION {String(groupIndex + 1).padStart(2,"0")}</p><h2 className="mt-3 whitespace-nowrap text-3xl font-bold sm:text-4xl">{group} 시리즈</h2></div><span className="text-xs text-muted-foreground">{String(items.length).padStart(2,"0")} MATERIALS</span></div>
+          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4 border-b border-border pb-7 sm:gap-6"><div className="min-w-0"><p className="eyebrow text-muted-foreground">COLLECTION {String(groupIndex + 1).padStart(2,"0")}</p><h2 className="ja-wrap mt-3 whitespace-nowrap text-3xl font-bold sm:text-4xl">{group} 시리즈</h2></div><span className="shrink-0 text-xs text-muted-foreground">{String(items.length).padStart(2,"0")} MATERIALS</span></div>
           <div className="mt-10 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((product, index)=><article key={product.slug} className="group flex h-full flex-col">
               <div className="relative aspect-[4/3] overflow-hidden border border-border bg-background"><img src={productImage(product.slug)} alt={`${product.name} 천연석 표면`} className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]"/><span className="absolute left-4 top-4 bg-background/90 px-3 py-1.5 text-[10px] font-bold tracking-[0.14em] backdrop-blur">{product.tone}</span></div>
