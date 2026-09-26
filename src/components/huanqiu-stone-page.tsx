@@ -81,10 +81,10 @@ function SectionHead({ eyebrow, title, body }: { eyebrow: string; title: string;
 export function HuanqiuStonePage() {
   return <SiteShell>
     <section className="relative min-h-[92svh] overflow-hidden bg-foreground text-primary-foreground">
-      <img src={asset("010")} alt="환구석재가 참여한 정밀한 석재 건축 입면" className="absolute inset-0 h-full w-full object-cover opacity-70" />
+      <img src={asset("010")} alt="환구 석재가 참여한 정밀한 석재 건축 입면" className="absolute inset-0 h-full w-full object-cover opacity-70" />
       <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/70 to-foreground/10" />
       <div className="relative mx-auto flex min-h-[92svh] max-w-[1440px] flex-col justify-end px-5 pb-16 pt-32 sm:px-10 sm:pb-24">
-        <p className="eyebrow text-primary-foreground/70">01 · 환구석재 · 1986년 설립</p>
+        <p className="eyebrow text-primary-foreground/70">01 · 환구 석재 · 1986년 설립</p>
         <h1 className="mt-6 max-w-4xl break-keep text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl">천연석 광산부터<br />시공까지, 한 번에</h1>
         <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-primary-foreground/75 sm:text-base sm:leading-8">광산 운영과 글로벌 조달부터 설계, 정밀 가공, 커튼월 시공까지 연결하는 장식용 석재 시스템 솔루션 기업입니다.</p>
         <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -102,7 +102,7 @@ export function HuanqiuStonePage() {
     <section className="border-b border-border">
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
         <div className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-24">
-          <SectionHead eyebrow="환구석재 소개" title="1986년부터 이어온 글로벌 석재 시스템" body="환구석재는 홍콩에서 설립된 석재 업계 선도 기업입니다. 중앙기업 화련 건자재 기술(1313.HK)이 지분을 보유하고 있으며, 광산·무역·연구개발·가공·인테리어·커튼월까지 폭넓은 사업 역량을 갖추고 있습니다." />
+          <SectionHead eyebrow="환구 석재 소개" title="1986년부터 이어온 글로벌 석재 시스템" body="환구 석재는 홍콩에서 설립된 석재 업계 선도 기업입니다. 중앙기업 화련 건자재 기술(1313.HK)이 지분을 보유하고 있으며, 광산·무역·연구개발·가공·인테리어·커튼월까지 폭넓은 사업 역량을 갖추고 있습니다." />
           <div className="grid grid-cols-2 gap-px border border-border bg-border">
             {overviewMetrics.map(([value, label]) => <div key={label} className="bg-background p-6 sm:p-8"><strong className="text-3xl font-bold text-gold sm:text-4xl">{value}</strong><p className="mt-3 text-xs leading-6 text-muted-foreground sm:text-sm">{label}</p></div>)}
           </div>
@@ -251,7 +251,7 @@ export function HuanqiuStonePage() {
 
     <section className="border-b border-border">
       <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-24 sm:px-10 sm:py-32 lg:grid-cols-2 lg:items-center">
-        <img src={asset("028")} alt="환구석재가 참여한 현대 건축 프로젝트" className="aspect-[16/10] h-full w-full object-cover saturate-[0.85]" />
+        <img src={asset("028")} alt="환구 석재가 참여한 현대 건축 프로젝트" className="aspect-[16/10] h-full w-full object-cover saturate-[0.85]" />
         <div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">글로벌 스톤의 자원과 기술을 한국 프로젝트에 직접 연결합니다.</h2><p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">이음앤빌드가 사양 검토, 샘플, 견적, 생산 일정, 물류와 현장 대응을 하나의 창구에서 관리합니다.</p><div className="mt-9 flex flex-wrap items-center gap-4"><Link to="/brands/huanqiu-stone-products" className="inline-flex items-center gap-2.5 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors duration-300 hover:bg-gold hover:text-foreground">제품 소개 보기 <ArrowRight size={16} /></Link><span className="text-xs text-muted-foreground">주요 천연석 품종 26종 · 카탈로그</span></div></div>
       </div>
     </section>
