@@ -2,9 +2,8 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import spaceAesthetics from "@/assets/lion/space-aesthetics.jpg.asset.json";
+import portlandHero from "@/assets/lion/portland-hero.jpg";
 
-const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
-const eumAsset = (id: string) => imageModules[`../assets/eum/${id}.jpg`];
 
 const strengths = [
   { number: "01", title: "연구개발", text: "국내외 기술과 디자인 흐름을 제품 개발에 빠르게 반영합니다." },
@@ -39,7 +38,7 @@ export function LionKingPage() {
           </div>
           <figure className="relative lg:col-span-7">
             <div className="aspect-[4/3] overflow-hidden bg-surface">
-              <img src={eumAsset("030")} alt="라이온킹 세라믹 타일이 적용된 공간" className="h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]" />
+              <img src={portlandHero} alt="라이온킹 세라믹 타일이 적용된 공간" className="h-full w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]" />
             </div>
             <figcaption className="mt-3 flex justify-between text-[10px] font-semibold text-muted-foreground">
               <span>GUANGDONG · FOSHAN</span><span>VISION LIFE</span>
