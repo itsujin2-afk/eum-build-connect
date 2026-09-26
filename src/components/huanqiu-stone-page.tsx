@@ -226,7 +226,7 @@ export function HuanqiuStonePage() {
 
     <section className="bg-foreground text-primary-foreground">
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
-        <SectionHead eyebrow="GLOBAL REFERENCES" title="세계의 상징적 건축이 선택한 석재" body="국가급 랜드마크부터 초고급 호텔과 문화시설까지, 자원·기술·공정 관리가 동시에 필요한 프로젝트를 완성해 왔습니다." />
+        <SectionHead eyebrow="GLOBAL REFERENCES" title="세계의 랜드마크 건축물이 선택한 석재" body="국가급 랜드마크부터 초고급 호텔과 문화시설까지, 자원·기술·공정 관리가 동시에 필요한 프로젝트를 완성해 왔습니다." />
         <div className="mt-14 grid grid-cols-2 gap-px border border-primary-foreground/15 bg-primary-foreground/15 lg:grid-cols-6">
           {projectScale.map(([value, label]) => <div key={label} className="bg-foreground p-5 sm:p-6"><strong className="text-2xl text-gold sm:text-3xl">{value}</strong><p className="mt-3 text-xs leading-5 text-primary-foreground/60">{label}</p></div>)}
         </div>
