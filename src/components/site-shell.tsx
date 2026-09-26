@@ -24,7 +24,7 @@ const materialNames = {
 
 export function SiteShell({ children, overlayHeader = false, hideFooter = false, hideFooterLogo = false, fullscreen = false }: { children: ReactNode; overlayHeader?: boolean; hideFooter?: boolean; hideFooterLogo?: boolean; fullscreen?: boolean }) {
   const { locale, setLocale } = useLocale();
-  const languageSelector = (mobile = false) => <div className={`flex items-center ${mobile ? "mt-3 justify-between border-t border-border pt-3" : "hidden gap-0.5 sm:flex"}`} role="group" aria-label="언어 선택">
+  const languageSelector = (mobile = false) => <div className={`flex items-center ${mobile ? "justify-between border-b border-border pb-3" : "hidden gap-0.5 sm:flex"}`} role="group" aria-label="언어 선택">
     {(["ko", "en", "ja"] as Locale[]).map((item) => <Button key={item} type="button" variant="ghost" size="sm" aria-pressed={locale === item} onClick={() => setLocale(item)} className={`h-7 min-w-8 rounded-sm px-2 text-[10px] tracking-[0.08em] ${locale === item ? (overlayHeader && !mobile ? "bg-background text-foreground hover:bg-background" : "bg-foreground text-background hover:bg-foreground") : (overlayHeader && !mobile ? "text-primary-foreground/70 hover:bg-primary-foreground/10 hover:text-primary-foreground" : "text-muted-foreground")}`}>{item === "ja" ? "JP" : item.toUpperCase()}</Button>)}
   </div>;
   return <div className={fullscreen ? "flex h-svh flex-col overflow-hidden bg-background text-foreground" : "min-h-screen bg-background text-foreground"}>
