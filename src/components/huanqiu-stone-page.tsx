@@ -215,7 +215,7 @@ export function HuanqiuStonePage() {
 
     <section className="bg-surface">
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
-        <SectionHead eyebrow="NATIONAL HONORS" title="국가가 맡긴 석재, 시대를 증명한 기술" body="국가급 하이테크 기업과 성급 기술센터로 인정받았으며, 중국 유명 상표·광둥성 명품·정부 품질상·건축 장식 추천 브랜드를 획득했습니다." />
+        <SectionHead eyebrow="NATIONAL HONORS" title="국가급 인증과 30년 기술력으로 검증된 석재" body="국가급 하이테크 기업과 성급 기술센터로 인정받았으며, 중국 유명 상표·광둥성 명품·정부 품질상·건축 장식 추천 브랜드를 획득했습니다." />
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           <article className="border border-border bg-background"><img src={umgg("hongkong-gift")} alt="홍콩 반환 국례품 영원히 피는 금자형" className="aspect-[4/3] w-full object-cover"/><div className="p-7"><p className="text-xs font-bold text-gold">1997 · 1999</p><h3 className="mt-3 text-xl font-bold">홍콩·마카오 반환 국례품</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">‘영원히 피는 금자형’과 ‘번영의 연꽃’ 석재 받침대를 제작했습니다. 홍콩 작품은 48개 부재를 0.1mm 단위로 조정해 완성했고 인민일보 1면에 보도됐습니다.</p></div></article>
           <article className="border border-border bg-background"><img src={asset("018")} alt="타지키스탄 정부청사" className="aspect-[4/3] w-full object-cover"/><div className="p-7"><p className="text-xs font-bold text-gold">2024 · DUSHANBE</p><h3 className="mt-3 text-xl font-bold">타지키스탄 정부·의회청사</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">외벽에 자체 광산의 산동 백화강, 내부에 미황 계열 대리석을 적용했습니다. 2024년 시진핑 주석과 라흐몬 대통령이 공동 제막했습니다.</p></div></article>
