@@ -16,7 +16,7 @@ export type Brand = {
 
 export const brands: Brand[] = [
   {
-    slug: "huanqiu-stone", number: "01", name: "환구석재", english: "환구석재", since: "1986", category: "천연석 · 인조석 · 커튼월",
+    slug: "huanqiu-stone", number: "01", name: "환구 석재", english: "환구 석재", since: "1986", category: "천연석 · 인조석 · 커튼월",
     headline: "중국 석재기업 최초로 유럽에 진출했습니다",
     intro: "1986년 중국 홍콩에서 설립된 중국 석재 산업 대표 기업입니다. 원석 채굴에서 인조석 생산, 커튼월 설계와 시공까지 한 회사 안에서 끝납니다.",
     heroImage: "010", gallery: ["018","019","020","021","022","023","024","025","026","027","028","029"],
