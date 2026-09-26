@@ -56,8 +56,8 @@ const crafts = [
   { image: "craft-spiral", title: "나선계단 공예", text: "곡률과 접합선을 연속적으로 맞춰 하나의 조형물처럼 완성하는 고난도 가공" },
   { image: "craft-double-curve", title: "3D 쌍곡면 아크", text: "항저우 왕차오 센터의 복합 3차원 곡면을 디지털 모델과 정밀 가공으로 구현" },
   { image: "craft-shell-column", title: "조개·자개 인레이", text: "셰이크 자이드 모스크 기둥에 세계 최초로 적용한 석재와 조개의 복합 공법" },
-  { image: "craft-dome", title: "돔 레이저 커팅", text: "알제리 자마 모스크의 거대 돔 부재를 3D로 전개해 레이저로 정밀하게 재단합니다" },
-  { image: "stone-art", title: "석재 예술 작품", text: "광저우미술학원·칭다오과기대 교수진과 함께 자연석의 아름다움을 현대 예술로 표현합니다" },
+  { image: "craft-dome", title: "돔 레이저 커팅", text: "알제리 자마 모스크의 거대 돔 부재를 3D로 전개해 레이저로 정밀하게 재단한 공예" },
+  { image: "stone-art", title: "석재 예술 작품", text: "광저우미술학원·칭다오과기대 교수진과 함께 자연석의 아름다움을 현대 예술로 표현한 작품" },
   { image: "027", title: "폐쇄형 타원 쌍곡면", text: "난징 뉴쇼우산 천불전의 연속 타원형 돔을 오차 없이 맞춘 특수 이형 공예" },
 ] as const;
 
