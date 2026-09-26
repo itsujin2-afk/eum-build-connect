@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowUpRight, Grid2X2, Layers3, MapPin } from "lucide-react";
+import { ArrowLeft, ArrowRight, Grid2X2, Layers3, MapPin } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
-import { buttonVariants } from "@/components/ui/button";
 
 const imageModules = import.meta.glob("../assets/umgg-products/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
 const productImage = (id: string) => imageModules[`../assets/umgg-products/${id}.jpg`] ?? "";
@@ -72,6 +71,6 @@ export function HuanqiuProductsPage() {
       </section>;
     })}
 
-    <section className="bg-foreground text-primary-foreground"><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-10 sm:py-24 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-primary-foreground/50">MATERIAL SELECTION</p><h2 className="mt-5 max-w-3xl break-keep text-3xl font-bold leading-tight sm:text-5xl">도면과 공간에 맞는 천연석 소재부터<br/>가공 방식까지 함께 선정합니다.</h2><div className="mt-8 flex flex-wrap gap-6 text-xs text-primary-foreground/60"><span className="inline-flex items-center gap-2"><Grid2X2 size={14}/> 북매치·연속 무늬</span><span className="inline-flex items-center gap-2"><Layers3 size={14}/> 두께·표면 마감·이형 가공</span></div></div><a href="tel:01031138668" className={buttonVariants({size:"lg",className:"h-auto rounded-lg bg-background px-7 py-4 text-foreground hover:bg-surface"})}>샘플·사양 문의 <ArrowUpRight size={16}/></a></div></section>
+    <section className="bg-foreground text-primary-foreground"><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-10 sm:py-24 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-primary-foreground/50">MATERIAL SELECTION</p><h2 className="mt-5 max-w-3xl break-keep text-3xl font-bold leading-tight sm:text-5xl">도면과 공간에 맞는 천연석 소재부터<br/>가공 방식까지 함께 선정합니다.</h2><div className="mt-8 flex flex-wrap gap-6 text-xs text-primary-foreground/60"><span className="inline-flex items-center gap-2"><Grid2X2 size={14}/> 북매치·연속 무늬</span><span className="inline-flex items-center gap-2"><Layers3 size={14}/> 두께·표면 마감·이형 가공</span></div></div><div className="flex flex-wrap gap-3"><Link to="/brands/huanqiu-stone" className="inline-flex items-center gap-2.5 bg-background px-8 py-4 text-sm font-bold text-foreground transition-colors hover:bg-surface">환구 석재 소개 보기 <ArrowRight size={16}/></Link><Link to="/company" className="inline-flex items-center gap-2.5 border border-primary-foreground/40 px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-foreground">이음앤빌드 소개</Link></div></div></section>
   </SiteShell>;
 }
