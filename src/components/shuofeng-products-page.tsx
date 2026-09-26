@@ -20,8 +20,8 @@ import simpleEuropean from "@/assets/shuofeng-products/simple-european.jpg.asset
 import newChinese from "@/assets/shuofeng-products/new-chinese.jpg.asset.json";
 import sunshineGlass from "@/assets/shuofeng-products/sunshine-glass-clean.jpg";
 import specialDoors from "@/assets/shuofeng-products/special-doors-final.jpg";
-import frenchCabinet from "@/assets/shuofeng-products/french-cabinet.jpg.asset.json";
-import modernCabinet from "@/assets/shuofeng-products/modern-cabinet.jpg.asset.json";
+import frenchCabinet from "@/assets/shuofeng-products/french-cabinet-crop.jpg";
+import modernCabinet from "@/assets/shuofeng-products/modern-cabinet-crop.jpg";
 
 const scenes = [
   { image: classicWall.url, title: "클래식 도어·수납장 일체형", detail: "아이보리 패널 월 · 싱글 도어" },
@@ -64,8 +64,8 @@ const finalCollections = [
 ] as const;
 
 const coordinatedOptions = [
-  { label: "FRENCH CABINET", title: "아치형 프렌치 미디어월", copy: "머스터드 톤 아치 수납장과 오픈 선반을 벽면 중앙의 미디어월과 맞춘 구성", image: frenchCabinet.url },
-  { label: "MODERN · MID-CENTURY", title: "월넛·라탄 다이닝 수납장", copy: "월넛 프레임과 라탄 패널 도어, 오픈 선반을 조합한 다이닝 수납 시스템", image: modernCabinet.url },
+  { label: "FRENCH CABINET", title: "아치형 프렌치 미디어월", copy: "머스터드 톤 아치 수납장과 오픈 선반을 벽면 중앙의 미디어월과 맞춘 구성", image: frenchCabinet },
+  { label: "MODERN · MID-CENTURY", title: "월넛·라탄 다이닝 수납장", copy: "월넛 프레임과 라탄 패널 도어, 오픈 선반을 조합한 다이닝 수납 시스템", image: modernCabinet },
 ] as const;
 
 export function ShuofengProductsPage() {
