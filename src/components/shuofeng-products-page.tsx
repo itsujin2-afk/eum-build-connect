@@ -1,11 +1,11 @@
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
-import archedDoor from "@/assets/shuofeng-products/arched-door.jpg.asset.json";
+import archedDoor from "@/assets/shuofeng-products/arched-door-clean.jpg";
 import classicWall from "@/assets/shuofeng-products/classic-wall.jpg.asset.json";
 import greenDoor from "@/assets/shuofeng-products/green-door.jpg.asset.json";
 import minimalDoor from "@/assets/shuofeng-products/minimal-door.jpg.asset.json";
-import oliveDoor from "@/assets/shuofeng-products/olive-door.jpg.asset.json";
+import oliveDoor from "@/assets/shuofeng-products/olive-door-clean.jpg";
 import roundedDoor from "@/assets/shuofeng-products/rounded-door.jpg.asset.json";
 import wardrobe from "@/assets/shuofeng-products/wardrobe.jpg.asset.json";
 import whiteDoor from "@/assets/shuofeng-products/white-door.jpg.asset.json";
@@ -13,13 +13,13 @@ import retroBlack from "@/assets/shuofeng-products/retro-black.jpg.asset.json";
 import retroWood from "@/assets/shuofeng-products/retro-wood.jpg.asset.json";
 import modernWhite from "@/assets/shuofeng-products/modern-white.jpg.asset.json";
 import modernRoom from "@/assets/shuofeng-products/modern-room.jpg.asset.json";
-import designerWalnut from "@/assets/shuofeng-products/designer-walnut.jpg.asset.json";
-import italianDoor from "@/assets/shuofeng-products/italian-door.jpg.asset.json";
+import designerWalnut from "@/assets/shuofeng-products/designer-walnut-clean.jpg";
+import italianDoor from "@/assets/shuofeng-products/italian-door-clean.jpg";
 import chineseWalnut from "@/assets/shuofeng-products/chinese-walnut.jpg.asset.json";
 import simpleEuropean from "@/assets/shuofeng-products/simple-european.jpg.asset.json";
 import newChinese from "@/assets/shuofeng-products/new-chinese.jpg.asset.json";
-import sunshineGlass from "@/assets/shuofeng-products/sunshine-glass.jpg.asset.json";
-import specialDoors from "@/assets/shuofeng-products/special-doors.jpg.asset.json";
+import sunshineGlass from "@/assets/shuofeng-products/sunshine-glass-clean.jpg";
+import specialDoors from "@/assets/shuofeng-products/special-doors-final.jpg";
 import frenchCabinet from "@/assets/shuofeng-products/french-cabinet.jpg.asset.json";
 import modernCabinet from "@/assets/shuofeng-products/modern-cabinet.jpg.asset.json";
 
@@ -31,8 +31,8 @@ const scenes = [
 
 const collections = [
   { range: "5004—5006", title: "라운드 프레임 싱글 도어", copy: "대표 모델 5006의 길게 이어진 라운드 프레임과 아이보리 톤이 클래식한 벽 몰딩과 자연스럽게 연결됩니다.", image: roundedDoor.url },
-  { range: "5007—5009", title: "올리브 아치 패널 도어", copy: "대표 모델 5009의 올리브 컬러와 부드러운 아치형 패널이 공간에 차분한 포인트를 더합니다.", image: oliveDoor.url },
-  { range: "5010—5012", title: "화이트 도어·우드 슬랫 월", copy: "대표 모델 5012의 슬림한 화이트 싱글 도어를 월넛 슬랫 벽면과 조합한 모던 프렌치 구성입니다.", image: archedDoor.url },
+  { range: "5007—5009", title: "올리브 아치 패널 도어", copy: "대표 모델 5009의 올리브 컬러와 부드러운 아치형 패널이 공간에 차분한 포인트를 더합니다.", image: oliveDoor },
+  { range: "5010—5012", title: "화이트 도어·우드 슬랫 월", copy: "대표 모델 5012의 슬림한 화이트 싱글 도어를 월넛 슬랫 벽면과 조합한 모던 프렌치 구성입니다.", image: archedDoor },
   { range: "5013—5017", title: "딥 그린 아치 패널", copy: "대표 모델 5015의 딥 그린 싱글 도어와 아이보리 벽 패널, 같은 색상의 수납장을 함께 맞춘 구성입니다.", image: greenDoor.url },
   { range: "5018—5028", title: "뉴트럴 플랫 패널", copy: "대표 모델 5018의 그레이지 싱글 도어와 플랫 수납 패널처럼 장식을 줄인 디자인을 중심으로 구성됩니다.", image: minimalDoor.url },
 ] as const;
@@ -51,16 +51,16 @@ const extendedCollections = [
   { range: "5049—5060", label: "MEDIEVAL WOOD", title: "아치형 우드 도어", copy: "세로 홈을 낸 브라운 원목 도어와 둥근 아치 프레임을 조합해 따뜻하고 고전적인 공간을 만듭니다.", image: retroWood.url },
   { range: "5061—5087", label: "MODERN SIMPLE", title: "화이트 슬림 프레임", copy: "화이트 싱글 도어에 가는 세로 홈과 슬림한 프레임을 적용해 벽면과 자연스럽게 이어지도록 정돈합니다.", image: modernWhite.url },
   { range: "5089—5104", label: "MODERN CHINESE", title: "화이트 도어·월넛 월", copy: "장식을 줄인 화이트 도어와 짙은 월넛 벽면·수납장을 대비시켜 차분하고 단정하게 구성합니다.", image: modernRoom.url },
-  { range: "5105—5117", label: "DESIGNER SERIES", title: "다크 우드 디자이너 도어", copy: "짙은 우드 톤의 플랫 도어와 떠 있는 수납장을 헤링본 바닥과 조합해 간결한 중심 면을 만듭니다.", image: designerWalnut.url },
-  { range: "5118—5123", label: "ITALIAN STYLE", title: "월넛 슬림 패널 도어", copy: "짙은 월넛 톤과 가는 세로 프레임, 브라스 손잡이를 조합해 절제되고 깊이 있는 인상을 냅니다.", image: italianDoor.url },
+  { range: "5105—5117", label: "DESIGNER SERIES", title: "다크 우드 디자이너 도어", copy: "짙은 우드 톤의 플랫 도어와 떠 있는 수납장을 헤링본 바닥과 조합해 간결한 중심 면을 만듭니다.", image: designerWalnut },
+  { range: "5118—5123", label: "ITALIAN STYLE", title: "월넛 슬림 패널 도어", copy: "짙은 월넛 톤과 가는 세로 프레임, 브라스 손잡이를 조합해 절제되고 깊이 있는 인상을 냅니다.", image: italianDoor },
   { range: "5124—5145", label: "WOOD GRAIN", title: "월넛 투 패널 도어", copy: "중간 톤 월넛의 사각 투 패널 도어를 같은 나뭇결의 수납장과 연결해 공간 전체를 통일합니다.", image: chineseWalnut.url },
 ] as const;
 
 const finalCollections = [
   { range: "5146—5165", label: "SIMPLE EUROPEAN", title: "마호가니 인레이 도어", copy: "깊은 적갈색 우드 톤과 가는 세로 인레이 라인을 조합해 장식을 절제한 유러피안 분위기를 만듭니다.", image: simpleEuropean.url },
   { range: "5166—5184", label: "NEW CHINESE", title: "산수화 파티션 월", copy: "동양화 모티프의 대형 패널과 짙은 우드 수납장을 조합해 전통적인 이미지를 현대적인 다이닝 공간에 담았습니다.", image: newChinese.url },
-  { range: "S185—SF7009", label: "LOG & SUNSHINE GLASS", title: "아치 글라스 원목 양개문", copy: "마호가니 톤 원목 프레임과 아치형 유리창을 결합한 양개문으로 채광과 공간의 개방감을 함께 조절합니다.", image: sunshineGlass.url },
-  { range: "5201—5216", label: "SPECIAL DOOR SYSTEM", title: "루버형 폴딩 도어", copy: "대표 모델 5216의 화이트 루버 폴딩 도어처럼 문짝을 접어 열 수 있어 좁은 동선을 효율적으로 활용합니다.", image: specialDoors.url },
+  { range: "S185—SF7009", label: "LOG & SUNSHINE GLASS", title: "아치 글라스 원목 양개문", copy: "마호가니 톤 원목 프레임과 아치형 유리창을 결합한 양개문으로 채광과 공간의 개방감을 함께 조절합니다.", image: sunshineGlass },
+  { range: "5201—5216", label: "SPECIAL DOOR SYSTEM", title: "루버형 폴딩 도어", copy: "대표 모델 5216의 화이트 루버 폴딩 도어처럼 문짝을 접어 열 수 있어 좁은 동선을 효율적으로 활용합니다.", image: specialDoors },
 ] as const;
 
 const coordinatedOptions = [
