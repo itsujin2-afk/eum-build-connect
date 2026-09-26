@@ -20,8 +20,8 @@ import simpleEuropean from "@/assets/shuofeng-products/simple-european.jpg.asset
 import newChinese from "@/assets/shuofeng-products/new-chinese.jpg.asset.json";
 import sunshineGlass from "@/assets/shuofeng-products/sunshine-glass-clean.jpg";
 import specialDoors from "@/assets/shuofeng-products/special-doors-final.jpg";
-import frenchCabinet from "@/assets/shuofeng-products/french-cabinet.jpg.asset.json";
-import modernCabinet from "@/assets/shuofeng-products/modern-cabinet.jpg.asset.json";
+import frenchCabinet from "@/assets/shuofeng-products/french-cabinet-crop.jpg";
+import modernCabinet from "@/assets/shuofeng-products/modern-cabinet-crop.jpg";
 
 const scenes = [
   { image: classicWall.url, title: "클래식 도어·수납장 일체형", detail: "아이보리 패널 월 · 싱글 도어" },
@@ -64,8 +64,8 @@ const finalCollections = [
 ] as const;
 
 const coordinatedOptions = [
-  { label: "FRENCH CABINET", title: "아치형 프렌치 미디어월", copy: "머스터드 톤 아치 수납장과 오픈 선반을 벽면 중앙의 미디어월과 맞춘 구성", image: frenchCabinet.url },
-  { label: "MODERN · MID-CENTURY", title: "월넛·라탄 다이닝 수납장", copy: "월넛 프레임과 라탄 패널 도어, 오픈 선반을 조합한 다이닝 수납 시스템", image: modernCabinet.url },
+  { label: "FRENCH CABINET", title: "아치형 프렌치 미디어월", copy: "머스터드 톤 아치 수납장과 오픈 선반을 벽면 중앙의 미디어월과 맞춘 구성", image: frenchCabinet },
+  { label: "MODERN · MID-CENTURY", title: "월넛·라탄 다이닝 수납장", copy: "월넛 프레임과 라탄 패널 도어, 오픈 선반을 조합한 다이닝 수납 시스템", image: modernCabinet },
 ] as const;
 
 export function ShuofengProductsPage() {
@@ -77,7 +77,7 @@ export function ShuofengProductsPage() {
           <div>
             <p className="eyebrow text-muted-foreground">06 · 슈오펑 목문 · 제품 컬렉션</p>
             <h1 className="mt-5 break-keep text-4xl font-bold leading-[1.12] sm:text-5xl lg:text-6xl">슈오펑 목문<br/>제품 컬렉션</h1>
-            <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">프렌치 몰딩부터 원목, 유리, 히든·폴딩 도어와 수납장까지 5001부터 5216까지 공간에 맞는 제품을 한곳에서 비교해 보세요.</p>
+            <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">프렌치 몰딩부터 원목, 유리, 히든·폴딩 도어와 수납장까지 공간에 맞는 제품을 한곳에서 비교해 보세요.</p>
             <div className="mt-8 flex flex-wrap items-center gap-5">
               <div className="flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold text-muted-foreground"><span>모델 216종</span><span>도장 · 우드 베니어 · 유리</span><span>도어 · 벽면 · 수납장</span></div>
             </div>
@@ -114,7 +114,7 @@ export function ShuofengProductsPage() {
 
     <section className="border-y border-border bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-20"><div><p className="eyebrow text-muted-foreground">MODEL INDEX</p><h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl">프로젝트에 맞는<br/>도어 형태를 고릅니다</h2><p className="mt-6 break-keep text-sm leading-7 text-muted-foreground">모델을 선택한 뒤 현장 도면에 맞춰 크기, 열림 방향, 컬러와 벽·수납장 연결 범위를 확정합니다.</p></div><div className="grid gap-px border border-border bg-border sm:grid-cols-2">{modelGroups.map(([range,title,copy])=><article key={range} className="bg-background p-6"><p className="text-xs font-bold text-gold">{range}</p><h3 className="mt-5 text-lg font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{copy}</p></article>)}</div></div>
-      <div className="mt-14 grid gap-5 md:grid-cols-3"><img src={frenchCabinet.url} alt="슈오펑 머스터드 톤 아치 수납장과 미디어월을 적용한 거실" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={modernCabinet.url} alt="슈오펑 월넛과 라탄 수납장, 다이닝 테이블을 적용한 실내" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={modernRoom.url} alt="슈오펑 다크 월넛 벽면과 화이트 도어를 적용한 복도" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
+      <div className="mt-14 grid gap-5 md:grid-cols-3"><img src={frenchCabinet} alt="슈오펑 머스터드 톤 아치 수납장과 미디어월을 적용한 거실" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={modernCabinet} alt="슈오펑 월넛과 라탄 수납장, 다이닝 테이블을 적용한 실내" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/><img src={modernRoom.url} alt="슈오펑 다크 월넛 벽면과 화이트 도어를 적용한 복도" className="aspect-[4/3] w-full object-cover saturate-[0.82] brightness-[0.98] contrast-[1.03]"/></div>
     </div></section>
 
     <section><div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-24 sm:px-10 sm:py-32 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="eyebrow text-muted-foreground">KOREA PROJECT DESK</p><h2 className="mt-5 max-w-4xl break-keep text-3xl font-bold leading-[1.25] sm:text-4xl">마음에 드는 모델과 현장 도면을 보내주시면 제작 조건을 확인합니다.</h2><p className="mt-6 max-w-2xl break-keep text-sm leading-7 text-muted-foreground">이음앤빌드가 슈오펑 생산팀과 크기·마감·수량·납기를 직접 조율합니다.</p></div><div className="flex flex-wrap gap-3"><Link to="/brands/shuofeng" className="inline-flex items-center gap-2.5 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">슈오펑 소개 보기 <ArrowRight size={16}/></Link><Link to="/company" className="inline-flex items-center gap-2.5 border border-foreground px-8 py-4 text-sm font-bold transition-colors hover:bg-foreground hover:text-primary-foreground">이음앤빌드 소개</Link></div></div></section>
