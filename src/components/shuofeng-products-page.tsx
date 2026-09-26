@@ -77,7 +77,7 @@ export function ShuofengProductsPage() {
           <div>
             <p className="eyebrow text-muted-foreground">06 · 슈오펑 목문 · 제품 컬렉션</p>
             <h1 className="mt-5 break-keep text-4xl font-bold leading-[1.12] sm:text-5xl lg:text-6xl">슈오펑 목문<br/>제품 컬렉션</h1>
-            <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">프렌치 몰딩부터 원목, 유리, 히든·폴딩 도어와 수납장까지 5001부터 5216까지 공간에 맞는 제품을 한곳에서 비교해 보세요.</p>
+            <p className="mt-6 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">프렌치 몰딩부터 원목, 유리, 히든·폴딩 도어와 수납장까지 공간에 맞는 제품을 한곳에서 비교해 보세요.</p>
             <div className="mt-8 flex flex-wrap items-center gap-5">
               <div className="flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold text-muted-foreground"><span>모델 216종</span><span>도장 · 우드 베니어 · 유리</span><span>도어 · 벽면 · 수납장</span></div>
             </div>
