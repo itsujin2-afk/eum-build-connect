@@ -165,6 +165,11 @@
     word-break: normal;
     overflow-wrap: anywhere;
   }
+
+  html[lang="ja"] .ja-wrap {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
 }
 
 @utility eyebrow {
