@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep existing public URLs for all locales; the KO/EN/JA selector uses a shared client-safe dictionary and persists the choice locally to avoid route duplication.
