@@ -51,14 +51,14 @@ export function HuanqiuProductsPage() {
     </section>
 
     <nav className="sticky top-14 z-40 border-b border-border bg-background/95 backdrop-blur" aria-label="제품 카테고리">
-      <div className="mx-auto flex max-w-[1440px] gap-7 overflow-x-auto px-5 py-4 sm:px-10">{groups.map((group)=><a key={group} href={`#${group}`} className="shrink-0 text-xs font-bold text-muted-foreground hover:text-gold">{group}</a>)}</div>
+      <div className="mx-auto flex max-w-[1440px] gap-7 overflow-x-auto px-5 py-4 sm:px-10">{groups.map((group)=><a key={group} href={`#${group}`} className="shrink-0 whitespace-nowrap text-xs font-bold text-muted-foreground hover:text-gold">{group}</a>)}</div>
     </nav>
 
     {groups.map((group, groupIndex) => {
       const items = products.filter((product) => product.family === group);
       return <section key={group} id={group} className={groupIndex % 2 ? "bg-surface" : "bg-background"}>
         <div className="mx-auto max-w-[1440px] px-5 py-20 sm:px-10 sm:py-28">
-          <div className="flex items-end justify-between gap-6 border-b border-border pb-7"><div><p className="eyebrow text-muted-foreground">COLLECTION {String(groupIndex + 1).padStart(2,"0")}</p><h2 className="mt-3 text-3xl font-bold sm:text-4xl">{group} 시리즈</h2></div><span className="text-xs text-muted-foreground">{String(items.length).padStart(2,"0")} MATERIALS</span></div>
+          <div className="flex items-end justify-between gap-6 border-b border-border pb-7"><div><p className="eyebrow text-muted-foreground">COLLECTION {String(groupIndex + 1).padStart(2,"0")}</p><h2 className="mt-3 whitespace-nowrap text-3xl font-bold sm:text-4xl">{group} 시리즈</h2></div><span className="text-xs text-muted-foreground">{String(items.length).padStart(2,"0")} MATERIALS</span></div>
           <div className="mt-10 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((product, index)=><article key={product.slug} className="group flex h-full flex-col">
               <div className="relative aspect-[4/3] overflow-hidden border border-border bg-background"><img src={productImage(product.slug)} alt={`${product.name} 천연석 표면`} className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]"/><span className="absolute left-4 top-4 bg-background/90 px-3 py-1.5 text-[10px] font-bold tracking-[0.14em] backdrop-blur">{product.tone}</span></div>
