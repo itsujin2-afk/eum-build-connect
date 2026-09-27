@@ -36,6 +36,7 @@ export function CategoryNav({ items }: { items: [string, string][] }) {
             {label}
           </a>
         ))}
+        <span aria-hidden="true" className="w-1 shrink-0 sm:w-2" />
       </div>
     </nav>
   );
