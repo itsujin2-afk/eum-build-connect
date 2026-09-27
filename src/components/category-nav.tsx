@@ -1,23 +1,55 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function CategoryNav({ items }: { items: [string, string][] }) {
   const [active, setActive] = useState(items[0]?.[0]);
+  const itemKey = items.map(([id]) => id).join("|");
+  const scrollingTo = useRef<string | undefined>(undefined);
+  const unlockTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        }
-      },
-      { rootMargin: "-25% 0px -65% 0px" }
-    );
-    for (const [id] of items) {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    }
-    return () => observer.disconnect();
-  }, [items]);
+    let frame = 0;
+    const updateActive = () => {
+      frame = 0;
+      if (scrollingTo.current) {
+        setActive(scrollingTo.current);
+        return;
+      }
+      const marker = window.innerWidth >= 640 ? 129 : 113;
+      let current = items[0]?.[0];
+
+      for (const [id] of items) {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= marker) current = id;
+      }
+
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+        current = items.at(-1)?.[0];
+      }
+      if (current) setActive(current);
+    };
+    const handleScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(updateActive);
+    };
+
+    updateActive();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+      if (unlockTimer.current) clearTimeout(unlockTimer.current);
+    };
+  }, [itemKey]);
+
+  const selectItem = (id: string) => {
+    scrollingTo.current = id;
+    setActive(id);
+    if (unlockTimer.current) clearTimeout(unlockTimer.current);
+    unlockTimer.current = setTimeout(() => {
+      scrollingTo.current = undefined;
+    }, 1000);
+  };
 
   return (
     <nav className="sticky top-12 z-40 border-b border-border bg-background sm:top-14" aria-label="제품 카테고리">
@@ -26,6 +58,7 @@ export function CategoryNav({ items }: { items: [string, string][] }) {
           <a
             key={id}
             href={`#${id}`}
+            onClick={() => selectItem(id)}
             aria-current={active === id ? "true" : undefined}
             className={`shrink-0 whitespace-nowrap rounded-full px-2.5 py-2 text-[10px] font-bold transition-colors sm:px-4 sm:text-xs ${
               active === id
