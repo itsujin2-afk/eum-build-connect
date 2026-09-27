@@ -219,6 +219,16 @@
       min-width: max-content;
       white-space: nowrap;
     }
+
+    .text-5xl {
+      font-size: 1.875rem !important;
+      line-height: 1.18 !important;
+    }
+
+    .text-4xl {
+      font-size: 1.5rem !important;
+      line-height: 1.22 !important;
+    }
   }
 }
 
