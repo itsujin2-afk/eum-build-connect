@@ -29,7 +29,7 @@ export function CinematicHome() {
     <div className="relative h-full min-h-0 overflow-hidden bg-background">
       <div className="mx-auto grid h-full min-h-0 w-full max-w-[1400px] grid-cols-1 grid-rows-[minmax(0,auto)_minmax(0,1fr)] items-center gap-4 px-5 pb-4 pt-16 sm:gap-5 sm:px-8 sm:pb-5 sm:pt-[4.5rem] lg:grid-cols-12 lg:grid-rows-1 lg:gap-10 lg:pb-6 lg:pt-16">
         {/* pristine logo stage — no imagery behind it */}
-        <div className="hero-reveal hero-reveal-logo flex min-w-0 flex-col items-center text-center lg:col-span-5 lg:items-start lg:text-left">
+        <div className="hero-reveal hero-reveal-logo flex min-w-0 flex-col items-center text-center lg:col-span-5 lg:items-center lg:text-center">
           <div
             className="logo-stage w-[235px] sm:w-[320px] lg:w-[400px]"
             style={{ ["--logo-mask" as string]: `url(${logoAsset.url})` }}
@@ -45,12 +45,12 @@ export function CinematicHome() {
             </span>
           </div>
 
-          <p className="mt-6 break-keep text-sm font-medium leading-relaxed tracking-tight text-foreground/75 sm:mt-8 sm:text-base">
+          <p className="mt-6 break-keep text-center text-sm font-medium leading-relaxed tracking-tight text-foreground/75 sm:mt-8 sm:text-base">
             중국 최정상 6개 브랜드 <span className="text-gold">공식 한국 HQ</span>
           </p>
           <Link
             to="/company"
-            className="group mt-6 inline-flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-foreground/70 sm:mt-8"
+            className="group mx-auto mt-6 inline-flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-foreground/70 sm:mt-8"
           >
             <span className="relative">
               이음앤빌드 소개
