@@ -111,7 +111,7 @@ export function LionKingProductsPage() {
               포틀랜드의 평면·몰드 표면부터 대형 석재 패턴과 300 × 900 mm 장식 타일까지, 공간과 용도에 맞춰 선택할 수 있습니다.
             </p>
           </div>
-          <a href="/catalogs/lion-king-product-catalog-ko.pdf" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2.5 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">
+          <a href="/catalogs/lion-king-product-catalog-ko.pdf" className="mt-8 inline-flex items-center gap-2.5 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">
             제품 카탈로그 보기 <ExternalLink size={16} />
           </a>
         </section>
