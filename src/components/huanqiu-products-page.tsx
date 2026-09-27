@@ -50,7 +50,7 @@ export function HuanqiuProductsPage() {
       </div>
     </section>
 
-    <nav className="sticky top-14 z-40 border-b border-border bg-background/95 backdrop-blur" aria-label="제품 카테고리">
+    <nav className="sticky top-16 z-40 border-b border-border bg-background" aria-label="제품 카테고리">
       <div className="locale-category-nav mx-auto flex max-w-[1440px] gap-7 overflow-x-auto px-5 py-4 sm:px-10">{groups.map((group)=><a key={group} href={`#${group}`} className="shrink-0 whitespace-nowrap text-xs font-bold text-muted-foreground hover:text-gold">{group}</a>)}</div>
     </nav>
 
