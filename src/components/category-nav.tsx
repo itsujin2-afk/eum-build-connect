@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export function CategoryNav({ items }: { items: [string, string][] }) {
   const [active, setActive] = useState(items[0]?.[0]);
+  const itemKey = items.map(([id]) => id).join("|");
 
   useEffect(() => {
     let frame = 0;
@@ -32,7 +33,7 @@ export function CategoryNav({ items }: { items: [string, string][] }) {
       window.removeEventListener("resize", handleScroll);
       if (frame) window.cancelAnimationFrame(frame);
     };
-  }, [items]);
+  }, [itemKey]);
 
   return (
     <nav className="sticky top-12 z-40 border-b border-border bg-background sm:top-14" aria-label="제품 카테고리">
