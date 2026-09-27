@@ -30,6 +30,17 @@ const moldedSurfaces = [
   ["M26", m26.url], ["M27", m27.url],
 ];
 
+const surfaceSeries = [
+  ["포틀랜드", "평면 Y1–Y6 · 몰드 M20/M24/M25/M26/M27"],
+  ["라임스톤", "라이트 그레이 · 베이지 · 옐로우 · 미디엄 그레이 · 브라운 · 블랙"],
+  ["운산석", "운산석 1–6 · 몰드 M20/M24/M25/M26/M27"],
+  ["트래버틴", "트래버틴 1–4 · 몰드 M20/M24/M25/M26/M27"],
+  ["앤티크 대리석 슬레이트", "슬레이트 1–6 · 몰드 M20/M24/M25/M26/M27"],
+  ["수입 앤티크 대리석", "앤티크 대리석 1–6 · 몰드 M20/M24/M25/M26/M27"],
+  ["스몰 포실", "스몰 포실 1–6 · 몰드 M20/M24/M25/M26/M27"],
+  ["테라조", "테라조 1–6 · 몰드 M20/M24/M25/M26/M27"],
+];
+
 const selectedCollections = [
   { title: "이탈리안 그레이", size: "750 × 1500 mm", models: "CX715P97 · CX715P98", detail: "차분한 회색 결을 두 가지 패턴으로 구성한 대형 타일", image: selected002.url },
   { title: "마이크로시멘트", size: "750 × 1500 mm", models: "CX75021GY · CX75022GY · CX75023GY", detail: "절제된 시멘트 질감을 세 가지 톤으로 전개한 컬렉션", image: selected007.url },
@@ -141,6 +152,25 @@ export function LionKingProductsPage() {
                 <figcaption className="mt-2 text-xs font-semibold">{name}</figcaption>
               </figure>
             ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
+          <div className="grid gap-8 lg:grid-cols-12">
+            <div className="lg:col-span-4">
+              <p className="eyebrow text-gold">STONE SURFACE SERIES</p>
+              <h2 className="mt-4 break-keep text-3xl font-semibold leading-tight sm:text-4xl">여덟 가지 석재 표면 시리즈</h2>
+              <p className="mt-5 break-keep text-sm leading-7 text-muted-foreground">각 시리즈는 평면과 입체 몰드면을 함께 구성해 같은 공간 안에서 색과 깊이를 이어갈 수 있습니다.</p>
+            </div>
+            <div className="border-t border-border lg:col-span-8">
+              {surfaceSeries.map(([name, variants], index) => (
+                <div key={name} className="grid gap-2 border-b border-border py-5 sm:grid-cols-[2.5rem_12rem_1fr] sm:items-baseline sm:gap-5">
+                  <span className="text-xs font-bold text-gold">{String(index + 1).padStart(2, "0")}</span>
+                  <h3 className="text-sm font-semibold">{name}</h3>
+                  <p className="break-keep text-xs leading-6 text-muted-foreground">{variants}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
