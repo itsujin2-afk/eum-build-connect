@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Download, LoaderCircle } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { ChevronLeft, ChevronRight, Download, Home, LoaderCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const catalogUrl = "/catalogs/lion-king-product-catalog-ko.pdf";
@@ -13,11 +14,14 @@ export function LionKingCatalogViewer() {
   return (
     <main className="min-h-screen bg-surface px-4 pb-10 pt-24 sm:px-8 sm:pt-28">
       <div className="mx-auto max-w-[1180px]">
-        <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-border pb-5">
+        <header className="grid grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-3 border-b border-border pb-5">
           <div className="min-w-0">
             <p className="eyebrow text-gold">LION KING CERAMICS</p>
             <h1 className="mt-2 truncate text-xl font-semibold sm:text-3xl">라이온킹 제품 카탈로그</h1>
           </div>
+          <Button asChild variant="outline" size="sm" className="gap-1.5 px-3 sm:px-4">
+            <Link to="/brands/lion-king-products"><Home size={16} />제품 소개</Link>
+          </Button>
           <Button asChild variant="outline" size="icon" title="PDF 내려받기">
             <a href={catalogUrl} download><Download /></a>
           </Button>
