@@ -29,13 +29,13 @@ export function SiteShell({ children, hideFooter = false, hideFooterLogo = false
   </div>;
   return <div className={fullscreen ? "flex h-svh flex-col overflow-hidden bg-background text-foreground" : "min-h-screen bg-background text-foreground"}>
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background text-foreground">
-      <div className="relative flex items-center justify-end px-5 py-2 sm:px-8 sm:py-3 md:px-10">
+      <div className="relative flex h-12 items-center justify-end px-5 sm:h-14 sm:px-8 md:px-10">
         <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex" aria-label="주요 메뉴">
           <Link to="/" activeOptions={{exact:true}} className="nav-link">Home</Link>
           <Link to="/company" className="nav-link">회사소개</Link>
-          <div className="group relative py-4">
+          <div className="group relative py-3">
              <span className="nav-link flex cursor-default items-center gap-1">자재 <ChevronDown size={13}/></span>
-             <div className="invisible absolute left-1/2 top-[43px] w-80 -translate-x-1/2 rounded-md border border-border bg-background p-2 opacity-0 shadow-sm transition group-hover:visible group-hover:opacity-100">
+             <div className="invisible absolute left-1/2 top-[40px] w-80 -translate-x-1/2 rounded-md border border-border bg-background p-2 opacity-0 shadow-sm transition group-hover:visible group-hover:opacity-100">
                {brands.map((brand)=><div key={brand.slug}>
                   <Link to={`/brands/${brand.slug}` as "/brands/huanqiu-stone"} className="flex items-center justify-between rounded-sm px-4 py-3 text-sm hover:bg-surface"><span><b className="mr-3 font-normal text-muted-foreground">{brand.number}</b>{materialNames[brand.slug as keyof typeof materialNames]}</span><span className="text-[10px] text-muted-foreground">{brand.name}</span></Link>
                  {brand.slug in productLinks && <Link to={productLinks[brand.slug as keyof typeof productLinks]} className="mb-1 ml-9 flex items-center justify-between rounded-sm px-4 py-1.5 text-xs text-muted-foreground hover:bg-surface hover:text-foreground"><span>제품소개</span><ArrowUpRight size={11} className="text-gold"/></Link>}
