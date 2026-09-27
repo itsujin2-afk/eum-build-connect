@@ -9,9 +9,9 @@ const pageCount = 77;
 
 export function LionKingCatalogViewer() {
   return (
-    <main className="min-h-screen bg-muted/40 px-2 pb-16 pt-24 sm:px-6 sm:pt-28">
+    <main className="min-h-screen bg-muted/40 px-2 pb-16 pt-3 sm:px-6">
       <div className="mx-auto max-w-[900px]">
-        <header className="sticky top-16 z-20 mb-5 flex items-center justify-between gap-3 border border-border bg-background/95 px-4 py-3 backdrop-blur sm:top-20">
+        <header className="sticky top-0 z-20 mb-5 flex items-center justify-between gap-3 border border-border bg-background/95 px-4 py-3 backdrop-blur">
           <div className="min-w-0">
             <p className="eyebrow text-gold">LION KING CERAMICS</p>
             <h1 className="truncate text-base font-semibold sm:text-xl">라이온킹 제품 카탈로그</h1>
