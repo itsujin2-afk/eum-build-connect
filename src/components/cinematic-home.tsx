@@ -27,7 +27,7 @@ export function CinematicHome() {
 
   return (
     <div className="relative h-full min-h-0 overflow-hidden bg-background">
-      <div className="mx-auto grid h-full min-h-0 w-full max-w-[1400px] grid-cols-1 grid-rows-[minmax(0,auto)_minmax(0,1fr)] items-center gap-6 px-5 pb-5 pt-14 sm:px-8 lg:grid-cols-12 lg:grid-rows-1 lg:gap-12 lg:pb-8 lg:pt-16">
+      <div className="mx-auto grid h-full min-h-0 w-full max-w-[1400px] grid-cols-1 grid-rows-[minmax(0,auto)_minmax(0,1fr)] items-center gap-4 px-5 pb-4 pt-12 sm:gap-5 sm:px-8 sm:pb-5 sm:pt-14 lg:grid-cols-12 lg:grid-rows-1 lg:gap-10 lg:pb-6 lg:pt-14">
         {/* pristine logo stage — no imagery behind it */}
         <div className="hero-reveal hero-reveal-logo flex min-w-0 flex-col items-center text-center lg:col-span-5 lg:items-start lg:text-left">
           <div
