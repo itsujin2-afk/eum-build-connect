@@ -10,4 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Keep existing public URLs for all locales; the KO/EN/JA selector uses a shared client-safe dictionary and persists the choice locally to avoid route duplication.
-- Render the Lion King PDF through a client-only PDF.js route; mobile browser PDF viewers are unreliable in authenticated previews.
+- Render the Lion King catalog through pre-rendered page images; mobile browser PDF viewers and canvas rendering are unreliable in authenticated previews.
