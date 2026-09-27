@@ -171,6 +171,55 @@
     overflow-wrap: anywhere;
     word-break: normal;
   }
+
+  @media (max-width: 639px) {
+    html[lang="en"] .break-keep {
+      word-break: normal;
+      overflow-wrap: anywhere;
+    }
+
+    html[lang="en"] .locale-wrap {
+      white-space: normal !important;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    html[lang="en"] .en-mobile-display {
+      font-size: 2.5rem !important;
+      line-height: 1.08 !important;
+    }
+
+    html[lang="en"] .locale-data-table {
+      min-width: 0;
+      table-layout: fixed;
+      font-size: 0.6875rem;
+    }
+
+    html[lang="en"] .locale-data-table th,
+    html[lang="en"] .locale-data-table td {
+      padding: 0.75rem 0.375rem;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    html[lang="en"] .locale-data-table th:first-child,
+    html[lang="en"] .locale-data-table td:first-child {
+      width: 22%;
+    }
+
+    html[lang="en"] .locale-category-nav {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .75rem 1rem !important;
+      overflow-x: visible !important;
+    }
+
+    html[lang="en"] .locale-category-nav > a {
+      min-width: 0;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+  }
 }
 
 @utility eyebrow {

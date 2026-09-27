@@ -44,27 +44,27 @@ export function HuanqiuProductsPage() {
       <div className="mx-auto max-w-[1440px] px-5 pb-20 pt-32 sm:px-10 sm:pb-28 sm:pt-40">
         <Link to="/brands/huanqiu-stone" className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground"><ArrowLeft size={14}/> 환구 석재 소개</Link>
         <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_.7fr] lg:items-end">
-          <div><p className="eyebrow text-gold">환구 석재 제품 컬렉션</p><h1 className="mt-5 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">주요 천연석 품종 26종<br/>한곳에서 보고 고릅니다</h1></div>
+          <div><p className="eyebrow text-gold">환구 석재 제품 컬렉션</p><h1 className="en-mobile-display mt-5 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">주요 천연석 품종 26종<br/>한곳에서 보고 고릅니다</h1></div>
           <div><p className="break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">화이트 대리석부터 트래버틴, 베이지, 그레이, 골드 계열까지. 환구 석재가 엄선하고 공급하는 주요 천연석 26종을 산지와 물성, 적용 범위에 따라 정리했습니다.</p><div className="mt-7 flex gap-8 text-xs"><span><b className="mr-2 text-xl text-gold">26</b>주요 품종</span><span><b className="mr-2 text-xl text-gold">8</b>산지 국가·지역</span></div></div>
         </div>
       </div>
     </section>
 
     <nav className="sticky top-14 z-40 border-b border-border bg-background/95 backdrop-blur" aria-label="제품 카테고리">
-      <div className="mx-auto flex max-w-[1440px] gap-7 overflow-x-auto px-5 py-4 sm:px-10">{groups.map((group)=><a key={group} href={`#${group}`} className="shrink-0 whitespace-nowrap text-xs font-bold text-muted-foreground hover:text-gold">{group}</a>)}</div>
+      <div className="locale-category-nav mx-auto flex max-w-[1440px] gap-7 overflow-x-auto px-5 py-4 sm:px-10">{groups.map((group)=><a key={group} href={`#${group}`} className="shrink-0 whitespace-nowrap text-xs font-bold text-muted-foreground hover:text-gold">{group}</a>)}</div>
     </nav>
 
     {groups.map((group, groupIndex) => {
       const items = products.filter((product) => product.family === group);
       return <section key={group} id={group} className={groupIndex % 2 ? "bg-surface" : "bg-background"}>
         <div className="mx-auto max-w-[1440px] px-5 py-20 sm:px-10 sm:py-28">
-          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4 border-b border-border pb-7 sm:gap-6"><div className="min-w-0"><p className="eyebrow text-muted-foreground">COLLECTION {String(groupIndex + 1).padStart(2,"0")}</p><h2 className="ja-wrap mt-3 whitespace-nowrap text-3xl font-bold sm:text-4xl">{group} 시리즈</h2></div><span className="shrink-0 text-xs text-muted-foreground">{String(items.length).padStart(2,"0")} MATERIALS</span></div>
+          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4 border-b border-border pb-7 sm:gap-6"><div className="min-w-0"><p className="eyebrow text-muted-foreground">COLLECTION {String(groupIndex + 1).padStart(2,"0")}</p><h2 className="locale-wrap mt-3 whitespace-nowrap text-3xl font-bold sm:text-4xl">{group} 시리즈</h2></div><span className="shrink-0 text-xs text-muted-foreground">{String(items.length).padStart(2,"0")} MATERIALS</span></div>
           <div className="mt-10 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((product, index)=><article key={product.slug} className="group flex h-full flex-col">
               <div className="relative aspect-[4/3] overflow-hidden border border-border bg-background"><img src={productImage(product.slug)} alt={`${product.name} 천연석 표면`} className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]"/><span className="absolute left-4 top-4 bg-background/90 px-3 py-1.5 text-[10px] font-bold tracking-[0.14em] backdrop-blur">{product.tone}</span></div>
               <div className="mt-6 flex items-start justify-between gap-4"><div><p className="text-[10px] font-bold text-gold">{String(index + 1).padStart(2,"0")} · {product.origin}</p><h3 className="mt-2 text-2xl font-bold">{product.name}</h3></div><MapPin size={17} className="mt-1 shrink-0 text-muted-foreground"/></div>
               <p className="mt-4 break-keep text-sm leading-7 text-muted-foreground">{product.feature}</p>
-              <dl className="mt-5 space-y-2 border-t border-border pt-4 text-xs leading-6 sm:mt-auto sm:min-h-24 sm:pt-4"><div className="flex gap-3"><dt className="w-12 shrink-0 font-bold">용도</dt><dd className="text-muted-foreground">{product.use}</dd></div>{product.properties && <div className="flex gap-3"><dt className="w-12 shrink-0 font-bold">물성</dt><dd className="text-muted-foreground">{product.properties}</dd></div>}</dl>
+              <dl className="mt-5 space-y-2 border-t border-border pt-4 text-xs leading-6 sm:mt-auto sm:min-h-24 sm:pt-4"><div className="grid grid-cols-[minmax(5.5rem,auto)_1fr] gap-3"><dt className="font-bold">용도</dt><dd className="min-w-0 text-muted-foreground">{product.use}</dd></div>{product.properties && <div className="grid grid-cols-[minmax(5.5rem,auto)_1fr] gap-3"><dt className="font-bold">물성</dt><dd className="min-w-0 text-muted-foreground">{product.properties}</dd></div>}</dl>
             </article>)}
           </div>
         </div>
