@@ -189,21 +189,21 @@
       line-height: 1.08 !important;
     }
 
-    html[lang="en"] .locale-data-table {
-      min-width: 0;
+    .locale-data-table {
+      min-width: 0 !important;
       table-layout: fixed;
       font-size: 0.6875rem;
     }
 
-    html[lang="en"] .locale-data-table th,
-    html[lang="en"] .locale-data-table td {
+    .locale-data-table th,
+    .locale-data-table td {
       padding: 0.75rem 0.375rem;
       overflow-wrap: anywhere;
       word-break: normal;
     }
 
-    html[lang="en"] .locale-data-table th:first-child,
-    html[lang="en"] .locale-data-table td:first-child {
+    .locale-data-table th:first-child,
+    .locale-data-table td:first-child {
       width: 22%;
     }
 
