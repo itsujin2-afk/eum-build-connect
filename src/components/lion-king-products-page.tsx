@@ -225,13 +225,13 @@ export function LionKingProductsPage() {
         </section>
 
         <section className="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
-          <div className="grid gap-10 border-y border-border bg-surface lg:grid-cols-12">
-            <figure className="lg:col-span-7">
-              <div className="aspect-[4/3] h-full overflow-hidden bg-background">
+          <div className="grid gap-0 border-y border-border bg-surface lg:grid-cols-12">
+            <figure className="min-w-0 overflow-hidden lg:col-span-7">
+              <div className="aspect-[4/3] w-full overflow-hidden bg-background lg:aspect-auto lg:h-full lg:min-h-[34rem]">
                 <img src={portlandInterior.url} alt="포틀랜드 Y4 타일이 적용된 거실" className="h-full w-full object-cover" />
               </div>
             </figure>
-            <div className="flex flex-col justify-center px-5 py-10 sm:px-8 lg:col-span-5 lg:py-16 lg:pl-0 lg:pr-14">
+            <div className="relative z-10 flex min-w-0 flex-col justify-center bg-surface px-5 py-10 sm:px-8 lg:col-span-5 lg:px-10 lg:py-16">
               <p className="eyebrow text-gold">PROJECT FORMAT</p>
               <h2 className="mt-4 break-keep text-3xl font-semibold leading-tight tracking-normal sm:text-4xl">
                 공간 규모에 맞춘<br />다섯 가지 규격
