@@ -55,7 +55,7 @@ export function SiteShell({ children, hideFooter = false, hideFooterLogo = false
     {!hideFooter && <footer className="shrink-0 border-t border-border bg-background text-foreground">
       <div className={`mx-auto flex max-w-[1440px] flex-wrap items-center gap-x-4 gap-y-1 px-5 text-[10px] leading-5 text-muted-foreground sm:justify-between sm:text-[11px] lg:px-10 ${fullscreen ? "py-2.5" : "py-6"}`}>
         <div className="flex items-center gap-3">
-          {!hideFooterLogo && <img src="/logo.jpg" alt="이음앤빌드" className="h-6 w-auto object-contain"/>}
+          {!hideFooterLogo && <img src="/logo-nav.jpg" alt="이음앤빌드" className="h-6 w-auto object-contain"/>}
           <span className="font-semibold text-foreground">주식회사 이음앤빌드</span>
         </div>
         <p>서울 강남구 테헤란로 329 삼흥빌딩 1612호</p>
