@@ -30,6 +30,9 @@ export function SiteShell({ children, hideFooter = false, hideFooterLogo = false
   return <div className={fullscreen ? "flex h-svh flex-col overflow-hidden bg-background text-foreground" : "min-h-screen bg-background text-foreground"}>
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background text-foreground">
       <div className="relative flex h-12 items-center justify-end px-5 sm:h-14 sm:px-8 md:px-10">
+        <Link to="/" aria-label="이음앤빌드 홈으로" className="mr-auto flex items-center">
+          <img src="/logo.jpg" alt="이음앤빌드" className="h-6 w-auto object-contain sm:h-7" />
+        </Link>
         <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex" aria-label="주요 메뉴">
           <Link to="/" activeOptions={{exact:true}} className="nav-link">Home</Link>
           <Link to="/company" className="nav-link">회사소개</Link>
