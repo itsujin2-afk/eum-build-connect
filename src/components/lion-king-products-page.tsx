@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import portlandInterior from "@/assets/lion/portland-interior.jpg.asset.json";
@@ -58,6 +58,9 @@ export function LionKingProductsPage() {
               같은 색의 평면과 입체 표면을 조합해 바닥과 벽을 자연스럽게 연결합니다.
             </p>
           </div>
+          <a href="/catalogs/lion-king-product-catalog-ko.pdf" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2.5 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">
+            제품 카탈로그 보기 <ExternalLink size={16} />
+          </a>
         </section>
 
         <section className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-14">
