@@ -34,7 +34,7 @@ export function LionKingPage() {
             <div className="mt-9 flex flex-wrap gap-x-8 gap-y-3 border-t border-border pt-5 text-[11px] font-semibold tracking-normal text-muted-foreground">
               <span>대리석 타일</span><span>다이아몬드 글레이즈</span><span>내벽 타일</span>
             </div>
-            <Link to="/brands/lion-king-products" className="mt-9 inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors duration-300 hover:bg-gold hover:text-foreground">포틀랜드 시리즈 제품 보기 <ArrowRight size={16} /></Link>
+            <Link to="/brands/lion-king-products" className="mt-9 inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors duration-300 hover:bg-gold hover:text-foreground">제품 소개 보기 <ArrowRight size={16} /></Link>
           </div>
           <figure className="relative lg:col-span-7">
             <div className="aspect-[4/3] overflow-hidden bg-surface">
