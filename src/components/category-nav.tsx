@@ -21,13 +21,13 @@ export function CategoryNav({ items }: { items: [string, string][] }) {
 
   return (
     <nav className="sticky top-12 z-40 border-b border-border bg-background sm:top-14" aria-label="제품 카테고리">
-      <div className="locale-category-nav mx-auto flex max-w-[1440px] gap-2 overflow-x-auto px-5 py-3 sm:px-10">
+      <div className="locale-category-nav mx-auto flex max-w-[1440px] gap-1 overflow-x-auto px-3 py-3 sm:gap-2 sm:px-10">
         {items.map(([id, label]) => (
           <a
             key={id}
             href={`#${id}`}
             aria-current={active === id ? "true" : undefined}
-            className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-xs font-bold transition-colors ${
+            className={`shrink-0 whitespace-nowrap rounded-full px-2.5 py-2 text-[10px] font-bold transition-colors sm:px-4 sm:text-xs ${
               active === id
                 ? "bg-foreground text-background"
                 : "bg-surface text-muted-foreground hover:text-foreground"
