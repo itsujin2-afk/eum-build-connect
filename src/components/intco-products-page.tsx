@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Check, Droplets, Flame, Hammer, Leaf, Ruler } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
+import { CategoryNav } from "@/components/category-nav";
 import spcInstall from "@/assets/intco-products/spc-install.jpg.asset.json";
 import wallApplication from "@/assets/intco-products/wall-application.jpg.asset.json";
 import mouldingApplication from "@/assets/intco-products/moulding-application.jpg.asset.json";
@@ -101,7 +102,7 @@ export function IntcoProductsPage() {
       </div>
     </section>
 
-    <nav className="sticky top-12 z-40 border-b border-border bg-background sm:top-14" aria-label="제품 카테고리"><div className="locale-category-nav mx-auto flex max-w-[1440px] gap-7 overflow-x-auto px-5 py-4 sm:px-10">{[["wall","벽패널"],["moulding","몰딩"],["accessory","부속"],["outdoor-range","아웃도어"],["spc","SPC 월패널"],["flooring","SPC 바닥재"]].map(([id,label])=><a key={id} href={`#${id}`} className="shrink-0 text-xs font-bold text-muted-foreground hover:text-gold">{label}</a>)}</div></nav>
+    <CategoryNav items={[["wall","벽패널"],["moulding","몰딩"],["accessory","부속"],["outdoor-range","아웃도어"],["spc","SPC 월패널"],["flooring","SPC 바닥재"]]} />
 
     <section className="border-b border-border"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <SectionHeading eyebrow="PRODUCT RANGE" title="실내외 마감에 필요한 4개 제품군" description="재생 소재를 활용한 패널과 몰딩부터 외부용 WPC까지, 공간별로 필요한 제품을 함께 구성할 수 있습니다."/>

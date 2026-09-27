@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Grid2X2, Layers3, MapPin } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
+import { CategoryNav } from "@/components/category-nav";
 
 const imageModules = import.meta.glob("../assets/umgg-products/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
 const productImage = (id: string) => imageModules[`../assets/umgg-products/${id}.jpg`] ?? "";
@@ -50,9 +51,7 @@ export function HuanqiuProductsPage() {
       </div>
     </section>
 
-    <nav className="sticky top-12 z-40 border-b border-border bg-background sm:top-14" aria-label="제품 카테고리">
-      <div className="locale-category-nav mx-auto flex max-w-[1440px] gap-7 overflow-x-auto px-5 py-4 sm:px-10">{groups.map((group)=><a key={group} href={`#${group}`} className="shrink-0 whitespace-nowrap text-xs font-bold text-muted-foreground hover:text-gold">{group}</a>)}</div>
-    </nav>
+    <CategoryNav items={groups.map((group) => [group, group])} />
 
     {groups.map((group, groupIndex) => {
       const items = products.filter((product) => product.family === group);
