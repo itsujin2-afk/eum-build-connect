@@ -50,7 +50,7 @@ export function IntcoDecorPage() {
       <div className="mx-auto grid min-h-[88svh] max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-10 lg:grid-cols-[.82fr_1.18fr] lg:gap-16">
         <div className="relative z-10">
           <p className="eyebrow text-muted-foreground">02 · 잉코 데코 · 2002년 설립</p>
-          <h1 className="mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">재생 소재로 만드는<br/><span className="text-gold">실내외 마감재</span></h1>
+          <h1 className="en-mobile-display mt-6 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">재생 소재로 만드는<br/><span className="text-gold">실내외 마감재</span></h1>
           <p className="mt-7 max-w-xl break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">버려진 플라스틱을 회수해 재생 원료로 만들고, 벽패널·몰딩·SPC 바닥재·아웃도어 제품까지 친환경 순환 구조 안에서 직접 생산합니다.</p>
           <div className="mt-9 flex flex-wrap items-center gap-4"><Link to="/brands/intco-decor-products" className="inline-flex items-center gap-2.5 bg-foreground px-7 py-3.5 text-sm font-bold text-primary-foreground transition-colors hover:bg-gold hover:text-foreground">제품 소개 보기 <ArrowRight size={16}/></Link><span className="text-xs text-muted-foreground">벽패널 · 몰딩 · WPC · SPC 월패널</span></div>
           <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 text-xs font-semibold"><span>연 1억 3천만m 몰딩</span><span>연 4,500만 개 완제품</span><span>130개국 이상 공급</span></div>

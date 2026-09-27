@@ -95,7 +95,7 @@ export function IntcoProductsPage() {
       <div className="mx-auto max-w-[1440px] px-5 pb-20 pt-32 sm:px-10 sm:pb-28 sm:pt-40">
         <Link to="/brands/intco-decor" className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground"><ArrowLeft size={14}/> 잉코 데코 소개</Link>
         <div className="mt-14 grid gap-10 lg:grid-cols-[.95fr_1.05fr] lg:items-end">
-          <div><p className="eyebrow text-gold">잉코 데코 제품 컬렉션</p><h1 className="mt-5 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">벽부터 바닥·외부 공간까지<br/>한곳에서 고릅니다</h1><p className="mt-7 max-w-2xl break-keep text-sm leading-7 text-muted-foreground sm:text-base">벽패널, 몰딩과 부속, WPC 외장재, SPC 월패널을 실제 패턴과 규격 중심으로 정리했습니다.</p></div>
+          <div><p className="eyebrow text-gold">잉코 데코 제품 컬렉션</p><h1 className="en-mobile-display mt-5 break-keep text-5xl font-bold leading-[1.06] sm:text-6xl lg:text-7xl">벽부터 바닥·외부 공간까지<br/>한곳에서 고릅니다</h1><p className="mt-7 max-w-2xl break-keep text-sm leading-7 text-muted-foreground sm:text-base">벽패널, 몰딩과 부속, WPC 외장재, SPC 월패널을 실제 패턴과 규격 중심으로 정리했습니다.</p></div>
           <figure className="overflow-hidden border border-border bg-background"><img src={spcMorningApplication.url} alt="모닝 스톤 SPC 월패널이 시공된 실내" className="aspect-[16/10] w-full object-cover"/></figure>
         </div>
       </div>
