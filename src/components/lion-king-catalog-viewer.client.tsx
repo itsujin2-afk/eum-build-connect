@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import type { PDFDocumentProxy, RenderTask } from "pdfjs-dist";
 import { ChevronLeft, ChevronRight, Download, LoaderCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -6,7 +7,7 @@ const catalogUrl = "/catalogs/lion-king-product-catalog-ko.pdf";
 
 export function LionKingCatalogViewer() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [documentProxy, setDocumentProxy] = useState<Awaited<ReturnType<typeof import("pdfjs-dist")["getDocument"]>>["promise"] | null>(null);
+  const [documentProxy, setDocumentProxy] = useState<PDFDocumentProxy | null>(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [pageCount, setPageCount] = useState(0);
   const [error, setError] = useState("");
@@ -18,7 +19,7 @@ export function LionKingCatalogViewer() {
         const pdfjs = await import("pdfjs-dist");
         const workerUrl = (await import("pdfjs-dist/build/pdf.worker.min.mjs?url")).default;
         pdfjs.GlobalWorkerOptions.workerSrc = workerUrl;
-        const pdf = await pdfjs.getDocument(catalogUrl).promise;
+        const pdf = await pdfjs.getDocument({ url: catalogUrl }).promise;
         if (!active) return;
         setDocumentProxy(pdf);
         setPageCount(pdf.numPages);
@@ -32,7 +33,7 @@ export function LionKingCatalogViewer() {
   useEffect(() => {
     if (!documentProxy || !canvasRef.current) return;
     let active = true;
-    let renderTask: { cancel: () => void } | undefined;
+    let renderTask: RenderTask | undefined;
     void documentProxy.getPage(pageNumber).then((page) => {
       if (!active || !canvasRef.current) return;
       const baseViewport = page.getViewport({ scale: 1 });
@@ -49,8 +50,8 @@ export function LionKingCatalogViewer() {
       canvas.style.height = `${Math.floor(viewport.height)}px`;
       renderTask = page.render({ canvas, canvasContext: context, viewport, transform: pixelRatio === 1 ? undefined : [pixelRatio, 0, 0, pixelRatio, 0, 0] });
       return renderTask.promise;
-    }).catch((reason) => {
-      if (active && reason?.name !== "RenderingCancelledException") setError("페이지를 표시하지 못했습니다.");
+    }).catch((reason: unknown) => {
+      if (active && (!(reason instanceof Error) || reason.name !== "RenderingCancelledException")) setError("페이지를 표시하지 못했습니다.");
     });
     return () => {
       active = false;
