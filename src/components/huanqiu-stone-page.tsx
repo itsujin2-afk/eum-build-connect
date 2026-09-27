@@ -158,7 +158,7 @@ export function HuanqiuStonePage() {
         <div className="mt-20 grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
           <div><Factory className="text-gold" size={28}/><h3 className="mt-7 text-3xl font-bold">4대 천연석 생산기지</h3><p className="mt-5 text-sm leading-7 text-muted-foreground">대판, 공사 규격판, 이형 제품을 자체 생산합니다. 둥관 창핑과 광시 라이빈에는 이탈리아 Breton 자동화 라인을 갖춘 2대 인조석 생산기지도 운영합니다.</p></div>
           <div className="overflow-x-auto border border-border">
-            <table className="w-full min-w-[620px] text-left text-sm">
+            <table className="locale-data-table w-full min-w-[620px] text-left text-sm">
               <thead className="bg-surface text-xs text-muted-foreground"><tr><th className="px-5 py-4">기지</th><th className="px-5 py-4">부지</th><th className="px-5 py-4">대판 / 연</th><th className="px-5 py-4">규격판 / 연</th><th className="px-5 py-4">이형 / 연</th></tr></thead>
               <tbody>{bases.map((base) => <tr key={base.name} className="border-t border-border"><td className="px-5 py-5 font-bold">{base.name}</td><td className="px-5 py-5 text-muted-foreground">{base.area}</td><td className="px-5 py-5">{base.slab}</td><td className="px-5 py-5">{base.panel}</td><td className="px-5 py-5">{base.special}</td></tr>)}</tbody>
             </table>
