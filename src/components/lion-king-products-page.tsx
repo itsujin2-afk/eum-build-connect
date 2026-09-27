@@ -13,6 +13,12 @@ import m24 from "@/assets/lion/portland-m24.jpg.asset.json";
 import m25 from "@/assets/lion/portland-m25.jpg.asset.json";
 import m26 from "@/assets/lion/portland-m26.jpg.asset.json";
 import m27 from "@/assets/lion/portland-m27.jpg.asset.json";
+import selected047 from "@/assets/lion/selected-047.jpg.asset.json";
+import selected136 from "@/assets/lion/selected-136.jpg.asset.json";
+import selected210 from "@/assets/lion/selected-210.jpg.asset.json";
+import selected312 from "@/assets/lion/selected-312.jpg.asset.json";
+import selected339 from "@/assets/lion/selected-339.jpg.asset.json";
+import selected341 from "@/assets/lion/selected-341.jpg.asset.json";
 
 const plainSurfaces = [
   ["Y1", y1.url], ["Y2", y2.url], ["Y3", y3.url],
@@ -22,6 +28,15 @@ const plainSurfaces = [
 const moldedSurfaces = [
   ["M20", m20.url], ["M24", m24.url], ["M25", m25.url],
   ["M26", m26.url], ["M27", m27.url],
+];
+
+const selectedCollections = [
+  { title: "이탈리안 그레이", size: "750 × 1500 mm", models: "CX715P97 · CX715P98", image: selected047.url },
+  { title: "마이크로시멘트", size: "750 × 1500 mm", models: "CX75021GY · CX75022GY · CX75023GY", image: selected136.url },
+  { title: "사암", size: "900 × 1800 mm", models: "SW918103GY · SW918104GY · SW918105GY", image: selected210.url },
+  { title: "홀로그램 컬러", size: "900 × 1800 mm", models: "SW918115GY · SW918116GY", image: selected312.url },
+  { title: "말라카이트 · 블루 오션", size: "900 × 1800 mm", models: "SY918077GY · SY918078GY", image: selected339.url },
+  { title: "트래버틴", size: "900 × 1800 mm", models: "CX918T07–T12 · CX918T21–T25", image: selected341.url },
 ];
 
 export function LionKingProductsPage() {
@@ -76,6 +91,23 @@ export function LionKingProductsPage() {
                 <figcaption className="mt-2 text-xs font-semibold">{name}</figcaption>
               </figure>
             ))}
+          </div>
+        </section>
+
+        <section className="border-y border-border bg-surface">
+          <div className="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
+            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+              <div><p className="eyebrow text-gold">SELECTED COLLECTIONS</p><h2 className="mt-4 break-keep text-3xl font-semibold leading-tight sm:text-4xl">새 카탈로그에서 고른<br />대표 제품 컬렉션</h2></div>
+              <p className="max-w-md text-sm leading-7 text-muted-foreground">대형 공간에 활용하기 좋은 주요 색상과 질감을 규격별로 간결하게 선별했습니다.</p>
+            </div>
+            <div className="mt-12 grid grid-cols-2 gap-x-3 gap-y-10 sm:grid-cols-3 lg:gap-x-5">
+              {selectedCollections.map((item) => <article key={item.title}>
+                <div className="aspect-[3/4] overflow-hidden bg-background"><img src={item.image} alt={`${item.title} 라이온킹 타일`} className="h-full w-full object-cover" /></div>
+                <h3 className="mt-4 text-base font-semibold sm:text-lg">{item.title}</h3>
+                <p className="mt-1 text-xs font-semibold text-gold">{item.size}</p>
+                <p className="mt-2 break-words text-[11px] leading-5 text-muted-foreground">{item.models}</p>
+              </article>)}
+            </div>
           </div>
         </section>
 

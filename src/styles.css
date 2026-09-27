@@ -208,16 +208,16 @@
     }
 
     html[lang="en"] .locale-category-nav {
-      display: grid !important;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: .75rem 1rem !important;
-      overflow-x: visible !important;
+      display: flex !important;
+      gap: 1.25rem !important;
+      overflow-x: auto !important;
+      overscroll-behavior-inline: contain;
+      scroll-padding-inline: 1.25rem;
     }
 
     html[lang="en"] .locale-category-nav > a {
-      min-width: 0;
-      white-space: normal;
-      overflow-wrap: anywhere;
+      min-width: max-content;
+      white-space: nowrap;
     }
   }
 }
