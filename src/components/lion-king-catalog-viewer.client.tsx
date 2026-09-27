@@ -31,7 +31,8 @@ export function LionKingCatalogViewer() {
 
   const handleTouchStart = (event: React.TouchEvent) => {
     if (event.touches.length === 2) {
-      const [a, b] = [event.touches[0], event.touches[1]];
+      const a = event.touches[0]!;
+      const b = event.touches[1]!;
       pinchRef.current = {
         startDistance: Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY),
         startZoom: zoom,
@@ -41,7 +42,8 @@ export function LionKingCatalogViewer() {
 
   const handleTouchMove = (event: React.TouchEvent) => {
     if (event.touches.length === 2 && pinchRef.current) {
-      const [a, b] = [event.touches[0], event.touches[1]];
+      const a = event.touches[0]!;
+      const b = event.touches[1]!;
       const distance = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
       if (pinchRef.current.startDistance > 0) {
         setZoom(clampZoom(pinchRef.current.startZoom * (distance / pinchRef.current.startDistance)));
