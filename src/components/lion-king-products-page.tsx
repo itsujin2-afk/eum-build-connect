@@ -13,9 +13,9 @@ import m24 from "@/assets/lion/portland-m24.jpg.asset.json";
 import m25 from "@/assets/lion/portland-m25.jpg.asset.json";
 import m26 from "@/assets/lion/portland-m26.jpg.asset.json";
 import m27 from "@/assets/lion/portland-m27.jpg.asset.json";
-import selected047 from "@/assets/lion/selected-047.jpg.asset.json";
-import selected136 from "@/assets/lion/selected-136.jpg.asset.json";
-import selected210 from "@/assets/lion/selected-210.jpg.asset.json";
+import selected002 from "@/assets/lion/selected-002.jpg.asset.json";
+import selected007 from "@/assets/lion/selected-007.jpg.asset.json";
+import selected178 from "@/assets/lion/selected-178.jpg.asset.json";
 import selected312 from "@/assets/lion/selected-312.jpg.asset.json";
 import selected339 from "@/assets/lion/selected-339.jpg.asset.json";
 import selected341 from "@/assets/lion/selected-341.jpg.asset.json";
@@ -31,9 +31,9 @@ const moldedSurfaces = [
 ];
 
 const selectedCollections = [
-  { title: "이탈리안 그레이", size: "750 × 1500 mm", models: "CX715P97 · CX715P98", image: selected047.url },
-  { title: "마이크로시멘트", size: "750 × 1500 mm", models: "CX75021GY · CX75022GY · CX75023GY", image: selected136.url },
-  { title: "사암", size: "900 × 1800 mm", models: "SW918103GY · SW918104GY · SW918105GY", image: selected210.url },
+  { title: "이탈리안 그레이", size: "750 × 1500 mm", models: "CX715P97 · CX715P98", image: selected002.url },
+  { title: "마이크로시멘트", size: "750 × 1500 mm", models: "CX75021GY · CX75022GY · CX75023GY", image: selected007.url },
+  { title: "사암", size: "900 × 1800 mm", models: "SW918103GY · SW918104GY · SW918105GY", image: selected178.url },
   { title: "홀로그램 컬러", size: "900 × 1800 mm", models: "SW918115GY · SW918116GY", image: selected312.url },
   { title: "말라카이트 · 블루 오션", size: "900 × 1800 mm", models: "SY918077GY · SY918078GY", image: selected339.url },
   { title: "트래버틴", size: "900 × 1800 mm", models: "CX918T07–T12 · CX918T21–T25", image: selected341.url },
