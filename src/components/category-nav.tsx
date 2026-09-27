@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 export function CategoryNav({ items }: { items: [string, string][] }) {
   const [active, setActive] = useState(items[0]?.[0]);
   const itemKey = items.map(([id]) => id).join("|");
-  const scrollingTo = useRef<string>();
-  const unlockTimer = useRef<ReturnType<typeof setTimeout>>();
+  const scrollingTo = useRef<string | undefined>(undefined);
+  const unlockTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => {
     let frame = 0;
