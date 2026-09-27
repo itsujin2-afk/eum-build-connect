@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ChevronLeft, ChevronRight, Download, LoaderCircle } from "lucide-react";
+import { ChevronLeft, ChevronRight, Download, Home, LoaderCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const catalogUrl = "/catalogs/lion-king-product-catalog-ko.pdf";
