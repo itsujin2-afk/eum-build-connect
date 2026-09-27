@@ -22,7 +22,7 @@ const materialNames = {
   "shuofeng": "목재",
 } as const;
 
-export function SiteShell({ children, overlayHeader = false, hideFooter = false, hideFooterLogo = false, fullscreen = false }: { children: ReactNode; overlayHeader?: boolean; hideFooter?: boolean; hideFooterLogo?: boolean; fullscreen?: boolean }) {
+export function SiteShell({ children, hideFooter = false, hideFooterLogo = false, fullscreen = false }: { children: ReactNode; hideFooter?: boolean; hideFooterLogo?: boolean; fullscreen?: boolean }) {
   const { locale, setLocale } = useLocale();
   const languageSelector = (mobile = false) => <div className={`flex items-center ${mobile ? "justify-between border-b border-border pb-3" : "hidden gap-0.5 lg:flex"}`} role="group" aria-label="언어 선택">
     {(["ko", "en", "ja"] as Locale[]).map((item) => <Button key={item} type="button" variant="ghost" size="sm" aria-pressed={locale === item} onClick={() => setLocale(item)} className={`h-7 min-w-8 rounded-sm px-2 text-[10px] tracking-[0.08em] ${mobile ? (locale === item ? "flex-1 bg-foreground text-background hover:bg-foreground" : "flex-1 border border-border text-muted-foreground hover:text-foreground") : (locale === item ? "bg-foreground text-background hover:bg-foreground" : "text-muted-foreground hover:text-foreground")}`}>{item === "ja" ? "JP" : item.toUpperCase()}</Button>)}
