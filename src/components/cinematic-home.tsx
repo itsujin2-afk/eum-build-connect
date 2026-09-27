@@ -45,12 +45,12 @@ export function CinematicHome() {
             </span>
           </div>
 
-          <p className="mt-6 break-keep text-sm font-medium leading-relaxed tracking-tight text-foreground/75 sm:mt-8 sm:text-base">
+          <p className="mt-6 break-keep text-center text-sm font-medium leading-relaxed tracking-tight text-foreground/75 sm:mt-8 sm:text-base">
             중국 최정상 6개 브랜드 <span className="text-gold">공식 한국 HQ</span>
           </p>
           <Link
             to="/company"
-            className="group mt-6 inline-flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-foreground/70 sm:mt-8"
+            className="group mx-auto mt-6 inline-flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-foreground/70 sm:mt-8"
           >
             <span className="relative">
               이음앤빌드 소개
