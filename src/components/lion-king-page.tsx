@@ -25,7 +25,7 @@ export function LionKingPage() {
         <section className="mx-auto grid min-h-[82svh] max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-8 lg:grid-cols-12 lg:px-14 lg:pb-20 lg:pt-32">
           <div className="lg:col-span-5">
             <p className="eyebrow text-gold">03 · 광둥 라이온 킹 세라믹스</p>
-            <h1 className="mt-5 break-keep text-[42px] font-semibold leading-[1.12] tracking-normal sm:text-[58px] lg:text-[72px]">
+            <h1 className="mt-5 break-keep text-[30px] font-semibold leading-[1.18] tracking-normal sm:text-[58px] lg:text-[72px]">
               공간에 남는 것은<br />타일이 아니라<br /><span className="text-gold">표정입니다</span>
             </h1>
             <p className="mt-7 max-w-md break-keep text-sm leading-7 text-muted-foreground sm:text-base">
