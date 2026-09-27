@@ -116,6 +116,22 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  // A stale page chunk (after an update) fails to import; reload once to fetch fresh files.
+  useEffect(() => {
+    const onPreloadError = (event: Event) => {
+      event.preventDefault();
+      const key = "eum-chunk-reload";
+      const last = Number(sessionStorage.getItem(key) || 0);
+      if (Date.now() - last > 10000) {
+        sessionStorage.setItem(key, String(Date.now()));
+        window.location.reload();
+      }
+    };
+    window.addEventListener("vite:preloadError", onPreloadError);
+    return () => window.removeEventListener("vite:preloadError", onPreloadError);
+  }, []);
+
+
   return (
     <QueryClientProvider client={queryClient}>
       <LocaleProvider>
