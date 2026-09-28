@@ -3,7 +3,7 @@ import { ArrowRight, Check, X } from "lucide-react";
 import { SiteShell, ContactBand } from "@/components/site-shell";
 import { BoomerangVideoBg } from "@/components/boomerang-video-bg";
 import { steps } from "@/lib/site-data";
-import logoAsset from "@/assets/eum-build-logo-transparent.png.asset.json";
+const logoSrc = "/logo-hero.png";
 
 
 export const Route = createFileRoute("/company")({
@@ -97,7 +97,7 @@ function Company() {
       <BoomerangVideoBg />
       <div className="absolute inset-0 z-[1] bg-background/25" />
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-5 pb-10 pt-28 text-center sm:pt-32">
-        <img src={logoAsset.url} alt="이음앤빌드 로고" className="w-[150px] drop-shadow-[0_16px_40px_rgba(60,44,8,0.25)] sm:w-[190px]" />
+        <img src={logoSrc} alt="이음앤빌드 로고" className="w-[150px] drop-shadow-[0_16px_40px_rgba(60,44,8,0.25)] sm:w-[190px]" />
         <h1 className="mt-8 break-keep text-4xl font-bold leading-[1.15] tracking-tight sm:text-6xl lg:text-[68px]">
           중국 최정상 6개 브랜드<br />공식 한국 <span className="text-gold">독점 HQ</span>
         </h1>

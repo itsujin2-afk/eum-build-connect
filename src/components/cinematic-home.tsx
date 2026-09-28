@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import logoAsset from "@/assets/eum-build-logo-transparent.png.asset.json";
+const logoSrc = "/logo-hero.png";
 
 const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
 const asset = (id: string) => imageModules[`../assets/eum/${id}.jpg`] ?? "";
@@ -32,12 +32,12 @@ export function CinematicHome() {
         <div className="hero-reveal hero-reveal-logo flex min-w-0 flex-col items-center text-center lg:col-span-5 lg:items-center lg:text-center">
           <div
             className="logo-stage w-[235px] sm:w-[320px] lg:w-[400px]"
-            style={{ ["--logo-mask" as string]: `url(${logoAsset.url})` }}
+            style={{ ["--logo-mask" as string]: `url(${logoSrc})` }}
           >
             <span className="logo-glow" aria-hidden />
             <span className="logo-stage-inner">
               <img
-                src={logoAsset.url}
+                src={logoSrc}
                 alt="이음앤빌드"
                 className="logo-stage-img drop-shadow-[0_18px_44px_rgba(60,44,8,0.22)]"
               />
