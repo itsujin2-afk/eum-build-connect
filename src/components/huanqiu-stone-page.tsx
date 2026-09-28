@@ -243,9 +243,6 @@ export function HuanqiuStonePage() {
         <div className="mt-20 grid gap-px border border-primary-foreground/15 bg-primary-foreground/15 md:grid-cols-2 lg:grid-cols-3">
           {projectGroups.map((group) => <article key={group.title} className="bg-foreground p-7 sm:p-8"><strong className="text-3xl text-gold">{group.count}</strong><h3 className="mt-3 text-lg font-bold">{group.title}</h3><p className="mt-5 break-keep text-xs leading-6 text-primary-foreground/60">{group.items}</p></article>)}
         </div>
-        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[{image:"diaoyutai",title:"다오위타이 국빈관"},{image:"expo-center",title:"상하이 엑스포센터"},{image:"024",title:"인민대회당"},{image:"028",title:"국가급 문화시설"}].map((item)=><figure key={item.title}><img src={item.image.match(/^\d/) ? asset(item.image) : umgg(item.image)} alt={item.title} className="aspect-[4/3] w-full object-cover saturate-[0.85]"/><figcaption className="mt-3 text-xs text-primary-foreground/60">{item.title}</figcaption></figure>)}
-        </div>
       </div>
     </section>
 
