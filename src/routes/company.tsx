@@ -145,13 +145,15 @@ function Company() {
             <div className="border border-border bg-background px-6 py-5">
               <p className="text-[11px] font-semibold tracking-[0.14em] text-muted-foreground">일반 경로</p>
               <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] leading-6 text-muted-foreground">
-                중국 본사 <ArrowRight size={12} className="text-muted-foreground/50" /> 무역상 <ArrowRight size={12} className="text-muted-foreground/50" /> 현지 브로커 <ArrowRight size={12} className="text-muted-foreground/50" /> 국내 유통 <ArrowRight size={12} className="text-muted-foreground/50" /> 발주처
+                <span className="inline-flex flex-wrap items-center gap-x-2">중국 본사 <ArrowRight size={12} className="text-muted-foreground/50" /> 무역상 <ArrowRight size={12} className="text-muted-foreground/50" /> 현지 브로커 <ArrowRight size={12} className="text-muted-foreground/50" /></span>
+                <span className="inline-flex flex-wrap items-center gap-x-2">국내 유통 <ArrowRight size={12} className="text-muted-foreground/50" /> 발주처</span>
               </p>
             </div>
             <div className="border border-gold/40 bg-background px-6 py-5">
               <p className="text-[11px] font-semibold tracking-[0.14em] text-gold">직접 경로</p>
               <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] font-semibold leading-6">
-                중국 본사 <ArrowRight size={12} className="text-gold" /> 이음앤빌드 한국 HQ <ArrowRight size={12} className="text-gold" /> 발주처
+                중국 본사 <ArrowRight size={12} className="text-gold" />
+                <span className="inline-flex flex-wrap items-center gap-x-2">이음앤빌드 한국 HQ <ArrowRight size={12} className="text-gold" /> 발주처</span>
               </p>
             </div>
           </div>

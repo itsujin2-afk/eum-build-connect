@@ -158,13 +158,30 @@
   }
 
   html { scroll-behavior: smooth; }
+
+  /* Mobile-friendly line breaking: even line lengths so no word is left alone on the last line.
+     Browsers balance only short blocks (up to ~6 lines); longer paragraphs fall back to pretty. */
+  h1, h2, h3, h4 { text-wrap: balance; }
+  p, li, dd, dt, figcaption, blockquote { text-wrap: pretty; }
+  p, li, dd, dt, figcaption, blockquote { text-wrap: balance; }
+
+  /* Korean: break between words, never inside a word (long unbroken strings still wrap). */
+  html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
   ::selection { background: var(--color-primary); color: var(--color-primary-foreground); }
 
   /* Japanese and Chinese have no inter-word spaces, so Korean keep-all rules can widen containers. */
   html[lang="ja"] .break-keep,
   html[lang="zh-CN"] .break-keep {
-    word-break: normal;
+    /* !important: these base-layer rules must beat the Tailwind break-keep utility layer. */
+    word-break: normal !important;
     overflow-wrap: anywhere;
+  }
+
+  /* Japanese: break at phrase (bunsetsu) boundaries where supported; falls back to normal. */
+  html[lang="ja"] body,
+  html[lang="ja"] .break-keep {
+    word-break: normal !important;
+    word-break: auto-phrase !important;
   }
 
   html[lang="ja"] .ja-wrap,
@@ -176,7 +193,7 @@
 
   @media (max-width: 639px) {
     html[lang="en"] .break-keep {
-      word-break: normal;
+      word-break: normal !important;
       overflow-wrap: anywhere;
     }
 

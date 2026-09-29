@@ -42,7 +42,7 @@ function Contact() {
       <section className="border-b border-border pt-12 sm:pt-14">
         <div className="mx-auto max-w-[1440px] px-5 py-24 sm:py-32 lg:px-10">
           <p className="eyebrow text-muted-foreground">CONTACT</p>
-          <h1 className="mt-5 break-keep text-3xl font-bold leading-[1.25] sm:text-5xl">
+          <h1 className="mt-5 break-keep text-[1.625rem] font-bold leading-[1.3] sm:text-5xl sm:leading-[1.25]">
             <span className="block">프로젝트에 맞는 자재,</span>
             <span className="block">이음앤빌드가 함께 찾겠습니다.</span>
           </h1>
