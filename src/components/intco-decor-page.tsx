@@ -7,6 +7,8 @@ import recycledPellets from "@/assets/intco/recycled-pellets.jpg.asset.json";
 import productApplications from "@/assets/intco/product-applications.jpg.asset.json";
 import interiorShowroom from "@/assets/intco/interior-showroom.jpg.asset.json";
 import circularMaterials from "@/assets/intco/circular-materials.jpg.asset.json";
+import flooringApplication from "@/assets/intco-products/flooring-application.jpg.asset.json";
+import outdoorApplication from "@/assets/intco-products/outdoor-application.jpg.asset.json";
 
 const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
 const asset = (id: string) => imageModules[`../assets/eum/${id}.jpg`] ?? "";
@@ -26,10 +28,10 @@ const bases = [
 ] as const;
 
 const products = [
-  { title: "건축 장식 패널", text: "대리석·원목·스톤·메탈·패브릭 표면을 구현하는 PS·MDF·SPC·WPC 패널", image: "080" },
-  { title: "SPC 바닥재", text: "습기와 변형에 강하고 클릭 방식으로 빠르게 시공하는 상업·주거용 바닥재", image: "085" },
-  { title: "몰딩과 부속", text: "걸레받이, 벽·천장 몰딩, 계단 디딤판과 단차·마감·T몰딩", image: "082" },
-  { title: "아웃도어", text: "재생 PE 기반 외벽재, 데크, 펜스, DIY 데크 타일과 인조잔디", image: "089" },
+  { title: "건축 장식 패널", text: "대리석·원목·스톤·메탈·패브릭 표면을 구현하는 PS·MDF·SPC·WPC 패널", image: asset("080") },
+  { title: "SPC 바닥재", text: "습기와 변형에 강하고 클릭 방식으로 빠르게 시공하는 상업·주거용 바닥재", image: flooringApplication.url },
+  { title: "몰딩과 부속", text: "걸레받이, 벽·천장 몰딩, 계단 디딤판과 단차·마감·T몰딩", image: asset("082") },
+  { title: "아웃도어", text: "재생 PE 기반 외벽재, 데크, 펜스, DIY 데크 타일과 인조잔디", image: outdoorApplication.url },
 ] as const;
 
 const strengths = [
@@ -77,7 +79,7 @@ export function IntcoDecorPage() {
 
     <section className="border-y border-border bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <SectionHead eyebrow="PRODUCT SYSTEM" title="벽·천장·바닥·실외를 한 제조사에서" body="호텔, 오피스, 상업시설과 주거 프로젝트에 필요한 장식 표면과 부속을 통합 공급합니다."/>
-      <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">{products.map(product=><article key={product.title}><img src={asset(product.image)} alt={product.title} className="aspect-[4/3] w-full object-cover saturate-[0.86]"/><h3 className="mt-5 text-xl font-bold">{product.title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{product.text}</p></article>)}</div>
+      <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">{products.map(product=><article key={product.title}><img src={product.image} alt={product.title} className="aspect-[4/3] w-full object-cover saturate-[0.86]"/><h3 className="mt-5 text-xl font-bold">{product.title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{product.text}</p></article>)}</div>
       <div className="mt-16 grid gap-5 lg:grid-cols-[.9fr_1.1fr]"><img src={productApplications.url} alt="잉코 장식 몰딩과 패널의 다양한 적용 사례" className="aspect-[16/10] h-full w-full object-cover"/><img src={interiorShowroom.url} alt="잉코 벽패널과 바닥재가 적용된 전시장" className="aspect-[16/10] h-full w-full object-cover"/></div>
     </div></section>
 
