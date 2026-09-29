@@ -5,6 +5,7 @@ import { brands } from "@/lib/site-data";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { useLocale, type Locale } from "@/lib/i18n";
 import { ScrollTopButton } from "@/components/scroll-top-button";
+import { cn } from "@/lib/utils";
 
 const productLinks = {
   "huanqiu-stone": "/brands/huanqiu-stone-products",
@@ -48,7 +49,7 @@ export function SiteShell({ children, hideFooter = false, hideFooterLogo = false
           </div>
             <a href="tel:025534122" className="nav-link">문의하기</a>
         </nav>
-<div className="flex items-center gap-2">{languageSelector()}<span className="hidden lg:inline-flex"><a href="tel:025534122" className={buttonVariants({className:"h-auto rounded-lg px-5 py-2.5 shadow-none"})}><Phone size={14}/> 견적 상담</a></span></div>
+<div className="flex items-center gap-2">{languageSelector()}<span className="hidden lg:inline-flex"><a href="tel:025534122" className={cn(buttonVariants(), "h-auto rounded-lg px-5 py-2.5 shadow-none transition-colors duration-300 hover:bg-gold hover:text-foreground")}><Phone size={14}/> 견적 상담</a></span></div>
           <div className="flex items-center gap-1 lg:hidden"><div className="flex items-center gap-0.5" role="group" aria-label="언어 선택">{(["ko", "en", "ja"] as Locale[]).map((item) => <button key={item} type="button" aria-pressed={locale === item} onClick={() => setLocale(item)} className={`h-7 min-w-7 rounded-sm px-1 text-[10px] font-medium tracking-[0.05em] ${locale === item ? "bg-foreground text-background" : "text-muted-foreground"}`}>{item === "ja" ? "JP" : item.toUpperCase()}</button>)}</div><a href="tel:025534122" aria-label="전화 문의" className="inline-flex h-9 w-9 items-center justify-center rounded-full text-foreground hover:bg-surface"><Phone size={17}/></a><details className="group relative"><summary className="list-none cursor-pointer p-2" aria-label="메뉴 열기"><Menu/></summary><div className="absolute right-0 mt-3 hidden max-h-[calc(100dvh-5.5rem)] w-72 overflow-y-auto overscroll-contain rounded-md border border-border bg-background p-3 pb-8 text-foreground shadow-sm group-open:block"><Link to="/" className="mobile-link mt-2">Home</Link><Link to="/company" className="mobile-link">회사소개</Link>{brands.map((brand)=><div key={brand.slug}><Link to={`/brands/${brand.slug}` as "/brands/huanqiu-stone"} className="mobile-link"><span className="mr-2 text-muted-foreground">{brand.number}</span>{materialNames[brand.slug as keyof typeof materialNames]}<span className="ml-2 text-xs text-muted-foreground">{brand.name}</span></Link>{brand.slug in productLinks && <Link to={productLinks[brand.slug as keyof typeof productLinks]} className="mobile-link pl-8 text-xs text-muted-foreground">제품소개</Link>}</div>)}</div></details></div>
       </div>
     </header>
