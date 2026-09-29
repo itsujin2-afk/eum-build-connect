@@ -67,7 +67,7 @@ export const brands: Brand[] = [
     sections:[
       {eyebrow:"PRODUCTION EQUIPMENT",title:"7종 설비로 전 공정을 직접 처리",body:"절단부터 연삭·강화·접합·복층 조립·실란트 도포까지 자체 라인에서 완결합니다.",items:[{title:"Bottero",text:"이탈리아 유리 절단기"},{title:"Jinbo",text:"유리 연삭기"},{title:"Jingong",text:"강화로"},{title:"Leway",text:"PVB 오토클레이브"},{title:"BOZA",text:"Low-E 막층 제거기"},{title:"BOZA",text:"자동 간봉 절곡기"},{title:"HANJIANG",text:"실란트 도포기"}]},
       {eyebrow:"LOW-E & PRODUCT",title:"열복사를 반사하는 저방사 코팅",body:"단은은 총 5층, 이은은 총 7~10층 코팅으로 원적외선 열복사를 반사합니다.",items:[{title:"복층 유리",text:"단열 · 차음 · 결로 방지"},{title:"강화 유리",text:"충격 · 긁힘 강도 3~5배"},{title:"접합 유리",text:"PVB 필름 · 자외선 99% 차단"},{title:"방화유리 · 커튼월",text:"내화 완전성 · 단열성 유지"},{title:"인증",text:"ISO 9001 · ISO 14001 · GB · CE · ASTM · CCC"}]},
-      {eyebrow:"KEY REFERENCES",title:"10여 개 성·시의 시공 파트너",items:[{title:"그룹",text:"비구이위안 · 룽창 · 장시 건공 · 자린 · 엔타이 페이룽 · 산동 진두 건축 · 룽커우 자위안 토공"},{title:"프로젝트",text:"중젠 웨하이허위안 · 장위 브랜드 양조장 · 페이룽 빌딩 · 진탄 가든 · 자오위안시 기록관 · 자오위안 가족성"}]}
+      {eyebrow:"KEY REFERENCES",title:"10여 개 성·시의 시공 파트너",items:[{title:"그룹",text:"비구이위안 · 룽촹 · 장시 건공 · 자린 · 엔타이 페이룽 · 산동 진두 건축 · 룽커우 자위안 토공"},{title:"프로젝트",text:"중젠 웨하이허위안 · 장위 브랜드 양조장 · 페이룽 빌딩 · 진탄 가든 · 자오위안시 기록관 · 자오위안 가족성"}]}
     ]
   },
   {
