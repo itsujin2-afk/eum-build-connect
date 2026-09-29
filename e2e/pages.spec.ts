@@ -4,6 +4,7 @@ import { expect, test, type Page } from "@playwright/test";
 const ROUTES = [
   "/",
   "/company",
+  "/contact",
   "/brands/huanqiu-stone",
   "/brands/huanqiu-stone-products",
   "/brands/intco-decor",

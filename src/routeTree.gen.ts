@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CompanyRouteImport } from './routes/company'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BrandsForestHouseRouteImport } from './routes/brands.forest-house'
 import { Route as BrandsForestHouseProductsRouteImport } from './routes/brands.forest-house-products'
 import { Route as BrandsHuanqiuStoneRouteImport } from './routes/brands.huanqiu-stone'
@@ -32,6 +33,11 @@ const IndexRoute = IndexRouteImport.update({
 const CompanyRoute = CompanyRouteImport.update({
   id: '/company',
   path: '/company',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BrandsForestHouseRoute = BrandsForestHouseRouteImport.update({
@@ -101,6 +107,7 @@ const BrandsShuofengProductsRoute = BrandsShuofengProductsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
+  '/contact': typeof ContactRoute
   '/brands/forest-house': typeof BrandsForestHouseRoute
   '/brands/forest-house-products': typeof BrandsForestHouseProductsRoute
   '/brands/huanqiu-stone': typeof BrandsHuanqiuStoneRoute
@@ -117,6 +124,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
+  '/contact': typeof ContactRoute
   '/brands/forest-house': typeof BrandsForestHouseRoute
   '/brands/forest-house-products': typeof BrandsForestHouseProductsRoute
   '/brands/huanqiu-stone': typeof BrandsHuanqiuStoneRoute
@@ -134,6 +142,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
+  '/contact': typeof ContactRoute
   '/brands/forest-house': typeof BrandsForestHouseRoute
   '/brands/forest-house-products': typeof BrandsForestHouseProductsRoute
   '/brands/huanqiu-stone': typeof BrandsHuanqiuStoneRoute
@@ -152,6 +161,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/company'
+    | '/contact'
     | '/brands/forest-house'
     | '/brands/forest-house-products'
     | '/brands/huanqiu-stone'
@@ -168,6 +178,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/company'
+    | '/contact'
     | '/brands/forest-house'
     | '/brands/forest-house-products'
     | '/brands/huanqiu-stone'
@@ -184,6 +195,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/company'
+    | '/contact'
     | '/brands/forest-house'
     | '/brands/forest-house-products'
     | '/brands/huanqiu-stone'
@@ -201,6 +213,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CompanyRoute: typeof CompanyRoute
+  ContactRoute: typeof ContactRoute
   BrandsForestHouseRoute: typeof BrandsForestHouseRoute
   BrandsForestHouseProductsRoute: typeof BrandsForestHouseProductsRoute
   BrandsHuanqiuStoneRoute: typeof BrandsHuanqiuStoneRoute
@@ -229,6 +242,13 @@ declare module '@tanstack/react-router' {
       path: '/company'
       fullPath: '/company'
       preLoaderRoute: typeof CompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/brands/forest-house': {
@@ -321,6 +341,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CompanyRoute: CompanyRoute,
+  ContactRoute: ContactRoute,
   BrandsForestHouseRoute: BrandsForestHouseRoute,
   BrandsForestHouseProductsRoute: BrandsForestHouseProductsRoute,
   BrandsHuanqiuStoneRoute: BrandsHuanqiuStoneRoute,
