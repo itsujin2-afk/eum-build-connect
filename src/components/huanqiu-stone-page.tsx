@@ -17,7 +17,7 @@ const overviewMetrics = [
 const history = [
   ["1986", "홍콩에서 창립"], ["1991", "중국 내륙 투자·공장 설립"], ["2003", "해외 시장 진출"],
   ["2007", "한덕석업 설립"], ["2008", "푸젠 생산기지 완공"], ["2010", "천하 석창 구축"],
-  ["2012", "글로벌 커튼월 설립"], ["2013", "글로벌 클래식 설립"], ["2019", "화련 건자재 기술 지분 참여"],
+  ["2012", "글로벌 커튼월 설립"], ["2013", "글로벌 클래식 설립"], ["2019", "화룬 건자재 기술 지분 참여"],
   ["2020", "삼공삼 광업 인수"], ["2023", "석재 인테리어·제품 생태계 확장"], ["2024", "품종 중심 비즈니스 모델 구축"],
 ] as const;
 
@@ -102,7 +102,7 @@ export function HuanqiuStonePage() {
     <section className="border-b border-border">
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
         <div className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-24">
-          <SectionHead eyebrow="환구 석재 소개" title="1986년부터 이어온 글로벌 석재 시스템" body="환구 석재는 홍콩에서 설립된 석재 업계 선도 기업입니다. 중앙기업 화련 건자재 기술(1313.HK)이 지분을 보유하고 있으며, 광산·무역·연구개발·가공·인테리어·커튼월까지 폭넓은 사업 역량을 갖추고 있습니다." />
+          <SectionHead eyebrow="환구 석재 소개" title="1986년부터 이어온 글로벌 석재 시스템" body="환구 석재는 홍콩에서 설립된 석재 업계 선도 기업입니다. 중앙기업 화룬 건자재 기술(1313.HK)이 지분을 보유하고 있으며, 광산·무역·연구개발·가공·인테리어·커튼월까지 폭넓은 사업 역량을 갖추고 있습니다." />
           <div className="grid grid-cols-2 gap-px border border-border bg-border">
             {overviewMetrics.map(([value, label]) => <div key={label} className="bg-background p-6 sm:p-8"><strong className="text-3xl font-bold text-gold sm:text-4xl">{value}</strong><p className="mt-3 text-xs leading-6 text-muted-foreground sm:text-sm">{label}</p></div>)}
           </div>

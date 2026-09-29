@@ -27,7 +27,7 @@ const products = [
 
 const equipment = [
   ["Bottero", "이탈리아 자동 절단 라인"], ["JINGGLASS", "강화로"], ["Leway", "PVB 접합 오토클레이브"],
-  ["BOZA", "Low-E 막층 제거기 · 자동 간봉 절곡기"], ["진보(金博)", "직선 연삭기"], ["HANJIANG", "자동 실란트 도포기"],
+  ["BOZA", "Low-E 막층 제거기 · 자동 간봉 절곡기"], ["진보(金玻)", "직선 연삭기"], ["HANJIANG", "자동 실란트 도포기"],
 ] as const;
 
 const certificates = [
@@ -72,7 +72,7 @@ export function JinchengGlassPage() {
     <section className="bg-surface"><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       <SectionHead eyebrow="PRODUCT SYSTEM" title="현장 조건에 맞춰 고르는 네 가지 안전 유리" body="안전성, 단열, 차음, 내화 중 프로젝트가 우선하는 성능에 따라 조합을 제안합니다."/>
       <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">{products.map(product=><article key={product.title}><img src={product.image} alt={`${product.title} 제품 이미지`} className="aspect-[4/3] w-full bg-background object-cover saturate-[0.9]"/><p className="mt-5 text-xs font-bold text-gold">{product.en}</p><h3 className="mt-2 text-xl font-bold">{product.title}</h3><ul className="mt-4 space-y-3">{product.points.map(point=><li key={point} className="flex gap-2.5 text-sm leading-7 text-muted-foreground"><Check size={16} className="mt-1.5 shrink-0 text-gold"/><span className="break-keep">{point}</span></li>)}</ul></article>)}</div>
-      <div className="mt-14 grid gap-px border border-border bg-border md:grid-cols-3">{[[ShieldCheck,"자연 파손률 3%","2023년 강화 유리 업계 표준 기준"],[Volume2,"파편 ≥ 40개","50×50mm 내 파편 수 (GB 15763.2)"],[Sun,"UV 99% 차단","접합 유리 기준"]].map(([Icon,value,label])=>{const MetricIcon=Icon as typeof ShieldCheck; return <article key={String(label)} className="bg-background p-7"><MetricIcon size={22} className="text-gold"/><strong className="mt-7 block text-2xl sm:text-3xl">{String(value)}</strong><p className="mt-2 text-sm text-muted-foreground">{String(label)}</p></article>})}</div>
+      <div className="mt-14 grid gap-px border border-border bg-border md:grid-cols-3">{[[ShieldCheck,"자연 파손률 3‰","2023년 강화 유리 업계 표준 기준"],[Volume2,"파편 ≥ 40개","50×50mm 내 파편 수 (GB 15763.2)"],[Sun,"UV 99% 차단","접합 유리 기준"]].map(([Icon,value,label])=>{const MetricIcon=Icon as typeof ShieldCheck; return <article key={String(label)} className="bg-background p-7"><MetricIcon size={22} className="text-gold"/><strong className="mt-7 block text-2xl sm:text-3xl">{String(value)}</strong><p className="mt-2 text-sm text-muted-foreground">{String(label)}</p></article>})}</div>
     </div></section>
 
     <section><div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
