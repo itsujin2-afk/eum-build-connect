@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { brands } from "@/lib/site-data";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { useLocale, type Locale } from "@/lib/i18n";
+import { ScrollTopButton } from "@/components/scroll-top-button";
 
 const productLinks = {
   "huanqiu-stone": "/brands/huanqiu-stone-products",
@@ -63,6 +64,7 @@ export function SiteShell({ children, hideFooter = false, hideFooterLogo = false
         <p>© {new Date().getFullYear()} 주식회사 이음앤빌드</p>
       </div>
     </footer>}
+    {!fullscreen && <ScrollTopButton />}
   </div>
 }
 

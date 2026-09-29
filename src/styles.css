@@ -456,6 +456,73 @@
 }
 
 
+/* --- scroll to top --- */
+@keyframes scroll-top-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -6px, 0); }
+}
+@keyframes scroll-top-nudge {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -3px, 0); }
+}
+.scroll-top {
+  width: 56px;
+  height: 56px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(0, 16px, 0) scale(.9);
+  transition: opacity .35s ease, transform .45s cubic-bezier(.2, .75, .25, 1);
+}
+.scroll-top[data-visible="true"] {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+.scroll-top-inner {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  border-radius: 9999px;
+  background: color-mix(in oklch, var(--background) 88%, transparent);
+  backdrop-filter: blur(8px);
+  color: var(--foreground);
+  box-shadow: 0 10px 30px -12px rgba(60, 44, 8, .35);
+  animation: scroll-top-float 3.2s ease-in-out infinite;
+  transition: background-color .25s ease, color .25s ease;
+}
+.scroll-top:hover .scroll-top-inner,
+.scroll-top:focus-visible .scroll-top-inner {
+  background: var(--foreground);
+  color: var(--background);
+}
+.scroll-top:hover .scroll-top-arrow { animation: scroll-top-nudge .8s ease-in-out infinite; }
+.scroll-top:focus-visible { outline: none; }
+.scroll-top:focus-visible .scroll-top-inner { box-shadow: 0 0 0 2px var(--gold); }
+.scroll-top-ring {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+}
+.scroll-top-track { fill: none; stroke: var(--border); stroke-width: 1.5; }
+.scroll-top-fill {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: stroke-dashoffset .15s linear;
+}
+.scroll-top-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  padding-left: .18em;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
