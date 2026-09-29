@@ -259,10 +259,10 @@ export function LionKingProductsPage() {
               </h2>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link to="/brands/lion-king" className="inline-flex items-center gap-2.5 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors duration-300 hover:bg-gold hover:text-foreground">
+              <Link to="/brands/lion-king" className="inline-flex items-center gap-2.5 bg-gold px-8 py-4 text-sm font-bold text-foreground transition-colors duration-300 hover:bg-[color-mix(in_oklch,var(--gold)_82%,black)]">
                 라이온킹 소개 보기 <ArrowRight size={16} />
               </Link>
-              <Link to="/company" className="inline-flex items-center gap-2.5 border border-foreground px-8 py-4 text-sm font-bold transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground">
+              <Link to="/company" className="inline-flex items-center gap-2.5 border border-foreground bg-background px-8 py-4 text-sm font-bold transition-colors duration-300 hover:border-gold hover:bg-gold/10">
                 이음앤빌드 소개
               </Link>
             </div>

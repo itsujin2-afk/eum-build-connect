@@ -107,7 +107,7 @@ export function LionKingPage() {
               <p className="eyebrow text-gold">PORTLAND · 2025</p>
               <h2 className="mt-4 break-keep text-2xl font-semibold tracking-normal sm:text-4xl">포틀랜드 시리즈의 표면과 규격은<br />제품 소개에서 확인하세요.</h2>
             </div>
-            <Link to="/brands/lion-king-products" className="inline-flex items-center gap-2 bg-foreground px-8 py-4 text-sm font-bold text-primary-foreground transition-colors duration-300 hover:bg-gold hover:text-foreground">제품 소개 보기 <ArrowRight size={16} /></Link>
+            <Link to="/brands/lion-king-products" className="inline-flex items-center gap-2 bg-gold px-8 py-4 text-sm font-bold text-foreground transition-colors duration-300 hover:bg-[color-mix(in_oklch,var(--gold)_82%,black)]">제품 소개 보기 <ArrowRight size={16} /></Link>
           </div>
         </section>
 
@@ -117,7 +117,7 @@ export function LionKingPage() {
               <p className="eyebrow text-gold">KOREA PROJECT DESK</p>
               <h2 className="mt-4 break-keep text-2xl font-semibold tracking-normal sm:text-4xl">라이온킹의 한국 프로젝트는<br />이음앤빌드가 연결합니다.</h2>
             </div>
-            <Link to="/company" className="inline-flex items-center gap-2 border border-foreground px-8 py-4 text-sm font-bold transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground">이음앤빌드 소개</Link>
+            <Link to="/company" className="inline-flex items-center gap-2 border border-foreground bg-background px-8 py-4 text-sm font-bold transition-colors duration-300 hover:border-gold hover:bg-gold/10">이음앤빌드 소개</Link>
           </div>
         </section>
       </main>
