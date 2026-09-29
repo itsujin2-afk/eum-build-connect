@@ -39,7 +39,7 @@ const certificates = [
   "CE · ASTM 해외 규격 대응",
 ] as const;
 
-const partners = ["COFCO 중량그룹", "SUNAC 룽창그룹", "COUNTRY GARDEN 비구이위안그룹", "장시건공", "페이룽그룹", "중창그룹", "자위안그룹"] as const;
+const partners = ["COFCO 중량그룹", "SUNAC 룽촹그룹", "COUNTRY GARDEN 비구이위안그룹", "장시건공", "페이룽그룹", "중창그룹", "자위안그룹"] as const;
 
 function SectionHead({ eyebrow, title, body }: { eyebrow: string; title: string; body?: string }) {
   return <div className="max-w-3xl"><p className="eyebrow text-muted-foreground">{eyebrow}</p><h2 className="mt-4 break-keep text-3xl font-bold leading-[1.2] sm:text-4xl lg:text-5xl">{title}</h2>{body && <p className="mt-6 break-keep text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">{body}</p>}</div>;
