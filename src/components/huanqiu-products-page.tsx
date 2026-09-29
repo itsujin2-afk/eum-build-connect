@@ -30,7 +30,7 @@ const products: Product[] = [
   { slug:"new-ottoman-beige", name:"뉴 오토만 베이지", origin:"터키", family:"베이지", tone:"OTTOMAN BEIGE", feature:"색과 무늬가 균일하고 큰 원석 확보가 가능한 안정적인 베이지 스톤", use:"대형 벽면 · 바닥 · 프로젝트 규격판" },
   { slug:"venus-beige", name:"비너스 베이지", origin:"터키", family:"베이지", tone:"VENUS BEIGE", feature:"연한 베이지 바탕과 흰 반점, 번개 모양 결이 자연스럽게 이어지는 소재", use:"실내 벽면 · 바닥 · 기둥" },
   { slug:"venus-grey", name:"비너스 그레이", origin:"터키", family:"그레이", tone:"SILVER GREY", feature:"깊은 은회색 바탕과 흰색 선형 무늬가 대비되는 현대적인 석재", use:"벽면 · 바닥 · 곡면판 · 원기둥" },
-  { slug:"petit-granit", name:"생탄 정", origin:"벨기에", family:"그레이", tone:"BELGIAN GREY", feature:"화강암에 견줄 만큼 견고한 탄산칼슘 퇴적암으로 절제된 화석 질감이 특징", use:"고급 실내외 마감 · 상업 공간" },
+  { slug:"petit-granit", name:"세잔 그레이", origin:"벨기에", family:"그레이", tone:"BELGIAN GREY", feature:"화강암에 견줄 만큼 견고한 탄산칼슘 퇴적암으로 절제된 화석 질감이 특징", use:"고급 실내외 마감 · 상업 공간" },
   { slug:"golden-spider", name:"골든 스파이더", origin:"그리스", family:"골드·기타", tone:"GOLDEN VEIN", feature:"흰 바탕에 거미줄처럼 변화하는 황금빛 망상 무늬의 화려한 대리석", properties:"밀도 2.82g/cm³ · 압축 164MPa", use:"실내 벽면 · 바닥 · 포인트 마감" },
   { slug:"sofita-gold", name:"소피타 골드", origin:"터키", family:"골드·기타", tone:"SOFITA GOLD", feature:"매우 밝은 바탕과 촘촘한 금황색 선, 유약 같은 광택이 돋보이는 소재", use:"고급 벽면 · 바닥 · 장식 패널" },
   { slug:"royal-gold", name:"로얄 골드", origin:"이스라엘", family:"골드·기타", tone:"ROYAL GOLD", feature:"직선형 또는 불규칙형 결을 지닌 따뜻한 골드톤의 고급 석재", use:"실내 장식 · 벽면 · 바닥" },
