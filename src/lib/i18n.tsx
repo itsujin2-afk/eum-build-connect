@@ -1,14 +1,16 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import en from "@/lib/i18n-en.json";
 import ja from "@/lib/i18n-ja.json";
+import zh from "@/lib/i18n-zh.json";
 
-export type Locale = "ko" | "en" | "ja";
+export type Locale = "ko" | "en" | "ja" | "zh";
 type Dictionary = Record<string, string>;
 
-const dictionaries: Record<Exclude<Locale, "ko">, Dictionary> = { en, ja };
+const dictionaries: Record<Exclude<Locale, "ko">, Dictionary> = { en, ja, zh };
 const reverse = {
   en: Object.fromEntries(Object.entries(en).map(([ko, translated]) => [translated, ko])),
   ja: Object.fromEntries(Object.entries(ja).map(([ko, translated]) => [translated, ko])),
+  zh: Object.fromEntries(Object.entries(zh).map(([ko, translated]) => [translated, ko])),
 } satisfies Record<Exclude<Locale, "ko">, Dictionary>;
 
 const LocaleContext = createContext<{ locale: Locale; setLocale: (locale: Locale) => void }>({ locale: "ko", setLocale: () => undefined });
@@ -16,7 +18,7 @@ const textAttributes = ["alt", "aria-label", "title", "placeholder", "content"] 
 
 function koreanSource(value: string): string {
   if (/[가-힣]/.test(value)) return value;
-  return reverse.en[value] ?? reverse.ja[value] ?? value;
+  return reverse.en[value] ?? reverse.ja[value] ?? reverse.zh[value] ?? value;
 }
 
 function translateString(value: string, locale: Locale): string {
@@ -65,11 +67,11 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const saved = window.localStorage.getItem("eum-build-locale");
-    if (saved === "en" || saved === "ja") updateLocale(saved);
+    if (saved === "en" || saved === "ja" || saved === "zh") updateLocale(saved);
   }, []);
 
   useEffect(() => {
-    document.documentElement.lang = locale;
+    document.documentElement.lang = locale === "zh" ? "zh-CN" : locale;
     translateTree(document, locale);
     const observer = new MutationObserver((mutations) => {
       for (const mutation of mutations) {
