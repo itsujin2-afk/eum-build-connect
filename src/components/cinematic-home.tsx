@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-const logoSrc = "/logo-hero.png";
+const logoSrc = "/logo-hero-v2.png";
 
 const imageModules = import.meta.glob("../assets/eum/*.jpg", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
 const asset = (id: string) => imageModules[`../assets/eum/${id}.jpg`] ?? "";

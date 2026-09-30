@@ -3,7 +3,7 @@ import { ArrowRight, Check, X } from "lucide-react";
 import { SiteShell, ContactBand } from "@/components/site-shell";
 import { BoomerangVideoBg } from "@/components/boomerang-video-bg";
 import { steps } from "@/lib/site-data";
-const logoSrc = "/logo-hero.png";
+const logoSrc = "/logo-hero-v2.png";
 
 
 export const Route = createFileRoute("/company")({
