@@ -5,7 +5,8 @@ import { CategoryNav } from "@/components/category-nav";
 import spcInstall from "@/assets/intco-products/spc-install.jpg.asset.json";
 import wallApplication from "@/assets/intco-products/wall-application.jpg.asset.json";
 import mouldingApplication from "@/assets/intco-products/moulding-application.jpg.asset.json";
-import accessoriesApplication from "@/assets/intco-products/accessories-application.jpg.asset.json";
+import stairTreads from "@/assets/intco-products/stair-treads.jpg";
+import floorTrims from "@/assets/intco-products/floor-trims.jpg";
 import outdoorApplication from "@/assets/intco-products/outdoor-application.jpg.asset.json";
 import flooringApplication from "@/assets/intco-products/flooring-application.jpg.asset.json";
 import spcMorningApplication from "@/assets/intco-products/spc-morning-application.jpg.asset.json";
@@ -36,7 +37,7 @@ import floorElmSwatches from "@/assets/intco-products/floor-elm-swatches.jpg.ass
 const categories = [
   { id: "wall", number: "01", title: "실내 벽패널", subtitle: "흡음·3D·MDF·SPC 패널", description: "흡음판부터 입체 벽패널까지 공간의 용도와 디자인에 맞춰 고릅니다. 우드·패브릭·석재 느낌을 다양한 규격과 색상으로 제공합니다.", image: wallApplication.url },
   { id: "moulding", number: "02", title: "몰딩과 걸레받이", subtitle: "PS·MDF·PVC 마감재", description: "걸레받이, 벽면 장식 몰딩, 천장 몰딩을 한 제조사에서 구성합니다. 벽과 바닥의 연결부까지 같은 디자인 방향으로 맞출 수 있습니다.", image: mouldingApplication.url },
-  { id: "accessory", number: "03", title: "바닥·계단 부속", subtitle: "디딤판·마감·단차 몰딩", description: "계단 디딤판과 T형 몰딩, 레벨링 스트립, 엣지 트림으로 모서리와 단차를 깔끔하게 마감합니다.", image: accessoriesApplication.url },
+  { id: "accessory", number: "03", title: "바닥·계단 부속", subtitle: "디딤판·마감·단차 몰딩", description: "계단 디딤판과 T형 몰딩, 레벨링 스트립, 엣지 트림으로 모서리와 단차를 깔끔하게 마감합니다.", image: stairTreads },
   { id: "outdoor", number: "04", title: "WPC 실외 마감재", subtitle: "외벽·데크·데크 타일·펜스", description: "비와 햇빛에 노출되는 외부 공간을 위한 벽패널과 데킹 제품입니다. 방수와 미끄럼 방지, 손쉬운 설치를 고려했습니다.", image: outdoorApplication.url },
 ] as const;
 
@@ -69,7 +70,7 @@ const materialGallery = [
   [wallPanels, "입체 벽패널 제품"],
   [mouldingApplication.url, "몰딩을 적용한 실내"],
   [mouldings, "벽과 천장 몰딩 제품"],
-  [accessoriesApplication.url, "바닥과 계단 마감 부속"],
+  [floorTrims, "바닥과 계단 마감 부속"],
 ] as const;
 
 const outdoorLines = [
